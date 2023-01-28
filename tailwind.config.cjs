@@ -19,6 +19,16 @@ const config = {
 				highlightLow: 'hsl(var(--color-highlight-low) / <alpha-value>)',
 				highlightMed: 'hsl(var(--color-highlight-med) / <alpha-value>)',
 				highlightHigh: 'hsl(var(--color-highlight-high) / <alpha-value>)'
+			},
+			borderColor: {
+				DEFAULT: 'hsl(var(--color-muted) / 0.2)'
+			},
+			ringColor: {
+				DEFAULT: 'hsl(var(--color-muted) / 0.3)'
+			},
+			boxShadow: {
+				DEFAULT: '0 10px 30px -20px rgba(87, 82, 121, 0.2)',
+				lg: '0 10px 40px -15px rgba(87, 82, 121, 0.2)'
 			}
 		}
 	},
