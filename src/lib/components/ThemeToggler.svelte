@@ -6,8 +6,11 @@
 
 	let siteTheme: SiteTheme;
 
-	$: {
-		switch (siteTheme) {
+	function handleSiteThemeChange(e: Event) {
+		const target = e.target as HTMLSelectElement;
+		const themeValue = target.value;
+
+		switch (themeValue) {
 			case 'light':
 				document.documentElement.setAttribute('data-theme', 'light');
 				localStorage.setItem('vitaneri:theme', 'light');
@@ -42,7 +45,7 @@
 </script>
 
 {#if siteTheme}
-	<select id="site-theme" bind:value={siteTheme}>
+	<select id="site-theme" value={siteTheme} on:change={handleSiteThemeChange}>
 		{#each themes as theme}
 			<option value={theme}>{formatOption(theme)}</option>
 		{/each}
