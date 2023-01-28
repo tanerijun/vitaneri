@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 
-	let darkTheme = true;
+	let darkTheme: boolean;
 
 	function handleClick() {
 		darkTheme = !darkTheme;
@@ -17,16 +17,21 @@
 		}
 	}
 
+	if (browser) {
+		const theme = document.documentElement.classList.value;
+		darkTheme = theme === 'dark' ? true : false;
+	}
+
 	// if (browser) {
 	// 	if (
 	// 		localStorage.theme === 'dark' ||
 	// 		(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
 	// 	) {
 	// 		document.documentElement.classList.add('dark');
-	// 		darkMode = true;
+	// 		darkTheme = true;
 	// 	} else {
 	// 		document.documentElement.classList.remove('dark');
-	// 		darkMode = false;
+	// 		darkTheme = false;
 	// 	}
 	// }
 </script>
