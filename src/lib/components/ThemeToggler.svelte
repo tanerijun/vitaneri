@@ -1,43 +1,69 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 
-	let darkTheme: boolean;
+	// let darkTheme: boolean;
 
-	function handleClick() {
-		darkTheme = !darkTheme;
+	// function handleClick() {
+	// 	darkTheme = !darkTheme;
 
-		if (darkTheme) {
-			document.documentElement.setAttribute('data-theme', 'dark');
-			localStorage.setItem('vitaneri:theme', 'dark');
-		} else {
-			document.documentElement.setAttribute('data-theme', 'light');
-			localStorage.setItem('vitaneri:theme', 'light');
+	// 	if (darkTheme) {
+	// 		document.documentElement.setAttribute('data-theme', 'dark');
+	// 		localStorage.setItem('vitaneri:theme', 'dark');
+	// 	} else {
+	// 		document.documentElement.setAttribute('data-theme', 'light');
+	// 		localStorage.setItem('vitaneri:theme', 'light');
+	// 	}
+	// }
+
+	// if (browser) {
+	// 	const theme = document.documentElement.getAttribute('data-theme');
+	// 	darkTheme = theme === 'dark' ? true : false;
+	// }
+
+	const themes = ['light', 'moon', 'dark'] as const;
+	type SiteTheme = (typeof themes)[number];
+
+	let siteTheme: SiteTheme;
+
+	$: {
+		switch (siteTheme) {
+			case 'light':
+				document.documentElement.setAttribute('data-theme', 'light');
+				localStorage.setItem('vitaneri:theme', 'light');
+				break;
+			case 'moon':
+				document.documentElement.setAttribute('data-theme', 'moon');
+				localStorage.setItem('vitaneri:theme', 'moon');
+				break;
+			case 'dark':
+				document.documentElement.setAttribute('data-theme', 'dark');
+				localStorage.setItem('vitaneri:theme', 'dark');
+				break;
 		}
 	}
 
 	if (browser) {
-		const theme = document.documentElement.getAttribute('data-theme');
-		darkTheme = theme === 'dark' ? true : false;
+		// If a valid theme data set by the inline script in <head> is available
+		const dataTheme = document.documentElement.getAttribute('data-theme');
+		if (typeof dataTheme === 'string' && themes.includes(dataTheme as SiteTheme)) {
+			siteTheme = dataTheme as SiteTheme;
+		} else {
+			// Use user's preferred color scheme
+			siteTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+		}
 	}
-
-	// if (browser) {
-	// 	if (
-	// 		localStorage.theme === 'dark' ||
-	// 		(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-	// 	) {
-	// 		document.documentElement.classList.add('dark');
-	// 		darkTheme = true;
-	// 	} else {
-	// 		document.documentElement.classList.remove('dark');
-	// 		darkTheme = false;
-	// 	}
-	// }
 </script>
 
-<div>
+<!-- <div>
 	<input type="checkbox" id="theme-toggle" on:click={handleClick} />
 	<label for="theme-toggle" />
-</div>
+</div> -->
+
+<select id="site-theme" bind:value={siteTheme}>
+	<option value="light">Light</option>
+	<option value="moon">Moon</option>
+	<option value="dark">Dark</option>
+</select>
 
 <!-- <button
 	class="theme-toggler"
