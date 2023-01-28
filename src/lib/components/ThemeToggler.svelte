@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 
-	const themes = ['light', 'moon', 'dark'] as const;
+	const themes = ['dawn', 'twilight', 'dusk'] as const;
 	type SiteTheme = (typeof themes)[number];
 
 	let siteTheme: SiteTheme;
@@ -11,17 +11,17 @@
 		const themeValue = target.value;
 
 		switch (themeValue) {
-			case 'light':
-				document.documentElement.setAttribute('data-theme', 'light');
-				localStorage.setItem('vitaneri:theme', 'light');
+			case 'dawn':
+				document.documentElement.setAttribute('data-theme', 'dawn');
+				localStorage.setItem('vitaneri:theme', 'dawn');
 				break;
-			case 'moon':
-				document.documentElement.setAttribute('data-theme', 'moon');
-				localStorage.setItem('vitaneri:theme', 'moon');
+			case 'twilight':
+				document.documentElement.setAttribute('data-theme', 'twilight');
+				localStorage.setItem('vitaneri:theme', 'twilight');
 				break;
-			case 'dark':
-				document.documentElement.setAttribute('data-theme', 'dark');
-				localStorage.setItem('vitaneri:theme', 'dark');
+			case 'dusk':
+				document.documentElement.setAttribute('data-theme', 'dusk');
+				localStorage.setItem('vitaneri:theme', 'dusk');
 				break;
 		}
 	}
@@ -33,7 +33,7 @@
 			siteTheme = dataTheme as SiteTheme;
 		} else {
 			// Use user's preferred color scheme
-			siteTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+			siteTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dusk' : 'dawn';
 		}
 	}
 

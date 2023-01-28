@@ -8,7 +8,7 @@
 	<script>
 		let dataTheme = localStorage.getItem('vitaneri:theme');
 		if (!dataTheme) {
-			dataTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+			dataTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dusk" : "dawn";
 		}
 		document.documentElement.setAttribute('data-theme', dataTheme);
 	</script>
