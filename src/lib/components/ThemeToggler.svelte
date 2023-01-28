@@ -41,8 +41,10 @@
 	}
 </script>
 
-<select id="site-theme" bind:value={siteTheme}>
-	{#each themes as theme}
-		<option value={theme}>{formatOption(theme)}</option>
-	{/each}
-</select>
+{#if siteTheme}
+	<select id="site-theme" bind:value={siteTheme}>
+		{#each themes as theme}
+			<option value={theme}>{formatOption(theme)}</option>
+		{/each}
+	</select>
+{/if}
