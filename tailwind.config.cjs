@@ -1,3 +1,5 @@
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -19,6 +21,9 @@ const config = {
 				highlightLow: 'hsl(var(--color-highlight-low) / <alpha-value>)',
 				highlightMed: 'hsl(var(--color-highlight-med) / <alpha-value>)',
 				highlightHigh: 'hsl(var(--color-highlight-high) / <alpha-value>)'
+			},
+			fontFamily: {
+				heading: ['Pier Sans', ...fontFamily.sans]
 			},
 			borderColor: {
 				DEFAULT: 'hsl(var(--color-muted) / 0.2)'

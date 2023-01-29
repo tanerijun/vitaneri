@@ -2,4 +2,12 @@
 	import '../app.postcss';
 </script>
 
-<slot />
+<div id="site-container">
+	<header>
+		<nav>Test</nav>
+	</header>
+
+	<main>
+		<slot />
+	</main>
+</div>

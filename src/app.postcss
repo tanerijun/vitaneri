@@ -1,4 +1,11 @@
-/* Write your global styles here, in PostCSS syntax */
+@font-face {
+	font-family: 'Pier Sans';
+	font-display: fallback;
+	font-style: normal;
+	font-weight: bold;
+	src: url('/fonts/PierSans-Bold.otf') format('opentype');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,6 +13,31 @@
 @layer base {
 	* {
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	}
+
+	::selection {
+		background-color: theme(colors.muted / 20%);
+	}
+
+	html {
+		scroll-behaviour: smooth;
+
+		@media (prefers-reduced-motion: reduce) {
+			scroll-behaviour: auto;
+		}
+	}
+
+	body {
+		@apply bg-base text-text antialiased;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-heading;
 	}
 
 	[data-theme='dawn'] {
