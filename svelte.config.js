@@ -19,7 +19,10 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		alias: {
+			$posts: './posts'
+		}
 	}
 };
 
