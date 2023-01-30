@@ -1,4 +1,6 @@
-interface Metadata {
+import type { posts } from '$lib/data/posts';
+
+interface MarkdownMetadata {
 	title: string;
 	ogImage?: string;
 	description?: string;
@@ -16,7 +18,9 @@ interface Post {
 			html: string;
 		};
 	};
-	metadata: Metadata;
+	metadata: MarkdownMetadata;
 }
 
-export type { Metadata, Post };
+type PostMetadata = typeof posts[number];
+
+export type { MarkdownMetadata, Post, PostMetadata };
