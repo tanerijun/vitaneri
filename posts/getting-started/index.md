@@ -1,6 +1,7 @@
 ---
 title: Getting Started
-date: 2022-12-14
+datetime: 2022-12-14
+slug: getting-started
 ---
 
 Thanks for checking out my blog template. It's based on the blog I built for my own [website](https://mattjennings.io) and I hope this is a good starting point for you to start yours.
@@ -74,7 +75,7 @@ If you wish to change the theme of your code blocks, you can edit the `src/prism
 
 ```javascript
 function helloWorld() {
-  return 'Hello World'
+	return 'Hello World';
 }
 ```
 
