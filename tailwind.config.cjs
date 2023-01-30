@@ -23,6 +23,7 @@ const config = {
 				highlightHigh: 'hsl(var(--color-highlight-high) / <alpha-value>)'
 			},
 			fontFamily: {
+				sans: ['Inter', ...fontFamily.sans],
 				heading: ['Pier Sans', ...fontFamily.sans]
 			},
 			borderColor: {

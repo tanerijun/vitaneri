@@ -1,9 +1,18 @@
 @font-face {
 	font-family: 'Pier Sans';
-	font-display: fallback;
+	font-display: swap;
 	font-style: normal;
 	font-weight: bold;
 	src: url('/fonts/PierSans-Bold.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/inter-v12-latin-regular.woff2') format('woff2'),
+		url('/fonts/inter-v12-latin-regular.woff') format('woff');
 }
 
 @tailwind base;
