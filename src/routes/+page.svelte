@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte';
 	import PostsList from '$lib/components/PostsList.svelte';
 	import type { PageServerData } from './$types';
 
@@ -11,9 +12,11 @@
 <section>Hero placeholder</section>
 
 <section>
-	<header class="flex justify-between">
+	<header class="mb-8 flex items-center justify-between">
 		<h2>Recently Published</h2>
-		<a href="/posts"> View All (-> icon placeholder) </a>
+		<a href="/posts" class="flex items-center gap-1 text-sm">
+			View All <ArrowRightIcon class="h-4 w-4" /></a
+		>
 	</header>
 	<PostsList posts={data.posts} />
 </section>

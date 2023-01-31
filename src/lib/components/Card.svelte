@@ -13,7 +13,7 @@
 		<div>
 			{#if href}
 				<div
-					class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-red-700 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"
+					class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-overlay opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"
 				/>
 				<a {href}>
 					<span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl" />
