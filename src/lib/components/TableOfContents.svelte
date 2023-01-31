@@ -54,7 +54,7 @@
 
 <Card>
 	<slot slot="description">
-		<h2 class="mb-2 pl-1 text-lg text-muted">Table of Contents</h2>
+		<h2 class="text-md text-md mb-2 pl-[5px] text-muted">ON THIS PAGE</h2>
 		<ul class="flex flex-col gap-2">
 			{#each headings as heading}
 				<li
