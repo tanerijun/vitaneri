@@ -1,5 +1,7 @@
-import remarkHeadings from '@vcarl/remark-headings';
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
+import remarkHeadings from '@vcarl/remark-headings';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
@@ -9,7 +11,15 @@ const config = defineConfig({
 	},
 
 	remarkPlugins: [headings],
-	rehypePlugins: []
+	rehypePlugins: [
+		rehypeSlug,
+		[
+			rehypeAutolinkHeadings,
+			{
+				behavior: 'wrap'
+			}
+		]
+	]
 });
 
 export default config;
