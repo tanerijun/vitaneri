@@ -54,10 +54,11 @@
 
 <Card>
 	<slot slot="description">
+		<h2 class="mb-2 pl-1 text-lg text-muted">Table of Contents</h2>
 		<ul class="flex flex-col gap-2">
 			{#each headings as heading}
 				<li
-					class="heading border-rose pl-2 text-muted transition-colors hover:text-text"
+					class="heading border-rose pl-2 text-muted transition-none hover:text-text"
 					class:active={activeHeading === heading}
 					style={`--depth: ${
 						// Consider h1 and h2 at the same depth, as h1 will only be used for page title
