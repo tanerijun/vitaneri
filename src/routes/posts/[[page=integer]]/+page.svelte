@@ -12,6 +12,21 @@
 
 <svelte:head>
 	<title>Posts | Vitaneri</title>
+	<meta name="description" content="All blog posts in Vitaneri" />
+	<meta name="author" content="Vincent Taneri" />
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:title" content="Posts | Vitaneri" />
+	<meta property="og:description" content="All blog posts in Vitaneri" />
+	<meta property="og:url" content="https://vitaneri.com/posts" />
+	<meta property="og:image" content="https://vitaneri.com/vitaneri-og.png" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://vitaneri.com/posts" />
+	<meta property="twitter:title" content="Posts | Vitaneri" />
+	<meta property="twitter:description" content="All blog posts in Vitaneri" />
+	<meta property="twitter:image" content="https://vitaneri.com/vitaneri-og.png" />
 </svelte:head>
 
 <div class="flex flex-grow flex-col">
