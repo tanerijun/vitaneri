@@ -10,6 +10,11 @@ interface MarkdownMetadata {
 	featured?: boolean;
 	draft?: boolean;
 	tags: string[];
+	headings: {
+		depth: number;
+		value: string;
+		id: string;
+	}[];
 }
 
 interface Post {
@@ -21,6 +26,6 @@ interface Post {
 	metadata: MarkdownMetadata;
 }
 
-type PostMetadata = typeof posts[number];
+type PostMetadata = (typeof posts)[number];
 
 export type { MarkdownMetadata, Post, PostMetadata };

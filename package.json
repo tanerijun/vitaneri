@@ -17,6 +17,7 @@
 		"@sveltejs/kit": "^1.0.0",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
+		"@vcarl/remark-headings": "^0.1.0",
 		"autoprefixer": "^10.4.7",
 		"date-fns": "^2.29.3",
 		"eslint": "^8.28.0",
