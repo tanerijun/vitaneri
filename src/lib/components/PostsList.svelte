@@ -9,6 +9,8 @@
 	{#each posts as post (post.slug)}
 		<article>
 			<PostDate class="hidden flex-col text-sm md:flex" {post} />
+
+			<div />
 		</article>
 	{/each}
 </div>
