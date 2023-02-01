@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import ArrowLeftIcon from '$lib/components/ArrowLeftIcon.svelte';
 	import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte';
+	import PageMeta from '$lib/components/PageMeta.svelte';
 	import PostsList from '$lib/components/PostsList.svelte';
 	import type { PageData } from './$types';
 
@@ -10,24 +12,11 @@
 	$: hasNextPage = data.posts[data.posts.length - 1]?.previous;
 </script>
 
-<svelte:head>
-	<title>Posts | Vitaneri</title>
-	<meta name="description" content="All blog posts in Vitaneri" />
-	<meta name="author" content="Vincent Taneri" />
-
-	<!-- Open Graph / Facebook -->
-	<meta property="og:title" content="Posts | Vitaneri" />
-	<meta property="og:description" content="All blog posts in Vitaneri" />
-	<meta property="og:url" content="https://vitaneri.com/posts" />
-	<meta property="og:image" content="https://vitaneri.com/vitaneri-og.png" />
-
-	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:url" content="https://vitaneri.com/posts" />
-	<meta property="twitter:title" content="Posts | Vitaneri" />
-	<meta property="twitter:description" content="All blog posts in Vitaneri" />
-	<meta property="twitter:image" content="https://vitaneri.com/vitaneri-og.png" />
-</svelte:head>
+<PageMeta
+	title="Posts | Vitaneri"
+	description="List of blog posts by Vitaneri"
+	route={$page.url.pathname}
+/>
 
 <div class="flex flex-grow flex-col">
 	<header class="pt-4">

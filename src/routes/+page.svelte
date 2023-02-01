@@ -1,29 +1,18 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte';
+	import PageMeta from '$lib/components/PageMeta.svelte';
 	import PostsList from '$lib/components/PostsList.svelte';
 	import type { PageServerData } from './$types';
 
 	export let data: PageServerData;
 </script>
 
-<svelte:head>
-	<title>Vitaneri</title>
-	<meta name="description" content="Personal website by Vincent Taneri" />
-	<meta name="author" content="Vincent Taneri" />
-
-	<!-- Open Graph / Facebook -->
-	<meta property="og:title" content="Vitaneri" />
-	<meta property="og:description" content="Personal website by Vincent Taneri" />
-	<meta property="og:url" content="https://vitaneri.com" />
-	<meta property="og:image" content="https://vitaneri.com/vitaneri-og.png" />
-
-	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:url" content="https://vitaneri.com" />
-	<meta property="twitter:title" content="Vitaneri" />
-	<meta property="twitter:description" content="Personal website by Vincent Taneri" />
-	<meta property="twitter:image" content="https://vitaneri.com/vitaneri-og.png" />
-</svelte:head>
+<PageMeta
+	title="Vitaneri"
+	description="Personal website by Vincent Taneri"
+	route={$page.url.pathname}
+/>
 
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>

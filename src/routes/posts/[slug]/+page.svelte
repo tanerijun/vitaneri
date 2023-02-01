@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+	import PageMeta from '$lib/components/PageMeta.svelte';
 	import { afterNavigate } from '$app/navigation';
 	import ArrowLeftIcon from '$lib/components/ArrowLeftIcon.svelte';
 	import PostDate from '$lib/components/PostDate.svelte';
@@ -25,27 +27,11 @@
 	}
 </script>
 
-<svelte:head>
-	<title>{data.post.title} | Vitaneri</title>
-	<meta name="title" content={data.post.title + ' | Vitaneri'} />
-	<meta name="description" content={data.post.preview.text} />
-	<meta name="author" content={data.post.author} />
-
-	<!-- Facebook Meta Tags -->
-	<meta property="og:url" content={url} />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content={data.post.title} />
-	<meta property="og:description" content={data.post.preview.text} />
-	<meta property="og:image" content="https://vitaneri.com/vitaneri-og.png" />
-
-	<!-- Twitter Meta Tags -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta property="twitter:domain" content="https://vitaneri.com" />
-	<meta property="twitter:url" content={url} />
-	<meta name="twitter:title" content={data.post.title} />
-	<meta name="twitter:description" content={data.post.preview.text} />
-	<meta name="twitter:image" content="https://vitaneri.com/vitaneri-og.png" />
-</svelte:head>
+<PageMeta
+	title={`${data.post.title} | Vitaneri`}
+	description={data.post.preview.text}
+	route={$page.url.pathname}
+/>
 
 <!-- 42rem on large screen matches max-w-2xl on smaller screen-->
 <div class="mx-auto grid max-w-2xl grid-cols-1 lg:max-w-none lg:grid-cols-[1fr_42rem_1fr]">
