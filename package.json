@@ -25,6 +25,7 @@
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"mdsvex": "^0.10.6",
+		"mdsvex-relative-images": "^1.0.3",
 		"node-html-parser": "^6.1.4",
 		"postcss": "^8.4.14",
 		"postcss-load-config": "^4.0.1",

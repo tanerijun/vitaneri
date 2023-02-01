@@ -2,6 +2,7 @@ import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 import remarkHeadings from '@vcarl/remark-headings';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import relativeImages from 'mdsvex-relative-images';
 
 const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
@@ -10,7 +11,7 @@ const config = defineConfig({
 		dashes: 'oldschool'
 	},
 
-	remarkPlugins: [headings],
+	remarkPlugins: [headings, relativeImages],
 	rehypePlugins: [
 		rehypeSlug,
 		[
