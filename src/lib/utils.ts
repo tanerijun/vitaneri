@@ -8,3 +8,7 @@ export function paginate<T>(
 
 	return data;
 }
+
+export function capitalizeFirstLetterOfWord(word: string) {
+	return word.charAt(0).toUpperCase() + word.slice(1);
+}

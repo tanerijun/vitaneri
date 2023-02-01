@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import { capitalizeFirstLetterOfWord } from '$lib/utils';
 
 	const themes = ['dawn', 'twilight', 'dusk'] as const;
 	type SiteTheme = (typeof themes)[number];
@@ -36,18 +37,12 @@
 			siteTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dusk' : 'dawn';
 		}
 	}
-
-	function formatOption(option: string) {
-		if (option.length >= 3) {
-			return option[0].toUpperCase() + option.slice(1);
-		}
-	}
 </script>
 
 {#if siteTheme}
 	<select id="site-theme" value={siteTheme} on:change={handleSiteThemeChange}>
 		{#each themes as theme}
-			<option value={theme}>{formatOption(theme)}</option>
+			<option value={theme}>{capitalizeFirstLetterOfWord(theme)}</option>
 		{/each}
 	</select>
 {/if}

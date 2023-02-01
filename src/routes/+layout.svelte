@@ -1,7 +1,10 @@
 <script>
 	import { page } from '$app/stores';
 	import ThemeToggler from '$lib/components/ThemeToggler.svelte';
+	import { capitalizeFirstLetterOfWord } from '$lib/utils';
 	import '../app.postcss';
+
+	const routes = ['posts', 'projects', 'about'];
 </script>
 
 <div id="site-container" class="container mx-auto">
@@ -13,18 +16,24 @@
 		>
 			Skip to content
 		</a>
-		<div class="flex justify-between py-4">
+		<div class="flex items-center justify-between border border-iris py-4">
 			<div id="site-logo">
 				<a href="/">
-					<h1>Vitaneri</h1>
+					<h1 class="text-3xl tracking-wide">Vitaneri</h1>
 				</a>
 			</div>
 			<nav>
 				<ul class="flex space-x-4">
+					{#each routes as route (route)}
+						<li>
+							<a class:text-text={$page.url.pathname.includes(route)} href={`/${route}`}>
+								{capitalizeFirstLetterOfWord(route)}
+							</a>
+						</li>
+					{/each}
+
 					<li>
-						<a class={$page.url.pathname.includes('posts') ? 'text-text' : null} href="/posts">
-							Posts
-						</a>
+						<a class:text-text={$page.url.pathname.includes('posts')} href="/posts"> Posts </a>
 					</li>
 					<li>
 						<a
