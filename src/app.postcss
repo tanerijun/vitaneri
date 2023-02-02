@@ -24,10 +24,6 @@
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 	}
 
-	::selection {
-		background-color: theme(colors.muted / 20%);
-	}
-
 	html {
 		scroll-behavior: smooth;
 
@@ -37,7 +33,7 @@
 	}
 
 	body {
-		@apply bg-base text-muted antialiased;
+		@apply bg-base text-muted antialiased selection:bg-highlightMed;
 	}
 
 	h1,
