@@ -1,30 +1,23 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { capitalizeFirstLetterOfWord } from '$lib/utils';
 
 	const themes = ['dawn', 'twilight', 'dusk'] as const;
 	type SiteTheme = (typeof themes)[number];
 
 	let siteTheme: SiteTheme;
+	$: currentThemeIndex = themes.findIndex((theme) => theme === siteTheme);
 
-	function handleSiteThemeChange(e: Event) {
-		const target = e.target as HTMLSelectElement;
-		const themeValue = target.value;
+	function handleSiteThemeChange() {
+		const nextTheme =
+			currentThemeIndex === themes.length - 1 ? themes[0] : themes[currentThemeIndex + 1];
 
-		switch (themeValue) {
-			case 'dawn':
-				document.documentElement.setAttribute('data-theme', 'dawn');
-				localStorage.setItem('vitaneri:theme', 'dawn');
-				break;
-			case 'twilight':
-				document.documentElement.setAttribute('data-theme', 'twilight');
-				localStorage.setItem('vitaneri:theme', 'twilight');
-				break;
-			case 'dusk':
-				document.documentElement.setAttribute('data-theme', 'dusk');
-				localStorage.setItem('vitaneri:theme', 'dusk');
-				break;
-		}
+		changeTheme(nextTheme);
+	}
+
+	function changeTheme(theme: SiteTheme) {
+		document.documentElement.setAttribute('data-theme', theme);
+		localStorage.setItem('vitaneri:theme', theme);
+		siteTheme = theme;
 	}
 
 	if (browser) {
@@ -40,9 +33,5 @@
 </script>
 
 {#if siteTheme}
-	<select id="site-theme" value={siteTheme} on:change={handleSiteThemeChange}>
-		{#each themes as theme}
-			<option value={theme}>{capitalizeFirstLetterOfWord(theme)}</option>
-		{/each}
-	</select>
+	<button on:click={handleSiteThemeChange}>{siteTheme}</button>
 {/if}
