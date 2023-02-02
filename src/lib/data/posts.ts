@@ -9,7 +9,7 @@ if (browser) {
 }
 
 // Get all posts' metadata
-export const posts = Object.entries(import.meta.glob(`/posts/**/*.md`, { eager: true }))
+export const posts = Object.entries(import.meta.glob(`/posts/*/*.md`, { eager: true }))
 	.map(([, obj]) => {
 		const post = obj as Post;
 		const html = parse(post.default.render().html);
