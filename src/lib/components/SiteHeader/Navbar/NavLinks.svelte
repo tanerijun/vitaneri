@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
 	import { capitalizeFirstLetterOfWord } from '$lib/utils';
 	import { onMount } from 'svelte';
@@ -6,24 +7,35 @@
 	let routes = ['posts', 'projects', 'about'];
 
 	let marker: HTMLDivElement;
-	let activeLink: HTMLElement;
+	let activeLink: HTMLElement | null | undefined;
 
-	$: if (activeLink) updateMarkerPosition(activeLink);
+	$: $page, updateActiveLink();
+	$: activeLink, updateMarkerPosition();
 
 	onMount(() => {
-		const link = $page.url.pathname.split('/')[1];
-		const linkElement = document.getElementById(link);
-		if (linkElement) activeLink = linkElement;
+		// Call updateActiveLink again afterMount
+		// because beforeMount, the `linkElement` in updateActiveLink will return null
+		// even though the `link` is valid.
+		updateActiveLink();
 	});
 
-	function updateMarkerPosition() {
-		marker.style.left = activeLink.offsetLeft + 'px';
-		marker.style.width = activeLink.offsetWidth + 'px';
+	// Either set activeLink to a mark-able linkElement or null
+	function updateActiveLink() {
+		if (!browser) return;
+		const link = $page.url.pathname.split('/')[1];
+		const linkElement = document.getElementById(link);
+		activeLink = linkElement;
 	}
 
-	function handleLinkClick(e: Event) {
-		const target = e.target as HTMLElement;
-		activeLink = target;
+	function updateMarkerPosition() {
+		if (!marker) return; // return early if marker haven't been rendered
+		if (activeLink) {
+			marker.style.left = activeLink.offsetLeft + 'px';
+			marker.style.width = activeLink.offsetWidth + 'px';
+			return;
+		}
+		marker.style.left = 0 + 'px';
+		marker.style.width = 0 + 'px';
 	}
 </script>
 
@@ -40,7 +52,6 @@
 			class:text-text={$page.url.pathname.includes(route)}
 			class="relative hover:text-text"
 			href={`/${route}`}
-			on:click={handleLinkClick}
 		>
 			{capitalizeFirstLetterOfWord(route)}
 		</a>
