@@ -1,5 +1,9 @@
 <div id="site-logo">
 	<a href="/">
-		<h1 class="select-none text-3xl tracking-wide">Vitaneri</h1>
+		<span
+			class="animate-mesh-background-slow select-none bg-gradient-to-r from-text to-iris bg-clip-text font-heading text-4xl font-bold text-transparent hover:animate-mesh-background-fast"
+		>
+			Vitaneri
+		</span>
 	</a>
 </div>

@@ -35,6 +35,22 @@ const config = {
 			boxShadow: {
 				DEFAULT: '0 10px 30px -20px rgba(87, 82, 121, 0.2)',
 				lg: '0 10px 40px -15px rgba(87, 82, 121, 0.2)'
+			},
+			animation: {
+				'mesh-background-slow': 'mesh-background 6s ease infinite',
+				'mesh-background-fast': 'mesh-background 3s ease infinite'
+			},
+			keyframes: {
+				'mesh-background': {
+					'0%, 100%': {
+						'background-size': '200% 200%',
+						'background-position': 'left center'
+					},
+					'50%': {
+						'background-size': '200% 200%',
+						'background-position': 'right center'
+					}
+				}
 			}
 		}
 	},

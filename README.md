@@ -9,3 +9,6 @@
 - [ ] Implement side-wide search
 - [ ] rss, sitemap
 - [ ] Make sure every decorative line like those in NavLinks and TOC is rounded (border-radius)
+- [ ] Show post's tags on blog post
+- [ ] Make sure the HTML structure of each page is correct
+- [ ] Run site through accessibility checker
