@@ -20,6 +20,10 @@
 @tailwind utilities;
 
 @layer base {
+	* {
+		@apply transition-colors;
+	}
+
 	html {
 		scroll-behavior: smooth;
 
@@ -29,7 +33,7 @@
 	}
 
 	body {
-		@apply bg-base text-muted antialiased transition-colors selection:bg-highlightMed;
+		@apply bg-base text-muted antialiased selection:bg-highlightMed;
 	}
 
 	h1,
