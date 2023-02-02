@@ -7,7 +7,8 @@
 <div class="flex items-center justify-between border border-love py-4">
 	<SiteLogo />
 	<nav>
-		<ul class="flex space-x-4 border border-teal-100">
+		<!-- position: relative is necessary for the marker in NavLinks -->
+		<ul class="relative flex space-x-8">
 			<NavLinks />
 			<li>
 				<ThemeToggler />
