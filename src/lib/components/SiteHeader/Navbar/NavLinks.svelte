@@ -16,7 +16,7 @@
 		if (linkElement) activeLink = linkElement;
 	});
 
-	function updateMarkerPosition(elem: HTMLElement) {
+	function updateMarkerPosition() {
 		marker.style.left = activeLink.offsetLeft + 'px';
 		marker.style.width = activeLink.offsetWidth + 'px';
 	}
