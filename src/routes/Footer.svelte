@@ -9,7 +9,7 @@
 </script>
 
 <footer class="mt-8 flex flex-col-reverse items-center justify-between py-6 md:flex-row">
-	<p class="text-sm md:text-base">
+	<p class="font-heading text-sm">
 		&#169; Copyright 2022-{new Date().getFullYear()} Vincent Taneri
 	</p>
 

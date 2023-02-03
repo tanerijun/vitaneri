@@ -19,10 +19,13 @@
 
 <section>Hero placeholder</section>
 
-<section class="max-w-2xl">
+<section>
 	<header class="mb-8 flex items-center justify-between">
 		<h2 class="text-lg">Recently Published</h2>
-		<a href="/posts" class="hover-underline-animation flex items-center gap-1 text-sm text-iris">
+		<a
+			href="/posts"
+			class="hover-underline-animation flex items-center gap-1 font-heading text-sm text-iris"
+		>
 			View All <ArrowRightIcon class="h-4 w-4" />
 		</a>
 	</header>
