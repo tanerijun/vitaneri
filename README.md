@@ -12,3 +12,4 @@
 - [ ] Show post's tags on blog post
 - [ ] Make sure the HTML structure of each page is correct
 - [ ] Run site through accessibility checker
+- [ ] Consider using [vscode icons](https://icones.js.org/collection/vscode-icons) for tools in about section
