@@ -10,6 +10,11 @@
 	<slot slot="eyebrow" name="eyebrow" />
 	<slot slot="title">{post.title}</slot>
 	<div slot="description">
+		<!-- 
+			In the case where the "description" is provided in frontmatter,
+			`post.preview.html` will equal `post.preview.text` because,
+			frontmatter will be parsed by mdsvex as plain text, unlike markdown.
+		-->
 		{#if post.preview.html === post.preview.text}
 			<p>{post.preview.text}</p>
 		{:else}
@@ -17,7 +22,7 @@
 		{/if}
 	</div>
 	<div slot="actions">
-		<div class="flex items-center">
+		<div class="flex items-center text-iris">
 			<span class="text-sm">Read</span>
 			<ArrowRightIcon class="ml-1 h-4 w-4" />
 		</div>

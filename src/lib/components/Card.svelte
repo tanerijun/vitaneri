@@ -10,13 +10,19 @@
 	<slot name="eyebrow" />
 
 	{#if $$slots.title}
-		<div>
+		<div class="font-heading text-lg text-text">
 			{#if href}
+				<!-- Hover animation for card -->
 				<div
-					class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-overlay opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"
+					class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 rounded-2xl bg-highlightLow opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6"
 				/>
 				<a {href}>
-					<span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl" />
+					<!-- 
+						This span make sure the card feels like a card when dragged or clicked,
+						It safe user the trouble of clicking on title to go to the link.
+						The user can now click anywhere on the card to go to the link.
+					-->
+					<span class="absolute -inset-y-6 -inset-x-4 z-20 rounded-2xl sm:-inset-x-6" />
 					<span class="relative z-10">
 						<slot name="title" />
 					</span>
@@ -28,7 +34,7 @@
 	{/if}
 
 	{#if $$slots.description}
-		<div class="relative z-10 flex-1 text-sm" class:mt-2={!!$$slots.title}>
+		<div class="relative z-10 flex-1 text-sm text-subtle" class:mt-2={!!$$slots.title}>
 			<slot name="description" />
 		</div>
 	{/if}
