@@ -7,6 +7,7 @@
 
 <header class="mb-8">
 	<!-- Skip To Content -->
+	<!-- Normally hidden, useful for screen reader or keyboard user -->
 	<a
 		id="skip-to-content"
 		href="#main-content"

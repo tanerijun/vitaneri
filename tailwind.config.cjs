@@ -6,7 +6,7 @@ const config = {
 	theme: {
 		extend: {
 			colors: {
-				base: 'hsl(var(--color-base) / <alpha-value>)',
+				basis: 'hsl(var(--color-base) / <alpha-value>)',
 				surface: 'hsl(var(--color-surface) / <alpha-value>)',
 				overlay: 'hsl(var(--color-overlay) / <alpha-value>)',
 				muted: 'hsl(var(--color-muted) / <alpha-value>)',
