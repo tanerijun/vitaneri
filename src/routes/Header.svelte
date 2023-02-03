@@ -3,6 +3,7 @@
 	import NavbarLinks from './NavbarLinks.svelte';
 	import ThemeToggler from './ThemeToggler.svelte';
 	import Search from './Search.svelte';
+	import MobileMenu from './MobileMenu.svelte';
 </script>
 
 <header class="mb-8">
@@ -27,6 +28,7 @@
 					<div class="flex items-center space-x-3">
 						<ThemeToggler />
 						<Search />
+						<MobileMenu />
 					</div>
 				</li>
 			</ul>
