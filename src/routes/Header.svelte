@@ -1,9 +1,15 @@
-<script>
+<script lang="ts">
 	import SiteLogo from './SiteLogo.svelte';
 	import NavbarLinks from './NavbarLinks.svelte';
 	import ThemeToggler from './ThemeToggler.svelte';
 	import Search from './Search.svelte';
 	import MobileMenu from './MobileMenu.svelte';
+
+	let showMobileNavigation = false;
+
+	function handleMenuChange(event: CustomEvent<{ isOpen: boolean }>) {
+		showMobileNavigation = event.detail.isOpen;
+	}
 </script>
 
 <header class="mb-8">
@@ -21,15 +27,23 @@
 	<div class="flex items-center justify-between py-6">
 		<SiteLogo />
 		<div class="flex space-x-6">
+			<!-- Navigation component for wide screen -->
 			<!-- position: relative is necessary for the marker in NavLinks -->
-			<nav class="relative flex items-center space-x-6">
+			<nav class="relative hidden items-center space-x-6 md:flex">
 				<NavbarLinks />
 			</nav>
 			<div class="flex items-center space-x-3">
 				<ThemeToggler />
 				<Search />
-				<MobileMenu />
+				<MobileMenu class="md:hidden" on:change={handleMenuChange} />
 			</div>
 		</div>
 	</div>
+	<!-- Navigation component for mobile -->
+	{#if showMobileNavigation}
+		<!-- TODO animate this nav -->
+		<nav class="relative flex items-center justify-center space-x-6 border border-love md:hidden">
+			<NavbarLinks />
+		</nav>
+	{/if}
 </header>
