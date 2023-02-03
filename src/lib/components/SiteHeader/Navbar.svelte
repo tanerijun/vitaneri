@@ -8,7 +8,7 @@
 	<SiteLogo />
 	<nav>
 		<!-- position: relative is necessary for the marker in NavLinks -->
-		<ul class="relative flex space-x-8">
+		<ul class="relative flex items-center justify-start space-x-8 border border-red-200">
 			<NavLinks />
 			<li>
 				<ThemeToggler />
