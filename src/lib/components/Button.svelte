@@ -8,7 +8,7 @@
 <svelte:element
 	this={as}
 	on:click
-	class={`flex items-center justify-center rounded-lg p-2 transition-colors hover:bg-highlightLow hover:text-text ${_class}`}
+	class={`flex items-center justify-center rounded-lg border border-muted bg-highlightLow p-2 transition-colors hover:border-subtle hover:text-text ${_class}`}
 >
 	<slot />
 </svelte:element>
