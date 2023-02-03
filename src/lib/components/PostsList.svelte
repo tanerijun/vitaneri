@@ -6,10 +6,10 @@
 	export let posts: PostMetadata[];
 </script>
 
-<div>
+<div class="flex flex-col gap-16 md:border-l md:border-muted md:pl-6">
 	{#each posts as post (post.slug)}
-		<article>
-			<PostDate class="hidden flex-col text-sm md:flex" {post} />
+		<article class="grid grid-cols-4 items-start gap-8">
+			<PostDate class="m-[2px] hidden flex-col text-sm md:flex" {post} />
 			<div class="col-span-4 md:col-span-3">
 				<PostPreview {post}>
 					<slot slot="eyebrow">

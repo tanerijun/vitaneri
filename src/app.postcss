@@ -102,3 +102,9 @@
 		--color-highlight-high: 248deg 13% 36%;
 	}
 }
+
+@layer utilities {
+	.hover-underline-animation {
+		@apply relative after:absolute after:top-6 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:rounded-full after:bg-iris after:transition-transform after:content-[''] hover:after:origin-bottom-left hover:after:scale-x-100;
+	}
+}
