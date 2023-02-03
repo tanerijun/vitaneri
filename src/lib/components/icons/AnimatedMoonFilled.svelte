@@ -2,6 +2,11 @@
 	export let size: number = 18;
 </script>
 
+<!-- @component
+line-md:sunny-filled-loop-to-moon-filled-loop-transition
+
+Adjust the size using the size props
+-->
 <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24"
 	><g
 		fill="none"

@@ -2,6 +2,11 @@
 	export let size: number = 18;
 </script>
 
+<!-- @component
+line-md:sunny-filled-loop
+
+Adjust the size using the size props
+-->
 <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24"
 	><g stroke="currentColor" stroke-linecap="round" stroke-width="2"
 		><path

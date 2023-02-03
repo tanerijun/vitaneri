@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import ArrowLeftIcon from '$lib/components/ArrowLeftIcon.svelte';
-	import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte';
+	import ArrowLeftIcon from '$lib/components/icons/ArrowLeftIcon.svelte';
+	import ArrowRightIcon from '$lib/components/icons/ArrowRightIcon.svelte';
 	import PageMeta from '$lib/components/PageMeta.svelte';
 	import PostsList from '$lib/components/PostsList.svelte';
 	import type { PageData } from './$types';

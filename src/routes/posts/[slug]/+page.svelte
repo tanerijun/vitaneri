@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 	import PageMeta from '$lib/components/PageMeta.svelte';
 	import { afterNavigate } from '$app/navigation';
-	import ArrowLeftIcon from '$lib/components/ArrowLeftIcon.svelte';
+	import ArrowLeftIcon from '$lib/components/icons/ArrowLeftIcon.svelte';
 	import PostDate from '$lib/components/PostDate.svelte';
 	import TableOfContents from '$lib/components/TableOfContents.svelte';
 	import type { PageData } from './$types';

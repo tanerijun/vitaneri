@@ -2,6 +2,11 @@
 	export let size: number = 18;
 </script>
 
+<!-- @component
+jam:search
+
+Adjust the size using the size props
+-->
 <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="-2.5 -2.5 24 24"
 	><path
 		fill="currentColor"

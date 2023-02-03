@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PostMetadata } from '$lib/types';
 	import Card from './Card.svelte';
-	import ArrowRightIcon from './ArrowRightIcon.svelte';
+	import ArrowRightIcon from './icons/ArrowRightIcon.svelte';
 
 	export let post: PostMetadata;
 </script>
