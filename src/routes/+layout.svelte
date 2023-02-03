@@ -1,11 +1,11 @@
 <script>
 	import '../app.postcss';
 	import Footer from './Footer.svelte';
-	import SiteHeader from '$lib/components/SiteHeader.svelte';
+	import Header from './Header.svelte';
 </script>
 
 <div id="site-container" class="container mx-auto">
-	<SiteHeader />
+	<Header />
 
 	<main id="main-content" class="min-h-screen">
 		<slot />
