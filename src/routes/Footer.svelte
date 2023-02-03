@@ -3,11 +3,12 @@
 	import EnvelopeIcon from '$lib/components/icons/EnvelopeIcon.svelte';
 	import GithubIcon from '$lib/components/icons/GithubIcon.svelte';
 	import LinkedInIcon from '$lib/components/icons/LinkedInIcon.svelte';
+	import RssIcon from '$lib/components/icons/RSSIcon.svelte';
 	import TwitterIcon from '$lib/components/icons/TwitterIcon.svelte';
 	import SocialLink from './SocialLink.svelte';
 </script>
 
-<footer class="flex items-center justify-between py-4">
+<footer class="mt-8 flex items-center justify-between py-6">
 	<p>&#169; Copyright 2022-{new Date().getFullYear()} Vincent Taneri</p>
 
 	<!-- Social links -->
@@ -23,6 +24,9 @@
 		</SocialLink>
 		<SocialLink href="https://www.linkedin.com/in/vincent-taneri/" title="Connect on LinkedIn">
 			<LinkedInIcon size={22} />
+		</SocialLink>
+		<SocialLink href="https://vitaneri.com/rss.xml" title="View RSS URL">
+			<RssIcon size={22} />
 		</SocialLink>
 	</div>
 </footer>

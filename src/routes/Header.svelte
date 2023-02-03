@@ -5,7 +5,7 @@
 	import Search from './Search.svelte';
 </script>
 
-<header>
+<header class="mb-8">
 	<!-- Skip To Content -->
 	<a
 		id="skip-to-content"
@@ -16,14 +16,14 @@
 	</a>
 
 	<!-- Navbar -->
-	<div class="flex items-center justify-between py-4">
+	<div class="flex items-center justify-between py-6">
 		<SiteLogo />
 		<nav>
 			<!-- position: relative is necessary for the marker in NavLinks -->
 			<ul class="relative flex items-center justify-start space-x-6">
 				<NavbarLinks />
 				<li>
-					<div class="flex items-center space-x-2">
+					<div class="flex items-center space-x-3">
 						<ThemeToggler />
 						<Search />
 					</div>
