@@ -20,16 +20,16 @@
 	<!-- Navbar -->
 	<div class="flex items-center justify-between py-6">
 		<SiteLogo />
-		<nav class="flex space-x-6">
+		<div class="flex space-x-6">
 			<!-- position: relative is necessary for the marker in NavLinks -->
-			<div class="relative flex items-center space-x-6">
+			<nav class="relative flex items-center space-x-6">
 				<NavbarLinks />
-			</div>
+			</nav>
 			<div class="flex items-center space-x-3">
 				<ThemeToggler />
 				<Search />
 				<MobileMenu />
 			</div>
-		</nav>
+		</div>
 	</div>
 </header>
