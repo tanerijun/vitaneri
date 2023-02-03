@@ -42,7 +42,7 @@
 <div
 	id="marker"
 	bind:this={marker}
-	class="absolute top-6 left-0 h-0.5 w-0 rounded-full bg-iris transition-all"
+	class="absolute top-8 left-0 h-0.5 w-0 rounded-full bg-iris transition-all"
 />
 {#each routes as route (route)}
 	<li>

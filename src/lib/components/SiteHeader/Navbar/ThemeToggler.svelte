@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import Button from '$lib/components/Button.svelte';
 	import AnimatedMoon from '$lib/components/icons/AnimatedMoon.svelte';
 	import AnimatedMoonAlt from '$lib/components/icons/AnimatedMoonAlt.svelte';
 	import AnimatedSun from '$lib/components/icons/AnimatedSun.svelte';
@@ -36,16 +37,13 @@
 </script>
 
 {#if siteTheme}
-	<button
-		on:click={handleSiteThemeChange}
-		class=" flex items-center justify-center border border-blue-400 transition-colors hover:text-text"
-	>
+	<Button on:click={handleSiteThemeChange}>
 		{#if siteTheme === 'dawn'}
-			<AnimatedSun size={24} />
+			<AnimatedSun />
 		{:else if siteTheme === 'twilight'}
-			<AnimatedMoonAlt size={24} />
+			<AnimatedMoonAlt />
 		{:else}
-			<AnimatedMoon size={24} />
+			<AnimatedMoon />
 		{/if}
-	</button>
+	</Button>
 {/if}
