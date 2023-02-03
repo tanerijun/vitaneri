@@ -45,15 +45,13 @@
 	class="absolute top-8 left-0 h-0.5 w-0 rounded-full bg-iris transition-all"
 />
 {#each routes as route (route)}
-	<li>
-		<!-- id attribute is necessary for marker to work -->
-		<a
-			id={`${route}`}
-			class:text-text={$page.url.pathname.includes(route)}
-			class="relative hover:text-text"
-			href={`/${route}`}
-		>
-			{capitalizeFirstLetterOfWord(route)}
-		</a>
-	</li>
+	<!-- id attribute is necessary for marker to work -->
+	<a
+		id={`${route}`}
+		class:text-text={$page.url.pathname.includes(route)}
+		class="relative hover:text-text"
+		href={`/${route}`}
+	>
+		{capitalizeFirstLetterOfWord(route)}
+	</a>
 {/each}
