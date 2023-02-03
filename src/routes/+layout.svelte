@@ -1,6 +1,6 @@
 <script>
 	import '../app.postcss';
-	import SiteFooter from '$lib/components/SiteFooter.svelte';
+	import Footer from './Footer.svelte';
 	import SiteHeader from '$lib/components/SiteHeader.svelte';
 </script>
 
@@ -11,5 +11,5 @@
 		<slot />
 	</main>
 
-	<SiteFooter />
+	<Footer />
 </div>
