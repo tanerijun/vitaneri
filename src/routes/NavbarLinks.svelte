@@ -34,13 +34,10 @@
 		if (activeLink) {
 			marker.style.left = activeLink.offsetLeft + 'px';
 			marker.style.width = activeLink.offsetWidth + 'px';
-			console.log(marker.style.left, marker.style.width, activeLink, 'A');
-			console.dir(activeLink);
 			return;
 		}
 		marker.style.left = 0 + 'px';
 		marker.style.width = 0 + 'px';
-		console.log(marker.style.left, marker.style.width, activeLink, 'B');
 	}
 </script>
 
