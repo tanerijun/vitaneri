@@ -44,7 +44,6 @@
 	</div>
 	<!-- Navigation component for mobile -->
 	{#if showMobileNavigation}
-		<!-- TODO animate this nav -->
 		<nav class="relative flex items-center justify-center space-x-6 md:hidden">
 			<NavbarLinks isMobile />
 		</nav>
