@@ -29,9 +29,12 @@
 		<div class="flex space-x-6">
 			<!-- Navigation component for wide screen -->
 			<!-- position: relative is necessary for the marker in NavLinks -->
-			<nav class="relative hidden items-center space-x-6 md:flex">
-				<NavbarLinks />
-			</nav>
+			{#if !showMobileNavigation}
+				<nav class="relative hidden items-center space-x-6 md:flex">
+					<NavbarLinks />
+				</nav>
+			{/if}
+
 			<div class="flex items-center space-x-3">
 				<ThemeToggler />
 				<Search />
@@ -42,8 +45,8 @@
 	<!-- Navigation component for mobile -->
 	{#if showMobileNavigation}
 		<!-- TODO animate this nav -->
-		<nav class="relative flex items-center justify-center space-x-6 border border-love md:hidden">
-			<NavbarLinks />
+		<nav class="relative flex items-center justify-center space-x-6 md:hidden">
+			<NavbarLinks isMobile />
 		</nav>
 	{/if}
 </header>

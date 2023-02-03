@@ -4,6 +4,8 @@
 	import { capitalizeFirstLetterOfWord } from '$lib/utils';
 	import { onMount } from 'svelte';
 
+	export let isMobile = false;
+
 	let routes = ['posts', 'projects', 'about'];
 
 	let marker: HTMLDivElement;
@@ -32,17 +34,22 @@
 		if (activeLink) {
 			marker.style.left = activeLink.offsetLeft + 'px';
 			marker.style.width = activeLink.offsetWidth + 'px';
+			console.log(marker.style.left, marker.style.width, activeLink, 'A');
+			console.dir(activeLink);
 			return;
 		}
 		marker.style.left = 0 + 'px';
 		marker.style.width = 0 + 'px';
+		console.log(marker.style.left, marker.style.width, activeLink, 'B');
 	}
 </script>
 
 <div
 	id="marker"
 	bind:this={marker}
-	class="absolute top-8 left-0 h-0.5 w-0 rounded-full bg-iris transition-all"
+	class={`absolute ${
+		isMobile ? 'top-7' : 'top-8'
+	} left-0 h-0.5 w-0 rounded-full bg-iris transition-all`}
 />
 {#each routes as route (route)}
 	<!-- id attribute is necessary for marker to work -->
