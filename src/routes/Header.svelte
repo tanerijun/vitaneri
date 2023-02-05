@@ -35,7 +35,7 @@
 				</nav>
 			{/if}
 
-			<div class="flex items-center space-x-3">
+			<div class="flex items-center space-x-2 md:space-x-3">
 				<ThemeToggler />
 				<Search />
 				<MobileMenu class="md:hidden" on:change={handleMenuChange} />
