@@ -12,7 +12,7 @@
 	}
 </script>
 
-<header class="mb-12 border-b border-highlightLow">
+<header class="mb-12 border-b border-muted/10">
 	<!-- Skip To Content -->
 	<!-- Normally hidden, useful for screen reader or keyboard user -->
 	<a

@@ -5,7 +5,7 @@
 
 <button
 	on:click
-	class={`flex items-center justify-center rounded-lg border border-muted bg-highlightLow p-2 transition-colors hover:border-subtle hover:text-text ${_class}`}
+	class={`flex items-center justify-center rounded-lg border border-muted/50 bg-highlightLow p-2 transition-colors hover:border-muted hover:text-text ${_class}`}
 >
 	<slot />
 </button>
