@@ -6,7 +6,7 @@
 	export let post: PostMetadata;
 </script>
 
-<Card href={`posts/${post.slug}`}>
+<Card href={`/posts/${post.slug}`}>
 	<slot slot="eyebrow" name="eyebrow" />
 	<slot slot="title">{post.title}</slot>
 	<div slot="description">
