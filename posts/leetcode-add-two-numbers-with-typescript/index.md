@@ -19,7 +19,7 @@ The title sounds so simple but it's actually much more challenging then it sound
 
 > A linked list is a sequence of nodes that contain two fields: an integer value and a link to the next node.
 
-![Example of a linked list](./images/linked-list.jpg)
+![Example of a linked list](./assets/linked-list.jpg)
 
 Now, let's go and solve the problem!
 
@@ -65,11 +65,11 @@ Constraints:
 
 This is a simple addition problem.
 
-![Normal addition](./images/normal-addition.jpeg)
+![Normal addition](./assets/normal-addition.jpeg)
 
 But in the linked list version, the numbers are sorted in reverse. That means we have to do our addition in reverse too.
 
-![Reversed addition](./images/reversed-addition.jpg)
+![Reversed addition](./assets/reversed-addition.jpg)
 
 ### Approach
 

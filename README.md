@@ -21,6 +21,7 @@
 - [ ] Test utils
 - [ ] e2e testing
 - [ ] Write a generator for blog post
+- [ ] Ability to highlight code using this kind of syntax js {3-5}
 
 ## Markdown Blog
 
@@ -40,3 +41,6 @@
   ![penguins](./assets/penguins.jpeg)
   ![penguins](./assets/penguins.mp4)
   ```
+- Highlight particular lines inside code block using curly braces.
+  - `js {1}` will highlight the first line.
+  - `js {3-5}` will highlight line 3 to 5.
