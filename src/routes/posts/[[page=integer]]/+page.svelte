@@ -19,10 +19,10 @@
 />
 
 <div class="flex flex-grow flex-col">
-	<header class="mt-4">
+	<header>
 		<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">My Tech Notebook</h1>
 		<p class="mt-6">
-			I like to think of my blog posts as notes for my future self, thence the name "My Tech
+			I like to think of this section as notes for my future self, thence the name "My Tech
 			Notebook".
 		</p>
 	</header>
@@ -32,7 +32,7 @@
 	</div>
 
 	<!-- pagination -->
-	<div class="mt-16 mb-8 flex items-center justify-between font-heading text-iris">
+	<div class="mt-16 flex items-center justify-between font-heading text-iris">
 		{#if !isFirstPage}
 			<a href={`/posts/${data.page - 1}`} class="hover-underline-animation flex items-center gap-2">
 				<ArrowLeftIcon class="h-4 w-4" />

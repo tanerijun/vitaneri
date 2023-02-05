@@ -7,7 +7,7 @@
 
 <LoadThemeScript />
 
-<div id="site-container" class="container mx-auto px-6">
+<div id="site-container" class="mx-auto max-w-3xl px-6">
 	<Header />
 
 	<main id="main-content" class="min-h-screen">

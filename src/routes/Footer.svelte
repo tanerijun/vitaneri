@@ -8,7 +8,9 @@
 	import SocialLink from './SocialLink.svelte';
 </script>
 
-<footer class="mt-8 flex flex-col-reverse items-center justify-between py-6 md:flex-row">
+<footer
+	class="mt-12 flex flex-col-reverse items-center justify-between gap-2 border-t border-highlightLow py-6 md:flex-row"
+>
 	<p class="font-heading text-sm">
 		&#169; Copyright 2022-{new Date().getFullYear()} Vincent Taneri
 	</p>
