@@ -48,6 +48,8 @@
 		@apply font-heading text-text selection:bg-highlightMed;
 	}
 
+	/* ===== themes ===== */
+
 	[data-theme='dawn'] {
 		--color-base: 32deg 57% 95%;
 		--color-surface: 35deg 100% 98%;
@@ -100,6 +102,31 @@
 		--color-highlight-low: 244deg 18% 15%;
 		--color-highlight-med: 249deg 15% 28%;
 		--color-highlight-high: 248deg 13% 36%;
+	}
+
+	/* ===== scrollbar ===== */
+	html {
+		overflow-y: scroll;
+	}
+
+	/* width */
+	::-webkit-scrollbar {
+		@apply w-1;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		@apply bg-basis;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		@apply rounded-full bg-muted;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		@apply bg-iris;
 	}
 }
 
