@@ -34,7 +34,7 @@
 />
 
 <!-- 42rem on large screen matches max-w-2xl on smaller screen-->
-<div class="mx-auto grid max-w-2xl grid-cols-1 lg:max-w-none lg:grid-cols-[1fr_42rem_1fr]">
+<section class="mx-auto grid max-w-2xl grid-cols-1 lg:max-w-none lg:grid-cols-[1fr_42rem_1fr]">
 	<div class="hidden pt-8 lg:block">
 		<!-- goBack button -->
 		<div class="sticky top-0 flex w-full justify-end pt-11 pr-8">
@@ -74,4 +74,4 @@
 			<TableOfContents post={data.post} />
 		</aside>
 	</div>
-</div>
+</section>

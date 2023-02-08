@@ -18,7 +18,7 @@
 	route={$page.url.pathname}
 />
 
-<div class="flex flex-grow flex-col">
+<section class="flex flex-grow flex-col">
 	<header>
 		<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">My Tech Notebook</h1>
 		<p class="mt-6">
@@ -49,4 +49,4 @@
 			</a>
 		{/if}
 	</div>
-</div>
+</section>
