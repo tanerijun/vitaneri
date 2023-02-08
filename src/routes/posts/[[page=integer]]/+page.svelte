@@ -27,7 +27,7 @@
 		</p>
 	</header>
 
-	<div class="mt-16 sm:mt-20">
+	<div class="mt-16">
 		<PostsList posts={data.posts} />
 	</div>
 
