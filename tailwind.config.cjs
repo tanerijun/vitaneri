@@ -62,14 +62,18 @@ const config = {
 						'--tw-prose-bold': 'hsl(var(--color-text) / 90%)',
 						'--tw-prose-counters': 'hsl(var(--color-muted))',
 						'--tw-prose-bullets': 'hsl(var(--color-iris))',
-						'--tw-prose-hr': 'hsl(var(--color-muted))',
+						'--tw-prose-hr': 'hsl(var(--color-muted) / 20%)',
 						'--tw-prose-quotes': 'hsl(var(--color-subtle))',
 						'--tw-prose-quote-borders': 'hsl(var(--color-iris))',
 						'--tw-prose-captions': 'hsl(var(--color-muted))',
-						'--tw-prose-code': 'hsl(var(--color-subtle))',
-						'--tw-prose-code-bg': 'hsl(var(--color-highlight-low))',
+						'--tw-prose-code': 'hsl(var(--color-text))',
+						'--tw-prose-pre-code': 'hsl(var(--color-subtle))',
+						'--tw-prose-pre-bg': 'hsl(var(--color-surface))',
+						'--tw-prose-th-borders': 'hsl(var(--color-muted) / 20%)',
+						'--tw-prose-td-borders': 'hsl(var(--color-muted) / 10%)',
 
 						// Base
+						'max-width': '72ch',
 						color: 'var(--tw-prose-body)',
 						lineHeight: theme('lineHeight.7'),
 						'> *': {
@@ -109,10 +113,12 @@ const config = {
 
 						// Images and videos
 						img: {
-							borderRadius: theme('borderRadius.3xl')
+							borderRadius: theme('borderRadius.DEFAULT'),
+							margin: '0 auto'
 						},
 						video: {
-							borderRadius: theme('borderRadius.3xl')
+							borderRadius: theme('borderRadius.DEFAULT'),
+							margin: '0 auto'
 						},
 
 						// Inline elements
@@ -133,7 +139,6 @@ const config = {
 							color: 'var(--tw-prose-code)',
 							fontSize: theme('fontSize.sm')[0],
 							fontWeight: theme('fontWeight.semibold'),
-							backgroundColor: 'var(--tw-prose-code-bg)',
 							borderRadius: theme('borderRadius.lg'),
 							paddingLeft: theme('spacing.1'),
 							paddingRight: theme('spacing.1')
@@ -196,6 +201,85 @@ const config = {
 						'li :is(li, p)': {
 							marginTop: theme('spacing.3'),
 							marginBottom: theme('spacing.3')
+						},
+
+						// Code blocks
+						pre: {
+							color: 'var(--tw-prose-pre-code)',
+							fontSize: theme('fontSize.sm')[0],
+							fontWeight: theme('fontWeight.medium'),
+							backgroundColor: 'var(--tw-prose-pre-bg)',
+							borderRadius: theme('borderRadius.DEFAULT'),
+							padding: theme('spacing.8'),
+							overflowX: 'auto'
+						},
+						'pre code': {
+							display: 'inline',
+							color: 'inherit',
+							fontSize: 'inherit',
+							fontWeight: 'inherit',
+							backgroundColor: 'transparent',
+							borderRadius: 0,
+							padding: 0
+						},
+
+						// Horizontal rules
+						hr: {
+							marginTop: theme('spacing.20'),
+							marginBottom: theme('spacing.20'),
+							borderTopWidth: '1px',
+							borderColor: 'var(--tw-prose-hr)'
+						},
+
+						// Tables
+						table: {
+							width: '100%',
+							tableLayout: 'auto',
+							textAlign: 'left',
+							fontSize: theme('fontSize.sm')[0]
+						},
+						thead: {
+							borderBottomWidth: '1px',
+							borderBottomColor: 'var(--tw-prose-th-borders)'
+						},
+						'thead th': {
+							color: 'var(--tw-prose-headings)',
+							fontWeight: theme('fontWeight.semibold'),
+							verticalAlign: 'bottom',
+							paddingBottom: theme('spacing.2')
+						},
+						'thead th:not(:first-child)': {
+							paddingLeft: theme('spacing.2')
+						},
+						'thead th:not(:last-child)': {
+							paddingRight: theme('spacing.2')
+						},
+						'tbody tr': {
+							borderBottomWidth: '1px',
+							borderBottomColor: 'var(--tw-prose-td-borders)'
+						},
+						'tbody tr:last-child': {
+							borderBottomWidth: 0
+						},
+						'tbody td': {
+							verticalAlign: 'baseline'
+						},
+						tfoot: {
+							borderTopWidth: '1px',
+							borderTopColor: 'var(--tw-prose-th-borders)'
+						},
+						'tfoot td': {
+							verticalAlign: 'top'
+						},
+						':is(tbody, tfoot) td': {
+							paddingTop: theme('spacing.2'),
+							paddingBottom: theme('spacing.2')
+						},
+						':is(tbody, tfoot) td:not(:first-child)': {
+							paddingLeft: theme('spacing.2')
+						},
+						':is(tbody, tfoot) td:not(:last-child)': {
+							paddingRight: theme('spacing.2')
 						}
 					}
 				}

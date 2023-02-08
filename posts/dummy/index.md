@@ -18,9 +18,20 @@ In this post, we'll take a look at how we can abstract React's context API using
 2. Test ul 2
 3. Test ul 3
 
+---
+
 - Test ol 1
 - Test ol 2
 - Test ol 3
+
+---
+
+| Domain                      | Skills                                                                                                                        |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| **_Languages_**             | English, Chinese, Indonesian (All fluent)                                                                                     |
+| **_Programming Languages_** | JavaScript, TypeScript, Java, Python, Go                                                                                      |
+| **_Frontend_**              | HTML, CSS, Tailwind CSS, Styled Component, Chakra UI, Material UI, Mantine UI, JQuery, React/Next, Svelte/SvelteKit, Astro... |
+| **_Backend_**               | NodeJS, Express, Spring / Spring Boot, MongoDB, MySQL, PostgreSQL, Firebase, REST, GraphQL, ...                               |
 
 <figure>
 
