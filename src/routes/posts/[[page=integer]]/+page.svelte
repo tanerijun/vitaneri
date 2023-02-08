@@ -32,7 +32,7 @@
 	</div>
 
 	<!-- pagination -->
-	<div class="mt-16 flex items-center justify-between font-heading text-iris">
+	<section class="mt-16 flex items-center justify-between font-heading text-iris">
 		{#if !isFirstPage}
 			<a href={`/posts/${data.page - 1}`} class="hover-underline-animation flex items-center gap-2">
 				<ArrowLeftIcon class="h-4 w-4" />
@@ -48,5 +48,5 @@
 				<ArrowRightIcon class="h-4 w-4" />
 			</a>
 		{/if}
-	</div>
+	</section>
 </section>
