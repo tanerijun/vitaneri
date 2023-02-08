@@ -33,7 +33,7 @@
 
 <!-- 42rem on large screen matches max-w-2xl on smaller screen-->
 <!-- <section class="mx-auto grid max-w-2xl grid-cols-1 lg:max-w-none lg:grid-cols-[42rem_1fr]"> -->
-<section class="flex flex-col border border-blue-400">
+<section class="flex flex-col">
 	<!-- <div class="mx-auto w-full overflow-x-hidden"> -->
 	<!-- goBack button -->
 	<div class="mb-8 w-fit font-heading text-iris">
@@ -59,7 +59,7 @@
 		</header>
 
 		<!-- Post content -->
-		<div class="prose mx-auto w-full border border-purple-400">
+		<div class="prose mx-auto w-full">
 			<svelte:component this={data.component} />
 		</div>
 	</article>
