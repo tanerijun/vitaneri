@@ -59,7 +59,7 @@
 		</header>
 
 		<!-- Post content -->
-		<div class="prose mx-auto w-full border border-purple-400 dark:prose-invert">
+		<div class="prose mx-auto w-full border border-purple-400">
 			<svelte:component this={data.component} />
 		</div>
 	</article>
