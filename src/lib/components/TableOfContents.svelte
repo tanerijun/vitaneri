@@ -54,8 +54,8 @@
 
 <Card>
 	<slot slot="description">
-		<h2 class="text-md text-md mb-2 pl-[5px] text-muted">ON THIS PAGE</h2>
-		<ul class="flex flex-col gap-2">
+		<h2 class="text-md text-md mb-3 pl-[5px] text-muted">ON THIS PAGE</h2>
+		<ul class="flex flex-col gap-3">
 			{#each headings as heading}
 				<li
 					class="heading border-iris pl-2 text-muted transition-colors hover:text-text"
