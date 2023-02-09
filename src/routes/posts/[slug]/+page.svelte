@@ -31,43 +31,42 @@
 	route={$page.url.pathname}
 />
 
-<!-- 42rem on large screen matches max-w-2xl on smaller screen-->
-<!-- <section class="mx-auto grid max-w-2xl grid-cols-1 lg:max-w-none lg:grid-cols-[42rem_1fr]"> -->
-<section class="flex flex-col">
-	<!-- <div class="mx-auto w-full overflow-x-hidden"> -->
-	<!-- goBack button -->
-	<div class="mb-8 w-fit font-heading text-iris">
-		<svelte:element
-			this={canGoBack ? 'button' : 'a'}
-			class="hover-underline-animation flex items-center gap-2"
-			href={canGoBack ? undefined : '/posts'}
-			aria-label="Go back to posts"
-			on:click={goBack}
-			on:keydown={goBack}
-		>
-			<ArrowLeftIcon class="h-4 w-4" /> Go Back
-		</svelte:element>
+<section class="grid grid-cols-[48rem_1fr]">
+	<div>
+		<!-- goBack button -->
+		<div class="mb-8 w-fit font-heading text-iris">
+			<svelte:element
+				this={canGoBack ? 'button' : 'a'}
+				class="hover-underline-animation flex items-center gap-2"
+				href={canGoBack ? undefined : '/posts'}
+				aria-label="Go back to posts"
+				on:click={goBack}
+				on:keydown={goBack}
+			>
+				<ArrowLeftIcon class="h-4 w-4" /> Go Back
+			</svelte:element>
+		</div>
+
+		<article>
+			<!-- Post header -->
+			<header class="flex flex-col">
+				<h1 class="mt-6 text-4xl font-bold tracking-tight sm:text-5xl">
+					{data.post.title}
+				</h1>
+				<PostDate class="text-sm" post={data.post} decorate collapsed />
+			</header>
+
+			<!-- Post content -->
+			<div class="prose w-full">
+				<svelte:component this={data.component} />
+			</div>
+		</article>
 	</div>
 
-	<article>
-		<!-- Post header -->
-		<header class="flex flex-col">
-			<h1 class="my-6 text-4xl font-bold tracking-tight sm:text-5xl">
-				{data.post.title}
-			</h1>
-			<PostDate class="text-sm" post={data.post} decorate collapsed />
-		</header>
-
-		<!-- Post content -->
-		<div class="prose mx-auto w-full">
-			<svelte:component this={data.component} />
-		</div>
-	</article>
-	<!-- </div> -->
+	<!-- Table of contents -->
+	<div class="hidden xl:block">
+		<aside class="sticky top-8 ml-8 w-48" aria-label="Table of Contents">
+			<TableOfContents post={data.post} />
+		</aside>
+	</div>
 </section>
-<!-- Table of contents -->
-<div class="hidden pt-10 xl:block">
-	<aside class="sticky top-8 ml-8 hidden w-48 xl:block" aria-label="Table of Contents">
-		<TableOfContents post={data.post} />
-	</aside>
-</div>
