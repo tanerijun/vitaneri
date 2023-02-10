@@ -60,6 +60,11 @@
 			<div class="prose w-full">
 				<svelte:component this={data.component} />
 			</div>
+
+			<!-- Post footer -->
+			<footer>
+				{data.post.tags} TODO
+			</footer>
 		</article>
 	</div>
 
