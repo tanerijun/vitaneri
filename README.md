@@ -22,6 +22,7 @@
 - [ ] e2e testing
 - [ ] Write a generator for blog post
 - [ ] Ability to highlight code using this kind of syntax js {3-5}
+- [ ] Add snippets section, collecting code snippets in md file
 
 ## Markdown Blog
 
