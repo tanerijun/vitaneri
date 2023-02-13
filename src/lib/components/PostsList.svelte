@@ -6,7 +6,7 @@
 	export let posts: PostMetadata[];
 </script>
 
-<div class="flex flex-col gap-16 md:border-l md:border-muted/50 md:pl-6">
+<div class="flex flex-col gap-16 md:border-l md:border-muted/20 md:pl-6">
 	{#each posts as post (post.slug)}
 		<article class="grid grid-cols-4 items-start gap-8">
 			<!-- PostDate on wide screen -->
