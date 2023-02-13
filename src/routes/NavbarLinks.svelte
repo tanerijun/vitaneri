@@ -6,7 +6,7 @@
 
 	export let isMobile = false;
 
-	let routes = ['posts', 'projects', 'about'];
+	let routes = ['posts', 'tags', 'TIL', 'projects', 'about'];
 
 	let marker: HTMLDivElement;
 	let activeLink: HTMLElement | null | undefined;
