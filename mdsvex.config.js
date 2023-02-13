@@ -4,12 +4,18 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import relativeImages from 'mdsvex-relative-images';
 import { visit } from 'unist-util-visit';
+import { createHighlighter } from '@bitmachina/highlighter';
 
+/** @type {import('mdsvex').MdsvexOptions} */
 const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
 
 	smartypants: {
 		dashes: 'oldschool'
+	},
+
+	highlight: {
+		highlighter: await createHighlighter({ theme: 'dracula' })
 	},
 
 	remarkPlugins: [headings, videos, relativeImages],

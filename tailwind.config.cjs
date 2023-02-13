@@ -20,7 +20,8 @@ const config = {
 				iris: 'hsl(var(--color-iris) / <alpha-value>)',
 				highlightLow: 'hsl(var(--color-highlight-low) / <alpha-value>)',
 				highlightMed: 'hsl(var(--color-highlight-med) / <alpha-value>)',
-				highlightHigh: 'hsl(var(--color-highlight-high) / <alpha-value>)'
+				highlightHigh: 'hsl(var(--color-highlight-high) / <alpha-value>)',
+				codeBg: 'hsl(var(--color-code-bg) / <alpha-value>)'
 			},
 			fontFamily: {
 				sans: ['Inter', ...fontFamily.sans],
@@ -68,7 +69,7 @@ const config = {
 						'--tw-prose-captions': 'hsl(var(--color-muted))',
 						'--tw-prose-code': 'hsl(var(--color-text))',
 						'--tw-prose-pre-code': 'hsl(var(--color-subtle))',
-						'--tw-prose-pre-bg': 'hsl(var(--color-surface))',
+						'--tw-prose-pre-bg': 'hsl(var(--color-code-bg))',
 						'--tw-prose-th-borders': 'hsl(var(--color-muted) / 20%)',
 						'--tw-prose-td-borders': 'hsl(var(--color-muted) / 10%)',
 

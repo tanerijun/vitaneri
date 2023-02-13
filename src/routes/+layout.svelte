@@ -1,6 +1,5 @@
 <script>
 	import '../app.postcss';
-	import '../prism.css';
 	import Footer from './Footer.svelte';
 	import Header from './Header.svelte';
 	import LoadThemeScript from './LoadThemeScript.svelte';
