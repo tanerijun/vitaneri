@@ -211,7 +211,8 @@ const config = {
 							fontWeight: theme('fontWeight.medium'),
 							backgroundColor: 'var(--tw-prose-pre-bg)',
 							borderRadius: theme('borderRadius.DEFAULT'),
-							padding: theme('spacing.8'),
+							paddingTop: theme('spacing.8'),
+							paddingBottom: theme('spacing.8'),
 							overflowX: 'auto'
 						},
 						'pre code': {
