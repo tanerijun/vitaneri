@@ -20,8 +20,8 @@
 - [ ] Make TOC mobile responsive, maybe showing it above the post
 - [ ] Test utils
 - [ ] e2e testing
-- [ ] Write a generator for blog post
-- [ ] Ability to highlight code using this kind of syntax js {3-5}
+- [ ] Write a generator for blog post, consider using [clack](https://github.com/natemoo-re/clack)
+- [x] Ability to highlight code using this kind of syntax js {3-5}
 - [ ] Add snippets section, collecting code snippets in md file
 
 ## Markdown Blog
