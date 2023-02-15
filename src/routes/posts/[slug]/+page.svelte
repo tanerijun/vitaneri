@@ -65,10 +65,11 @@
 				<!-- Tags -->
 				<div class="flex flex-wrap gap-4">
 					{#each data.post.tags as tag (tag)}
-						<a href={`/tags/${tag}`}
-							><div class="flex gap-1 hover:text-text">
+						<a href={`/tags/${tag}`}>
+							<div class="flex gap-1 hover:text-text">
 								<span class="flex items-center text-sm text-iris">#</span>{tag}
-							</div></a>
+							</div>
+						</a>
 					{/each}
 				</div>
 			</footer>
