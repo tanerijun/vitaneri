@@ -24,6 +24,7 @@
 - [x] Ability to highlight code using this kind of syntax js {3-5}
 - [ ] Add snippets section, collecting code snippets in md file
 - [ ] Add next post and prev post after blog post, just use the next and previous from "posts" route.
+- [ ] Remove unnecessary color from theme, and better css variable name
 
 ## Markdown Blog
 
