@@ -52,7 +52,7 @@
 	<a
 		id={`${route}`}
 		class:text-text={$page.url.pathname.includes(route)}
-		class="relative font-heading hover:text-text"
+		class="relative font-heading text-sm hover:text-text md:text-base"
 		href={`/${route}`}>
 		{capitalizeFirstLetterOfWord(route)}
 	</a>
