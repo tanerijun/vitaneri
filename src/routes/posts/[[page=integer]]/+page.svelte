@@ -15,16 +15,12 @@
 <PageMeta
 	title="Posts | Vitaneri"
 	description="List of blog posts by Vitaneri"
-	route={$page.url.pathname}
-/>
+	route={$page.url.pathname} />
 
 <section class="flex flex-grow flex-col">
 	<header>
-		<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">My Tech Notebook</h1>
-		<p class="mt-6">
-			I like to think of this section as notes for my future self, thence the name "My Tech
-			Notebook".
-		</p>
+		<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Posts</h1>
+		<p class="mt-6">All my blog posts in one place.</p>
 	</header>
 
 	<div class="mt-16">
