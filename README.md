@@ -23,6 +23,7 @@
 - [ ] Write a generator for blog post, consider using [clack](https://github.com/natemoo-re/clack)
 - [x] Ability to highlight code using this kind of syntax js {3-5}
 - [ ] Add snippets section, collecting code snippets in md file
+- [ ] Add next post and prev post after blog post, just use the next and previous from "posts" route.
 
 ## Markdown Blog
 
@@ -42,6 +43,20 @@
   ![penguins](./assets/penguins.jpeg)
   ![penguins](./assets/penguins.mp4)
   ```
-- Highlight particular lines inside code block using curly braces.
-  - `js {1}` will highlight the first line.
-  - `js {3-5}` will highlight line 3 to 5.
+
+## Code Block's Feature
+
+1. Highlight particular lines inside code block using curly braces.
+
+- `js {1}` will highlight the first line.
+- `js {3-5}` will highlight line 3 to 5.
+- You can also mix things up. `js {1, 3-5}` will highlight the first line and line 3 to 5.
+
+2. Give the code block a title
+
+- Example: `jsx title="Graph.tsx"`
+
+3. Show line numbers
+
+- Example: `jsx showLineNumbers`
+- Show line numbers with custom starting line. Example: `jsx showLineNumbers{15}` will start from line 15.
