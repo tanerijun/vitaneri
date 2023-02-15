@@ -3,6 +3,7 @@
 	import PageMeta from '$lib/components/PageMeta.svelte';
 	import { afterNavigate } from '$app/navigation';
 	import ArrowLeftIcon from '$lib/components/icons/ArrowLeftIcon.svelte';
+	import ArrowRightIcon from '$lib/components/icons/ArrowRightIcon.svelte';
 	import PostDate from '$lib/components/PostDate.svelte';
 	import TableOfContents from '$lib/components/TableOfContents.svelte';
 	import type { PageData } from './$types';
@@ -45,7 +46,7 @@
 			</svelte:element>
 		</div>
 
-		<article>
+		<article class="max-w-[45rem]">
 			<!-- Post header -->
 			<header class="flex flex-col">
 				<h1 class="mt-6 text-4xl font-bold tracking-tight sm:text-5xl">
@@ -61,7 +62,15 @@
 
 			<!-- Post footer -->
 			<footer>
-				{data.post.tags} TODO
+				<!-- Tags -->
+				<div class="flex flex-wrap gap-4">
+					{#each data.post.tags as tag (tag)}
+						<a href={`/tags/${tag}`}
+							><div class="flex gap-1 hover:text-text">
+								<span class="flex items-center text-sm text-iris">#</span>{tag}
+							</div></a>
+					{/each}
+				</div>
 			</footer>
 		</article>
 	</div>

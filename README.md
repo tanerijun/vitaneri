@@ -23,8 +23,11 @@
 - [ ] Write a generator for blog post, consider using [clack](https://github.com/natemoo-re/clack)
 - [x] Ability to highlight code using this kind of syntax js {3-5}
 - [ ] Add snippets section, collecting code snippets in md file
-- [ ] Add next post and prev post after blog post, just use the next and previous from "posts" route.
 - [ ] Remove unnecessary color from theme, and better css variable name
+
+## Idea on hold
+
+- [ ] Add next post and prev post after blog post, just use the next and previous from "posts" route. (Unnecessary clutter)
 
 ## Markdown Blog
 
