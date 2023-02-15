@@ -19,7 +19,7 @@
 
 	<div class="mt-16 md:columns-2">
 		{#each [...data.tagsData] as [letter, tagsMap] (letter)}
-			<div class="mb-8 flex break-inside-avoid flex-col gap-4">
+			<div class="mb-8 flex break-inside-avoid-column flex-col gap-4">
 				<h3 class="text-4xl">{letter.toUpperCase()}</h3>
 				<ul class="grid grid-cols-2">
 					{#each [...tagsMap] as [tag, count] (tag)}
