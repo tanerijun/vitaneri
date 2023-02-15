@@ -9,7 +9,7 @@ export const load = (async () => {
 		});
 	});
 
-	const alphabetTagsMap = new Map<string, Map<string, number>>();
+	const alphabetTagsMap = new Map<string, typeof tagsMap>();
 	tagsMap.forEach((count, tag) => {
 		const firstLetter = tag[0].toLowerCase();
 		const alphabetTags = alphabetTagsMap.get(firstLetter) || new Map<string, number>();

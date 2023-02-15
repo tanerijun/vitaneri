@@ -24,6 +24,7 @@
 - [x] Ability to highlight code using this kind of syntax js {3-5}
 - [ ] Add snippets section, collecting code snippets in md file
 - [ ] Remove unnecessary color from theme, and better css variable name
+- [ ] 404 page
 
 ## Idea on hold
 
