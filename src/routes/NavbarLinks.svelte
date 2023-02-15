@@ -6,7 +6,7 @@
 
 	export let isMobile = false;
 
-	let routes = ['posts', 'tags', 'TIL', 'projects', 'about'];
+	let routes = ['posts', 'tags', 'sketchpad', 'projects', 'about'];
 
 	let marker: HTMLDivElement;
 	let activeLink: HTMLElement | null | undefined;
@@ -46,16 +46,14 @@
 	bind:this={marker}
 	class={`absolute ${
 		isMobile ? 'top-7' : 'top-8'
-	} left-0 h-0.5 w-0 rounded-full bg-iris transition-all`}
-/>
+	} left-0 h-0.5 w-0 rounded-full bg-iris transition-all`} />
 {#each routes as route (route)}
 	<!-- id attribute is necessary for marker to work -->
 	<a
 		id={`${route}`}
 		class:text-text={$page.url.pathname.includes(route)}
 		class="relative font-heading hover:text-text"
-		href={`/${route}`}
-	>
+		href={`/${route}`}>
 		{capitalizeFirstLetterOfWord(route)}
 	</a>
 {/each}

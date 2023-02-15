@@ -211,9 +211,10 @@ const config = {
 							fontWeight: theme('fontWeight.medium'),
 							backgroundColor: 'var(--tw-prose-pre-bg)',
 							borderRadius: theme('borderRadius.DEFAULT'),
+							maxWidth: '100%',
 							paddingTop: theme('spacing.8'),
 							paddingBottom: theme('spacing.8'),
-							overflowX: 'auto'
+							overflowX: 'scroll'
 						},
 						'pre code': {
 							display: 'inline',

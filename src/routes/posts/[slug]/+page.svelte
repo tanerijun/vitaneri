@@ -28,10 +28,9 @@
 <PageMeta
 	title={`${data.post.title} | Vitaneri`}
 	description={data.post.preview.text}
-	route={$page.url.pathname}
-/>
+	route={$page.url.pathname} />
 
-<section class="grid grid-cols-[48rem_1fr]">
+<section class="grid grid-cols-1 md:grid-cols-[48rem_1fr]">
 	<div>
 		<!-- goBack button -->
 		<div class="mb-8 w-fit font-heading text-iris">
@@ -41,8 +40,7 @@
 				href={canGoBack ? undefined : '/posts'}
 				aria-label="Go back to posts"
 				on:click={goBack}
-				on:keydown={goBack}
-			>
+				on:keydown={goBack}>
 				<ArrowLeftIcon class="h-4 w-4" /> Go Back
 			</svelte:element>
 		</div>
@@ -57,7 +55,7 @@
 			</header>
 
 			<!-- Post content -->
-			<div class="prose w-full">
+			<div class="prose">
 				<svelte:component this={data.component} />
 			</div>
 
