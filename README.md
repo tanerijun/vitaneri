@@ -9,9 +9,9 @@
 - [ ] Implement side-wide search, try Lyra
 - [ ] rss, sitemap
 - [ ] Make sure every decorative line like those in NavLinks and TOC is rounded (border-radius)
-- [ ] Show post's tags on blog post
+- [x] Show post's tags on blog post
 - [ ] Show post tags on blog card
-- [ ] Allow people to filter by tag in posts route
+- [x] Allow people to filter by tag in posts route
 - [ ] Make sure the HTML structure of each page is correct
 - [ ] Run site through accessibility checker
 - [ ] Consider using [vscode icons](https://icones.js.org/collection/vscode-icons) for tools in about section

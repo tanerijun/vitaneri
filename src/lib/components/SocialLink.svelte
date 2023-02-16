@@ -8,7 +8,6 @@
 	{title}
 	target="_blank"
 	rel="noreferrer"
-	class="flex items-center justify-center rounded-lg p-2 transition-colors hover:text-text"
->
+	class="flex items-center justify-center transition-colors hover:text-text">
 	<slot />
 </a>

@@ -1,11 +1,10 @@
 <script lang="ts">
-	import Button from '$lib/components/Button.svelte';
 	import EnvelopeIcon from '$lib/components/icons/EnvelopeIcon.svelte';
 	import GithubIcon from '$lib/components/icons/GithubIcon.svelte';
 	import LinkedInIcon from '$lib/components/icons/LinkedInIcon.svelte';
 	import RssIcon from '$lib/components/icons/RSSIcon.svelte';
 	import TwitterIcon from '$lib/components/icons/TwitterIcon.svelte';
-	import SocialLink from './SocialLink.svelte';
+	import SocialLink from '$lib/components/SocialLink.svelte';
 </script>
 
 <footer class="mt-12 flex flex-col-reverse items-center justify-between gap-2 py-6 md:flex-row">
@@ -14,7 +13,7 @@
 	</p>
 
 	<!-- Social links -->
-	<div class="flex items-center space-x-2">
+	<div class="flex items-center space-x-4">
 		<SocialLink href="mailto:tanerivince@gmail.com" title="Send an email to tanerivince@gmail.com">
 			<EnvelopeIcon size={22} />
 		</SocialLink>
