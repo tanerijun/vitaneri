@@ -9,7 +9,8 @@
 <PageMeta
 	title="Tags | Vitaneri"
 	description="Search through Vitaneri with tags"
-	route={$page.url.pathname} />
+	route={$page.url.pathname}
+/>
 
 <section>
 	<header>
