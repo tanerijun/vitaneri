@@ -14,7 +14,7 @@
 <section>
 	<header>
 		<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Tags</h1>
-		<p class="mt-6">Search Vitaneri with tags.</p>
+		<p class="mt-6">Filter posts by tag.</p>
 	</header>
 
 	<div class="mt-16 md:columns-2">
