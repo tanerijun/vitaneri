@@ -31,7 +31,7 @@
 			</a>
 			, and if you feel so inclined, you're welcome to
 			<a
-				href="https://vitaneri.com/rss.xml"
+				href="https://www.buymeacoffee.com/tvince"
 				target="_blank"
 				rel="noreferrer"
 				class="hover-underline-animation text-iris"
@@ -41,6 +41,13 @@
 			.
 		</p>
 	</header>
+
+	<section class="mt-16">
+		<header class="mb-8 flex items-center">
+			<h2 class="text-xl">Featured Posts</h2>
+		</header>
+		<PostsList posts={data.featuredPosts} />
+	</section>
 
 	<section class="mt-16">
 		<header class="mb-8 flex items-center justify-between">
