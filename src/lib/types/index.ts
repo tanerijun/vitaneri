@@ -26,6 +26,20 @@ interface Post {
 	metadata: MarkdownMetadata;
 }
 
+interface TILMetadata {
+	id: number;
+	datetime: string;
+}
+
+interface TIL {
+	default: {
+		render: () => {
+			html: string;
+		};
+	};
+	metadata: TILMetadata;
+}
+
 type PostMetadata = (typeof posts)[number];
 
-export type { MarkdownMetadata, Post, PostMetadata };
+export type { MarkdownMetadata, Post, PostMetadata, TIL, TILMetadata };

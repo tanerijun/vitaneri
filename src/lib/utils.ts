@@ -12,3 +12,7 @@ export function paginate<T>(
 export function capitalizeFirstLetterOfWord(word: string) {
 	return word.charAt(0).toUpperCase() + word.slice(1);
 }
+
+export function zeroPad(num: number, places: number) {
+	return String(num).padStart(places, '0');
+}
