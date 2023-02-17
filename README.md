@@ -23,6 +23,7 @@
 - [ ] Add snippets section, collecting code snippets in md file
 - [ ] Remove unnecessary color from theme, and better css variable name
 - [ ] 404 page
+- [ ] Group post and TILs in one folder (idea: content)
 
 ## Idea about to be ditched
 
