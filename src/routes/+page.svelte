@@ -14,7 +14,7 @@
 	route={$page.url.pathname}
 />
 
-<section>
+<section class="flex flex-col space-y-16">
 	<header>
 		<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Welcome ~</h1>
 		<p class="mt-6">
@@ -42,14 +42,14 @@
 		</p>
 	</header>
 
-	<section class="mt-16">
+	<section>
 		<header class="mb-8 flex items-center">
 			<h2 class="text-xl">Featured Posts</h2>
 		</header>
 		<PostsList posts={data.featuredPosts} />
 	</section>
 
-	<section class="mt-16">
+	<section>
 		<header class="mb-8 flex items-center justify-between">
 			<h2 class="text-xl">Recently Published</h2>
 			<a

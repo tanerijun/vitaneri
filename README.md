@@ -10,11 +10,9 @@
 - [ ] rss, sitemap
 - [ ] Make sure every decorative line like those in NavLinks and TOC is rounded (border-radius)
 - [x] Show post's tags on blog post
-- [ ] Show post tags on blog card
 - [x] Allow people to filter by tag in posts route
 - [ ] Make sure the HTML structure of each page is correct
 - [ ] Run site through accessibility checker
-- [ ] Consider using [vscode icons](https://icones.js.org/collection/vscode-icons) for tools in about section
 - [ ] Make sure the spacing separating header and footer is consistent on every page. Don't put margin in <section> on every page, instead put it on the heading and footer to ensure consistency
 - [ ] May also consider adding Giscus
 - [ ] Make TOC mobile responsive, maybe showing it above the post
@@ -26,9 +24,11 @@
 - [ ] Remove unnecessary color from theme, and better css variable name
 - [ ] 404 page
 
-## Idea on hold
+## Idea about to be ditched
 
 - [ ] Add next post and prev post after blog post, just use the next and previous from "posts" route. (Unnecessary clutter)
+- [ ] Consider using [vscode icons](https://icones.js.org/collection/vscode-icons) for tools in about section
+- [ ] Show post tags on blog card
 
 ## Markdown Blog
 

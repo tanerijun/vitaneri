@@ -11,7 +11,7 @@
 
 <PageMeta title="About | Vitaneri" description="About Vitaneri" route={$page.url.pathname} />
 
-<section id="top" class="flex flex-col gap-8 leading-6 text-subtle">
+<section id="top" class="flex flex-col space-y-16 leading-6 text-subtle">
 	<!-- About Me -->
 	<section class="flex flex-col space-y-6">
 		<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">About Me</h1>
@@ -23,7 +23,8 @@
 			<div class="flex items-center space-x-4">
 				<SocialLink
 					href="mailto:tanerivince@gmail.com"
-					title="Send an email to tanerivince@gmail.com">
+					title="Send an email to tanerivince@gmail.com"
+				>
 					<EnvelopeIcon size={22} />
 				</SocialLink>
 				<SocialLink href="https://github.com/tanerijun" title="See my Github profile">
@@ -125,7 +126,8 @@
 		<p>
 			Feel free to reach me through the social links <a
 				href="#top"
-				class="hover-underline-animation text-iris">above ↑</a> .
+				class="hover-underline-animation text-iris">above ↑</a
+			> .
 		</p>
 	</footer>
 </section>

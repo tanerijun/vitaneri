@@ -6,7 +6,7 @@
 	export let data: PageData;
 </script>
 
-<section>
+<section class="flex flex-col space-y-16">
 	<header>
 		<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Tag</h1>
 		<p class="mt-6">
@@ -14,13 +14,15 @@
 		</p>
 	</header>
 
-	<div class="mt-16">
+	<div>
 		<PostsList posts={data.posts} />
+		<div>
+			<a
+				href="/tags"
+				class="hover-underline-animation mt-16 flex w-fit items-center gap-1 text-iris"
+			>
+				<ArrowLeftIcon class="h-4 w-4" /> Go back
+			</a>
+		</div>
 	</div>
-
-	<footer>
-		<a href="/tags" class="hover-underline-animation mt-16 flex w-fit items-center gap-1 text-iris">
-			<ArrowLeftIcon class="h-4 w-4" /> Go back
-		</a>
-	</footer>
 </section>

@@ -9,7 +9,7 @@
 	route={$page.url.pathname}
 />
 
-<section>
+<section class="flex flex-col space-y-16">
 	<header>
 		<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Side Projects</h1>
 		<p class="mt-6">These are some of my side projects that I think are worth sharing:</p>

@@ -12,13 +12,13 @@
 	route={$page.url.pathname}
 />
 
-<section>
+<section class="flex flex-col space-y-16">
 	<header>
 		<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Tags</h1>
 		<p class="mt-6">Filter posts by tag.</p>
 	</header>
 
-	<div class="mt-16 md:columns-2">
+	<div class="md:columns-2">
 		{#each [...data.tagsData] as [letter, tagsMap] (letter)}
 			<div class="mb-8 flex break-inside-avoid-column flex-col gap-4">
 				<h3 class="text-4xl">{letter.toUpperCase()}</h3>

@@ -15,20 +15,21 @@
 <PageMeta
 	title="Posts | Vitaneri"
 	description="List of blog posts by Vitaneri"
-	route={$page.url.pathname} />
+	route={$page.url.pathname}
+/>
 
-<section class="flex flex-grow flex-col">
+<section class="flex flex-col space-y-16">
 	<header>
 		<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Posts</h1>
 		<p class="mt-6">All my blog posts in one place.</p>
 	</header>
 
-	<div class="mt-16">
+	<div>
 		<PostsList posts={data.posts} />
 	</div>
 
 	<!-- pagination -->
-	<footer class="mt-16 flex items-center justify-between font-heading text-iris">
+	<footer class="flex items-center justify-between font-heading text-iris">
 		{#if !isFirstPage}
 			<a href={`/posts/${data.page - 1}`} class="hover-underline-animation flex items-center gap-2">
 				<ArrowLeftIcon class="h-4 w-4" />
