@@ -14,7 +14,7 @@
 			{#if href}
 				<!-- Hover animation for card -->
 				<div
-					class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 rounded-2xl bg-highlightLow opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6"
+					class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 rounded-2xl bg-lowlight opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6"
 				/>
 				<a {href}>
 					<!-- 

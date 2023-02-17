@@ -13,7 +13,7 @@ const config = {
 				subtle: 'hsl(var(--color-subtle) / <alpha-value>)',
 				text: 'hsl(var(--color-text) / <alpha-value>)',
 				accent: 'hsl(var(--color-accent) / <alpha-value>)',
-				highlightLow: 'hsl(var(--color-highlight-low) / <alpha-value>)',
+				lowlight: 'hsl(var(--color-lowlight) / <alpha-value>)',
 				highlight: 'hsl(var(--color-highlight) / <alpha-value>)'
 			},
 			fontFamily: {
