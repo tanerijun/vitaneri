@@ -32,7 +32,7 @@
 	route={$page.url.pathname}
 />
 
-<section class="grid grid-cols-1 md:grid-cols-[48rem_1fr]">
+<section class="grid w-full grid-cols-1 md:grid-cols-[48rem_1fr]">
 	<div>
 		<!-- goBack button -->
 		<div class="mb-8 w-fit font-heading text-accent">
