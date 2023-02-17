@@ -16,7 +16,7 @@
 		<p class="mt-6">These are some of my side projects that I think are worth sharing:</p>
 	</header>
 
-	<div class="columns-2">
+	<div class="md:columns-2">
 		{#each projects as project (project.title)}
 			<div class="mb-4 break-inside-avoid-column border border-muted/50">
 				<img src={project.imgUrl} alt={project.title} />
