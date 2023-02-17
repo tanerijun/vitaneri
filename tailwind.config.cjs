@@ -14,7 +14,7 @@ const config = {
 				text: 'hsl(var(--color-text) / <alpha-value>)',
 				accent: 'hsl(var(--color-accent) / <alpha-value>)',
 				highlightLow: 'hsl(var(--color-highlight-low) / <alpha-value>)',
-				highlightMed: 'hsl(var(--color-highlight-med) / <alpha-value>)'
+				highlight: 'hsl(var(--color-highlight) / <alpha-value>)'
 			},
 			fontFamily: {
 				sans: ['Inter', ...fontFamily.sans],

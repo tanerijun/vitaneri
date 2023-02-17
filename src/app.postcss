@@ -40,7 +40,7 @@
 	}
 
 	body {
-		@apply bg-basis text-muted antialiased selection:bg-highlightMed;
+		@apply bg-basis text-muted antialiased selection:bg-highlight;
 	}
 
 	h1,
@@ -49,7 +49,7 @@
 	h4,
 	h5,
 	h6 {
-		@apply font-heading text-text selection:bg-highlightMed;
+		@apply font-heading text-text selection:bg-highlight;
 	}
 
 	/* ===== themes ===== */
@@ -63,7 +63,7 @@
 		--color-text: 248deg 19% 40%;
 		--color-accent: 268deg 21% 57%;
 		--color-highlight-low: 25deg 35% 93%;
-		--color-highlight-med: 10deg 9% 86%;
+		--color-highlight: 10deg 9% 86%;
 	}
 
 	[data-theme='twilight'] {
@@ -75,7 +75,7 @@
 		--color-text: 246deg 50% 91%;
 		--color-accent: 267deg 57% 78%;
 		--color-highlight-low: 246deg 22% 20%;
-		--color-highlight-med: 247deg 16% 30%;
+		--color-highlight: 247deg 16% 30%;
 	}
 
 	[data-theme='dusk'] {
@@ -87,7 +87,7 @@
 		--color-text: 245deg 50% 91%;
 		--color-accent: 267deg 57% 78%;
 		--color-highlight-low: 244deg 18% 15%;
-		--color-highlight-med: 249deg 15% 28%;
+		--color-highlight: 249deg 15% 28%;
 	}
 
 	/* ===== scrollbar ===== */
@@ -117,7 +117,7 @@
 
 	/* ===== code block ===== */
 	pre > code {
-		@apply selection:bg-highlightMed/30;
+		@apply selection:bg-highlight/30;
 	}
 
 	code > span {
