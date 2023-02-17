@@ -29,7 +29,7 @@
 		{#each data.TILs as TIL (TIL.id)}
 			<article>
 				<header class="flex items-center justify-between">
-					<h2 class="text-4xl"><span class="mr-2 text-iris">#</span>{TIL.id}</h2>
+					<h2 class="text-4xl"><span class="mr-2 text-accent">#</span>{TIL.id}</h2>
 					<time datetime={TIL.datetime}>
 						{format(new Date(parseISO(TIL.datetime)), 'MMMM d, yyyy')}
 					</time>
@@ -42,7 +42,7 @@
 	</div>
 
 	<!-- pagination -->
-	<footer class="flex items-center justify-between font-heading text-iris">
+	<footer class="flex items-center justify-between font-heading text-accent">
 		{#if !isFirstPage}
 			<a href={`/tils/${data.page - 1}`} class="hover-underline-animation flex items-center gap-2">
 				<ArrowLeftIcon class="h-4 w-4" />

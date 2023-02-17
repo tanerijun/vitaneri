@@ -25,7 +25,7 @@
 				href="https://vitaneri.com/rss.xml"
 				target="_blank"
 				rel="noreferrer"
-				class="hover-underline-animation text-iris"
+				class="hover-underline-animation text-accent"
 			>
 				RSS feed
 			</a>
@@ -34,7 +34,7 @@
 				href="https://www.buymeacoffee.com/tvince"
 				target="_blank"
 				rel="noreferrer"
-				class="hover-underline-animation text-iris"
+				class="hover-underline-animation text-accent"
 			>
 				buy me a coffee
 			</a>
@@ -54,7 +54,7 @@
 			<h2 class="text-xl">Recently Published</h2>
 			<a
 				href="/posts"
-				class="hover-underline-animation flex items-center space-x-1 font-heading text-sm text-iris"
+				class="hover-underline-animation flex items-center space-x-1 font-heading text-sm text-accent"
 			>
 				View All <ArrowRightIcon class="h-4 w-4" />
 			</a>

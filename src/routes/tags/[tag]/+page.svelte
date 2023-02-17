@@ -10,7 +10,7 @@
 	<header>
 		<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Tag</h1>
 		<p class="mt-6">
-			Posts tagged with <span class="text-iris"><span class="mr-0.5">#</span>{data.tag}</span>:
+			Posts tagged with <span class="text-accent"><span class="mr-0.5">#</span>{data.tag}</span>:
 		</p>
 	</header>
 
@@ -19,7 +19,7 @@
 	</div>
 
 	<footer>
-		<a href="/tags" class="hover-underline-animation flex w-fit items-center gap-1 text-iris">
+		<a href="/tags" class="hover-underline-animation flex w-fit items-center gap-1 text-accent">
 			<ArrowLeftIcon class="h-4 w-4" /> Go back
 		</a>
 	</footer>

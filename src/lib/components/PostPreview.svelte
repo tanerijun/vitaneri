@@ -22,7 +22,7 @@
 		{/if}
 	</div>
 	<div slot="actions">
-		<div class="flex items-center text-iris">
+		<div class="flex items-center text-accent">
 			<span class="text-sm">Read</span>
 			<ArrowRightIcon class="ml-1 h-4 w-4" />
 		</div>

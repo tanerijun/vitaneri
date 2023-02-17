@@ -35,7 +35,7 @@
 <section class="grid grid-cols-1 md:grid-cols-[48rem_1fr]">
 	<div>
 		<!-- goBack button -->
-		<div class="mb-8 w-fit font-heading text-iris">
+		<div class="mb-8 w-fit font-heading text-accent">
 			<svelte:element
 				this={canGoBack ? 'button' : 'a'}
 				class="hover-underline-animation flex items-center gap-2"
@@ -69,7 +69,7 @@
 					{#each data.post.tags as tag (tag)}
 						<a href={`/tags/${tag}`}>
 							<div class="flex gap-1 hover:text-text">
-								<span class="flex items-center text-sm text-iris">#</span>{tag}
+								<span class="flex items-center text-sm text-accent">#</span>{tag}
 							</div>
 						</a>
 					{/each}

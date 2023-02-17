@@ -29,7 +29,7 @@
 	</div>
 
 	<!-- pagination -->
-	<footer class="flex items-center justify-between font-heading text-iris">
+	<footer class="flex items-center justify-between font-heading text-accent">
 		{#if !isFirstPage}
 			<a href={`/posts/${data.page - 1}`} class="hover-underline-animation flex items-center gap-2">
 				<ArrowLeftIcon class="h-4 w-4" />

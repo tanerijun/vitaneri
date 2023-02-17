@@ -46,7 +46,7 @@
 	bind:this={marker}
 	class={`absolute ${
 		isMobile ? 'top-7' : 'top-8'
-	} left-0 h-0.5 w-0 rounded-full bg-iris transition-all`}
+	} left-0 h-0.5 w-0 rounded-full bg-accent transition-all`}
 />
 {#each routes as route (route)}
 	<!-- id attribute is necessary for marker to work -->

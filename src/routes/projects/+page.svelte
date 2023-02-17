@@ -25,13 +25,13 @@
 					<p>{project.description}</p>
 					<div class="columns-2 text-sm">
 						{#each project.techs as tech (tech)}
-							<div><span class="mr-2 text-iris">#</span>{tech}</div>
+							<div><span class="mr-2 text-accent">#</span>{tech}</div>
 						{/each}
 					</div>
 					<div>
 						<a
 							href={project.url}
-							class="hover-underline-animation text-iris"
+							class="hover-underline-animation text-accent"
 							target="_blank"
 							rel="noreferrer"
 						>
@@ -40,7 +40,7 @@
 						•
 						<a
 							href={project.repo}
-							class="hover-underline-animation text-iris"
+							class="hover-underline-animation text-accent"
 							target="_blank"
 							rel="noreferrer"
 						>
@@ -59,7 +59,7 @@
 				href="https://github.com/tanerijun"
 				target="_blank"
 				rel="noreferrer"
-				class="hover-underline-animation text-iris"
+				class="hover-underline-animation text-accent"
 			>
 				Github
 			</a>

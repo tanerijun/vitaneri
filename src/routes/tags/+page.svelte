@@ -26,7 +26,7 @@
 					{#each [...tagsMap] as [tag, count] (tag)}
 						<li>
 							<a href={`/tags/${tag}`} class="flex gap-1 hover:text-text">
-								<span class="flex items-center text-sm text-iris">#</span>{tag} ({count})
+								<span class="flex items-center text-sm text-accent">#</span>{tag} ({count})
 							</a>
 						</li>
 					{/each}

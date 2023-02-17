@@ -16,7 +16,11 @@
 	<section class="flex flex-col space-y-6">
 		<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">About Me</h1>
 		<div class="flex flex-col items-center justify-center space-y-2">
-			<img class="h-44 w-44 rounded-full border border-iris" src={Portrait} alt="Vincent Taneri" />
+			<img
+				class="h-44 w-44 rounded-full border border-accent"
+				src={Portrait}
+				alt="Vincent Taneri"
+			/>
 			<h3 class="text-2xl">Vincent Taneri</h3>
 			<p class="text-sm text-subtle">Fullstack Software Developer</p>
 			<!-- Social links -->
@@ -64,7 +68,7 @@
 		</p>
 		<div class="flex flex-col space-y-4">
 			<h3 class="text-2xl">Languages</h3>
-			<ul class="list-disc columns-2 pl-6 marker:text-iris">
+			<ul class="list-disc columns-2 pl-6 marker:text-accent">
 				<li>JavaScript</li>
 				<li>TypeScript</li>
 				<li>Go</li>
@@ -72,7 +76,7 @@
 				<li>Python</li>
 			</ul>
 			<h3 class="text-2xl">Frontend</h3>
-			<ul class="list-disc columns-2 pl-6 marker:text-iris">
+			<ul class="list-disc columns-2 pl-6 marker:text-accent">
 				<li>HTML / Semantic / a11y</li>
 				<li>CSS / SCSS / Tailwind</li>
 				<li>React</li>
@@ -83,7 +87,7 @@
 				<li>Astro</li>
 			</ul>
 			<h3 class="text-2xl">Backend</h3>
-			<ul class="list-disc columns-2 pl-6 marker:text-iris">
+			<ul class="list-disc columns-2 pl-6 marker:text-accent">
 				<li>Node JS</li>
 				<li>Express</li>
 				<li>Spring / Spring Boot</li>
@@ -94,7 +98,7 @@
 				<li>Supabase</li>
 			</ul>
 			<h3 class="text-2xl">Other</h3>
-			<ul class="list-disc columns-2 pl-6 marker:text-iris">
+			<ul class="list-disc columns-2 pl-6 marker:text-accent">
 				<li>Git</li>
 				<li>Docker</li>
 			</ul>
@@ -109,7 +113,7 @@
 			me fuel and necessary re-charge to keep me motivated. Here are some activities that I enjoy
 			doing:
 		</p>
-		<ul class="flex list-disc flex-col space-y-2 pl-6 marker:text-iris">
+		<ul class="flex list-disc flex-col space-y-2 pl-6 marker:text-accent">
 			<li>Tinkering electronics</li>
 			<li>Reading (Non-fiction, Fiction, Manga)</li>
 			<li>Watching movies (Mostly Anime)</li>
@@ -126,7 +130,7 @@
 		<p>
 			Feel free to reach me through the social links <a
 				href="#top"
-				class="hover-underline-animation text-iris">above ↑</a
+				class="hover-underline-animation text-accent">above ↑</a
 			> .
 		</p>
 	</footer>
