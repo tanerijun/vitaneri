@@ -11,9 +11,9 @@
 
 <section class="flex flex-col space-y-16">
 	<header>
-		<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Notepad</h1>
+		<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">TIL (Today I Learned)</h1>
 		<p class="mt-6">
-			This is the place where I put some code snippets, TILs, and other random stuff.
+			This is the place where I put some interesting facts, code snippets, and other random stuff.
 		</p>
 	</header>
 </section>
