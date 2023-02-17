@@ -19,11 +19,11 @@
 - [ ] Write a generator for blog post, consider using [clack](https://github.com/natemoo-re/clack)
 - [x] Ability to highlight code using this kind of syntax js {3-5}
 - [x] Add snippets section, collecting code snippets in md file
-- [ ] Remove unnecessary color from theme, and better css variable name
+- [x] Remove unnecessary color from theme, and better css variable name
 - [ ] 404 page
 - [x] Group post and TILs in one folder (idea: content)
-- [ ] /content/posts/make-image-fade-to-transparent-with-css/index.md:13:3 A11y: Screenreaders already announce <img> elements as an image.
-- [ ]/content/posts/understanding-space-complexity-of-algorithm/index.md:98:3 A11y: Screenreaders already announce <img> elements as an image.
+- [x] /content/posts/make-image-fade-to-transparent-with-css/index.md:13:3 A11y: Screenreaders already announce <img> elements as an image.
+- [x] /content/posts/understanding-space-complexity-of-algorithm/index.md:98:3 A11y: Screenreaders already announce <img> elements as an image.
 
 ## Idea about to be ditched
 

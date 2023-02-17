@@ -19,7 +19,7 @@ In this post, we're going to take a look at how to make an image fade to transpa
 
 This is an example of the effect we're trying to achieve.
 
-![Example of image fading into transparent](./assets/transparent-gradient-example.jpeg)
+![Transparent gradient example](./assets/transparent-gradient-example.jpeg)
 
 Notice how the bottom part of the image is slowly fading into the background, making it much easier to read the text on top of it.
 

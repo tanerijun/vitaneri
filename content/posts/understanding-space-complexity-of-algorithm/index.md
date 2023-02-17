@@ -149,7 +149,7 @@ This time, we're down to only 1 variable (`n`). But the auxiliary space needed i
 
 Let's look at the call stack assuming `n = 5`.
 
-![Image of the call stack](./assets/call-stack.jpg)
+![Call stack](./assets/call-stack.jpg)
 
 As the value of `n` increases, the number of function call also increase. Each function call has each own auxiliary space. So the auxiliary space will be based on `n`.
 
