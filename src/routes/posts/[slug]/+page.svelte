@@ -29,7 +29,8 @@
 <PageMeta
 	title={`${data.post.title} | Vitaneri`}
 	description={data.post.preview.text}
-	route={$page.url.pathname} />
+	route={$page.url.pathname}
+/>
 
 <section class="grid grid-cols-1 md:grid-cols-[48rem_1fr]">
 	<div>
@@ -41,7 +42,8 @@
 				href={canGoBack ? undefined : '/posts'}
 				aria-label="Go back to posts"
 				on:click={goBack}
-				on:keydown={goBack}>
+				on:keydown={goBack}
+			>
 				<ArrowLeftIcon class="h-4 w-4" /> Go Back
 			</svelte:element>
 		</div>
@@ -63,7 +65,7 @@
 			<!-- Post footer -->
 			<footer>
 				<!-- Tags -->
-				<div class="flex flex-wrap gap-4">
+				<div class="flex flex-wrap space-x-4">
 					{#each data.post.tags as tag (tag)}
 						<a href={`/tags/${tag}`}>
 							<div class="flex gap-1 hover:text-text">
