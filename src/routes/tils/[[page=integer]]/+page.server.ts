@@ -6,7 +6,7 @@ import type { TILMetadata } from '$lib/types';
 
 export const load = (async ({ params }) => {
 	const page = params.page ? parseInt(params.page) : 1;
-	const limit = 10;
+	const limit = 20;
 
 	const TILsForPage: TILMetadata[] = paginate(TILs, { limit, page });
 

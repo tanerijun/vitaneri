@@ -9,7 +9,6 @@
 	export let data: PageData;
 
 	$: isFirstPage = data.page === 1;
-	console.log(data.TILs);
 </script>
 
 <PageMeta
@@ -45,7 +44,7 @@
 	<!-- pagination -->
 	<footer class="flex items-center justify-between font-heading text-iris">
 		{#if !isFirstPage}
-			<a href={`/posts/${data.page - 1}`} class="hover-underline-animation flex items-center gap-2">
+			<a href={`/tils/${data.page - 1}`} class="hover-underline-animation flex items-center gap-2">
 				<ArrowLeftIcon class="h-4 w-4" />
 				Previous
 			</a>
@@ -54,7 +53,7 @@
 		{/if}
 
 		{#if data.hasNextPage}
-			<a href={`/posts/${data.page + 1}`} class="hover-underline-animation flex items-center gap-2">
+			<a href={`/tils/${data.page + 1}`} class="hover-underline-animation flex items-center gap-2">
 				Next
 				<ArrowRightIcon class="h-4 w-4" />
 			</a>
