@@ -18,11 +18,11 @@
 		<p class="mt-6">Filter posts by tag.</p>
 	</header>
 
-	<div class="md:columns-2">
+	<div class="md:columns-3">
 		{#each [...data.tagsData] as [letter, tagsMap] (letter)}
 			<div class="mb-8 flex break-inside-avoid-column flex-col gap-4">
 				<h3 class="text-4xl">{letter.toUpperCase()}</h3>
-				<ul class="grid grid-cols-2">
+				<ul>
 					{#each [...tagsMap] as [tag, count] (tag)}
 						<li>
 							<a href={`/tags/${tag}`} class="flex gap-1 hover:text-text">
