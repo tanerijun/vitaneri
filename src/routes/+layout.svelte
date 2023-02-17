@@ -7,10 +7,10 @@
 
 <LoadThemeScript />
 
-<div id="site-container" class="mx-auto max-w-3xl px-6">
+<div id="site-container" class="mx-auto flex min-h-screen max-w-3xl flex-col px-6">
 	<Header />
 
-	<main id="main-content" class="min-h-screen">
+	<main id="main-content" class="flex flex-1 items-center justify-center">
 		<slot />
 	</main>
 

@@ -14,7 +14,7 @@
 	route={$page.url.pathname}
 />
 
-<section class="flex flex-col space-y-16">
+<section class="flex w-full flex-col space-y-16">
 	<header>
 		<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Welcome ~</h1>
 		<p class="mt-6">
