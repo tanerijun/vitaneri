@@ -51,7 +51,7 @@
 {#each routes as route (route)}
 	<!-- id attribute is necessary for marker to work -->
 	<a
-		id={`${route}`}
+		id={`${route.toLowerCase()}`}
 		class:text-text={$page.url.pathname.includes(route)}
 		class="relative font-heading text-sm hover:text-text md:text-base"
 		href={`/${route.toLowerCase()}`}
