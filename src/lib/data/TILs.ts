@@ -7,7 +7,7 @@ if (browser) {
 }
 
 // Get all TILs' metadata
-export const TILs = Object.entries(import.meta.glob(`/TILs/**.md`, { eager: true }))
+export const TILs = Object.entries(import.meta.glob(`/content/TILs/**.md`, { eager: true }))
 	.map(([, obj]) => {
 		const TIL = obj as TIL;
 

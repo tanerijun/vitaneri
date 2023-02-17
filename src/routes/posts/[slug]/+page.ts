@@ -5,7 +5,7 @@ import type { PageLoad } from './$types';
  * and pass on the data from +page.server.ts
  */
 export const load = (async ({ data }) => {
-	const component = await import(`../../../../posts/${data.post.slug}/index.md`);
+	const component = await import(`../../../../content/posts/${data.post.slug}/index.md`);
 
 	return {
 		post: data.post,

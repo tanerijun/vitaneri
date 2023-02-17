@@ -7,7 +7,7 @@ import type { PageLoad } from './$types';
  */
 export const load = (async ({ data }) => {
 	const TILsWithComponent = data.TILs.map(async (TIL) => {
-		const component = await import(`../../../../TILs/${zeroPad(TIL.id, 4)}.md`);
+		const component = await import(`../../../../content/TILs/${zeroPad(TIL.id, 4)}.md`);
 		return {
 			...TIL,
 			component: component.default
