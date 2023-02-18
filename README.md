@@ -24,6 +24,7 @@
 - [x] Group post and TILs in one folder (idea: content)
 - [x] /content/posts/make-image-fade-to-transparent-with-css/index.md:13:3 A11y: Screenreaders already announce <img> elements as an image.
 - [x] /content/posts/understanding-space-complexity-of-algorithm/index.md:98:3 A11y: Screenreaders already announce <img> elements as an image.
+- [x] ping Google on sitemap update: https://github.com/bartholomej/svelte-sitemap/issues/23
 
 ## Idea about to be ditched
 
