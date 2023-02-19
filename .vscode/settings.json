@@ -8,6 +8,7 @@
 		"postbuild",
 		"searchdb",
 		"Supabase",
+		"tils",
 		"Wordle",
 		"wowie"
 	]

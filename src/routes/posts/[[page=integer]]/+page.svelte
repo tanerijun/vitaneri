@@ -40,9 +40,12 @@
 		{/if}
 
 		{#if hasNextPage}
-			<a href={`/posts/${data.page + 1}`} class="hover-underline-animation flex items-center gap-2">
+			<a
+				href={`/posts/${data.page + 1}`}
+				class="hover-underline-animation flex items-center gap-1.5"
+			>
 				Next
-				<ArrowRightIcon class="h-4 w-4" />
+				<ArrowRightIcon size={16} />
 			</a>
 		{/if}
 	</footer>

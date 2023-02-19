@@ -54,9 +54,9 @@
 			<h2 class="text-xl">Recently Published</h2>
 			<a
 				href="/posts"
-				class="hover-underline-animation flex items-center gap-2 font-heading text-sm text-accent"
+				class="hover-underline-animation flex items-center gap-1.5 font-heading text-sm text-accent"
 			>
-				View All <ArrowRightIcon class="h-4 w-4" />
+				View All <ArrowRightIcon size={16} />
 			</a>
 		</header>
 		<PostsList posts={data.posts} />

@@ -22,9 +22,9 @@
 		{/if}
 	</div>
 	<div slot="actions">
-		<div class="flex items-center text-accent">
+		<div class="flex items-center gap-1 text-accent">
 			<span class="text-sm">Read</span>
-			<ArrowRightIcon class="ml-1 h-4 w-4" />
+			<ArrowRightIcon size={14} />
 		</div>
 	</div>
 </Card>
