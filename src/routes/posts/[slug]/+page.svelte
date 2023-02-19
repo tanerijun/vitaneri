@@ -37,13 +37,13 @@
 		<div class="mb-8 w-fit font-heading text-accent">
 			<svelte:element
 				this={canGoBack ? 'button' : 'a'}
-				class="hover-underline-animation flex items-center gap-2"
+				class="hover-underline-animation flex items-center gap-1.5"
 				href={canGoBack ? undefined : '/posts'}
 				aria-label="Go back to posts"
 				on:click={goBack}
 				on:keydown={goBack}
 			>
-				<ArrowLeftIcon class="h-4 w-4" /> Go Back
+				<ArrowLeftIcon /> Go Back
 			</svelte:element>
 		</div>
 

@@ -19,8 +19,8 @@
 	</div>
 
 	<footer>
-		<a href="/tags" class="hover-underline-animation flex w-fit items-center gap-1 text-accent">
-			<ArrowLeftIcon class="h-4 w-4" /> Go back
+		<a href="/tags" class="hover-underline-animation flex w-fit items-center gap-1.5 text-accent">
+			<ArrowLeftIcon /> Go back
 		</a>
 	</footer>
 </section>
