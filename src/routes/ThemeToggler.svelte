@@ -4,6 +4,7 @@
 	import AnimatedMoon from '$lib/components/icons/AnimatedMoon.svelte';
 	import AnimatedMoonAlt from '$lib/components/icons/AnimatedMoonAlt.svelte';
 	import AnimatedSun from '$lib/components/icons/AnimatedSun.svelte';
+	import DotIcon from '$lib/components/icons/DotIcon.svelte';
 
 	const themes = ['dawn', 'twilight', 'dusk'] as const;
 	type SiteTheme = (typeof themes)[number];
@@ -41,5 +42,9 @@
 {#if siteTheme}
 	<Button on:click={handleSiteThemeChange}>
 		<svelte:component this={siteThemeIcons[currentThemeIndex]} />
+	</Button>
+{:else}
+	<Button>
+		<DotIcon />
 	</Button>
 {/if}
