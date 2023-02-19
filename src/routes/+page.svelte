@@ -56,7 +56,7 @@
 				href="/posts"
 				class="hover-underline-animation flex items-center gap-1.5 font-heading text-sm text-accent"
 			>
-				View All <ArrowRightIcon size={16} />
+				View All <ArrowRightIcon />
 			</a>
 		</header>
 		<PostsList posts={data.posts} />

@@ -35,7 +35,7 @@
 				href={`/posts/${data.page - 1}`}
 				class="hover-underline-animation flex items-center gap-1.5"
 			>
-				<ArrowLeftIcon size={16} />
+				<ArrowLeftIcon />
 				Previous
 			</a>
 		{:else}
@@ -48,7 +48,7 @@
 				class="hover-underline-animation flex items-center gap-1.5"
 			>
 				Next
-				<ArrowRightIcon size={16} />
+				<ArrowRightIcon />
 			</a>
 		{/if}
 	</footer>

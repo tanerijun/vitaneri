@@ -61,7 +61,7 @@
 				class="hover-underline-animation flex items-center gap-1.5"
 			>
 				Next
-				<ArrowRightIcon size={16} />
+				<ArrowRightIcon />
 			</a>
 		{/if}
 	</footer>
