@@ -16,7 +16,6 @@
 	"devDependencies": {
 		"@bitmachina/highlighter": "^1.0.0-alpha.7",
 		"@grail-ui/svelte": "^0.8.0",
-		"@lyrasearch/lyra": "^0.4.9",
 		"@sveltejs/adapter-static": "^2.0.1",
 		"@sveltejs/kit": "^1.0.0",
 		"@tailwindcss/typography": "^0.5.9",
