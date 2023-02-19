@@ -30,7 +30,7 @@
 			<article>
 				<header class="flex items-center justify-between">
 					<h2 class="text-4xl"><span class="mr-2 text-accent">#</span>{TIL.id}</h2>
-					<time datetime={TIL.datetime}>
+					<time datetime={TIL.datetime} class="text-sm">
 						{format(new Date(parseISO(TIL.datetime)), 'MMMM d, yyyy')}
 					</time>
 				</header>
