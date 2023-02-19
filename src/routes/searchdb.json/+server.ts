@@ -4,6 +4,11 @@ import { lyraInstance } from '$lib/data/lyraDB';
 
 export const prerender = true;
 
-export const GET = (() => {
+export const GET = (({ setHeaders }) => {
+	setHeaders({
+		'Cache-Control': 'max-age=0, s-max-age=600',
+		'Content-Type': 'application/json'
+	});
+
 	return json(lyraInstance);
 }) satisfies RequestHandler;

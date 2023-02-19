@@ -4,7 +4,11 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-		fetch('/searchdb.json')
+		fetch('/searchdb.json', {
+			headers: {
+				Accept: 'application/json'
+			}
+		})
 			.then((response) => response.json())
 			.then((data) => {
 				console.log(data);
