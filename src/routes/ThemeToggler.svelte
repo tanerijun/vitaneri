@@ -9,6 +9,8 @@
 	type SiteTheme = (typeof themes)[number];
 
 	let siteTheme: SiteTheme;
+	const siteThemeIcons = [AnimatedSun, AnimatedMoonAlt, AnimatedMoon];
+
 	$: currentThemeIndex = themes.findIndex((theme) => theme === siteTheme);
 
 	function handleSiteThemeChange() {
@@ -38,12 +40,6 @@
 
 {#if siteTheme}
 	<Button on:click={handleSiteThemeChange}>
-		{#if siteTheme === 'dawn'}
-			<AnimatedSun />
-		{:else if siteTheme === 'twilight'}
-			<AnimatedMoonAlt />
-		{:else}
-			<AnimatedMoon />
-		{/if}
+		<svelte:component this={siteThemeIcons[currentThemeIndex]} />
 	</Button>
 {/if}
