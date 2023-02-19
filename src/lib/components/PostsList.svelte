@@ -15,7 +15,7 @@
 				<PostPreview {post}>
 					<slot slot="eyebrow">
 						<!-- PostDate for small screen -->
-						<PostDate class="md:hidden" {post} collapsed decorate />
+						<PostDate class="text-sm md:hidden" {post} collapsed decorate />
 					</slot>
 				</PostPreview>
 			</div>
