@@ -11,11 +11,9 @@
 				node.focus();
 			}
 		}
-		console.log('Add keydown event');
 		window.addEventListener('keydown', handleKeydown);
 		return {
 			destroy() {
-				console.log('Remove keydown event');
 				window.removeEventListener('keydown', handleKeydown);
 			}
 		};
