@@ -1,17 +1,45 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
+	import { search } from '@lyrasearch/lyra';
 
-	onMount(() => {
-		fetch('/searchdb.json', {
+	export let query: string;
+	let searchDB: any;
+	let results: any;
+
+	$: console.log(results);
+
+	$: if (query && searchDB) {
+		search(searchDB, {
+			term: query,
+			properties: ['title', 'preview', 'tags']
+		}).then((data) => {
+			results = data;
+		});
+	}
+
+	async function fetchSearchDB() {
+		const response = await fetch('/searchdb.json', {
 			headers: {
 				Accept: 'application/json'
 			}
-		})
-			.then((response) => response.json())
-			.then((data) => {
-				console.log(data);
+		});
+		const data = await response.json();
+		return data;
+	}
+
+	if (browser) {
+		const sessionStorageSearchDB = window.sessionStorage.getItem('searchDB');
+		if (sessionStorageSearchDB) {
+			searchDB = JSON.parse(sessionStorageSearchDB);
+		} else {
+			fetchSearchDB().then((data) => {
+				searchDB = data;
+				window.sessionStorage.setItem('searchDB', JSON.stringify(data));
 			});
-	});
+		}
+	}
 </script>
 
-<div>Search Body</div>
+{#if searchDB}
+	<div>{searchDB.docsCount}</div>
+{/if}
