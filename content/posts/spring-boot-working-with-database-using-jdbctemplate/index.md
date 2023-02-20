@@ -1,20 +1,15 @@
 ---
-author: Vincent Taneri
 datetime: 2022-09-01T01:04:50.000Z
 title: "Spring Boot: Working With Database Using JDBCTemplate"
 slug: spring-boot-working-with-database-using-jdbctemplate
 featured: false
-draft: false
 tags:
   - spring
   - jdbctemplate
-ogImage:
 description: "Learn how to connect a Spring Boot application with a relational database using JDBCTemplate."
 ---
 
 In this tutorial, we'll learn how to connect a Spring Boot application with a relational database using JDBCTemplate. First, some background on why JDBCTemplate is used.
-
-## Table Of Contents
 
 ## Introduction
 

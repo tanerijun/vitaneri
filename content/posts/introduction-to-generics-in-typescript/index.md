@@ -1,19 +1,14 @@
 ---
-author: Vincent Taneri
 datetime: 2022-10-29T01:58:28.122Z
 title: "Introduction To Generics In TypeScript"
 slug: introduction-to-generics-in-typescript
 featured: false
-draft: false
 tags:
   - typescript
-ogImage:
 description: "A guide on TypeScript's generics."
 ---
 
 This post is a simple introduction to generics in TypeScript.
-
-## Table Of Contents
 
 ## What Is Generics?
 

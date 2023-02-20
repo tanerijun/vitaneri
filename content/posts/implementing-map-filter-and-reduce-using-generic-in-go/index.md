@@ -1,19 +1,14 @@
 ---
-author: Vincent Taneri
 datetime: 2022-11-15T08:25:07.215Z
 title: "Implementing Map, Filter, And Reduce Using Generic In Go"
 slug: implementing-map-filter-and-reduce-using-generic-in-go
 featured: false
-draft: false
 tags:
   - go
-ogImage:
 description: "An implementation of map, filter, and reduce using Go's generic."
 ---
 
 This is a short post showing an implementation of map, filter, and reduce using generic in Go.
-
-## Table Of Contents
 
 ## Map
 

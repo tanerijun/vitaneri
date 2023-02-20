@@ -1,21 +1,16 @@
 ---
-author: Vincent Taneri
 datetime: 2022-10-27T05:34:34.621Z
 title: 'LeetCode: Container With Most Water With TypeScript'
 slug: leetcode-container-with-most-water-with-typescript
 featured: false
-draft: false
 tags:
   - leetcode
   - dsa
   - typescript
-ogImage:
 description: 'Solving "Container With Most Water" from LeetCode with TypeScript.'
 ---
 
 In this post, we're going to solve LeetCode's "Container With Most Water" using TypeScript.
-
-## Table Of Contents
 
 ## Problem
 

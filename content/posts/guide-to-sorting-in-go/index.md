@@ -1,19 +1,14 @@
 ---
-author: Vincent Taneri
 datetime: 2022-11-16T04:03:59.416Z
 title: "Guide To Sorting In Go"
 slug: guide-to-sorting-in-go
 featured: false
-draft: false
 tags:
   - go
-ogImage:
 description: 'Various ways to sort a slice in using the "sort" package in Go.'
 ---
 
 In this post, we're going to take a look at various ways to sort a slice using the `sort` package from Go's standard library.
-
-## Table Of Contents
 
 ## Ascending Sort
 

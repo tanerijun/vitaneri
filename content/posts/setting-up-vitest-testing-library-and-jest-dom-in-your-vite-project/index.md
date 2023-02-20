@@ -1,21 +1,15 @@
 ---
-author: Vincent Taneri
 datetime: 2023-01-06T13:07:13.165Z
 title: "Setting Up Vitest, Testing Library, And jest-dom In Your Vite Project"
 slug: setting-up-vitest-testing-library-and-jest-dom-in-your-vite-project
 featured: true
-draft: false
 tags:
   - vitest
   - javascript
-  - typescript
-ogImage:
-description: "A short tutorial on how to setup Vitest, Testing Library, and jest-dom in your Vite Project."
+  - typescript "A short tutorial on how to setup Vitest, Testing Library, and jest-dom in your Vite Project."
 ---
 
 This will be a brief tutorial on how to setup Vitest, Testing Library, and jest-dom in your Vite Project.
-
-## Table Of Contents
 
 ## Setup Vite Project
 

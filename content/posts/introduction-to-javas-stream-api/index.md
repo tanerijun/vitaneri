@@ -1,19 +1,14 @@
 ---
-author: Vincent Taneri
 datetime: 2022-09-08T01:15:32.000Z
 title: Introduction to Java's Stream API
 slug: introduction-to-javas-stream-api
 featured: false
-draft: false
 tags:
   - java
-ogImage:
 description: "Learn Java's Stream API with examples code. We'll work with a sample data using the Stream API."
 ---
 
 In this post, we'll learn Java's Stream API by working with a sample data source using the Stream API. By the end of this article, you'll have a basic understanding of the Stream API in Java and what kind of problem it solves.
-
-## Table Of Contents
 
 ## Overview
 

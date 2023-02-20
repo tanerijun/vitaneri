@@ -1,20 +1,15 @@
 ---
-author: Vincent Taneri
 datetime: 2023-01-16T14:18:32.943Z
 title: "Optimize React's useState Hook With Lazy Initialization"
 slug: optimize-reacts-usestate-hook-with-lazy-initialization
 featured: false
-draft: false
 tags:
   - javascript
   - react
-ogImage:
 description: "An explanation of a way to optimize React's useState hook with lazy initialization."
 ---
 
 In this post, we'll look at a way to optimize React's `useState` hook called [lazy initialization](https://reactjs.org/docs/hooks-reference.html#lazy-initial-state).
-
-## Table Of Contents
 
 ## The Problem
 
