@@ -1,21 +1,16 @@
 ---
-author: Vincent Taneri
 datetime: 2022-10-29T04:53:41.458Z
 title: "Understanding Mapped Types In TypeScript"
 slug: understanding-mapped-types-in-typescript
 featured: false
-draft: false
 tags:
   - typescript
-ogImage:
 description: "Exploring Mapped Types in TypeScript."
 ---
 
 In this post, we'll look at Mapped Types in TypeScript.
 
 It's recommended that you have a basic understanding of [generics](introduction-to-generics-in-typescript) first before proceeding.
-
-## Table Of Contents
 
 ## What Is Mapped Type?
 

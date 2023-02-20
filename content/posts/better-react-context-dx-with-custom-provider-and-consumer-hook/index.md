@@ -1,20 +1,15 @@
 ---
-author: Vincent Taneri
 datetime: 2023-01-20T08:43:41.820Z
 title: "Better React Context DX With Custom Provider And Consumer Hook"
 slug: better-react-context-dx-with-custom-provider-and-consumer-hook
 featured: false
-draft: false
 tags:
   - react
   - javascript
-ogImage:
 description: "Abstracting React's Context API using custom provider and consumer hook."
 ---
 
 In this post, we'll take a look at how we can abstract React's context API using custom provider and consumer hook for a better developer experience.
-
-## Table Of Contents
 
 ## Introduction
 

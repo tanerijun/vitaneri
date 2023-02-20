@@ -1,21 +1,16 @@
 ---
-author: Vincent Taneri
 datetime: 2022-10-10T02:34:04.780Z
 title: Understanding Space Complexity Of Algorithm
 slug: understanding-space-complexity-of-algorithm
 featured: false
-draft: false
 tags:
   - dsa
-ogImage:
 description: 'Complete guide to calculating the space complexity of algorithms.'
 ---
 
 If you're like me, you'll find space complexity much more tricky to calculate than the time complexity. It always seems to go over your head.
 
 In this post, we'll learn about space complexity by looking at several examples. We'll also learn that there are 2 ways to look at space complexity.
-
-## Table Of Contents
 
 ## What Is Space Complexity?
 

@@ -1,21 +1,16 @@
 ---
-author: Vincent Taneri
 datetime: 2022-10-21T08:18:28.861Z
 title: "LeetCode: Longest Substring Without Repeating Characters With TypeScript"
 slug: leetcode-longest-substring-without-repeating-characters-with-typescript
 featured: false
-draft: false
 tags:
   - leetcode
   - dsa
   - typescript
-ogImage:
 description: 'Going over "Longest Substring Without Repeating Characters" from LeetCode with TypeScript.'
 ---
 
 This is my solution to "Longest Substring Without Repeating Characters" from LeetCode with TypeScript.
-
-## Table Of Contents
 
 ## Problem
 

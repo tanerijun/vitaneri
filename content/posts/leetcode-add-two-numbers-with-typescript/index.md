@@ -1,15 +1,12 @@
 ---
-author: Vincent Taneri
 datetime: 2022-10-09T15:07:17.838Z
 title: 'LeetCode: Add Two Numbers With TypeScript'
 slug: leetcode-add-two-numbers-with-typescript
 featured: false
-draft: false
 tags:
   - leetcode
   - dsa
   - typescript
-ogImage:
 description: 'Going over "Add Two Numbers" from LeetCode with TypeScript.'
 ---
 
@@ -22,8 +19,6 @@ The title sounds so simple but it's actually much more challenging then it sound
 ![Example of a linked list](./assets/linked-list.jpg)
 
 Now, let's go and solve the problem!
-
-## Table Of Contents
 
 ## Problem
 

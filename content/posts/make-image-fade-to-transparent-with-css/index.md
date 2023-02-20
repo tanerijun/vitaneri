@@ -1,19 +1,14 @@
 ---
-author: Vincent Taneri
 datetime: 2022-09-30T01:15:16.000Z
 title: Make Image Fade To Transparent With CSS
 slug: make-image-fade-to-transparent-with-css
 featured: false
-draft: false
 tags:
   - css
-ogImage:
 description: 'Learn how to make image fade to transparent using CSS masking.'
 ---
 
 In this post, we're going to take a look at how to make an image fade to transparent, or what I like to call _transparent image gradient_ with CSS.
-
-## Table Of Contents
 
 ## Example
 

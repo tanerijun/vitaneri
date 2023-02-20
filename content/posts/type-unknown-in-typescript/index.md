@@ -1,19 +1,14 @@
 ---
-author: Vincent Taneri
 datetime: 2022-10-21T15:06:20.401Z
 title: "Type Unknown in TypeScript"
 slug: type-unknown-in-typescript
 featured: false
-draft: false
 tags: 
 	- typescript
-ogImage: 
 description: "Exploring one of the primitive types in TypeScript: Unknown"
 ---
 
 Let's take a look at the `unknown` type in TypeScript. Type `unknown` is a very interesting type that only exist in TypeScript. Let's take a look at how it works.
-
-## Table Of Contents
 
 ## Working With Unknown
 

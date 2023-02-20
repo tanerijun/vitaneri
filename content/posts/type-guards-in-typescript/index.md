@@ -1,17 +1,12 @@
 ---
-author: Vincent Taneri
 datetime: 2022-10-14T02:15:52.963Z
 title: "Type Guards In TypeScript"
 slug: type-guards-in-typescript
 featured: false
-draft: false
 tags: 
 	- typescript
-ogImage: 
 description: "Exploring type guards in TypeScript."
 ---
-
-## Table Of Contents
 
 ## Introduction
 

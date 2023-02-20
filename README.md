@@ -3,11 +3,11 @@
 - [x] Style "Skip to content" in <header>
 - [x] Make <header> responsive
 - [x] Rewrite ThemeToggler ~~with Headless Menu~~ as a Button that toggle over 3 themes
-- [ ] Remove unnecessary metadata from frontmatter
-- [ ] Remove unnecessary metadata type in $lib/types like featured, draft, ...
+- [X] Remove unnecessary metadata from frontmatter
+- [X] Remove unnecessary metadata type in $lib/types like featured, draft, ...
 - [ ] Comments all components. ex: <!-- @component Allows you to quickly navigate the hierarchy of headings for the current page. -->
 - [ ] Implement side-wide search, try Lyra
-- [ ] rss, sitemap
+- [X] rss, sitemap
 - [x] Make sure every decorative line like those in NavLinks and TOC is rounded (border-radius)
 - [x] Show post's tags on blog post
 - [x] Allow people to filter by tag in posts route
@@ -20,7 +20,7 @@
 - [x] Ability to highlight code using this kind of syntax js {3-5}
 - [x] Add snippets section, collecting code snippets in md file
 - [x] Remove unnecessary color from theme, and better css variable name
-- [ ] 404 page
+- [X] 404 page
 - [x] Group post and TILs in one folder (idea: content)
 - [x] /content/posts/make-image-fade-to-transparent-with-css/index.md:13:3 A11y: Screenreaders already announce <img> elements as an image.
 - [x] /content/posts/understanding-space-complexity-of-algorithm/index.md:98:3 A11y: Screenreaders already announce <img> elements as an image.
