@@ -3,8 +3,8 @@
 	import SearchIcon from '$lib/components/icons/SearchIcon.svelte';
 	import { createModal } from '@grail-ui/svelte';
 	import { scale } from 'svelte/transition';
-	import SearchBody from './SearchBody.svelte';
 	import SearchInput from './SearchInput.svelte';
+	import SearchBody from './SearchBody.svelte';
 
 	let query: string = '';
 
@@ -26,8 +26,9 @@
 		transition:scale={{ duration: 150 }}
 		class="fixed left-1/2 top-1/2 z-50 flex max-w-md -translate-x-1/2 -translate-y-1/2 flex-col space-y-6 rounded-2xl bg-overlay/95 p-8 shadow-xl backdrop-blur-sm transition-all"
 	>
-		<SearchInput bind:query />
-		<SearchBody {query} />
+		<SearchBody />
+
+		<!-- <SearchInput bind:query /> -->
 		<div class="mt-2">
 			<p class="text-sm text-gray-500">
 				Your payment has been successfully submitted. We’ve sent you an email with all of the
