@@ -6,12 +6,18 @@
 	// Clean up to call on destroy when event listener is registered successfully.
 	let cleanUp: (() => void) | undefined = undefined;
 
-	const fetchPosts = async () => {
-		const res = await fetch('/posts.json');
-		return res.json();
-	};
+	onMount(() => {
+		populateData();
+		registerKeyRedirectEventToInput();
+	});
 
-	const populateData = async () => {
+	onDestroy(() => {
+		if (cleanUp) {
+			cleanUp();
+		}
+	});
+
+	async function populateData() {
 		const sessionStoragePosts = window.sessionStorage.getItem('posts');
 		if (sessionStoragePosts) {
 			data = JSON.parse(sessionStoragePosts);
@@ -19,9 +25,21 @@
 			data = await fetchPosts();
 			window.sessionStorage.setItem('posts', JSON.stringify(data));
 		}
-	};
+	}
 
-	const registerKeyRedirect = (node: HTMLElement) => {
+	async function fetchPosts() {
+		const res = await fetch('/posts.json');
+		return res.json();
+	}
+
+	function registerKeyRedirectEventToInput() {
+		const inputRef = document.querySelector('[data-svelte-search] input');
+		if (inputRef) {
+			cleanUp = registerKeyRedirect(inputRef as HTMLElement);
+		}
+	}
+
+	function registerKeyRedirect(node: HTMLElement) {
 		function handleKeydown(e: KeyboardEvent) {
 			if (node === document.activeElement) {
 				return;
@@ -36,25 +54,7 @@
 		return () => {
 			window.removeEventListener('keydown', handleKeydown);
 		};
-	};
-
-	const registerKeyRedirectToInput = () => {
-		const inputRef = document.querySelector('[data-svelte-search] input');
-		if (inputRef) {
-			cleanUp = registerKeyRedirect(inputRef as HTMLElement);
-		}
-	};
-
-	onMount(() => {
-		populateData();
-		registerKeyRedirectToInput();
-	});
-
-	onDestroy(() => {
-		if (cleanUp) {
-			cleanUp();
-		}
-	});
+	}
 </script>
 
 <Typeahead {data} />
