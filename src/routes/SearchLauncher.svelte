@@ -23,6 +23,6 @@
 		transition:scale={{ duration: 150 }}
 		class="fixed left-1/2 top-1/2 z-50 flex h-[80%] w-[80%] -translate-x-1/2 -translate-y-1/2 flex-col space-y-4 rounded-2xl bg-overlay/95 p-4 shadow-xl backdrop-blur-sm transition-all md:h-1/2 md:w-1/2 md:max-w-md md:p-6"
 	>
-		<Search />
+		<Search on:navigation={() => ($open = false)} />
 	</div>
 {/if}

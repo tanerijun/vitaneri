@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount, createEventDispatcher } from 'svelte';
 	import SearchInput from './SearchInput.svelte';
 	import Fuzzy from 'svelte-fuzzy';
 	import type { FormattedResult } from 'svelte-fuzzy/types/Fuzzy.svelte';
@@ -8,6 +8,12 @@
 	let data: { [key: string]: any }[] = [];
 	let formatted: FormattedResult = [];
 	let result: any = [];
+
+	const dispatch = createEventDispatcher();
+
+	function handleLinkClick() {
+		dispatch('navigation');
+	}
 
 	let fuseOptions = {
 		keys: ['title']
@@ -34,6 +40,12 @@
 
 	$: console.log(formatted);
 	$: console.log(result);
+
+	// Todo:
+	// 1. remove formatted
+	// 2. give type to result
+	// 3. remove unnecessary data from posts.json
+	// 4. fix bug where modal is still opened after clicking on a link
 </script>
 
 <SearchInput bind:query />
@@ -43,7 +55,7 @@
 <ul class="no-scrollbar flex h-full w-full flex-col gap-4 overflow-scroll text-sm text-subtle">
 	{#each result as item}
 		<li>
-			<a href={`/posts/${item.slug}`}>
+			<a href={`/posts/${item.slug}`} on:click={handleLinkClick}>
 				{#each item.title as { matches, text }}
 					{#if matches}
 						<mark class="bg-highlight text-accent">{text}</mark>
