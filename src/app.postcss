@@ -147,6 +147,16 @@
 	code[data-line-numbers] > span[data-highlighted] {
 		@apply -ml-[2px];
 	}
+
+	/* ===== typeahead ===== */
+
+	[data-svelte-typeahead] {
+		@apply static bg-transparent !important;
+	}
+
+	[data-svelte-typeahead] ul {
+		@apply static border border-red-300 shadow-none !important;
+	}
 }
 
 @layer utilities {
