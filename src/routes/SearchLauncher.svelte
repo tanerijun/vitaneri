@@ -3,13 +3,12 @@
 	import SearchIcon from '$lib/components/icons/SearchIcon.svelte';
 	import { createModal } from '@grail-ui/svelte';
 	import { scale } from 'svelte/transition';
-	import SearchInput from './SearchInput.svelte';
 	import Search from './Search.svelte';
 
 	let query: string = '';
 
 	const { useModal, modalAttrs, triggerAttrs, open } = createModal({
-		portal: null,
+		portal: 'body',
 		dismissible: true,
 		open: false
 	});
@@ -24,26 +23,8 @@
 		use:useModal
 		{...$modalAttrs}
 		transition:scale={{ duration: 150 }}
-		class="fixed left-1/2 top-1/2 z-50 flex max-w-md -translate-x-1/2 -translate-y-1/2 flex-col space-y-6 rounded-2xl bg-overlay/95 p-8 shadow-xl backdrop-blur-sm transition-all"
+		class="no-scrollbar fixed left-1/2 top-1/2 z-50 h-[80%] w-[80%] -translate-x-1/2 -translate-y-1/2 overflow-scroll rounded-2xl bg-overlay/95 p-4 shadow-xl backdrop-blur-sm transition-all md:h-1/2 md:w-1/2 md:max-w-md md:p-8"
 	>
 		<Search />
-
-		<!-- <SearchInput bind:query /> -->
-		<div class="mt-2">
-			<p class="text-sm text-gray-500">
-				Your payment has been successfully submitted. We’ve sent you an email with all of the
-				details of your order.
-			</p>
-			<p>{query}</p>
-		</div>
-
-		<div class="mt-4">
-			<button
-				type="button"
-				on:click={() => ($open = false)}
-				class="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-				>Got it, thanks!</button
-			>
-		</div>
 	</div>
 {/if}

@@ -57,4 +57,14 @@
 	}
 </script>
 
-<Typeahead {data} />
+<Typeahead label="Search posts" hideLabel {data} />
+
+<style lang="postcss" global>
+	[data-svelte-typeahead] {
+		@apply static bg-transparent !important;
+	}
+
+	[data-svelte-typeahead] ul {
+		@apply static border border-red-300 !important;
+	}
+</style>
