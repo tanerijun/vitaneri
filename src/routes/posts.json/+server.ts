@@ -8,9 +8,7 @@ export const GET = (() => {
 		posts.map((post) => {
 			return {
 				title: post.title,
-				preview: post.preview,
-				slug: post.slug,
-				tags: post.tags
+				slug: post.slug
 			};
 		})
 	);
