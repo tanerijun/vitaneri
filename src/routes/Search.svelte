@@ -38,13 +38,13 @@
 
 <Fuzzy {query} {data} options={fuseOptions} bind:formatted />
 
-<ul>
+<ul class="no-scrollbar flex h-full w-full flex-col gap-4 overflow-scroll text-sm text-subtle">
 	{#each formatted as item}
 		{#each item as line}
 			<li>
 				{#each line as { matches, text }}
 					{#if matches}
-						<mark>{text}</mark>
+						<mark class="bg-highlight text-accent">{text}</mark>
 					{:else}
 						{text}
 					{/if}
