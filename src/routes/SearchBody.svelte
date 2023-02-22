@@ -11,6 +11,16 @@
 		return res.json();
 	};
 
+	const populateData = async () => {
+		const sessionStoragePosts = window.sessionStorage.getItem('posts');
+		if (sessionStoragePosts) {
+			data = JSON.parse(sessionStoragePosts);
+		} else {
+			data = await fetchPosts();
+			window.sessionStorage.setItem('posts', JSON.stringify(data));
+		}
+	};
+
 	const registerKeyRedirect = (node: HTMLElement) => {
 		function handleKeydown(e: KeyboardEvent) {
 			if (node === document.activeElement) {
@@ -21,11 +31,9 @@
 			}
 		}
 
-		console.log('registering event listener');
 		window.addEventListener('keydown', handleKeydown);
 
 		return () => {
-			console.log('cleaning up');
 			window.removeEventListener('keydown', handleKeydown);
 		};
 	};
@@ -37,20 +45,8 @@
 		}
 	};
 
-	onMount(async () => {
-		const sessionStoragePosts = window.sessionStorage.getItem('posts');
-		if (sessionStoragePosts) {
-			data = JSON.parse(sessionStoragePosts);
-		} else {
-			data = await fetchPosts();
-			window.sessionStorage.setItem('posts', JSON.stringify(data));
-		}
-
-		// const searchFormRef = document.querySelector('[data-svelte-search]');
-		// const inputRef = searchFormRef?.querySelector('input');
-		// if (inputRef) {
-		// 	cleanUp = registerKeyRedirect(inputRef);
-		// }
+	onMount(() => {
+		populateData();
 		registerKeyRedirectToInput();
 	});
 
