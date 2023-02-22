@@ -2,8 +2,8 @@
 	import SiteLogo from './SiteLogo.svelte';
 	import NavbarLinks from './NavbarLinks.svelte';
 	import ThemeToggler from './ThemeToggler.svelte';
-	import Search from './Search.svelte';
 	import MobileMenu from './MobileMenu.svelte';
+	import SearchLauncher from './SearchLauncher.svelte';
 
 	let showMobileNavigation = false;
 
@@ -37,7 +37,7 @@
 
 			<div class="flex items-center space-x-2 md:space-x-3">
 				<ThemeToggler />
-				<Search />
+				<SearchLauncher />
 				<MobileMenu class="md:hidden" on:change={handleMenuChange} />
 			</div>
 		</div>
