@@ -5,8 +5,6 @@
 	import { scale } from 'svelte/transition';
 	import Search from './Search.svelte';
 
-	let query: string = '';
-
 	const { useModal, modalAttrs, triggerAttrs, open } = createModal({
 		portal: 'body',
 		dismissible: true,

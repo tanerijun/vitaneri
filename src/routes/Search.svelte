@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Typeahead from 'svelte-typeahead';
 	import { onDestroy, onMount } from 'svelte';
 
 	let data: string[] = [];
@@ -56,5 +55,3 @@
 		};
 	}
 </script>
-
-<Typeahead label="Search posts" hideLabel {data} />
