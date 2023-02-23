@@ -2,7 +2,7 @@
 	import { browser } from '$app/environment';
 	import type { PostMetadata } from '$lib/types';
 	import { onMount } from 'svelte';
-	import Card from './Card.svelte';
+	import Card from '../src/lib/components/Card.svelte';
 
 	export let post: PostMetadata;
 

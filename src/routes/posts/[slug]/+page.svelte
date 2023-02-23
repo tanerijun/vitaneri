@@ -4,7 +4,6 @@
 	import { afterNavigate } from '$app/navigation';
 	import ArrowLeftIcon from '$lib/components/icons/ArrowLeftIcon.svelte';
 	import PostDate from '$lib/components/PostDate.svelte';
-	import TableOfContents from '$lib/components/TableOfContents.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
