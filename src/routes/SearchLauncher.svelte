@@ -18,7 +18,20 @@
 	function closeModal() {
 		$open = false;
 	}
+
+	function toggleModal() {
+		$open = !$open;
+	}
+
+	function handleKeydown(e: KeyboardEvent) {
+		if (e.key.toLowerCase() === 'k' && (e.ctrlKey || e.metaKey)) {
+			e.preventDefault();
+			toggleModal();
+		}
+	}
 </script>
+
+<svelte:window on:keydown={handleKeydown} />
 
 <Button {...$triggerAttrs} on:click={openModal}>
 	<SearchIcon />
