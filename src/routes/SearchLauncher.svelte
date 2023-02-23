@@ -46,7 +46,7 @@
 	>
 		<Search on:navigation={closeModal} />
 		<p class="hidden border-t border-muted/20 pt-4 text-sm md:block">
-			Press <kbd>Ctrl</kbd> + <kbd>K</kbd> to search from anywhere.
+			Press <kbd class="ml-1">Ctrl</kbd> + <kbd class="mr-1">K</kbd> to search from anywhere.
 		</p>
 	</div>
 {/if}
