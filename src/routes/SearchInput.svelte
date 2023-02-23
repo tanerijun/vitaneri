@@ -21,9 +21,9 @@
 </script>
 
 <input
-	type="text"
+	type="search"
 	placeholder="Type something..."
-	class="h-10 w-full rounded-md border border-muted/20 bg-basis px-4 text-sm text-text placeholder-muted focus:border-transparent focus:outline-none focus:ring-2 focus:ring-accent"
+	class="w-full rounded-md border border-muted/20 bg-basis p-4 text-sm text-text placeholder-muted focus:border-transparent focus:outline-none focus:ring-2 focus:ring-accent"
 	bind:value={query}
 	use:keyRedirect
 />
