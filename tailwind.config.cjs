@@ -81,8 +81,10 @@ const config = {
 
 						// Headings
 						'h2, h3': {
-							color: 'var(--tw-prose-headings)'
+							color: 'var(--tw-prose-headings)',
+							fontSize: theme('fontSize.3xl')[0]
 						},
+
 						// Prevents <h2><a>Title</a></h2> to be styled like a link
 						':is(h1,h2,h3,h4,h5,h6) a': {
 							color: 'var(--tw-prose-headings)',
