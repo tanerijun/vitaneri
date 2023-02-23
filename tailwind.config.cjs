@@ -135,7 +135,6 @@ const config = {
 							color: 'var(--tw-prose-code)',
 							fontSize: theme('fontSize.sm')[0],
 							fontWeight: theme('fontWeight.semibold'),
-							borderRadius: theme('borderRadius.lg'),
 							paddingLeft: theme('spacing.1'),
 							paddingRight: theme('spacing.1')
 						},
