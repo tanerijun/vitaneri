@@ -31,56 +31,48 @@
 	route={$page.url.pathname}
 />
 
-<section class="grid w-full grid-cols-1 md:grid-cols-[48rem_1fr]">
-	<div>
-		<!-- goBack button -->
-		<div class="mb-8 w-fit font-heading text-accent">
-			<svelte:element
-				this={canGoBack ? 'button' : 'a'}
-				class="hover-underline-animation flex items-center gap-1.5"
-				href={canGoBack ? undefined : '/posts'}
-				aria-label="Go back to posts"
-				on:click={goBack}
-				on:keydown={goBack}
-			>
-				<ArrowLeftIcon /> Go Back
-			</svelte:element>
+<!-- <section class="grid w-full grid-cols-1 md:grid-cols-[48rem_1fr]"> -->
+<section class="flex flex-col gap-8">
+	<!-- goBack button -->
+	<div class="w-fit font-heading text-accent">
+		<svelte:element
+			this={canGoBack ? 'button' : 'a'}
+			class="hover-underline-animation flex items-center gap-1.5"
+			href={canGoBack ? undefined : '/posts'}
+			aria-label="Go back to posts"
+			on:click={goBack}
+			on:keydown={goBack}
+		>
+			<ArrowLeftIcon /> Go Back
+		</svelte:element>
+	</div>
+
+	<article>
+		<!-- Post header -->
+		<header class="flex flex-col gap-6">
+			<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">
+				{data.post.title}
+			</h1>
+			<PostDate class="text-sm" post={data.post} decorate collapsed />
+		</header>
+
+		<!-- Post content -->
+		<div class="prose">
+			<svelte:component this={data.component} />
 		</div>
 
-		<article class="max-w-[45rem]">
-			<!-- Post header -->
-			<header class="flex flex-col">
-				<h1 class="mt-6 text-4xl font-bold tracking-tight sm:text-5xl">
-					{data.post.title}
-				</h1>
-				<PostDate class="text-sm" post={data.post} decorate collapsed />
-			</header>
-
-			<!-- Post content -->
-			<div class="prose">
-				<svelte:component this={data.component} />
+		<!-- Post footer -->
+		<footer>
+			<!-- Tags -->
+			<div class="flex flex-wrap space-x-4">
+				{#each data.post.tags as tag (tag)}
+					<a href={`/tags/${tag}`}>
+						<div class="flex gap-1 hover:text-text">
+							<span class="flex items-center text-sm text-accent">#</span>{tag}
+						</div>
+					</a>
+				{/each}
 			</div>
-
-			<!-- Post footer -->
-			<footer>
-				<!-- Tags -->
-				<div class="flex flex-wrap space-x-4">
-					{#each data.post.tags as tag (tag)}
-						<a href={`/tags/${tag}`}>
-							<div class="flex gap-1 hover:text-text">
-								<span class="flex items-center text-sm text-accent">#</span>{tag}
-							</div>
-						</a>
-					{/each}
-				</div>
-			</footer>
-		</article>
-	</div>
-
-	<!-- Table of contents -->
-	<div class="hidden xl:block">
-		<aside class="sticky top-8 ml-8 w-48" aria-label="Table of Contents">
-			<TableOfContents post={data.post} />
-		</aside>
-	</div>
+		</footer>
+	</article>
 </section>
