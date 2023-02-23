@@ -50,10 +50,10 @@
 <ul class="no-scrollbar flex h-full w-full flex-col gap-4 overflow-scroll text-sm text-subtle">
 	{#each result as item}
 		<li>
-			<a href={`/posts/${item.slug}`} on:click={handleLinkClick}>
+			<a href={`/posts/${item.slug}`} on:click={handleLinkClick} class="hover:text-text">
 				{#each item.title as { matches, text }}
 					{#if matches}
-						<mark class="bg-highlight text-accent">{text}</mark>
+						<mark class="bg-highlight/30 text-accent">{text}</mark>
 					{:else}
 						{text}
 					{/if}
