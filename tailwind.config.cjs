@@ -61,7 +61,7 @@ const config = {
 						'--tw-prose-quote-borders': 'hsl(var(--color-accent))',
 						'--tw-prose-captions': 'hsl(var(--color-muted))',
 						'--tw-prose-code': 'hsl(var(--color-text))',
-						'--tw-prose-pre-code': 'hsl(var(--color-subtle))',
+						'--tw-prose-pre-code': '#F8F8F2', // match shiki dracula
 						'--tw-prose-pre-bg': 'hsl(var(--color-surface))',
 						'--tw-prose-th-borders': 'hsl(var(--color-muted) / 20%)',
 						'--tw-prose-td-borders': 'hsl(var(--color-muted) / 10%)',
