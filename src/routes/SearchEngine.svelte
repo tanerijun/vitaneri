@@ -3,7 +3,7 @@
 
 	export let query: string = '';
 	export let data: { [key: string]: any }[] = [];
-	export let result: Object[] = [];
+	export let result: Array<(typeof data)[0] & { highlight: string }> = [];
 
 	const uf = new uFuzzy({
 		intraMode: 1, // IntraMode.SingleError

@@ -1,4 +1,4 @@
-import type { posts } from "$lib/data/posts";
+import type { posts } from '$lib/data/posts';
 
 interface MarkdownMetadata {
 	title: string;
@@ -38,6 +38,11 @@ interface TIL {
 	metadata: TILMetadata;
 }
 
-type PostMetadata = typeof posts[number];
+type PostMetadata = (typeof posts)[number];
 
-export type { MarkdownMetadata, Post, PostMetadata, TIL, TILMetadata };
+interface SearchData {
+	title: string;
+	slug: string;
+}
+
+export type { MarkdownMetadata, Post, PostMetadata, TIL, TILMetadata, SearchData };

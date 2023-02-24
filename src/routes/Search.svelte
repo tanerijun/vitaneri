@@ -2,10 +2,11 @@
 	import { onMount, createEventDispatcher } from 'svelte';
 	import SearchInput from './SearchInput.svelte';
 	import SearchEngine from './SearchEngine.svelte';
+	import type { SearchData } from '$lib/types';
 
 	let query: string = '';
-	let data: { [key: string]: any }[] = [];
-	let result: any = [];
+	let data: SearchData[] = [];
+	let result: Array<SearchData & { highlight: string }> = [];
 
 	const dispatch = createEventDispatcher();
 
@@ -27,13 +28,10 @@
 		}
 	}
 
-	async function fetchPosts() {
+	async function fetchPosts(): Promise<SearchData[]> {
 		const res = await fetch('/posts.json');
 		return res.json();
 	}
-
-	// Todo:
-	// 2. give type to result
 </script>
 
 <SearchInput bind:query />
