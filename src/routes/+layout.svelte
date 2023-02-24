@@ -3,9 +3,12 @@
 	import Footer from './Footer.svelte';
 	import Header from './Header.svelte';
 	import LoadThemeScript from './LoadThemeScript.svelte';
+	import NavigationLoading from './NavigationLoading.svelte';
 </script>
 
 <LoadThemeScript />
+
+<NavigationLoading />
 
 <div id="site-container" class="mx-auto flex min-h-screen max-w-3xl flex-col px-6">
 	<Header />
