@@ -126,7 +126,7 @@
 
 	/* Highlighted line */
 	code > span[data-highlighted] {
-		@apply w-full border-l-2 border-accent bg-accent/10 pl-[14px] content-[''];
+		@apply border-l-2 border-accent bg-accent/10 pr-4;
 	}
 
 	/* Code block with title */
@@ -136,7 +136,7 @@
 
 	/* Code block with line numbers */
 	code[data-line-numbers] > span[data-line-number] {
-		@apply px-0;
+		@apply pl-0;
 	}
 
 	code[data-line-numbers] > span[data-line-number]::before {
