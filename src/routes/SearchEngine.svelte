@@ -6,29 +6,27 @@
 	export let result: Object[] = [];
 
 	const uf = new uFuzzy({
-		intraMode: 1
+		intraMode: 1, // IntraMode.SingleError
+		intraIns: 1,
+		intraSub: 1,
+		intraTrn: 1,
+		intraDel: 1
 	});
 
 	$: if (query || data) {
 		const haystack = data.map((item) => item.title);
-		const idxs = uf.filter(haystack, query);
-		const info = uf.info(idxs, haystack, query);
-		const order = uf.sort(info, haystack, query);
-		result = order.map((idx) => {
-			const itemIdx = info.idx[order[idx]];
-			const item = data[itemIdx];
-			const highlight = uFuzzy.highlight(
-				haystack[itemIdx],
-				info.ranges[order[idx]],
-				(part, matched) => (matched ? '<mark>' + part + '</mark>' : part)
-			);
-			return { ...item, highlight };
-		});
-		console.log('data: ', data);
-		console.log('haystack: ', haystack);
-		console.log('idxs: ', idxs);
-		console.log('info: ', info);
-		console.log('order: ', order);
-		console.log('result', result);
+		const [idxs, info, order] = uf.search(haystack, query, true, 1e3);
+		if (idxs && info && order) {
+			result = order.map((idx) => {
+				const itemIdx = info.idx[order[idx]];
+				const item = data[itemIdx];
+				const highlight = uFuzzy.highlight(
+					haystack[itemIdx],
+					info.ranges[order[idx]],
+					(part, matched) => (matched ? '<mark>' + part + '</mark>' : part)
+				);
+				return { ...item, highlight };
+			});
+		}
 	}
 </script>

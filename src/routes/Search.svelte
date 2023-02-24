@@ -84,3 +84,9 @@
 		</li>
 	{/each}
 </ul>
+
+<style global lang="postcss">
+	mark {
+		@apply bg-highlight/30 text-accent;
+	}
+</style>
