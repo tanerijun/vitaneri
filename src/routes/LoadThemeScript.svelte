@@ -6,7 +6,7 @@
 		let dataTheme = localStorage.getItem('vitaneri:theme');
 		if (!dataTheme) {
 			dataTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dusk' : 'dawn';
+			document.documentElement.setAttribute('data-theme', dataTheme);
 		}
-		document.documentElement.setAttribute('data-theme', dataTheme);
 	</script>
 </svelte:head>
