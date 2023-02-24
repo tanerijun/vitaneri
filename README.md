@@ -6,7 +6,7 @@
 - [x] Remove unnecessary metadata from frontmatter
 - [x] Remove unnecessary metadata type in $lib/types like featured, draft, ...
 - [ ] Comments all components. ex: <!-- @component Allows you to quickly navigate the hierarchy of headings for the current page. -->
-- [ ] Implement side-wide search, try Lyra (fail), trying uFuzzy this time
+- [x] Implement side-wide search, used uFuzzy at the end.
 - [x] rss, sitemap
 - [x] Make sure every decorative line like those in NavLinks and TOC is rounded (border-radius)
 - [x] Show post's tags on blog post
@@ -16,7 +16,7 @@
 - [ ] Make sure the spacing separating header and footer is consistent on every page. Don't put margin in <section> on every page, instead put it on the heading and footer to ensure consistency
 - [ ] Test utils
 - [ ] e2e testing
-- [ ] Write a generator for blog post, consider using [clack](https://github.com/natemoo-re/clack)
+- [x] Write a generator for blog post, consider using [clack](https://github.com/natemoo-re/clack)
 - [x] Ability to highlight code using this kind of syntax js {3-5}
 - [x] Add snippets section, collecting code snippets in md file
 - [x] Remove unnecessary color from theme, and better css variable name
@@ -33,6 +33,18 @@
 - [ ] Show post tags on blog card
 - [ ] Make TOC mobile responsive, maybe showing it above the post
 - [ ] May also consider adding Giscus
+
+# Vitaneri
+
+My own personal corner of the Internet.
+
+## Generate Content
+
+- Make sure that Node is installed and configured correctly
+- Run the following command in terminal:
+  ```
+  `npm run create`
+  ```
 
 ## Markdown Blog
 
