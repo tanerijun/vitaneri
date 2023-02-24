@@ -30,8 +30,7 @@
 	route={$page.url.pathname}
 />
 
-<!-- <section class="grid w-full grid-cols-1 md:grid-cols-[48rem_1fr]"> -->
-<section class="flex flex-col gap-8">
+<section class="flex w-full flex-col gap-8">
 	<!-- goBack button -->
 	<div class="w-fit font-heading text-accent">
 		<svelte:element
