@@ -11,7 +11,8 @@
 		"test:unit": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"postbuild": "npx svelte-sitemap --domain https://vitaneri.com"
+		"postbuild": "npx svelte-sitemap --domain https://vitaneri.com",
+		"create": "node content-generator"
 	},
 	"devDependencies": {
 		"@bitmachina/highlighter": "^1.0.0-alpha.7",
