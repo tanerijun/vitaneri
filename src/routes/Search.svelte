@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount, createEventDispatcher } from 'svelte';
 	import SearchInput from './SearchInput.svelte';
-	import Fuzzy from 'svelte-fuzzy';
 	import SearchEngine from './SearchEngine.svelte';
 
 	let query: string = '';
@@ -13,10 +12,6 @@
 	function handleLinkClick() {
 		dispatch('navigation');
 	}
-
-	let fuseOptions = {
-		keys: ['title']
-	};
 
 	onMount(() => {
 		populateData();
@@ -39,35 +34,11 @@
 
 	// Todo:
 	// 2. give type to result
-	// 3. remove unnecessary data from posts.json
 </script>
 
 <SearchInput bind:query />
 
-<!-- <Fuzzy {query} {data} options={fuseOptions} bind:result /> -->
 <SearchEngine {query} {data} bind:result />
-
-<!-- <ul
-	class="no-scrollbar flex h-full w-full flex-col gap-4 overflow-scroll overscroll-y-contain text-sm text-subtle"
->
-	{#each result as item}
-		<li>
-			<a
-				href={`/posts/${item.slug}`}
-				on:click={handleLinkClick}
-				class="hover:bg-highlight/30 hover:text-accent"
-			>
-				{#each item.title as { matches, text }}
-					{#if matches}
-						<mark class="bg-highlight/30 text-accent">{text}</mark>
-					{:else}
-						{text}
-					{/if}
-				{/each}
-			</a>
-		</li>
-	{/each}
-</ul> -->
 
 <ul
 	class="no-scrollbar flex h-full w-full flex-col gap-4 overflow-scroll overscroll-y-contain text-sm text-subtle"
