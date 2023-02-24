@@ -19,17 +19,17 @@
 	});
 
 	async function populateData() {
-		const sessionStoragePosts = window.sessionStorage.getItem('posts');
+		const sessionStoragePosts = window.sessionStorage.getItem('searchdata');
 		if (sessionStoragePosts) {
 			data = JSON.parse(sessionStoragePosts);
 		} else {
 			data = await fetchPosts();
-			window.sessionStorage.setItem('posts', JSON.stringify(data));
+			window.sessionStorage.setItem('searchdata', JSON.stringify(data));
 		}
 	}
 
 	async function fetchPosts(): Promise<SearchData[]> {
-		const res = await fetch('/posts.json');
+		const res = await fetch('/searchdata.json');
 		return res.json();
 	}
 </script>
