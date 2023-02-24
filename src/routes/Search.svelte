@@ -2,6 +2,7 @@
 	import { onMount, createEventDispatcher } from 'svelte';
 	import SearchInput from './SearchInput.svelte';
 	import Fuzzy from 'svelte-fuzzy';
+	import SearchEngine from './SearchEngine.svelte';
 
 	let query: string = '';
 	let data: { [key: string]: any }[] = [];
@@ -36,8 +37,6 @@
 		return res.json();
 	}
 
-	$: console.log(result);
-
 	// Todo:
 	// 2. give type to result
 	// 3. remove unnecessary data from posts.json
@@ -45,9 +44,10 @@
 
 <SearchInput bind:query />
 
-<Fuzzy {query} {data} options={fuseOptions} bind:result />
+<!-- <Fuzzy {query} {data} options={fuseOptions} bind:result /> -->
+<SearchEngine {query} {data} bind:result />
 
-<ul
+<!-- <ul
 	class="no-scrollbar flex h-full w-full flex-col gap-4 overflow-scroll overscroll-y-contain text-sm text-subtle"
 >
 	{#each result as item}
@@ -64,6 +64,22 @@
 						{text}
 					{/if}
 				{/each}
+			</a>
+		</li>
+	{/each}
+</ul> -->
+
+<ul
+	class="no-scrollbar flex h-full w-full flex-col gap-4 overflow-scroll overscroll-y-contain text-sm text-subtle"
+>
+	{#each result as item}
+		<li>
+			<a
+				href={`/posts/${item.slug}`}
+				on:click={handleLinkClick}
+				class="hover:bg-highlight/30 hover:text-accent"
+			>
+				{@html item.highlight}
 			</a>
 		</li>
 	{/each}
