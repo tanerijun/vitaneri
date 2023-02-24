@@ -46,13 +46,18 @@ My own personal corner of the Internet.
   `npm run create`
   ```
 
-## Markdown Blog
+## Markdown Support
 
-- Write blog posts using markdown in the `posts` folder in project root.
-- The file has to be put inside a folder with post title as it's name, and the file inside is called `index.md` by convention.
-  ```
-  /posts/my-first-post/index.md
-  ```
+- Write blog posts using markdown in the `content/posts` folder in project root.
+  - The file has to be put inside a folder with post title as it's name, and the file inside is called `index.md` by convention.
+    ```
+    /content/posts/my-first-post/index.md
+    ```
+- You can also write TIL using markdown in the `content/TILs` folder in the project root.
+  - The naming convention for TIL is:
+    ```
+    /content/TILs/0123.md
+    ```
 - Supported extensions: `.md`, `.svelte.md`, `.svx`.
   - Using `.svelte.md` and `.svx` extensions, you can put a Svelte component inside the markdown.
   - But it's recommended to just use `.md` for maximum portability.
