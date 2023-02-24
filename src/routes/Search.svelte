@@ -47,7 +47,9 @@
 
 <Fuzzy {query} {data} options={fuseOptions} bind:result />
 
-<ul class="no-scrollbar flex h-full w-full flex-col gap-4 overflow-scroll text-sm text-subtle">
+<ul
+	class="no-scrollbar flex h-full w-full flex-col gap-4 overflow-scroll overscroll-y-contain text-sm text-subtle"
+>
 	{#each result as item}
 		<li>
 			<a
