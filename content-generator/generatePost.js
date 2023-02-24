@@ -7,9 +7,12 @@ const slugger = new GithubSlugger();
  *
  * @param {string} path - The path to the folder where the post will be created.
  * @param {string} title - The title of the post.
+ * @param {string} description - The description of the post.
+ * @param {string} tags - The tags of the post.
+ * @returns {string} The path to the post.
  */
 export function generatePost(path, title, description = '', tags = '') {
-	const BASE_URL = path;
+	const BASE_PATH = path;
 	const postSlug = slugger.slug(title);
 	const processedTags = processTagsString(tags);
 
@@ -22,9 +25,9 @@ export function generatePost(path, title, description = '', tags = '') {
 		description
 	};
 
-	fs.mkdirSync(`${BASE_URL}/${postSlug}/`);
+	fs.mkdirSync(`${BASE_PATH}/${postSlug}/`);
 
-	const writeStream = fs.createWriteStream(`${BASE_URL}/${postSlug}/index.md`);
+	const writeStream = fs.createWriteStream(`${BASE_PATH}/${postSlug}/index.md`);
 
 	writeStream.write('---\n');
 	for (const [key, value] of Object.entries(frontmatter)) {
@@ -35,6 +38,8 @@ export function generatePost(path, title, description = '', tags = '') {
 	writeStream.write('{/* Happy writing! */}');
 	writeStream.write('\n');
 	writeStream.end();
+
+	return `${BASE_PATH}/${postSlug}/index.md`;
 }
 
 /**

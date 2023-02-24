@@ -1,5 +1,6 @@
 import * as prompt from '@clack/prompts';
 import { generatePost } from './generatePost.js';
+import { generateTIL } from './generateTIL.js';
 
 const POSTS_PATH = 'content/posts';
 const TIL_PATH = 'content/TILs';
@@ -58,7 +59,13 @@ if (contentType === 'post') {
 		}
 	});
 
-	generatePost(POSTS_PATH, title, description, tags);
+	const filePath = generatePost(POSTS_PATH, title, description, tags);
+
+	prompt.outro(`You're all set! Go to ${filePath} to start writing your post.`);
 }
 
-prompt.outro(`You're all set!`);
+if (contentType === 'TIL') {
+	const filePath = generateTIL(TIL_PATH);
+
+	prompt.outro(`You're all set! Go to ${filePath} to start writing your TIL.`);
+}
