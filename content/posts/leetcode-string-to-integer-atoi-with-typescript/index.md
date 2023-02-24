@@ -1,6 +1,6 @@
 ---
 datetime: 2022-10-25T13:55:29.989Z
-title: "LeetCode: String To Integer (atoi) With TypeScript"
+title: 'LeetCode: String To Integer (atoi) With TypeScript'
 slug: leetcode-string-to-integer-atoi-with-typescript
 featured: false
 tags:
@@ -38,44 +38,44 @@ Since the algorithm has been given to us, all we need to do is to implement it.
 
 ```ts
 function myAtoi(s: string): number {
-  const input: string = s.trimStart();
-  let result: number = 0;
-  let sign: number | undefined;
+	const input: string = s.trimStart();
+	let result: number = 0;
+	let sign: number | undefined;
 
-  if (input[0] === "+") {
-    sign = 1;
-  } else if (input[0] === "-") {
-    sign = -1;
-  }
+	if (input[0] === '+') {
+		sign = 1;
+	} else if (input[0] === '-') {
+		sign = -1;
+	}
 
-  let i = sign ? 1 : 0;
-  for (; i < input.length; i++) {
-    const num = parseInt(input[i]);
-    if (num >= 0 && num <= 9) {
-      result = result * 10 + num;
-    } else {
-      break;
-    }
-  }
+	let i = sign ? 1 : 0;
+	for (; i < input.length; i++) {
+		const num = parseInt(input[i]);
+		if (num >= 0 && num <= 9) {
+			result = result * 10 + num;
+		} else {
+			break;
+		}
+	}
 
-  result = sign === -1 ? result * -1 : result;
+	result = sign === -1 ? result * -1 : result;
 
-  const MAX_VAL = Math.pow(2, 31) - 1;
-  const MIN_VAL = Math.pow(-2, 31);
+	const MAX_VAL = Math.pow(2, 31) - 1;
+	const MIN_VAL = Math.pow(-2, 31);
 
-  if (result > MAX_VAL) {
-    result = MAX_VAL;
-  } else if (result < MIN_VAL) {
-    result = MIN_VAL;
-  }
+	if (result > MAX_VAL) {
+		result = MAX_VAL;
+	} else if (result < MIN_VAL) {
+		result = MIN_VAL;
+	}
 
-  return result;
+	return result;
 }
 ```
 
 ## Code Explanation
 
-1. Remove leading whitespaces from the string.
+1. Remove leading whitespace from the string.
 2. Create a variable to store the result.
 3. Create a variable to temporary store whether the input is a positive or negative number.
 4. Loop through each characters in the string without forgetting to adjust the starting point according to if the positive or negative sign is available.

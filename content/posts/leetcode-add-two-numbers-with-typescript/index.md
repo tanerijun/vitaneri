@@ -79,7 +79,7 @@ But in the linked list version, the numbers are sorted in reverse. That means we
 
 ### Code
 
-First, let's look at how our linked list is representated:
+First, let's look at how our linked list is constructed:
 
 ```ts
 class ListNode {

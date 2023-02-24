@@ -123,7 +123,7 @@ Assuming that the size of an integer is 4 bytes and the auxiliary space is 4 byt
 
 `space complexity = sizeof n + sizeof result + sizeof i + auxiliary space = 16 bytes`
 
-Removing the constants, our space complexity is contant (`O(1)`).
+Removing the constants, our space complexity is constant (`O(1)`).
 
 No matter what `n` we pass to the function, no matter how many times the loop run, the space complexity will be the same (there's just one variable `i`).
 

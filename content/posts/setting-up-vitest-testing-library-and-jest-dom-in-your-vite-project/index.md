@@ -14,7 +14,7 @@ This will be a brief tutorial on how to setup Vitest, Testing Library, and jest-
 
 ## Setup Vite Project
 
-Before we can setup our testing tools, we first need a Vite project. We can scaffhold a Vite project easily by running the command:
+Before we can setup our testing tools, we first need a Vite project. We can scaffold a Vite project easily by running the command:
 
 ```
 npm create vite@latest

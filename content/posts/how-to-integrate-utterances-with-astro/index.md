@@ -23,17 +23,17 @@ Before we can put Utterances in our site, we have to generate a script to call t
 
 First, you have to [install Utterances in your GitHub account](https://github.com/apps/utterances). Give Utterances access to your site's repository and make sure that the repository is _public_.
 
-Next, fill in the template below with your informations.
+Next, fill in the template below with your information.
 
 ```html
 <script
-  src="https://utteranc.es/client.js"
-  repo="[ENTER REPO HERE]"
-  issue-term="[ISSUE TERM]"
-  label="[LABEL NAME]"
-  theme="[THEME NAME]"
-  crossorigin="anonymous"
-  async
+	src="https://utteranc.es/client.js"
+	repo="[ENTER REPO HERE]"
+	issue-term="[ISSUE TERM]"
+	label="[LABEL NAME]"
+	theme="[THEME NAME]"
+	crossorigin="anonymous"
+	async
 ></script>
 ```
 
@@ -62,19 +62,19 @@ Next, put a single `div` element in the component with whatever `id` you like. I
 To send the script to the client, we have to write our JavaScript in a `<script>` tag, not frontmatter(`---`). Inside the `<script>` tag, let's put in these code:
 
 ```js
-const script = document.createElement("script");
-const container = document.querySelector("#utterances-container"); // your id in your html above
+const script = document.createElement('script');
+const container = document.querySelector('#utterances-container'); // your id in your html above
 
 // Replace the value of each key with yours
 Object.entries({
-  src: "https://utteranc.es/client.js",
-  repo: "tanerijun/vitaneri-v3",
-  "issue-term": "pathname",
-  label: "post comments", // omit this line, if you don't need label
-  theme: "github-dark",
-  crossorigin: "anonymous",
+	src: 'https://utteranc.es/client.js',
+	repo: 'tanerijun/vitaneri-v3',
+	'issue-term': 'pathname',
+	label: 'post comments', // omit this line, if you don't need label
+	theme: 'github-dark',
+	crossorigin: 'anonymous'
 }).forEach(([key, value]) => {
-  script.setAttribute(key, value);
+	script.setAttribute(key, value);
 });
 
 container?.appendChild(script);
@@ -146,20 +146,15 @@ In order to make sure the Utterance theme is synced with the `theme` value in ou
 
 ```ts
 function toggleUtterancesTheme() {
-  if (document.querySelector(".utterances-frame")) {
-    const theme =
-      localStorage.getItem("theme") === "light"
-        ? "github-light"
-        : "github-dark";
-    const message = {
-      type: "set-theme",
-      theme,
-    };
-    const iframe = document.querySelector(
-      ".utterances-frame"
-    ) as HTMLIFrameElement; // omit as HTMLIFrameElement if you're wring JS
-    iframe?.contentWindow?.postMessage(message, "https://utteranc.es");
-  }
+	if (document.querySelector('.utterances-frame')) {
+		const theme = localStorage.getItem('theme') === 'light' ? 'github-light' : 'github-dark';
+		const message = {
+			type: 'set-theme',
+			theme
+		};
+		const iframe = document.querySelector('.utterances-frame') as HTMLIFrameElement; // omit as HTMLIFrameElement if you're wring JS
+		iframe?.contentWindow?.postMessage(message, 'https://utteranc.es');
+	}
 }
 ```
 
@@ -168,14 +163,14 @@ The function read our new `theme` value and send a message containing the new `t
 And finally, we need to make sure our light/dark mode toggle button change the value in local storage and call the function.
 
 ```ts
-themeBtn?.addEventListener("click", function () {
-  // toggle light/dark mode
-  if (htmlClassList?.contains("theme-dark")) {
-    localStorage.setItem("theme", "light");
-  } else {
-    localStorage.setItem("theme", "dark");
-  }
-  toggleUtterancesTheme();
+themeBtn?.addEventListener('click', function () {
+	// toggle light/dark mode
+	if (htmlClassList?.contains('theme-dark')) {
+		localStorage.setItem('theme', 'light');
+	} else {
+		localStorage.setItem('theme', 'dark');
+	}
+	toggleUtterancesTheme();
 });
 ```
 

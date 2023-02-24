@@ -1,6 +1,6 @@
 ---
 datetime: 2022-10-29T01:58:28.122Z
-title: "Introduction To Generics In TypeScript"
+title: 'Introduction To Generics In TypeScript'
 slug: introduction-to-generics-in-typescript
 featured: false
 tags:
@@ -22,8 +22,8 @@ Let's first look at a code snippet that uses generics.
 
 ```ts
 function print<T>(val: T) {
-  console.log(`typeof T is: ${typeof val}`);
-  console.log(`value is: ${val}`);
+	console.log(`typeof T is: ${typeof val}`);
+	console.log(`value is: ${val}`);
 }
 ```
 
@@ -35,10 +35,10 @@ Let's see how it works when we call the function with arguments of different typ
 
 ```ts
 print<number>(1);
-print<string>("hello");
+print<string>('hello');
 print<boolean>(true);
 print<function>(() => {});
-print<object>({ name: "John" });
+print<object>({ name: 'John' });
 ```
 
 And the output:
@@ -62,8 +62,8 @@ Take `print<number>()` for example. All `T` that appear inside the function will
 
 ```ts
 function print(val: number) {
-  console.log(`typeof T is: ${typeof val}`);
-  console.log(`value is: ${val}`);
+	console.log(`typeof T is: ${typeof val}`);
+	console.log(`value is: ${val}`);
 }
 ```
 
@@ -81,10 +81,10 @@ Typescript prevents us from calling a generic function with the wrong type as an
 
 ```ts
 print(1);
-print("hello");
+print('hello');
 print(true);
 print(() => {});
-print({ name: "John" });
+print({ name: 'John' });
 ```
 
 ## Multiple Generics
@@ -95,17 +95,17 @@ For example:
 
 ```ts
 function twoTypes<A, B>(arg1: A, arg2: B) {
-  console.log(`Type of the first argument is: ${typeof arg1}`);
-  console.log(`Type of the second argument is: ${typeof arg2}`);
+	console.log(`Type of the first argument is: ${typeof arg1}`);
+	console.log(`Type of the second argument is: ${typeof arg2}`);
 }
 ```
 
 Here, we have a function that take 2 generic types. Let's see how it works using the code below.
 
 ```ts
-twoTypes<number, string>(1, "hello");
-twoTypes(2, "world");
-twoTypes("hello", "world");
+twoTypes<number, string>(1, 'hello');
+twoTypes(2, 'world');
+twoTypes('hello', 'world');
 ```
 
 Notice that the 2 generics can also be of the same type as shown at line 3.
@@ -137,7 +137,7 @@ If we try to call the function with array of boolean, `takeArray([true, false])`
 Type 'boolean' is not assignable to type 'string | number'.
 ```
 
-**Note** that `Array<T>` is a predifined type from the standard TypeScript [type definitions](https://github.com/microsoft/TypeScript/blob/main/lib/lib.es5.d.ts).
+**Note** that `Array<T>` is a predefined type from the standard TypeScript [type definitions](https://github.com/microsoft/TypeScript/blob/main/lib/lib.es5.d.ts).
 
 ## Generic Constraints
 
@@ -147,7 +147,7 @@ For example:
 
 ```ts
 function printProperty<T, K extends keyof T>(obj: T, key: K) {
-  console.log(`obj[${key}] = ${obj[key]}`);
+	console.log(`obj[${key}] = ${obj[key]}`);
 }
 ```
 
@@ -159,13 +159,13 @@ Let's look at an example.
 
 ```ts
 const obj = {
-  id: 1,
-  name: "John",
+	id: 1,
+	name: 'John'
 };
 
-printProperty(obj, "id");
-printProperty(obj, "name");
-printProperty(obj, "age");
+printProperty(obj, 'id');
+printProperty(obj, 'name');
+printProperty(obj, 'age');
 ```
 
 The first and second line of the code will produce the following output as expected:
@@ -191,13 +191,13 @@ For example:
 class Fish {}
 
 function createClassInstance<T>(arg: T): T {
-  return new arg();
+	return new arg();
 }
 
 let instanceOfFish = createClassInstance(Fish);
 ```
 
-Suprisingly, the code above results in the following error.
+Surprisingly, the code above results in the following error.
 
 ```
 This expression is not constructable.
@@ -212,7 +212,7 @@ In order to fix the code above, we need to refer to type `T` by its constructor 
 class Fish {}
 
 function createClassInstance<T>(arg: { new (): T }): T {
-  return new arg();
+	return new arg();
 }
 
 let instanceOfFish = createClassInstance(Fish);

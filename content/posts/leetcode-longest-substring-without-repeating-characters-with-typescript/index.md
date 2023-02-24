@@ -1,6 +1,6 @@
 ---
 datetime: 2022-10-21T08:18:28.861Z
-title: "LeetCode: Longest Substring Without Repeating Characters With TypeScript"
+title: 'LeetCode: Longest Substring Without Repeating Characters With TypeScript'
 slug: leetcode-longest-substring-without-repeating-characters-with-typescript
 featured: false
 tags:
@@ -66,19 +66,19 @@ Translating our approach to code:
 
 ```ts
 export function lengthOfLongestSubstring(s: string): number {
-  let res = 0;
-  const map = new Map<string, number>();
+	let res = 0;
+	const map = new Map<string, number>();
 
-  for (let i = 0, j = 0; j < s.length; j++) {
-    const char = map.get(s[j]);
-    if (char) {
-      i = Math.max(char, i);
-    }
-    map.set(s[j], j + 1);
-    res = Math.max(res, j - i + 1);
-  }
+	for (let i = 0, j = 0; j < s.length; j++) {
+		const char = map.get(s[j]);
+		if (char) {
+			i = Math.max(char, i);
+		}
+		map.set(s[j], j + 1);
+		res = Math.max(res, j - i + 1);
+	}
 
-  return res;
+	return res;
 }
 ```
 
@@ -90,19 +90,19 @@ The reason I want to talk about this is because I stumbled upon a bug on my firs
 
 ```ts {8}
 export function lengthOfLongestSubstring(s: string): number {
-  let res = 0;
-  const map = new Map<string, number>();
+	let res = 0;
+	const map = new Map<string, number>();
 
-  for (let i = 0, j = 0; j < s.length; j++) {
-    const char = map.get(s[j]);
-    if (char) {
-      i = char;
-    }
-    map.set(s[j], j + 1);
-    res = Math.max(res, j - i + 1);
-  }
+	for (let i = 0, j = 0; j < s.length; j++) {
+		const char = map.get(s[j]);
+		if (char) {
+			i = char;
+		}
+		map.set(s[j], j + 1);
+		res = Math.max(res, j - i + 1);
+	}
 
-  return res;
+	return res;
 }
 ```
 
@@ -112,7 +112,7 @@ To see the bug produced by this code, let's track how the loop run if the input 
 
 - Loop 1 add `a` to map because the char doesn't exist yet. Our `i` is 0 and our result is 1.
 - Loop 2 add `b` to map because the char doesn't exist yet. Our `i` is 0 and our result is now 2.
-- Loop 3 found that `b` already exist in our map. So we assign the index of `b` which is 1 to `i`. Our `i` is now 1, and our result is now 2. (Correct behaviour)
+- Loop 3 found that `b` already exist in our map. So we assign the index of `b` which is 1 to `i`. Our `i` is now 1, and our result is now 2. (Correct behavior)
 - Loop 4 found that `a` already exist in our map. So we move our `i` to the index of `a` which is 0. Our `i` is now back to 0 and our result is now 3. (`i` shouldn't move back to the left)
 
 Now you get why we need `Math.max` there. Both our `i` and `j` should only move to the right, getting closer and closer to the end of the input string.
