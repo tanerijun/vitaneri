@@ -40,7 +40,7 @@
 </script>
 
 {#if siteTheme}
-	<Button on:click={handleSiteThemeChange}>
+	<Button on:click={handleSiteThemeChange} aria-label="Toggle theme">
 		<svelte:component this={siteThemeIcons[currentThemeIndex]} />
 	</Button>
 {:else}

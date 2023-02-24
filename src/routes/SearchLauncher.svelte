@@ -33,7 +33,7 @@
 
 <svelte:window on:keydown={handleKeydown} />
 
-<Button {...$triggerAttrs} on:click={openModal}>
+<Button {...$triggerAttrs} aria-label="Search" on:click={openModal}>
 	<SearchIcon />
 </Button>
 
