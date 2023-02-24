@@ -1,12 +1,13 @@
 ---
 datetime: 2023-01-06T13:07:13.165Z
-title: "Setting Up Vitest, Testing Library, And jest-dom In Your Vite Project"
+title: 'Setting Up Vitest, Testing Library, And jest-dom In Your Vite Project'
 slug: setting-up-vitest-testing-library-and-jest-dom-in-your-vite-project
 featured: true
 tags:
   - vitest
   - javascript
-  - typescript "A short tutorial on how to setup Vitest, Testing Library, and jest-dom in your Vite Project."
+  - typescript
+description: 'A short tutorial on how to setup Vitest, Testing Library, and jest-dom in your Vite Project.'
 ---
 
 This will be a brief tutorial on how to setup Vitest, Testing Library, and jest-dom in your Vite Project.
@@ -42,37 +43,37 @@ npm install --save-dev jsdom
 Next, we need to tell Vitest to change our testing environment to `jsdom`. Create a file called `vitest.config.ts` or `.js` depending on your preferences, and pass the following code in.
 
 ```ts
-import { defineConfig } from "vitest/config";
-import { svelte } from "@sveltejs/vite-plugin-svelte";
+import { defineConfig } from 'vitest/config';
+import { svelte } from '@sveltejs/vite-plugin-svelte';
 
 export default defineConfig({
-  plugins: [svelte({ hot: !process.env.VITEST })],
-  test: {
-    include: ["src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
-    environment: "jsdom",
-  },
+	plugins: [svelte({ hot: !process.env.VITEST })],
+	test: {
+		include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+		environment: 'jsdom'
+	}
 });
 ```
 
 One thing to note about Vitest is that unlike Jest, globals are not enabled by default. This means that we have to explicitly import `describe`, `test`, `expect`, etc. on our test files like this:
 
 ```ts
-import { describe, test, expect } from "vitest";
+import { describe, test, expect } from 'vitest';
 ```
 
 But if you prefer, you can enable the test APIs globally like Jest. To enable globals support, we need to add the following line into our `vitest.config.ts` file.
 
 ```ts {8}
-import { defineConfig } from "vitest/config";
-import { svelte } from "@sveltejs/vite-plugin-svelte";
+import { defineConfig } from 'vitest/config';
+import { svelte } from '@sveltejs/vite-plugin-svelte';
 
 export default defineConfig({
-  plugins: [svelte({ hot: !process.env.VITEST })],
-  test: {
-    include: ["src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
-    globals: true,
-    environment: "jsdom",
-  },
+	plugins: [svelte({ hot: !process.env.VITEST })],
+	test: {
+		include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+		globals: true,
+		environment: 'jsdom'
+	}
 });
 ```
 
@@ -80,20 +81,20 @@ If you're using Typescript, we need to do one extra step to please the type chec
 
 ```json {12}
 {
-  "extends": "@tsconfig/svelte/tsconfig.json",
-  "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "resolveJsonModule": true,
-    "allowJs": true,
-    "checkJs": true,
-    "isolatedModules": true,
-    "moduleResolution": "node",
-    "types": ["vitest/globals"]
-  },
-  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+	"extends": "@tsconfig/svelte/tsconfig.json",
+	"compilerOptions": {
+		"target": "ESNext",
+		"useDefineForClassFields": true,
+		"module": "ESNext",
+		"resolveJsonModule": true,
+		"allowJs": true,
+		"checkJs": true,
+		"isolatedModules": true,
+		"moduleResolution": "node",
+		"types": ["vitest/globals"]
+	},
+	"include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
+	"references": [{ "path": "./tsconfig.node.json" }]
 }
 ```
 
@@ -101,10 +102,10 @@ And finally, let's add the following to our `package.json` file for convenience 
 
 ```json
 {
-  "scripts": {
-    "test": "vitest run src",
-    "test:watch": "vitest src"
-  }
+	"scripts": {
+		"test": "vitest run src",
+		"test:watch": "vitest src"
+	}
 }
 ```
 
@@ -137,14 +138,14 @@ npm install --save-dev @testing-library/jest-dom
 Now, we can use the matchers by importing `@testing-library/jest-dom` at the start of our test files.
 
 ```ts
-import "@testing-library/jest-dom";
+import '@testing-library/jest-dom';
 ```
 
 We can make our experience even better by extending the matcher with a Vitest setup file. The filename doesn't matter, but let's assume that the file name is `./src/tests/setup.ts`. Inside the file, paste in the following code:
 
 ```ts
-import { expect } from "vitest";
-import matchers from "@testing-library/jest-dom/matchers";
+import { expect } from 'vitest';
+import matchers from '@testing-library/jest-dom/matchers';
 
 expect.extend(matchers);
 ```
@@ -152,17 +153,17 @@ expect.extend(matchers);
 We also need to tell Vitest where to look for our setup file.
 
 ```ts {10}
-import { defineConfig } from "vitest/config";
-import { svelte } from "@sveltejs/vite-plugin-svelte";
+import { defineConfig } from 'vitest/config';
+import { svelte } from '@sveltejs/vite-plugin-svelte';
 
 export default defineConfig({
-  plugins: [svelte({ hot: !process.env.VITEST })],
-  test: {
-    include: ["src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
-    globals: true,
-    environment: "jsdom",
-    setupFiles: "./src/tests/setup.ts",
-  },
+	plugins: [svelte({ hot: !process.env.VITEST })],
+	test: {
+		include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+		globals: true,
+		environment: 'jsdom',
+		setupFiles: './src/tests/setup.ts'
+	}
 });
 ```
 
@@ -184,20 +185,20 @@ And update your `tsconfig.json`.
 
 ```json {12}
 {
-  "extends": "@tsconfig/svelte/tsconfig.json",
-  "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "resolveJsonModule": true,
-    "allowJs": true,
-    "checkJs": true,
-    "isolatedModules": true,
-    "moduleResolution": "node",
-    "types": ["vitest/globals", "@testing-library/jest-dom"]
-  },
-  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+	"extends": "@tsconfig/svelte/tsconfig.json",
+	"compilerOptions": {
+		"target": "ESNext",
+		"useDefineForClassFields": true,
+		"module": "ESNext",
+		"resolveJsonModule": true,
+		"allowJs": true,
+		"checkJs": true,
+		"isolatedModules": true,
+		"moduleResolution": "node",
+		"types": ["vitest/globals", "@testing-library/jest-dom"]
+	},
+	"include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
+	"references": [{ "path": "./tsconfig.node.json" }]
 }
 ```
 
