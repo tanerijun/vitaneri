@@ -6,6 +6,8 @@
 		let dataTheme = localStorage.getItem('vitaneri:theme');
 		if (!dataTheme) {
 			dataTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dusk' : 'dawn';
+		}
+		if (!document.documentElement.hasAttribute('data-theme')) {
 			document.documentElement.setAttribute('data-theme', dataTheme);
 		}
 	</script>
