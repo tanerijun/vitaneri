@@ -203,21 +203,18 @@ const config = {
 							color: 'var(--tw-prose-pre-code)',
 							fontSize: theme('fontSize.sm')[0],
 							fontWeight: theme('fontWeight.medium'),
-							backgroundColor: 'var(--tw-prose-pre-bg)',
-							borderRadius: theme('borderRadius.DEFAULT'),
 							maxWidth: '100%',
-							paddingTop: theme('spacing.8'),
-							paddingBottom: theme('spacing.8'),
-							overflowX: 'scroll'
+							backgroundColor: 'var(--tw-prose-pre-bg)',
+							padding: 0
 						},
 						'pre code': {
-							display: 'inline',
 							color: 'inherit',
 							fontSize: 'inherit',
 							fontWeight: 'inherit',
 							backgroundColor: 'transparent',
-							borderRadius: 0,
-							padding: 0
+							width: 'max-content',
+							paddingTop: theme('spacing.6'),
+							paddingBottom: theme('spacing.6')
 						},
 
 						// Horizontal rules

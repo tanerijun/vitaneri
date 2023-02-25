@@ -121,7 +121,7 @@
 	}
 
 	code > span {
-		@apply inline-block px-4;
+		@apply inline-block w-full px-4;
 	}
 
 	/* Highlighted line */
@@ -131,7 +131,7 @@
 
 	/* Code block with title */
 	pre[data-code-title]:before {
-		@apply mb-6 block border-b border-muted/20 px-4 pb-6 text-sm content-[attr(data-code-title)];
+		@apply block p-4 text-sm font-bold text-text content-[attr(data-code-title)];
 	}
 
 	/* Code block with line numbers */
@@ -143,9 +143,8 @@
 		@apply ml-2 mr-4 inline-block w-4 text-right text-muted content-[attr(data-line-number)];
 	}
 
-	/* For pixel perfect line number on highlighted line (left border on highlighted line takes 2px) */
-	code[data-line-numbers] > span[data-highlighted] {
-		@apply -ml-[2px];
+	code[data-line-numbers] > span[data-highlighted][data-line-number]::before {
+		@apply ml-1.5;
 	}
 }
 
