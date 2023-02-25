@@ -7,7 +7,7 @@
 	import SocialLink from '$lib/components/SocialLink.svelte';
 </script>
 
-<footer class="mt-12 flex flex-col-reverse items-center justify-between gap-2 py-6 md:flex-row">
+<footer class="mt-14 flex flex-col-reverse items-center justify-between gap-4 py-6 md:flex-row">
 	<p class="font-heading text-sm">
 		&#169; Copyright 2022-{new Date().getFullYear()} Vincent Taneri
 	</p>
