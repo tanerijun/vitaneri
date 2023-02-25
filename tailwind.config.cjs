@@ -150,7 +150,12 @@ const config = {
 							paddingLeft: theme('spacing.4'),
 							borderLeftWidth: theme('borderWidth.2'),
 							borderLeftColor: 'var(--tw-prose-quote-borders)',
-							fontStyle: 'italic'
+							fontStyle: 'italic',
+							overflowX: 'scroll',
+							scrollbarWidth: 'none'
+						},
+						'blockquote::-webkit-scrollbar': {
+							display: 'none'
 						},
 
 						// Figures
