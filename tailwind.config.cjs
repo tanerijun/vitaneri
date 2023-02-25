@@ -213,6 +213,7 @@ const config = {
 							fontWeight: 'inherit',
 							backgroundColor: 'transparent',
 							width: 'max-content',
+							minWidth: '100%',
 							paddingTop: theme('spacing.6'),
 							paddingBottom: theme('spacing.6')
 						},
