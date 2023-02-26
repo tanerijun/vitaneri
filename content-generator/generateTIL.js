@@ -16,8 +16,6 @@ export function generateTIL(path) {
 		datetime: new Date().toISOString()
 	};
 
-	fs.mkdirSync(`${BASE_PATH}/${fileName}/`);
-
 	const writeStream = fs.createWriteStream(`${BASE_PATH}/${fileName}.md`);
 
 	writeStream.write('---\n');
