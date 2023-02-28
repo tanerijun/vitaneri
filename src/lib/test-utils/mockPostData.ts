@@ -6,7 +6,7 @@ export const mockPostData: PostMetadata = {
 	slug: 'test-post',
 	tags: ['test', 'post'],
 	description: 'Test post description',
-	preview: { html: 'Test post preview', text: 'Test post text' },
+	preview: { html: '<p>Test post description</p>', text: 'Test post description' },
 	readingTime: '10 min read',
 	featured: false,
 	headings: [
@@ -19,7 +19,7 @@ export const mockPostData: PostMetadata = {
 		slug: 'next-test-post',
 		tags: ['next', 'test', 'post'],
 		description: 'Next Test post description',
-		preview: { html: 'Next Test post preview', text: 'Next Test post text' },
+		preview: { html: '<p>Next Test post description</p>', text: 'Next Test post description' },
 		readingTime: '11 min read',
 		featured: false,
 		headings: [
@@ -33,7 +33,10 @@ export const mockPostData: PostMetadata = {
 		slug: 'previous-test-post',
 		tags: ['previous', 'test', 'post'],
 		description: 'Previous Test post description',
-		preview: { html: 'Previous Test post preview', text: 'Previous Test post text' },
+		preview: {
+			html: '<p>Previous Test post description</p>',
+			text: 'Previous Test post description'
+		},
 		readingTime: '11 min read',
 		featured: false,
 		headings: [

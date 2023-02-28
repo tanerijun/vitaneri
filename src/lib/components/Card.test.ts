@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/svelte';
 
 import Card from './Card.svelte';
-import CardSlot from './test-components/CardSlot.svelte';
+import CardSlot from './test-components/CardTest.svelte';
 
 describe('Card', () => {
 	it('should render a div element by default', () => {
