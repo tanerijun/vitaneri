@@ -1,5 +1,5 @@
-import Button from '../Button.svelte';
-import ButtonSlot from './components/ButtonSlot.svelte';
+import Button from './Button.svelte';
+import ButtonSlot from './test-components/ButtonSlot.svelte';
 import { render, screen } from '@testing-library/svelte';
 import '@testing-library/jest-dom';
 
