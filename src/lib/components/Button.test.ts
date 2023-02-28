@@ -1,7 +1,7 @@
+import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/svelte';
 import Button from './Button.svelte';
 import ButtonSlot from './test-components/ButtonSlot.svelte';
-import { render, screen } from '@testing-library/svelte';
-import '@testing-library/jest-dom';
 
 describe('Button', () => {
 	it('should render a button element', () => {

@@ -6,7 +6,11 @@
 	export { _class as class };
 </script>
 
-<svelte:element this={as} class={['group relative flex flex-col items-start', _class].join(' ')}>
+<svelte:element
+	this={as}
+	class={['group relative flex flex-col items-start', _class].join(' ')}
+	data-testid="card"
+>
 	<slot name="eyebrow" />
 
 	{#if $$slots.title}
