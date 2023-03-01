@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/svelte';
+import html from 'svelte-htm';
 import SocialLink from './SocialLink.svelte';
-import SocialLinkTest from './test-components/SocialLinkTest.svelte';
 
 describe('SocialLink', () => {
 	it('should render a link with the correct href', () => {
@@ -20,7 +20,9 @@ describe('SocialLink', () => {
 	});
 
 	it('should render the slotted component properly', () => {
-		render(SocialLinkTest);
-		expect(screen.getByTestId('icon')).toBeInTheDocument();
+		render(
+			html`<${SocialLink} href="https://example.com" title="Example"><div data-testid="slotted">ICON</div></${SocialLink}>`
+		);
+		expect(screen.getByTestId('slotted')).toBeInTheDocument();
 	});
 });
