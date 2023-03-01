@@ -1,8 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/svelte';
-
+import html from 'svelte-htm';
 import Card from './Card.svelte';
-import CardSlot from './test-components/CardTest.svelte';
 
 describe('Card', () => {
 	it('should render a div element by default', () => {
@@ -20,19 +19,40 @@ describe('Card', () => {
 		expect(screen.getByTestId('card')).toHaveClass('custom-class');
 	});
 
-	it('should render slotted components inside the card ', () => {
-		render(CardSlot);
-		const card = screen.getByTestId('card');
-		expect(card).toHaveTextContent('Hello from eyebrow slot');
-		expect(card).toHaveTextContent('Hello from title slot');
-		expect(card).toHaveTextContent('Hello from description slot');
-		expect(card).toHaveTextContent('Hello from actions slot');
-	});
-
-	it('should render an <a> tag when passed href prop', () => {
-		const { container } = render(CardSlot, { props: { href: 'https://www.example.com' } });
+	it('should render an <a> tag when passed href prop and title', () => {
+		const { container } = render(
+			html`<${Card} href="https://www.example.com"><slot slot="title">Title</slot></${Card}>`
+		);
 		const anchorTags = container.getElementsByTagName('a');
 		expect(anchorTags).toHaveLength(1);
 		expect(anchorTags[0]).toHaveAttribute('href', 'https://www.example.com');
+	});
+
+	it('should render content in eyebrow slot properly', () => {
+		render(
+			html`<${Card}><slot slot="eyebrow"><div data-testid="slotted">Content</div></slot></${Card}>`
+		);
+		expect(screen.getByTestId('slotted')).toBeInTheDocument();
+	});
+
+	it('should render content in title slot properly', () => {
+		render(
+			html`<${Card}><slot slot="title"><div data-testid="slotted">Content</div></slot></${Card}>`
+		);
+		expect(screen.getByTestId('slotted')).toBeInTheDocument();
+	});
+
+	it('should render content in description slot properly', () => {
+		render(
+			html`<${Card}><slot slot="description"><div data-testid="slotted">Content</div></slot></${Card}>`
+		);
+		expect(screen.getByTestId('slotted')).toBeInTheDocument();
+	});
+
+	it('should render content in actions slot properly', () => {
+		render(
+			html`<${Card}><slot slot="actions"><div data-testid="slotted">Content</div></slot></${Card}>`
+		);
+		expect(screen.getByTestId('slotted')).toBeInTheDocument();
 	});
 });
