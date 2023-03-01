@@ -2,7 +2,6 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/svelte';
 import html from 'svelte-htm';
 import Button from './Button.svelte';
-import ButtonSlot from './test-components/ButtonTest.svelte';
 
 describe('Button', () => {
 	it('should render a button element', () => {
@@ -21,11 +20,6 @@ describe('Button', () => {
 	});
 
 	it('should render slotted component inside the button', () => {
-		render(ButtonSlot);
-		expect(screen.getByRole('button')).toHaveTextContent('Hello from slot!');
-	});
-
-	it('should work', () => {
 		render(
 			html`<${Button}>
 				<p data-testid="slotted">Click me</p>
