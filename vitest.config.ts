@@ -10,7 +10,8 @@ export default defineConfig({
 	},
 	resolve: {
 		alias: {
-			$lib: '/src/lib'
+			$lib: '/src/lib',
+			'$app/stores': '/src/lib/test-utils/stubs/stores.ts'
 		}
 	}
 });

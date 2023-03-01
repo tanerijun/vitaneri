@@ -17,7 +17,6 @@ export const load = (async ({ params }) => {
 
 	return {
 		posts: postsForPage,
-		page,
-		limit
+		page
 	};
 }) satisfies PageServerLoad;
