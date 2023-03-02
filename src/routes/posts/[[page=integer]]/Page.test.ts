@@ -38,7 +38,6 @@ describe('Page', () => {
 
 	it('should render all posts inside <article> tag', () => {
 		render(Page, { data: firstPageData });
-		console.log(screen.getAllByRole('article').length);
 		expect(screen.getAllByRole('article')).toHaveLength(firstPageData.posts.length);
 	});
 
