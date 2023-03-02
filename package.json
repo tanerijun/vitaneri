@@ -12,7 +12,8 @@
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
 		"postbuild": "npx svelte-sitemap --domain https://vitaneri.com",
-		"create": "node content-generator"
+		"create": "node content-generator",
+		"prepare": "husky install"
 	},
 	"devDependencies": {
 		"@bitmachina/highlighter": "^1.0.0-alpha.7",
@@ -35,6 +36,7 @@
 		"eslint-plugin-svelte3": "^4.0.0",
 		"feed": "^4.2.2",
 		"github-slugger": "^2.0.0",
+		"husky": "^8.0.3",
 		"mdsvex": "^0.10.6",
 		"mdsvex-relative-images": "^1.0.3",
 		"node-html-parser": "^6.1.5",
