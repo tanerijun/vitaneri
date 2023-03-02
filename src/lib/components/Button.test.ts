@@ -20,11 +20,11 @@ describe('Button', () => {
 	});
 
 	it('should render slotted component inside the button', () => {
-		render(
-			html`<${Button}>
+		render(html`
+			<${Button}>
 				<p data-testid="slotted">Click me</p>
-			</${Button}>`
-		);
+			</${Button}>
+		`);
 		expect(screen.getByTestId('slotted')).toBeInTheDocument();
 	});
 });

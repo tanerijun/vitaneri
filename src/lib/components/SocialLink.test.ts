@@ -21,7 +21,13 @@ describe('SocialLink', () => {
 
 	it('should render the slotted component properly', () => {
 		render(
-			html`<${SocialLink} href="https://example.com" title="Example"><div data-testid="slotted">ICON</div></${SocialLink}>`
+			html`
+				<${SocialLink} href="https://example.com" title="Example">
+					<div data-testid="slotted">
+						ICON
+					</div>
+				</${SocialLink}>
+			`
 		);
 		expect(screen.getByTestId('slotted')).toBeInTheDocument();
 	});
