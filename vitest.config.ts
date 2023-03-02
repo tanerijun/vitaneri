@@ -6,7 +6,8 @@ export default defineConfig({
 	test: {
 		include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
 		globals: true,
-		environment: 'jsdom'
+		environment: 'jsdom',
+		setupFiles: ['/src/lib/test-utils/setupTest.ts']
 	},
 	resolve: {
 		alias: {

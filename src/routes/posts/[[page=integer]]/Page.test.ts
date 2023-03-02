@@ -1,6 +1,5 @@
 import Page from './+page.svelte';
 import { render, screen } from '@testing-library/svelte';
-import '@testing-library/jest-dom';
 import { mockPostData } from '$lib/test-utils/mockPostData';
 
 const posts = [

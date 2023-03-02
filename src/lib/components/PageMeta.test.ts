@@ -1,4 +1,3 @@
-import '@testing-library/jest-dom';
 import { render } from '@testing-library/svelte';
 
 import PageMeta from './PageMeta.svelte';

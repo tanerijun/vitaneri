@@ -1,4 +1,3 @@
-import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/svelte';
 
 import PostsList from './PostsList.svelte';
