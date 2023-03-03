@@ -23,7 +23,7 @@
 		"@grail-ui/svelte": "^0.8.0",
 		"@leeoniya/ufuzzy": "^1.0.3",
 		"@sveltejs/adapter-static": "^2.0.1",
-		"@sveltejs/kit": "^1.8.3",
+		"@sveltejs/kit": "^1.9.3",
 		"@tailwindcss/typography": "^0.5.9",
 		"@testing-library/jest-dom": "^5.16.5",
 		"@testing-library/svelte": "^3.2.2",
