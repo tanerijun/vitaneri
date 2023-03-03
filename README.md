@@ -50,8 +50,3 @@ My own personal corner of the Internet.
 
 - Example: `jsx showLineNumbers`
 - Show line numbers with custom starting line. Example: `jsx showLineNumbers{15}` will start from line 15.
-
-## TODO
-
-- [ ] Test utils
-- [ ] e2e testing
