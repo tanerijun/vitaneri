@@ -21,7 +21,7 @@
 		"@bitmachina/highlighter": "^1.0.0-alpha.7",
 		"@clack/prompts": "^0.6.1",
 		"@grail-ui/svelte": "^0.8.0",
-		"@leeoniya/ufuzzy": "^1.0.3",
+		"@leeoniya/ufuzzy": "^1.0.2",
 		"@sveltejs/adapter-static": "^2.0.1",
 		"@sveltejs/kit": "^1.9.3",
 		"@tailwindcss/typography": "^0.5.9",
