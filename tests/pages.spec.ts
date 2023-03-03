@@ -50,6 +50,25 @@ test.describe('PostsPage', () => {
 	});
 });
 
+test.describe('PostPage', () => {
+	test('should have correct title', async ({ page }) => {
+		await page.goto('http://localhost:5173/posts/how-to-debug-typescript-in-vscode');
+		await expect(page).toHaveTitle(/How To Debug TypeScript In VSCode | Vitaneri/);
+	});
+
+	test('should go to /posts page on "go back" click', async ({ page }) => {
+		await page.goto('http://localhost:5173/posts/how-to-debug-typescript-in-vscode');
+		await page.getByRole('link', { name: 'Go back to posts' }).click();
+		await expect(page).toHaveURL(/.*posts/);
+	});
+
+	test('should go to /tags page on tag click', async ({ page }) => {
+		await page.goto('http://localhost:5173/posts/how-to-debug-typescript-in-vscode');
+		await page.getByRole('link', { name: '# typescript' }).click();
+		await expect(page).toHaveURL(/.*tags\/typescript/);
+	});
+});
+
 test.describe('TagsPage', () => {
 	test('should have correct title', async ({ page }) => {
 		await page.goto('http://localhost:5173/tags');
