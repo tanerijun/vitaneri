@@ -22,7 +22,7 @@
 				alt="Vincent Taneri"
 			/>
 			<h3 class="text-2xl">Vincent Taneri</h3>
-			<p class="text-sm text-subtle">Fullstack Software Developer</p>
+			<p class="text-sm text-subtle">Software Developer</p>
 			<!-- Social links -->
 			<div class="flex items-center space-x-4">
 				<SocialLink
@@ -88,14 +88,12 @@
 			</ul>
 			<h3 class="text-2xl">Backend</h3>
 			<ul class="list-disc columns-2 pl-6 marker:text-accent">
-				<li>Node JS</li>
-				<li>Express</li>
+				<li>Node JS / Express / Fastify</li>
 				<li>Spring / Spring Boot</li>
 				<li>MongoDB</li>
 				<li>MySQL</li>
 				<li>PostgreSQL</li>
 				<li>Firebase</li>
-				<li>Supabase</li>
 			</ul>
 			<h3 class="text-2xl">Other</h3>
 			<ul class="list-disc columns-2 pl-6 marker:text-accent">
