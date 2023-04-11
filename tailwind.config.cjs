@@ -31,8 +31,7 @@ const config = {
 				lg: '0 10px 40px -15px rgba(87, 82, 121, 0.2)'
 			},
 			animation: {
-				'mesh-background-slow': 'mesh-background 6s ease infinite',
-				'mesh-background-fast': 'mesh-background 3s ease infinite'
+				'mesh-background': 'mesh-background 3s ease infinite'
 			},
 			keyframes: {
 				'mesh-background': {
