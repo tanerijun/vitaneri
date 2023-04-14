@@ -18,27 +18,21 @@
 	<header>
 		<h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Welcome ~</h1>
 		<p class="mt-6">
-			This website is my humble abode on the internet, where I pen my musings about software
-			development, specifically JavaScript, TypeScript and web technologies in general. If you enjoy
-			my content, consider subscribing to my
-			<a
+			Welcome to my virtual sanctuary, a space where I share my musings on the world of software
+			development, specifically delving into JavaScript, TypeScript, and web technologies. If my
+			content resonates with you, consider subscribing to my <a
 				href="https://vitaneri.com/rss.xml"
 				target="_blank"
 				rel="noreferrer"
-				class="hover-underline-animation text-accent"
+				class="hover-underline-animation text-accent">RSS feed</a
 			>
-				RSS feed
-			</a>
-			, and if you feel so inclined, you're welcome to
+			to stay updated. And if you're feeling generous, you can also show your support by
 			<a
 				href="https://www.buymeacoffee.com/tvince"
 				target="_blank"
 				rel="noreferrer"
-				class="hover-underline-animation text-accent"
-			>
-				buy me a coffee
-			</a>
-			.
+				class="hover-underline-animation text-accent">treating me to a coffee.</a
+			> Thank you for stopping by and being a part of my online journey!
 		</p>
 	</header>
 
