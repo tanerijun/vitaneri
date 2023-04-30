@@ -30,5 +30,13 @@ export const projects = [
 		imgUrl: '/assets/projects/speed-type.png',
 		url: 'https://speed-type-react.vercel.app/',
 		repo: 'https://github.com/tanerijun/speed-type-react'
+	},
+	{
+		title: 'Shampoodle',
+		description: 'A platform to share your shower thoughts',
+		techs: ['TypeScript', 'React', 'NextJS', 'TRPC', 'Prisma', 'MySQL'],
+		imgUrl: '/assets/projects/shampoodle.png',
+		url: 'https://shampoodle.vercel.app/',
+		repo: 'https://github.com/tanerijun/shampoodle'
 	}
 ];
