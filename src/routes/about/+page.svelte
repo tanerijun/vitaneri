@@ -82,6 +82,7 @@
 				<li>React</li>
 				<li>React Native</li>
 				<li>NextJS</li>
+				<li>Remix</li>
 				<li>Svelte</li>
 				<li>Sveltekit</li>
 				<li>Astro</li>
