@@ -43,11 +43,39 @@ Let's see what's going on with the component. On render, we first check if there
 
 In short, it's just a simple component with input that take in your name and display it on the screen.
 
-As you know, reading from local storage is an IO operation, and it can potentially slow down our application.
-
 In the example above, the `useState` hook read the value from local storage every time it re-renders. In this case, every time you type with the input box.
 
-Is there a way to optimize this? Yes! This is where **lazy initialization** come in to play.
+As you know, reading from local storage is an IO operation, and it can potentially slow down our application.
+
+> Reading from local storage is just one example. The same potential performance issue apply to any expensive function you passed to `useState`.
+
+The argument you pass to `useState` is supposed to be the initial value of the state. So, why is it that the function you passed need to re-run on every subsequent re-render? Is this React's bug?
+
+The answer is "No". The culprit here is Javascript itself.
+
+When your component re-renders, your function is parsed and executed again. When Javascript parses your component, it'll run the function you passed as argument, get its value, and passes it to `useState` again, which is then ignored correctly by React.
+
+As you can see, the problem occurred before you even reach the React land.
+
+So, how do we prevent Javascript from executing our function? **Anonymous function** to the rescue.
+
+It's just like passing an arrow function that executes your function instead of passing your function directly to event handlers when your function has argument.
+
+```jsx
+<button onClick={() => setValue(3)} />
+```
+
+Instead of
+
+```jsx
+<button onClick={setValue(3)} /> // this will error, because the function executes too early
+```
+
+The same principle comes into play here. In this case though, it's called **lazy initialization**.
+
+When the Javascript parser see an anonymous function, it won't try to get its value. So your function argument to `useState` will truly only run once (on initial render, by React).
+
+To fix the example above:
 
 ```jsx {3}
 function NameForm = () => {
@@ -71,7 +99,7 @@ function NameForm = () => {
 }
 ```
 
-Instead of passing the initial value directly to the `useState` hook, we passed in a function that return the initial value instead.
+Instead of passing the initial value directly to the `useState` hook, we passed in an anonymous function that returns the initial value instead.
 
 Now, the `useState` hook will only get the value from local storage on initial render. Which is really what we want it to do.
 
