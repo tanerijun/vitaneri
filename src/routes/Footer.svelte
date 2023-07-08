@@ -20,7 +20,7 @@
 		<SocialLink href="https://github.com/tanerijun" title="See my Github profile">
 			<GithubIcon size={22} />
 		</SocialLink>
-		<SocialLink href="https://twitter.com/tanerivince" title="Say hi on Twitter">
+		<SocialLink href="https://twitter.com/tanerijun" title="Say hi on Twitter">
 			<TwitterIcon size={22} />
 		</SocialLink>
 		<SocialLink href="https://www.linkedin.com/in/vincent-taneri/" title="Connect on LinkedIn">
