@@ -28,6 +28,15 @@ interface TILMetadata {
 	datetime: string;
 }
 
+interface TIL {
+	default: {
+		render: () => {
+			html: string;
+		};
+	};
+	metadata: TILMetadata;
+}
+
 type PostMetadata = (typeof posts)[number];
 
 interface SearchData {
@@ -35,4 +44,4 @@ interface SearchData {
 	slug: string;
 }
 
-export type { MarkdownMetadata, Post, PostMetadata, TILMetadata, SearchData };
+export type { MarkdownMetadata, Post, PostMetadata, TIL, TILMetadata, SearchData };
