@@ -38,5 +38,13 @@ export const projects = [
 		imgUrl: '/assets/projects/shampoodle.png',
 		url: 'https://shampoodle.vercel.app/',
 		repo: 'https://github.com/tanerijun/shampoodle'
+	},
+	{
+		title: 'Dicto',
+		description: 'Super fast dictionary hosted on the edge',
+		techs: ['Typescript', 'React', 'Remix'],
+		imgUrl: '/assets/projects/dicto.png',
+		url: 'https://dicto.pages.dev/',
+		repo: 'https://github.com/tanerijun/dicto'
 	}
 ];
