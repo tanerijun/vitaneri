@@ -5,7 +5,7 @@ import { Feed } from 'feed';
 export const prerender = true;
 
 const NAME = 'Vincent Taneri';
-const EMAIL = 'tanerivince@gmail.com';
+const EMAIL = 'tanerijun@vitaneri.com';
 const TITLE = 'Vitaneri';
 const WEBSITE = 'https://vitaneri.com';
 const WEBSITE_DESCRIPTION = `${NAME}'s personal website`;

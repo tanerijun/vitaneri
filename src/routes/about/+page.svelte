@@ -25,10 +25,7 @@
 			<p class="text-sm text-subtle">Software Developer</p>
 			<!-- Social links -->
 			<div class="flex items-center space-x-4">
-				<SocialLink
-					href="mailto:tanerivince@gmail.com"
-					title="Send an email to tanerivince@gmail.com"
-				>
+				<SocialLink href="mailto:tanerijun@vitaneri.com" title="Send me an email">
 					<EnvelopeIcon size={22} />
 				</SocialLink>
 				<SocialLink href="https://github.com/tanerijun" title="See my Github profile">
