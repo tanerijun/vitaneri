@@ -37,15 +37,17 @@
 						>
 							Live
 						</a>
-						•
-						<a
-							href={project.repo}
-							class="hover-underline-animation text-accent"
-							target="_blank"
-							rel="noreferrer"
-						>
-							Repo
-						</a>
+						{#if project.repo}
+							•
+							<a
+								href={project.repo}
+								class="hover-underline-animation text-accent"
+								target="_blank"
+								rel="noreferrer"
+							>
+								Repo
+							</a>
+						{/if}
 					</div>
 				</div>
 			</div>

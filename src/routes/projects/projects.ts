@@ -46,5 +46,12 @@ export const projects = [
 		imgUrl: '/assets/projects/dicto.png',
 		url: 'https://dicto.pages.dev/',
 		repo: 'https://github.com/tanerijun/dicto'
+	},
+	{
+		title: "Efenhan's Gallery",
+		description: 'Minimalist art showcase website',
+		techs: ['Typescript', 'Astro'],
+		imgUrl: '/assets/projects/efenhan-gallery.png',
+		url: 'https://efenhan-gallery.com'
 	}
 ];
