@@ -12,7 +12,7 @@ export const projects = [
 		description: 'Wordle game for the true hardcore',
 		techs: ['TypeScript', 'React', 'ChakraUI', 'Framer Motion'],
 		imgUrl: '/assets/projects/wordle-fever.png',
-		url: 'https://wordle-fever.netlify.app/',
+		url: 'https://wordle-fever.netlify.app',
 		repo: 'https://github.com/tanerijun/wordle-fever'
 	},
 	{
@@ -20,7 +20,7 @@ export const projects = [
 		description: 'A frontend for The Movie Database API',
 		techs: ['TypeScript', 'React', 'TailwindCSS', 'React Query'],
 		imgUrl: '/assets/projects/wowie.png',
-		url: 'https://wowie-fawn.vercel.app/',
+		url: 'https://wowie-fawn.vercel.app',
 		repo: 'https://github.com/tanerijun/wowie'
 	},
 	{
@@ -28,7 +28,7 @@ export const projects = [
 		description: 'A speed typing game created with React',
 		techs: ['TypeScript', 'React', 'TailwindCSS'],
 		imgUrl: '/assets/projects/speed-type.png',
-		url: 'https://speed-type-react.vercel.app/',
+		url: 'https://speed-type-react.vercel.app',
 		repo: 'https://github.com/tanerijun/speed-type-react'
 	},
 	{
@@ -36,7 +36,7 @@ export const projects = [
 		description: 'A platform to share your shower thoughts',
 		techs: ['TypeScript', 'React', 'NextJS', 'TRPC', 'Prisma', 'MySQL'],
 		imgUrl: '/assets/projects/shampoodle.png',
-		url: 'https://shampoodle.vercel.app/',
+		url: 'https://shampoodle.vercel.app',
 		repo: 'https://github.com/tanerijun/shampoodle'
 	},
 	{
@@ -44,7 +44,7 @@ export const projects = [
 		description: 'Super fast dictionary hosted on the edge',
 		techs: ['Typescript', 'React', 'Remix'],
 		imgUrl: '/assets/projects/dicto.png',
-		url: 'https://dicto.pages.dev/',
+		url: 'https://dicto.pages.dev',
 		repo: 'https://github.com/tanerijun/dicto'
 	},
 	{
@@ -52,6 +52,6 @@ export const projects = [
 		description: 'Minimalist art showcase website',
 		techs: ['Typescript', 'Astro'],
 		imgUrl: '/assets/projects/efenhan-gallery.png',
-		url: 'https://efenhan-gallery.com'
+		url: 'https://efenhan.com'
 	}
 ];
