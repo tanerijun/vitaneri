@@ -38,21 +38,19 @@
 
 <SearchEngine {query} {data} bind:result />
 
-<ul
+<nav
 	class="no-scrollbar flex h-full w-full flex-col gap-4 overflow-scroll overscroll-y-contain text-sm text-subtle"
 >
 	{#each result as item}
-		<li>
-			<a
-				href={`/posts/${item.slug}`}
-				on:click={handleLinkClick}
-				class="hover:bg-highlight/30 hover:text-accent"
-			>
-				{@html item.highlight}
-			</a>
-		</li>
+		<a
+			href={`/posts/${item.slug}`}
+			on:click={handleLinkClick}
+			class="hover:bg-highlight/30 hover:text-accent"
+		>
+			{@html item.highlight}
+		</a>
 	{/each}
-</ul>
+</nav>
 
 <style global lang="postcss">
 	mark {
