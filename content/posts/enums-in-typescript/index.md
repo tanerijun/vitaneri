@@ -20,8 +20,8 @@ This is how you declare an enums in TypeScript:
 
 ```ts
 enum ModalState {
-  Open,
-  Closed,
+	Open,
+	Closed,
 }
 ```
 
@@ -29,15 +29,15 @@ Now, let's look at how we can use this enums.
 
 ```ts
 function checkModalState(state: ModalState) {
-  console.log(`Enum's real value is: ${state}`);
-  switch (state) {
-    case ModalState.Open:
-      console.log("Modal is open.");
-      break;
-    case ModalState.Closed:
-      console.log("Door is closed.");
-      break;
-  }
+	console.log(`Enum's real value is: ${state}`);
+	switch (state) {
+		case ModalState.Open:
+			console.log("Modal is open.");
+			break;
+		case ModalState.Closed:
+			console.log("Door is closed.");
+			break;
+	}
 }
 ```
 
@@ -69,8 +69,8 @@ We can also set the numerical value of an enum to whatever we like. For example:
 
 ```ts
 enum ModalState {
-  Open = 5,
-  Closed = 10,
+	Open = 5,
+	Closed = 10,
 }
 ```
 
@@ -96,8 +96,8 @@ In TypeScript, we are not limited to numeric enums. We can also use a string enu
 
 ```ts
 enum ModalState {
-  OPEN = "Open",
-  CLOSED = "Closed",
+	OPEN = "Open",
+	CLOSED = "Closed",
 }
 ```
 
@@ -117,8 +117,8 @@ String enums don't auto-increment like the numeric enum. You've got to assign a 
 
 ```ts
 enum modalState {
-  OPEN = "open",
-  Closed, // TypeScript will complain about this line
+	OPEN = "open",
+	Closed, // TypeScript will complain about this line
 }
 ```
 
@@ -126,8 +126,8 @@ You can also make a heterogenous enums like this, but it's generally not recomme
 
 ```ts
 enum modalState {
-  OPEN = 1,
-  CLOSED = "Closed",
+	OPEN = 1,
+	CLOSED = "Closed",
 }
 ```
 
@@ -139,8 +139,8 @@ When requirements are tight, and our code has to be as minimal as possible, we c
 
 ```ts {1}
 const enum ModalState {
-  Open,
-  Closed,
+	Open,
+	Closed,
 }
 ```
 
@@ -150,8 +150,8 @@ Before we look at how const enums are implemented in plain JavaScript, let's go 
 
 ```ts {1}
 enum ModalState {
-  Open,
-  Closed,
+	Open,
+	Closed,
 }
 ```
 
@@ -160,8 +160,8 @@ This is how the code above look like after compilation.
 ```js
 var modalState;
 (function (modalState) {
-  modalState[(modalState["Open"] = 0)] = "Open";
-  modalState[(modalState["Closed"] = 1)] = "Closed";
+	modalState[(modalState["Open"] = 0)] = "Open";
+	modalState[(modalState["Closed"] = 1)] = "Closed";
 })(modalState || (modalState = {}));
 ```
 
@@ -180,8 +180,8 @@ Now, back to const enum. No object is generated at all. They are completely remo
 
 ```ts
 const enum modalState {
-  Open,
-  Closed,
+	Open,
+	Closed,
 }
 
 console.log(modalState); // this line will error

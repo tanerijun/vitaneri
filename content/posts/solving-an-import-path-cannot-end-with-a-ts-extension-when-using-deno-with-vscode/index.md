@@ -6,7 +6,7 @@ featured: false
 tags:
   - deno
   - vscode
-description: 'A simple solution to the squiggly line when importing files with .ts extension in Deno VSCode.'
+description: "A simple solution to the squiggly line when importing files with .ts extension in Deno VSCode."
 ---
 
 When we are working with Deno, we often need to import files with .ts extension. But the built-in TS language server from VSCode is usually unhappy when we do this.

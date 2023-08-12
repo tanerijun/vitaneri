@@ -16,7 +16,7 @@ Take a look at this code:
 
 ```ts
 function add(arg1: string | number, arg2: string | number) {
-  return arg1 + arg2;
+	return arg1 + arg2;
 }
 ```
 
@@ -38,18 +38,18 @@ Let's rewrite our `add` function to use type guard.
 
 ```ts
 function add(arg1: string | number, arg2: string | number) {
-  if (typeof arg1 === "string") {
-    // arg1 is guaranteed to be a string in this scope
-    return arg1 + arg2;
-  }
+	if (typeof arg1 === "string") {
+		// arg1 is guaranteed to be a string in this scope
+		return arg1 + arg2;
+	}
 
-  if (typeof arg1 === "number" && typeof arg2 === "number") {
-    // both arg1 and arg2 are guaranteed to be a number in this scope
-    return arg1 + arg2;
-  }
+	if (typeof arg1 === "number" && typeof arg2 === "number") {
+		// both arg1 and arg2 are guaranteed to be a number in this scope
+		return arg1 + arg2;
+	}
 
-  // default: return both as strings
-  return arg1.toString() + arg2.toString();
+	// default: return both as strings
+	return arg1.toString() + arg2.toString();
 }
 ```
 

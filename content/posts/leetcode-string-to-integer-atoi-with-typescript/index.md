@@ -1,6 +1,6 @@
 ---
 datetime: 2022-10-25T13:55:29.989Z
-title: 'LeetCode: String To Integer (atoi) With TypeScript'
+title: "LeetCode: String To Integer (atoi) With TypeScript"
 slug: leetcode-string-to-integer-atoi-with-typescript
 featured: false
 tags:
@@ -42,9 +42,9 @@ function myAtoi(s: string): number {
 	let result: number = 0;
 	let sign: number | undefined;
 
-	if (input[0] === '+') {
+	if (input[0] === "+") {
 		sign = 1;
-	} else if (input[0] === '-') {
+	} else if (input[0] === "-") {
 		sign = -1;
 	}
 

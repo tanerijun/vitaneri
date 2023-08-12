@@ -1,11 +1,11 @@
 ---
 datetime: 2022-10-29T04:53:41.458Z
-title: 'Understanding Mapped Types In TypeScript'
+title: "Understanding Mapped Types In TypeScript"
 slug: understanding-mapped-types-in-typescript
 featured: false
 tags:
   - typescript
-description: 'Exploring Mapped Types in TypeScript.'
+description: "Exploring Mapped Types in TypeScript."
 ---
 
 In this post, we'll look at Mapped Types in TypeScript.
@@ -30,7 +30,7 @@ Any object that implements the interface must have the `a` and `b` properties.
 ```ts
 const obj: RequireAB = {
 	a: 1,
-	b: 'hello'
+	b: "hello",
 };
 ```
 
@@ -53,7 +53,7 @@ interface RequireAB {
 
 const obj: RequireAB = {
 	a: 1,
-	b: 'hello'
+	b: "hello",
 };
 
 type NotRequireAB<RequireAB> = {
@@ -204,7 +204,7 @@ interface RequireAB {
 
 const obj: Readonly<RequireAB> = {
 	a: 1,
-	b: 'hello'
+	b: "hello",
 };
 
 obj.a = 2;
@@ -238,9 +238,9 @@ interface ABC {
 	c: boolean;
 }
 
-let obj: Pick<ABC, 'a' | 'b'> = {
+let obj: Pick<ABC, "a" | "b"> = {
 	a: 1,
-	b: 'hello'
+	b: "hello",
 };
 ```
 
@@ -262,9 +262,9 @@ type Record<K extends keyof any, T> = {
 Let's look at an example that use Record.
 
 ```ts
-let obj: Record<'c' | 'd', string> = {
-	c: 'hello',
-	d: 'world'
+let obj: Record<"c" | "d", string> = {
+	c: "hello",
+	d: "world",
 };
 ```
 

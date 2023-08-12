@@ -5,7 +5,7 @@ slug: understanding-space-complexity-of-algorithm
 featured: false
 tags:
   - dsa
-description: 'Complete guide to calculating the space complexity of algorithms.'
+description: "Complete guide to calculating the space complexity of algorithms."
 ---
 
 If you're like me, you'll find space complexity much more tricky to calculate than the time complexity. It always seems to go over your head.

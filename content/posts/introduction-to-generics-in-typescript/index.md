@@ -1,6 +1,6 @@
 ---
 datetime: 2022-10-29T01:58:28.122Z
-title: 'Introduction To Generics In TypeScript'
+title: "Introduction To Generics In TypeScript"
 slug: introduction-to-generics-in-typescript
 featured: false
 tags:
@@ -35,10 +35,10 @@ Let's see how it works when we call the function with arguments of different typ
 
 ```ts
 print<number>(1);
-print<string>('hello');
+print<string>("hello");
 print<boolean>(true);
 print<function>(() => {});
-print<object>({ name: 'John' });
+print<object>({ name: "John" });
 ```
 
 And the output:
@@ -81,10 +81,10 @@ Typescript prevents us from calling a generic function with the wrong type as an
 
 ```ts
 print(1);
-print('hello');
+print("hello");
 print(true);
 print(() => {});
-print({ name: 'John' });
+print({ name: "John" });
 ```
 
 ## Multiple Generics
@@ -103,9 +103,9 @@ function twoTypes<A, B>(arg1: A, arg2: B) {
 Here, we have a function that take 2 generic types. Let's see how it works using the code below.
 
 ```ts
-twoTypes<number, string>(1, 'hello');
-twoTypes(2, 'world');
-twoTypes('hello', 'world');
+twoTypes<number, string>(1, "hello");
+twoTypes(2, "world");
+twoTypes("hello", "world");
 ```
 
 Notice that the 2 generics can also be of the same type as shown at line 3.
@@ -160,12 +160,12 @@ Let's look at an example.
 ```ts
 const obj = {
 	id: 1,
-	name: 'John'
+	name: "John",
 };
 
-printProperty(obj, 'id');
-printProperty(obj, 'name');
-printProperty(obj, 'age');
+printProperty(obj, "id");
+printProperty(obj, "name");
+printProperty(obj, "age");
 ```
 
 The first and second line of the code will produce the following output as expected:

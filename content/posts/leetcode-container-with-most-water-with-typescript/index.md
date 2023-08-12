@@ -1,6 +1,6 @@
 ---
 datetime: 2022-10-27T05:34:34.621Z
-title: 'LeetCode: Container With Most Water With TypeScript'
+title: "LeetCode: Container With Most Water With TypeScript"
 slug: leetcode-container-with-most-water-with-typescript
 featured: false
 tags:

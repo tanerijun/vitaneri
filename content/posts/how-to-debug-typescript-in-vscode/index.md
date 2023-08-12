@@ -35,15 +35,15 @@ Your `tsconfig.json` file will now look something like this:
 
 ```json
 {
-  "compilerOptions": {
-    "target": "ES3",
-    "module": "commonjs",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "sourceMap": true
-  }
+	"compilerOptions": {
+		"target": "ES3",
+		"module": "commonjs",
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"sourceMap": true
+	}
 }
 ```
 
@@ -57,23 +57,18 @@ Next, go to the debug tab, and add a JSON configuration file named `launch.json`
 
 ```json
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "ts-debug",
-      "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/index.ts",
-      "runtimeArgs": [
-        "-r",
-        "ts-node/register",
-        "-r",
-        "tsconfig-paths/register"
-      ],
-      "outFiles": ["${workspaceFolder}/**/*.js"]
-    }
-  ]
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "ts-debug",
+			"skipFiles": ["<node_internals>/**"],
+			"program": "${workspaceFolder}/index.ts",
+			"runtimeArgs": ["-r", "ts-node/register", "-r", "tsconfig-paths/register"],
+			"outFiles": ["${workspaceFolder}/**/*.js"]
+		}
+	]
 }
 ```
 

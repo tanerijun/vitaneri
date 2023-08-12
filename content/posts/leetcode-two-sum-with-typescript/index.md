@@ -50,15 +50,15 @@ I am talking about the brute force method. Something like this:
 
 ```ts
 function twoSum(nums: number[], target: number): number[] {
-  for (let i = 0; i < nums.length; i++) {
-    for (let j = 0; j < nums.length; j++) {
-      if (nums[i] + nums[j] === target) {
-        return [i, j];
-      }
-    }
-  }
+	for (let i = 0; i < nums.length; i++) {
+		for (let j = 0; j < nums.length; j++) {
+			if (nums[i] + nums[j] === target) {
+				return [i, j];
+			}
+		}
+	}
 
-  return [];
+	return [];
 }
 ```
 
@@ -68,19 +68,19 @@ We want to try solving this only by looping through the list once, and we can ac
 
 ```ts
 function twoSum(nums: number[], target: number): number[] {
-  const map: Map<number, number> = new Map();
+	const map: Map<number, number> = new Map();
 
-  for (let i = 0; i < nums.length; i++) {
-    const complement = target - nums[i];
+	for (let i = 0; i < nums.length; i++) {
+		const complement = target - nums[i];
 
-    const complementIndex = map.get(complement);
-    if (complementIndex !== undefined) {
-      return [complementIndex, i];
-    }
-    map.set(nums[i], i);
-  }
+		const complementIndex = map.get(complement);
+		if (complementIndex !== undefined) {
+			return [complementIndex, i];
+		}
+		map.set(nums[i], i);
+	}
 
-  return [];
+	return [];
 }
 ```
 

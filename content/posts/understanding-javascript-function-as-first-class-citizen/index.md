@@ -41,7 +41,7 @@ call(function() {})
 
 ```js
 function exampleFunction() {
-  return function () {};
+	return function () {};
 }
 ```
 

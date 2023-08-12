@@ -1,6 +1,6 @@
 ---
 datetime: 2022-10-09T15:07:17.838Z
-title: 'LeetCode: Add Two Numbers With TypeScript'
+title: "LeetCode: Add Two Numbers With TypeScript"
 slug: leetcode-add-two-numbers-with-typescript
 featured: false
 tags:

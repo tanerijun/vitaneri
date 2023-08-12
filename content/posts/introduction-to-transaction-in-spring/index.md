@@ -246,9 +246,9 @@ This is what I did:
 
 ```json
 {
-  "senderId": 1,
-  "receiverId": 2,
-  "amount": 20
+	"senderId": 1,
+	"receiverId": 2,
+	"amount": 20
 }
 ```
 
@@ -256,16 +256,16 @@ This is what I did:
 
 ```json
 [
-  {
-    "id": 1,
-    "name": "John Doe",
-    "money": 80.0
-  },
-  {
-    "id": 2,
-    "name": "Jane Doe",
-    "money": 120.0
-  }
+	{
+		"id": 1,
+		"name": "John Doe",
+		"money": 80.0
+	},
+	{
+		"id": 2,
+		"name": "Jane Doe",
+		"money": 120.0
+	}
 ]
 ```
 
@@ -297,9 +297,9 @@ Now let's restart the app and call the endpoints again.
 
 ```json
 {
-  "senderId": 1,
-  "receiverId": 2,
-  "amount": 20
+	"senderId": 1,
+	"receiverId": 2,
+	"amount": 20
 }
 ```
 
@@ -307,16 +307,16 @@ Now let's restart the app and call the endpoints again.
 
 ```json
 [
-  {
-    "id": 1,
-    "name": "John Doe",
-    "money": 100.0
-  },
-  {
-    "id": 2,
-    "name": "Jane Doe",
-    "money": 100.0
-  }
+	{
+		"id": 1,
+		"name": "John Doe",
+		"money": 100.0
+	},
+	{
+		"id": 2,
+		"name": "Jane Doe",
+		"money": 100.0
+	}
 ]
 ```
 
