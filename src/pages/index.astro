@@ -1,6 +1,11 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Content as WelcomeMessage } from "../content/misc/welcome-message.md";
+
+const postEntries = (await getCollection("posts")).sort(
+	(a, b) => b.data.datetime.getTime() - a.data.datetime.getTime(),
+);
 ---
 
 <BaseLayout>
@@ -8,5 +13,15 @@ import { Content as WelcomeMessage } from "../content/misc/welcome-message.md";
 		<div>
 			<WelcomeMessage />
 		</div>
+		<p>List of posts</p>
+		<ul>
+			{
+				postEntries.map((entry) => (
+					<li>
+						<a href={`/posts/${entry.slug}`}>{entry.data.title}</a>
+					</li>
+				))
+			}
+		</ul>
 	</main>
 </BaseLayout>
