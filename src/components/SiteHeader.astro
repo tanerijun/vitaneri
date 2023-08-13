@@ -1,0 +1,36 @@
+---
+const navLinks = [
+	{
+		displayText: "Posts",
+		url: "/posts",
+	},
+	{
+		displayText: "Tags",
+		url: "/tags",
+	},
+	{
+		displayText: "TILs",
+		url: "/tils",
+	},
+	{
+		displayText: "Projects",
+		url: "/projects",
+	},
+	{
+		displayText: "About",
+		url: "/about",
+	},
+];
+---
+
+<header class="flex justify-between">
+	<div id="site-logo">
+		<a href="/">
+			<span>Vitaneri</span>
+		</a>
+	</div>
+
+	<nav class="flex gap-4">
+		{navLinks.map((navLink) => <a href={navLink.url}>{navLink.displayText}</a>)}
+	</nav>
+</header>

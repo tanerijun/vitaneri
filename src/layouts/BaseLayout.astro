@@ -1,5 +1,7 @@
 ---
 import "../base.css";
+
+import SiteHeader from "../components/SiteHeader.astro";
 ---
 
 <html lang="en">
@@ -10,15 +12,7 @@ import "../base.css";
 		<title>Vitaneri</title>
 	</head>
 	<body>
-		<header class="flex justify-between">
-			<span>Logo</span>
-			<nav>
-				<a class="border border-green-500" href="/">Link 1</a>
-				<a class="border border-green-500" href="/">Link 2</a>
-				<a class="border border-green-500" href="/">Link 3</a>
-			</nav>
-		</header>
-
+		<SiteHeader />
 		<slot />
 	</body>
 </html>
