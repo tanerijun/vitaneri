@@ -1,0 +1,8 @@
+{
+	"title": "Wordle Fever",
+	"description": "Wordle game for the true hardcore",
+	"techs": ["TypeScript", "React", "ChakraUI", "Framer Motion"],
+	"imgUrl": "/assets/projects/wordle-fever.png",
+	"url": "https://wordle-fever.netlify.app",
+	"repo": "https://github.com/tanerijun/wordle-fever"
+}

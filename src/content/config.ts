@@ -9,6 +9,17 @@ const postCollection = defineCollection({
 	}),
 });
 
+const projectCollection = defineCollection({
+	type: "data",
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		techs: z.array(z.string()),
+		url: z.string().url().optional(),
+		repo: z.string().url().optional(),
+	}),
+});
+
 const tilCollection = defineCollection({
 	type: "content",
 	schema: z.object({
@@ -18,15 +29,6 @@ const tilCollection = defineCollection({
 
 export const collections = {
 	posts: postCollection,
+	projects: projectCollection,
 	tils: tilCollection,
 };
-
-// ---
-// datetime: 2022-10-21T15:06:20.401Z
-// title: "Type Unknown in TypeScript"
-// slug: type-unknown-in-typescript
-// featured: false
-// tags:
-// 	- typescript
-// description: "Exploring one of the primitive types in TypeScript: Unknown"
-// ---
