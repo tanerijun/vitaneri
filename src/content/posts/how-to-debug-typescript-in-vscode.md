@@ -1,12 +1,9 @@
 ---
 datetime: 2022-09-21T20:22:32.000Z
 title: How To Debug TypeScript In VSCode
-slug: how-to-debug-typescript-in-vscode
-featured: false
 tags:
   - typescript
   - vscode
-description: "How to configure VSCode's built-in debugger to debug a TypeScript Node application."
 ---
 
 Let's take a look at how we can configure VSCode's built-in debugger to debug a TypeScript Node application.

@@ -1,11 +1,8 @@
 ---
 datetime: 2022-09-03T03:22:27.000Z
 title: Introduction To Transaction In Spring
-slug: introduction-to-transaction-in-spring
-featured: false
 tags:
   - spring
-description: "Explaining Transaction in Spring (The ELI5 way)."
 ---
 
 In this post, we'll implement a simple Spring app to understand transaction. By the end of this post, you'll be equipped with the basic knowledge to work with transaction in Spring.

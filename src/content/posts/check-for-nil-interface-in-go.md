@@ -3,7 +3,6 @@ datetime: 2022-11-14T16:07:52.838Z
 title: "Check For Nil Interface In Go"
 tags:
   - go
-description: "A short code snippet to check for nil interface in Go."
 ---
 
 The zero value for a Go interface is `nil`. But unlike the `nil` for concrete types (e.g: pointer, slice), checking for `nil` interface is not as straightforward.

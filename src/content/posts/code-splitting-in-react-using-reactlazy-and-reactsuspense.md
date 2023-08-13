@@ -1,12 +1,9 @@
 ---
 datetime: 2023-01-22T15:51:52.609Z
 title: "Code Splitting In React Using React.lazy and React.Suspense"
-slug: code-splitting-in-react-using-reactlazy-and-reactsuspense
-featured: false
 tags:
   - javascript
   - react
-description: "Short post about Code Splitting Using React.lazy and React.Suspense."
 ---
 
 In this post, we will learn how to do code splitting in our React app using `React.lazy` and `React.suspense`.

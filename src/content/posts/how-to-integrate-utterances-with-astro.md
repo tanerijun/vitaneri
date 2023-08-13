@@ -1,12 +1,9 @@
 ---
 title: How To Integrate Utterances With Astro
 datetime: 2022-10-07T09:53:35Z
-slug: how-to-integrate-utterances-with-astro
-featured: true
 tags:
   - astro
   - utterances
-description: "Let's take a look at how I integrated Utterances with my Astro blog without any additional UI library (Using Astro component)."
 ---
 
 In this post, we're going to take a look at how I integrated Utterances with my Astro blog without any additional UI library. We'll create an Astro component that handle calling the Utterances script, and also see how we can change the theme of the Utterances' IFrame dynamically.

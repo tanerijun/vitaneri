@@ -1,12 +1,9 @@
 ---
 datetime: 2023-01-20T08:43:41.820Z
 title: "Better React Context DX With Custom Provider And Consumer Hook"
-slug: better-react-context-dx-with-custom-provider-and-consumer-hook
-featured: false
 tags:
   - react
   - javascript
-description: "Abstracting React's Context API using custom provider and consumer hook."
 ---
 
 In this post, we'll take a look at how we can abstract React's context API using custom provider and consumer hook for a better developer experience.
@@ -197,9 +194,7 @@ But with our custom hook solution, we can just handle that inside the hook.
 export const useTheme = () => {
 	const themeContext = useContext(ThemeContext);
 	if (!themeContext) {
-		throw new Error(
-			"ThemeContext is undefined. Make sure to wrap your component with ThemeProvider.",
-		);
+		throw new Error("ThemeContext is undefined. Make sure to wrap your component with ThemeProvider.");
 	}
 	return themeContext;
 };

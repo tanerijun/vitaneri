@@ -1,11 +1,8 @@
 ---
 datetime: 2022-10-15T01:35:13.086Z
 title: "Enums In TypeScript"
-slug: enums-in-typescript
-featured: false
 tags:
   - typescript
-description: "introduction to enums in TypeScript."
 ---
 
 Enums is a special type whose concept will already be familiar to you if you come from languages like C#, C++, Java, etc.

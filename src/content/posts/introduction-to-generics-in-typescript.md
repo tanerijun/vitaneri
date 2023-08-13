@@ -1,11 +1,8 @@
 ---
 datetime: 2022-10-29T01:58:28.122Z
 title: "Introduction To Generics In TypeScript"
-slug: introduction-to-generics-in-typescript
-featured: false
 tags:
   - typescript
-description: "A guide on TypeScript's generics."
 ---
 
 This post is a simple introduction to generics in TypeScript.
