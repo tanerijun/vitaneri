@@ -8,4 +8,7 @@ export default defineConfig({
 	image: {
 		service: sharpImageService(),
 	},
+	redirects: {
+		"/posts": "/",
+	},
 });
