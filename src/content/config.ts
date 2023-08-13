@@ -9,8 +9,16 @@ const postCollection = defineCollection({
 	}),
 });
 
+const tilCollection = defineCollection({
+	type: "content",
+	schema: z.object({
+		datetime: z.date(),
+	}),
+});
+
 export const collections = {
 	posts: postCollection,
+	tils: tilCollection,
 };
 
 // ---
