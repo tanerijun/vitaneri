@@ -1,11 +1,8 @@
 ---
 datetime: 2022-09-02T05:15:27.000Z
 title: Understanding JavaScript Function As First-class Citizen
-slug: understanding-javascript-function-as-first-class-citizen
-featured: false
 tags:
   - javascript
-description: "This is a short post explaining the meaning of JavaScript function as a first-class citizen."
 ---
 
 ## Introduction

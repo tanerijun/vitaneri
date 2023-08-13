@@ -1,11 +1,8 @@
 ---
 datetime: 2022-10-10T02:34:04.780Z
 title: Understanding Space Complexity Of Algorithm
-slug: understanding-space-complexity-of-algorithm
-featured: false
 tags:
   - dsa
-description: "Complete guide to calculating the space complexity of algorithms."
 ---
 
 If you're like me, you'll find space complexity much more tricky to calculate than the time complexity. It always seems to go over your head.
@@ -61,7 +58,7 @@ To the calculation:
 
 For this kind of algorithm, no matter what the values of `n1` and `n2` are, the space needed is always the same. Everything inside the algorithm is of a fixed size. This is also called **constant** space complexity or `O(1)`.
 
-![Graph of constant space complexity](./assets/constant-space.jpeg)
+![Graph of constant space complexity](~/assets/space-complexity-constant-graph.jpeg)
 
 ### Example 2
 
@@ -95,7 +92,7 @@ or
 
 So the space complexity is `O(n)`, also called **linear** space complexity.
 
-![Graph of linear space complexity](./assets/linear-space.jpg)
+![Graph of linear space complexity](~/assets/space-complexity-linear-graph.jpg)
 
 ### Example 3
 
@@ -144,7 +141,7 @@ This time, we're down to only 1 variable (`n`). But the auxiliary space needed i
 
 Let's look at the call stack assuming `n = 5`.
 
-![Call stack](./assets/call-stack.jpg)
+![Call stack](~/assets/space-complexity-call-stack.jpg)
 
 As the value of `n` increases, the number of function call also increase. Each function call has each own auxiliary space. So the auxiliary space will be based on `n`.
 

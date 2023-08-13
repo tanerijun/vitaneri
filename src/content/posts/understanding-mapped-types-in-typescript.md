@@ -1,11 +1,8 @@
 ---
 datetime: 2022-10-29T04:53:41.458Z
 title: "Understanding Mapped Types In TypeScript"
-slug: understanding-mapped-types-in-typescript
-featured: false
 tags:
   - typescript
-description: "Exploring Mapped Types in TypeScript."
 ---
 
 In this post, we'll look at Mapped Types in TypeScript.

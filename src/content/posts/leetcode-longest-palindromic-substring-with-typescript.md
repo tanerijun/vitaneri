@@ -1,14 +1,10 @@
 ---
 datetime: 2022-10-22T01:51:06.754Z
 title: "LeetCode: Longest Palindromic Substring With TypeScript"
-slug: leetcode-longest-palindromic-substring-with-typescript
-featured: false
-draft: false
 tags:
   - leetcode
   - dsa
   - typescript
-description: 'My solution to "Longest Palindromic Substring" from LeetCode with TypeScript.'
 ---
 
 In this post, we are going to look at the solution to the "Longest Palindromic Substring" from LeetCode using TypeScript.

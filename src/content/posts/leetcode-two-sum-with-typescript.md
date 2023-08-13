@@ -1,13 +1,10 @@
 ---
 datetime: 2022-10-08T13:39:18.243Z
 title: "LeetCode: Two Sum With TypeScript"
-slug: leetcode-two-sum-with-typescript
-featured: false
 tags:
   - leetcode
   - dsa
   - typescript
-description: "Going over the LeetCode's Two Sum problem with TypeScript."
 ---
 
 In this post, we're going to look at LeetCode's Two Sum problem and find the most efficient algorithm to solve the problem.

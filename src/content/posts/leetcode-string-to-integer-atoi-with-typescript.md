@@ -1,13 +1,10 @@
 ---
 datetime: 2022-10-25T13:55:29.989Z
 title: "LeetCode: String To Integer (atoi) With TypeScript"
-slug: leetcode-string-to-integer-atoi-with-typescript
-featured: false
 tags:
   - leetcode
   - dsa
   - typescript
-description: 'Solving "String To Integer (atoi)" from LeetCode With TypeScript'
 ---
 
 In this post, we're going to solve LeetCode's "String To Integer (atoi)" using TypeScript.

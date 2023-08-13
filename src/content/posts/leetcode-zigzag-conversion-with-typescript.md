@@ -1,13 +1,10 @@
 ---
 datetime: 2022-10-23T05:37:15.568Z
 title: "LeetCode: Zigzag Conversion With TypeScript"
-slug: leetcode-zigzag-conversion-with-typescript
-featured: false
 tags:
   - leetcode
   - dsa
   - typescript
-description: 'My solution to "Zigzag Conversion" from LeetCode with TypeScript.'
 ---
 
 In this post, we are going to look at my solution to the "Zigzag Conversion" from LeetCode using TypeScript.

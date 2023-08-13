@@ -1,13 +1,10 @@
 ---
 datetime: 2022-10-26T05:39:32.062Z
 title: "LeetCode: Palindrome Number With TypeScript"
-slug: leetcode-palindrome-number-with-typescript
-featured: false
 tags:
   - leetcode
   - dsa
   - typescript
-description: "Solution to Palindrome Number from LeetCode Using TypeScript."
 ---
 
 In this post, we're going to solve LeetCode's "Palindrome Number" using TypeScript.

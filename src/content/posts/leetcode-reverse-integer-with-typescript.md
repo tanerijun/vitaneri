@@ -1,13 +1,10 @@
 ---
 datetime: 2022-10-24T14:06:23.627Z
 title: "LeetCode: Reverse Integer With TypeScript"
-slug: leetcode-reverse-integer-with-typescript
-featured: false
 tags:
   - leetcode
   - dsa
   - typescript
-description: 'Solving "Reverse Integer" from LeetCode with TypeScript'
 ---
 
 In this post, we're going to solve LeetCode's "Reverse Integer" using TypeScript.

@@ -1,13 +1,10 @@
 ---
 datetime: 2022-10-27T05:34:34.621Z
 title: "LeetCode: Container With Most Water With TypeScript"
-slug: leetcode-container-with-most-water-with-typescript
-featured: false
 tags:
   - leetcode
   - dsa
   - typescript
-description: 'Solving "Container With Most Water" from LeetCode with TypeScript.'
 ---
 
 In this post, we're going to solve LeetCode's "Container With Most Water" using TypeScript.
@@ -24,7 +21,7 @@ Return the maximum amount of water a container can store.
 
 Example 1:
 
-![example](./assets/water_container.jpg)
+![example](~/assets/lc11-water-container.jpg)
 
 ```
 Input: height = [1,8,6,2,5,4,8,3,7]

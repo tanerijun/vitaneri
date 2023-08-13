@@ -1,11 +1,8 @@
 ---
 datetime: 2023-03-01T16:13:49.880Z
 title: Test Svelte Component Slot Using svelte-htm
-slug: test-svelte-component-slot-using-svelte-htm
-featured: false
 tags:
   - svelte
-description: A short guide on how to test Svelte component with slot using the svelte-htm library.
 ---
 
 This is a short guide on how to test a Svelte component with slot using the [svelte-htm](https://github.com/kenoxa/svelte-htm) library.

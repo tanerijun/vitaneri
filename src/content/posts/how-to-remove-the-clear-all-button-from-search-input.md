@@ -10,7 +10,7 @@ When you create a search input, `<input type="search" />`, in HTML. It's going t
 
 I am talking about this:
 
-![example](~/assets/x-icon-in-searchbar.png)
+![X Icon in Searchbar](~/assets/x-icon-in-searchbar.png)
 
 We can remove the "X" with these CSS:
 
