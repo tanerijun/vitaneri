@@ -1,0 +1,13 @@
+---
+import { getEntry } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const aboutPage = await getEntry("misc", "about")
+const { Content } = await aboutPage.render()
+---
+
+<BaseLayout>
+  <div class="prose">
+    <Content />
+  </div>
+</BaseLayout>

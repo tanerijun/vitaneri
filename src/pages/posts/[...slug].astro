@@ -19,5 +19,7 @@ const { Content } = await entry.render();
 
 <BaseLayout>
 	<h1>{entry.data.title}</h1>
-	<Content />
+	<div class="prose">
+		<Content />
+	</div>
 </BaseLayout>
