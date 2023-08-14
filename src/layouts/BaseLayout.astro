@@ -4,14 +4,14 @@ import "../base.css";
 import SiteHeader from "../components/SiteHeader.astro";
 ---
 
-<html lang="en">
+<html lang="en" data-theme="dusk">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<title>Vitaneri</title>
 	</head>
-	<body>
+	<body class="bg-basis text-muted antialiased selection:bg-highlight">
 		<SiteHeader />
 		<main>
 			<slot />
