@@ -24,9 +24,19 @@ const navLinks = [
 ---
 
 <header class="flex justify-between">
+	<!-- Skip To Content -->
+	<!-- Normally hidden, useful for screen reader or keyboard user -->
+	<a
+		id="skip-to-content"
+		href="#main-content"
+		class="top absolute -top-full left-16 z-50 bg-overlay p-2 text-text transition-all focus:top-4 focus:ring"
+	>
+		Skip to content
+	</a>
+
 	<div id="site-logo">
 		<a href="/">
-			<span>Vitaneri</span>
+			<span class="select-none bg-gradient-to-b from-text to-accent bg-clip-text font-heading text-3xl font-bold text-transparent hover:animate-mesh-background">Vitaneri</span>
 		</a>
 	</div>
 
