@@ -6,7 +6,5 @@ const projectEntries = await getCollection("projects");
 ---
 
 <BaseLayout>
-	<main>
-		{projectEntries.map((entry) => <div>{entry.data.title}</div>)}
-	</main>
+	{projectEntries.map((entry) => <div>{entry.data.title}</div>)}
 </BaseLayout>

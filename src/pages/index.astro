@@ -9,19 +9,17 @@ const postEntries = (await getCollection("posts")).sort(
 ---
 
 <BaseLayout>
-	<main>
-		<div>
-			<WelcomeMessage />
-		</div>
-		<p>List of posts</p>
-		<ul>
-			{
-				postEntries.map((entry) => (
-					<li>
-						<a href={`/posts/${entry.slug}`}>{entry.data.title}</a>
-					</li>
-				))
-			}
-		</ul>
-	</main>
+	<div>
+		<WelcomeMessage />
+	</div>
+	<p>List of posts</p>
+	<ul>
+		{
+			postEntries.map((entry) => (
+				<li>
+					<a href={`/posts/${entry.slug}`}>{entry.data.title}</a>
+				</li>
+			))
+		}
+	</ul>
 </BaseLayout>

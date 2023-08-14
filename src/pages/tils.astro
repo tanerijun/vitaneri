@@ -6,21 +6,19 @@ const tilEntries = (await getCollection("tils")).sort((a, b) => parseInt(b.slug)
 ---
 
 <BaseLayout>
-	<main>
-		{
-			tilEntries.map(async (entry) => {
-				const id = parseInt(entry.slug).toString();
-				const { Content } = await entry.render();
+	{
+		tilEntries.map(async (entry) => {
+			const id = parseInt(entry.slug).toString();
+			const { Content } = await entry.render();
 
-				return (
-					<div>
-						<h2 id={id}>
-							<a href={`#${id}`}>#{id}</a>
-						</h2>
-						<Content />
-					</div>
-				);
-			})
-		}
-	</main>
+			return (
+				<div>
+					<h2 id={id}>
+						<a href={`#${id}`}>#{id}</a>
+					</h2>
+					<Content />
+				</div>
+			);
+		})
+	}
 </BaseLayout>
