@@ -1,4 +1,6 @@
 ---
+import { twJoin } from "../utils/tw-join";
+
 const navLinks = [
 	{
 		displayText: "Posts",
@@ -21,9 +23,11 @@ const navLinks = [
 		url: "/about",
 	},
 ];
+
+const activePath = Astro.url.pathname.split("/")[1];
 ---
 
-<header class="flex justify-between">
+<header>
 	<!-- Skip To Content -->
 	<!-- Normally hidden, useful for screen reader or keyboard user -->
 	<a
@@ -34,13 +38,35 @@ const navLinks = [
 		Skip to content
 	</a>
 
-	<div id="site-logo">
-		<a href="/">
-			<span class="select-none bg-gradient-to-b from-text to-accent bg-clip-text font-heading text-3xl font-bold text-transparent hover:animate-mesh-background">Vitaneri</span>
-		</a>
-	</div>
+	<div class="mx-auto flex max-w-7xl items-center justify-between py-6">
+		<div id="site-logo">
+			<a href="/">
+				<span
+					class="inline-block select-none bg-gradient-to-b from-text to-accent bg-clip-text font-heading text-3xl font-bold text-transparent hover:animate-mesh-background"
+				>
+					Vitaneri
+				</span>
+			</a>
+		</div>
 
-	<nav class="flex gap-4">
-		{navLinks.map((navLink) => <a href={navLink.url}>{navLink.displayText}</a>)}
-	</nav>
+		<nav class="hidden items-center gap-6 md:flex">
+			{
+				navLinks.map((navLink) => {
+					const isActive = "/" + activePath === navLink.url;
+
+					return (
+						<div class="relative">
+							<a
+								href={navLink.url}
+								class={twJoin("font-heading text-sm hover:text-text md:text-base", isActive && "text-text")}
+							>
+								{navLink.displayText}
+							</a>
+							{isActive && <div id="marker" class="absolute h-0.5 w-full bg-accent" />}
+						</div>
+					);
+				})
+			}
+		</nav>
+	</div>
 </header>
