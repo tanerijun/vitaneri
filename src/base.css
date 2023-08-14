@@ -29,6 +29,11 @@
 		@apply font-heading text-text selection:bg-highlight;
 	}
 
+	/* ==== Element focus ==== */
+	*:focus-visible {
+		@apply outline-2 outline-offset-4 outline-accent;
+	}
+
   /* ===== scrollbar ===== */
 	/* width */
 	::-webkit-scrollbar {
