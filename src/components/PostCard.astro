@@ -1,0 +1,24 @@
+---
+import type { Post } from "../utils/schemas";
+
+type Props = { data: Post };
+
+const { data } = Astro.props;
+
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dev"];
+const displayDate = months[data.datetime.getMonth()] + " " + data.datetime.getDate();
+---
+
+<article class="group relative">
+	<!-- Hover animation for card -->
+	<div
+		class="absolute -inset-x-1 -inset-y-2 -z-10 scale-95 rounded-2xl bg-lowlight opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6"
+		aria-hidden="true"
+	>
+	</div>
+
+	<div class="flex items-center gap-10 py-4 text-subtle transition-colors group-hover:text-text">
+		<p class="min-w-[80px]">{displayDate}</p>
+		<p>{data.title}</p>
+	</div>
+</article>

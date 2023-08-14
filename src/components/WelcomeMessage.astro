@@ -1,0 +1,50 @@
+<div class="my-16 text-2xl leading-10">
+	<span class="text-text">
+		Hi <span class="wave inline-block">👋🏻</span> I'm Vincent. Welcome to my blog.
+	</span>
+	 This is the place where I share my thoughts, reflections, and everything related to software development and new
+	technologies. If my content resonates with you, consider subscribing to my
+	<a href="https://vitaneri.com/rss.xml" target="_blank" rel="noreferrer" class="text-accent hover:underline">
+		RSS feed
+	</a> to stay updated. And if you're feeling generous, you can also show your support by
+	<a href="https://www.buymeacoffee.com/tvince" target="_blank" rel="noreferrer" class="text-accent hover:underline">
+		treating me to a coffee
+	</a>. Thank you for stopping by and being a part of my online journey!
+</div>
+
+<style>
+	.wave {
+		animation-name: wave-animation;
+		animation-duration: 2.5s;
+		animation-iteration-count: 1;
+		transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+		display: inline-block;
+	}
+
+	@keyframes wave-animation {
+		0% {
+			transform: rotate(0deg);
+		}
+		10% {
+			transform: rotate(14deg);
+		} /* The following five values can be played with to make the waving more or less extreme */
+		20% {
+			transform: rotate(-8deg);
+		}
+		30% {
+			transform: rotate(14deg);
+		}
+		40% {
+			transform: rotate(-4deg);
+		}
+		50% {
+			transform: rotate(10deg);
+		}
+		60% {
+			transform: rotate(0deg);
+		} /* Reset for the last half to pause */
+		100% {
+			transform: rotate(0deg);
+		}
+	}
+</style>

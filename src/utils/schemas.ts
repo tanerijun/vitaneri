@@ -16,10 +16,10 @@ export const projectSchema = z.object({
 	repo: z.string().url().optional(),
 });
 
-export type projectSchema = z.infer<typeof projectSchema>;
+export type Project = z.infer<typeof projectSchema>;
 
 export const tilSchema = z.object({
 	datetime: z.date(),
 });
 
-export type tilSchema = z.infer<typeof tilSchema>;
+export type TIL = z.infer<typeof tilSchema>;
