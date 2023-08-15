@@ -10,23 +10,10 @@ Forever work in progress :D
 
 # Font Candidate for Logo
 
-- Akronim
 - Atomic Age
-- Black Ops One
-- Cinzel Decorative
-- Comforter (Vi)
-- Croissant One (Vi)
-- Dr Sugiyama (Vi)
-- Dynalight
-- Fleur de leah (too girly?)
-- Fuggles
-- Lavishly Yours (Kinda like Fleur, but not as girly?)
-- Lovers Quarrel (Better than Lavish?)
-- Monoton
+- Comforter
+- Fleur de leah
+- Lavishly Yours
 - Monsieur La Doulaise
 - Passions Conflict
-- Plaster (v4)
-- Ruthie
-- Stalemate (simple)
-- Train One
 - Trirong
