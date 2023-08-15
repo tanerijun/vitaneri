@@ -14,11 +14,12 @@ export async function getStaticPaths() {
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content, remarkPluginFrontmatter } = await entry.render();
 ---
 
 <BaseLayout>
 	<h1>{entry.data.title}</h1>
+	<p>{remarkPluginFrontmatter.minutesRead}</p>
 	<div class="prose">
 		<Content />
 	</div>
