@@ -8,7 +8,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["Inter", ...defaultTheme.fontFamily.sans],
+				sans: ["Nunito Sans Variable", ...defaultTheme.fontFamily.sans],
 			},
 		},
 	},
