@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import StylishHeading from "../components/StylishHeading.astro";
+import PostsList from "../components/PostsList.astro";
 
 const postEntries = (await getCollection("posts")).sort(
 	(a, b) => b.data.datetime.getTime() - a.data.datetime.getTime(),
@@ -27,21 +28,7 @@ for (const entry of postEntries) {
 			Array.from(postsGroupedByYear).map(([year, entries]) => (
 				<section class="relative">
 					<StylishHeading tag="h2" text={year} />
-					<ul class="group flex flex-col gap-6">
-						{entries.map((entry) => {
-							const displayDate = entry.data.datetime.toLocaleDateString("en-us", { month: "short", day: "2-digit" });
-							return (
-								<a href={`/posts/${entry.slug}`}>
-									<li class="text-zinc-600 transition-colors group-hover:text-zinc-500">
-										<div class="flex items-center gap-0 hover:text-zinc-950 md:gap-10">
-											<span class="min-w-[80px]">{displayDate}</span>
-											<p>{entry.data.title}</p>
-										</div>
-									</li>
-								</a>
-							);
-						})}
-					</ul>
+					<PostsList {entries} />
 				</section>
 			))
 		}

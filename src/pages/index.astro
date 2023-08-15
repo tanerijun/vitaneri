@@ -1,48 +1,26 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import PostCard from "../components/PostCard.astro";
 import WelcomeMessage from "../components/WelcomeMessage.astro";
+import StylishHeading from "../components/StylishHeading.astro";
+import PostsList from "../components/PostsList.astro";
 
-const postEntries = (await getCollection("posts")).sort(
-	(a, b) => b.data.datetime.getTime() - a.data.datetime.getTime(),
-);
-
-const postsGroupedByYear = new Map<number, typeof postEntries>();
-
-for (const entry of postEntries) {
-	const year = entry.data.datetime.getFullYear();
-
-	if (!postsGroupedByYear.has(year)) {
-		postsGroupedByYear.set(year, [entry]);
-		continue;
-	}
-
-	postsGroupedByYear.get(year)!.push(entry);
-}
+const postEntries = (await getCollection("posts"))
+	.sort((a, b) => b.data.datetime.getTime() - a.data.datetime.getTime())
+	.slice(10);
 ---
 
 <BaseLayout>
-	<div class="mx-auto max-w-3xl">
-		<WelcomeMessage />
+	<div class="mx-auto flex max-w-3xl flex-col gap-40">
+		<section class="relative">
+			<StylishHeading tag="h2" text="Hello" />
+			<WelcomeMessage />
+		</section>
 
-		<div class="flex flex-col gap-20">
-			{
-				Array.from(postsGroupedByYear).map(([year, entries]) => (
-					<div>
-						<h2 class="mb-6 text-2xl">{year}</h2>
-						<ul class="flex flex-col gap-4">
-							{entries.map((entry) => (
-								<li>
-									<a href={`/posts/${entry.slug}`}>
-										<PostCard data={entry.data} />
-									</a>
-								</li>
-							))}
-						</ul>
-					</div>
-				))
-			}
-		</div>
+		<section class="relative">
+			<StylishHeading tag="h2" text="Blog" />
+			<p class="my-6">Here are some of my recent blog posts:</p>
+			<PostsList entries={postEntries} />
+		</section>
 	</div>
 </BaseLayout>
