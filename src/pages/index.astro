@@ -7,7 +7,7 @@ import PostsList from "../components/PostsList.astro";
 
 const postEntries = (await getCollection("posts"))
 	.sort((a, b) => b.data.datetime.getTime() - a.data.datetime.getTime())
-	.slice(10);
+	.slice(0, 10);
 ---
 
 <BaseLayout>
@@ -17,10 +17,11 @@ const postEntries = (await getCollection("posts"))
 			<WelcomeMessage />
 		</section>
 
-		<section class="relative">
+		<section class="relative flex flex-col gap-8">
 			<StylishHeading tag="h2" text="Blog" />
-			<p class="my-6">Here are some of my recent blog posts:</p>
+			<p>Here are some of my recent blog posts:</p>
 			<PostsList entries={postEntries} />
+			<a href="/posts" class="text-right">View all posts</a>
 		</section>
 	</div>
 </BaseLayout>
