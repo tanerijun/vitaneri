@@ -76,4 +76,4 @@ const c2: IsCapitalized = "Cc"; //OK
 
 ## Wrap Up
 
-That's it for the article, hope you this little trick useful.
+That's it for the article, hope you find this little trick useful.
