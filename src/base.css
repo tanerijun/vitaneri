@@ -1,95 +1,27 @@
-@font-face {
-	font-family: 'Pier Sans';
-	font-display: swap;
-	font-style: normal;
-	font-weight: bold;
-	src: url('/fonts/PierSans-Bold.otf') format('opentype');
-}
-
-@font-face {
-	font-family: 'Inter';
-	font-display: swap;
-	font-style: normal;
-	font-weight: 400;
-	src: url('/fonts/inter-v12-latin-regular.woff2') format('woff2'),
-		url('/fonts/inter-v12-latin-regular.woff') format('woff');
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		@apply font-heading text-text selection:bg-highlight;
-	}
-
-	/* ==== Element focus ==== */
-	*:focus-visible {
-		@apply outline-2 outline-offset-4 outline-accent;
-	}
-
-  /* ===== scrollbar ===== */
-	/* width */
+	/* ===== scrollbar ===== */
 	::-webkit-scrollbar {
 		@apply h-1 w-1;
 	}
 
-	/* Track */
 	::-webkit-scrollbar-track {
-		@apply bg-basis;
+		@apply bg-transparent;
 	}
 
-	/* Handle */
 	::-webkit-scrollbar-thumb {
-		@apply rounded-full bg-muted;
+		@apply rounded-full bg-zinc-500;
 	}
 
-	/* Handle on hover */
 	::-webkit-scrollbar-thumb:hover {
-		@apply bg-accent;
+		@apply bg-zinc-700;
 	}
-}
 
-/* ===== themes ===== */
-
-[data-theme='dawn'] {
-  --color-base: 32deg 57% 95%;
-  --color-surface: 246deg 24% 17%;
-  --color-overlay: 33deg 43% 91%;
-  --color-muted: 257deg 9% 61%;
-  --color-subtle: 248deg 12% 52%;
-  --color-text: 248deg 19% 40%;
-  --color-accent: 268deg 21% 57%;
-  --color-lowlight: 25deg 35% 93%;
-  --color-highlight: 10deg 9% 86%;
-}
-
-[data-theme='twilight'] {
-  --color-base: 246deg 24% 17%;
-  --color-surface: 249deg 22% 12%;
-  --color-overlay: 248deg 22% 27%;
-  --color-muted: 249deg 12% 47%;
-  --color-subtle: 248deg 15% 61%;
-  --color-text: 246deg 50% 91%;
-  --color-accent: 267deg 57% 78%;
-  --color-lowlight: 246deg 22% 20%;
-  --color-highlight: 247deg 16% 30%;
-}
-
-[data-theme='dusk'] {
-  --color-base: 249deg 22% 12%;
-  --color-surface: 247deg 23% 15%;
-  --color-overlay: 248deg 25% 18%;
-  --color-muted: 249deg 12% 47%;
-  --color-subtle: 248deg 15% 61%;
-  --color-text: 245deg 50% 91%;
-  --color-accent: 267deg 57% 78%;
-  --color-lowlight: 244deg 18% 15%;
-  --color-highlight: 249deg 15% 28%;
+	/* TODO: dark mode */
+	/* .dark ::-webkit-scrollbar-thumb {
+		@apply bg-blue-500;
+	} */
 }
