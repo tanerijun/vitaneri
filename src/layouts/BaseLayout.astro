@@ -15,9 +15,9 @@ import SiteHeader from "../components/SiteHeader.astro";
 		<meta name="viewport" content="width=device-width" />
 		<title>Vitaneri</title>
 	</head>
-	<body class="bg-white antialiased selection:bg-zinc-300">
+	<body class="flex flex-col gap-40 bg-white antialiased selection:bg-zinc-300">
 		<SiteHeader />
-		<main id="main-content">
+		<main id="main-content" class="px-8 md:px-0">
 			<slot />
 		</main>
 	</body>

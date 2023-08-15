@@ -1,8 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import PostCard from "../components/PostCard.astro";
-import StrokedText from "../components/StrokedText.astro";
+import StylishHeading from "../components/StylishHeading.astro";
 
 const postEntries = (await getCollection("posts")).sort(
 	(a, b) => b.data.datetime.getTime() - a.data.datetime.getTime(),
@@ -23,24 +22,28 @@ for (const entry of postEntries) {
 ---
 
 <BaseLayout>
-	<div class="mx-auto mt-20 max-w-3xl">
-		<div class="flex flex-col gap-40">
-			{
-				Array.from(postsGroupedByYear).map(([year, entries]) => (
-					<div class="relative">
-						<StrokedText tag="h2" text={year} />
-						<ul class="flex flex-col gap-6">
-							{entries.map((entry) => (
-								<li>
-									<a href={`/posts/${entry.slug}`}>
-										<PostCard data={entry.data} />
-									</a>
-								</li>
-							))}
-						</ul>
-					</div>
-				))
-			}
-		</div>
+	<div class="mx-auto flex max-w-3xl flex-col gap-40">
+		{
+			Array.from(postsGroupedByYear).map(([year, entries]) => (
+				<section class="relative">
+					<StylishHeading tag="h2" text={year} />
+					<ul class="group flex flex-col gap-6">
+						{entries.map((entry) => {
+							const displayDate = entry.data.datetime.toLocaleDateString("en-us", { month: "short", day: "2-digit" });
+							return (
+								<a href={`/posts/${entry.slug}`}>
+									<li class="text-zinc-600 transition-colors group-hover:text-zinc-500">
+										<div class="flex items-center gap-0 hover:text-zinc-950 md:gap-10">
+											<span class="min-w-[80px]">{displayDate}</span>
+											<p>{entry.data.title}</p>
+										</div>
+									</li>
+								</a>
+							);
+						})}
+					</ul>
+				</section>
+			))
+		}
 	</div>
 </BaseLayout>
