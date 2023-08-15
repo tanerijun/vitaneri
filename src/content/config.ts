@@ -1,4 +1,4 @@
-import { z, defineCollection } from "astro:content";
+import { defineCollection } from "astro:content";
 import { postSchema, projectSchema, tilSchema } from "../utils/schemas";
 
 const postCollection = defineCollection({

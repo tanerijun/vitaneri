@@ -8,7 +8,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["Nunito Sans Variable", ...defaultTheme.fontFamily.sans],
+				sans: ["Atkinson Hyperlegible", ...defaultTheme.fontFamily.sans],
 			},
 		},
 	},

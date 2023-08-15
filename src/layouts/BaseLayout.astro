@@ -1,6 +1,9 @@
 ---
 import "../base.css";
-import "@fontsource-variable/nunito-sans";
+import "@fontsource/atkinson-hyperlegible/400.css";
+import "@fontsource/atkinson-hyperlegible/700.css";
+import "@fontsource/atkinson-hyperlegible/400-italic.css";
+import "@fontsource/atkinson-hyperlegible/700-italic.css";
 
 import SiteHeader from "../components/SiteHeader.astro";
 ---
@@ -12,7 +15,7 @@ import SiteHeader from "../components/SiteHeader.astro";
 		<meta name="viewport" content="width=device-width" />
 		<title>Vitaneri</title>
 	</head>
-	<body class="bg-zinc-100 antialiased selection:bg-zinc-300">
+	<body class="bg-white antialiased selection:bg-zinc-300">
 		<SiteHeader />
 		<main id="main-content">
 			<slot />

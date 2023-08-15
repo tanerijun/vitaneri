@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PostCard from "../components/PostCard.astro";
+import StrokedText from "../components/StrokedText.astro";
 
 const postEntries = (await getCollection("posts")).sort(
 	(a, b) => b.data.datetime.getTime() - a.data.datetime.getTime(),
@@ -22,13 +23,13 @@ for (const entry of postEntries) {
 ---
 
 <BaseLayout>
-	<div class="mx-auto max-w-3xl">
-		<div class="flex flex-col gap-20">
+	<div class="mx-auto mt-20 max-w-3xl">
+		<div class="flex flex-col gap-40">
 			{
 				Array.from(postsGroupedByYear).map(([year, entries]) => (
-					<div>
-						<h2 class="mb-6 text-2xl">{year}</h2>
-						<ul class="flex flex-col gap-4">
+					<div class="relative">
+						<StrokedText tag="h2" text={year} />
+						<ul class="flex flex-col gap-6">
 							{entries.map((entry) => (
 								<li>
 									<a href={`/posts/${entry.slug}`}>
