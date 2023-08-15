@@ -33,7 +33,7 @@ const activePath = Astro.url.pathname.split("/")[1];
 	<a
 		id="skip-to-content"
 		href="#main-content"
-		class="top absolute -top-full left-16 z-50 bg-overlay p-2 text-text transition-all focus:top-4 focus:ring"
+		class="top absolute -top-full left-16 z-50 bg-zinc-200 p-2 drop-shadow-md transition-all focus:top-4"
 	>
 		Skip to content
 	</a>
@@ -41,11 +41,7 @@ const activePath = Astro.url.pathname.split("/")[1];
 	<div class="mx-auto flex max-w-7xl items-center justify-between py-6">
 		<div id="site-logo">
 			<a href="/">
-				<span
-					class="inline-block select-none bg-gradient-to-b from-text to-accent bg-clip-text font-heading text-3xl font-bold text-transparent hover:animate-mesh-background"
-				>
-					Vitaneri
-				</span>
+				<span class="inline-block select-none">Vitaneri</span>
 			</a>
 		</div>
 
@@ -58,11 +54,11 @@ const activePath = Astro.url.pathname.split("/")[1];
 						<div class="relative">
 							<a
 								href={navLink.url}
-								class={twJoin("font-heading text-sm hover:text-text md:text-base", isActive && "text-text")}
+								class={twJoin("text-sm md:text-base", isActive ? "text-zinc-900" : "text-zinc-500")}
 							>
 								{navLink.displayText}
 							</a>
-							{isActive && <div id="marker" class="absolute h-0.5 w-full bg-accent" />}
+							{isActive && <div id="marker" class="absolute h-0.5 w-full bg-zinc-900" />}
 						</div>
 					);
 				})

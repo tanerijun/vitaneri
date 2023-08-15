@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+	* {
+		@apply focus:outline-zinc-700;
+	}
+
 	/* ===== scrollbar ===== */
 	::-webkit-scrollbar {
 		@apply h-1 w-1;
