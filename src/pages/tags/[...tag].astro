@@ -61,8 +61,9 @@ const activePath = Astro.url.pathname.split("/")[2];
 							{isActive && (
 								<div
 									id="active-tag"
-									class="absolute left-0 top-0 -z-10 h-full w-full scale-125 rounded-full bg-zinc-100"
+									class="absolute left-0 top-0 -z-10 h-full w-full scale-125 rounded-full border border-zinc-200"
 									aria-hidden="true"
+									transition:animate="morph"
 								/>
 							)}
 						</a>
