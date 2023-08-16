@@ -44,12 +44,31 @@ export async function getStaticPaths() {
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { tag, tagList, filteredPostEntries } = Astro.props;
+
+const activePath = Astro.url.pathname.split("/")[2];
 ---
 
 <BaseLayout>
 	<div class="mx-auto flex max-w-3xl flex-col gap-40">
-		<ul class="flex flex-wrap gap-10">
-			{tagList.map((tag) => <li>{tag}</li>)}
+		<ul class="-mt-10 mb-10 flex flex-wrap gap-10">
+			{
+				tagList.map((tag) => {
+					const isActive = tag === activePath;
+
+					return (
+						<a href={`/tags/${tag}`} class="relative px-3 py-1">
+							<li class="cursor-pointer select-none text-sm text-zinc-600">{tag}</li>
+							{isActive && (
+								<div
+									id="active-tag"
+									class="absolute left-0 top-0 -z-10 h-full w-full scale-125 rounded-full bg-zinc-100"
+									aria-hidden="true"
+								/>
+							)}
+						</a>
+					);
+				})
+			}
 		</ul>
 
 		<SectionWrapper headingText={tag ? tag : "All"}>
