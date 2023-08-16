@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import PostsList from "../components/PostsList.astro";
+import PostList from "../components/PostList.astro";
 import SectionWrapper from "../components/SectionWrapper.astro";
 
 const postEntries = (await getCollection("posts")).sort(
@@ -27,7 +27,7 @@ for (const entry of postEntries) {
 		{
 			Array.from(postsGroupedByYear).map(([year, entries]) => (
 				<SectionWrapper headingText={year}>
-					<PostsList {entries} />
+					<PostList {entries} />
 				</SectionWrapper>
 			))
 		}
