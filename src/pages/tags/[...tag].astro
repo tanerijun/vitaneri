@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PostList from "../../components/PostList.astro";
 import SectionWrapper from "../../components/SectionWrapper.astro";
-import { twJoin } from "../../utils/tw-join";
+import { twJoin } from "../../lib/tw-join";
 
 export async function getStaticPaths() {
 	const postEntries = await getCollection("posts");
@@ -80,3 +80,4 @@ const activePath = Astro.url.pathname.split("/")[2];
 		</SectionWrapper>
 	</div>
 </BaseLayout>
+ ../../lib/tw-join
