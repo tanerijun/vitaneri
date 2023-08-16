@@ -1,0 +1,15 @@
+---
+import StylishHeading from "./SectionHeading.astro";
+
+type Props = {
+	headingTag?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+	headingText: string | number;
+};
+
+const { headingTag = "h2", headingText } = Astro.props;
+---
+
+<section class="relative">
+	<StylishHeading tag={headingTag} text={headingText} />
+	<slot />
+</section>

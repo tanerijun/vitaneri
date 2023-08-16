@@ -1,8 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import StylishHeading from "../components/StylishHeading.astro";
 import PostsList from "../components/PostsList.astro";
+import SectionWrapper from "../components/SectionWrapper.astro";
 
 const postEntries = (await getCollection("posts")).sort(
 	(a, b) => b.data.datetime.getTime() - a.data.datetime.getTime(),
@@ -26,10 +26,9 @@ for (const entry of postEntries) {
 	<div class="mx-auto flex max-w-3xl flex-col gap-40">
 		{
 			Array.from(postsGroupedByYear).map(([year, entries]) => (
-				<section class="relative">
-					<StylishHeading tag="h2" text={year} />
+				<SectionWrapper headingText={year}>
 					<PostsList {entries} />
-				</section>
+				</SectionWrapper>
 			))
 		}
 	</div>
