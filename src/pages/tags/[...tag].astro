@@ -75,7 +75,7 @@ const activePath = Astro.url.pathname.split("/")[2];
 			}
 		</ul>
 
-		<SectionWrapper headingText={tag ? tag : "All"}>
+		<SectionWrapper headingText={tag ? tag[0]?.toUpperCase() + tag.slice(1) : "All"}>
 			<PostList entries={filteredPostEntries} />
 		</SectionWrapper>
 	</div>
