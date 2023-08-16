@@ -5,6 +5,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import PostList from "../../components/PostList.astro";
 import SectionWrapper from "../../components/SectionWrapper.astro";
 import { twJoin } from "../../lib/tw-join";
+import { capitalize } from "../../lib/utils";
+import { tagAliases } from "../../data/tag-aliases";
 
 export async function getStaticPaths() {
 	const postEntries = await getCollection("posts");
@@ -47,6 +49,8 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { tag, tagList, filteredPostEntries } = Astro.props;
 
 const activePath = Astro.url.pathname.split("/")[2];
+
+const tagAlias = tag ? tagAliases[tag] : undefined;
 ---
 
 <BaseLayout>
@@ -75,9 +79,8 @@ const activePath = Astro.url.pathname.split("/")[2];
 			}
 		</ul>
 
-		<SectionWrapper headingText={tag ? tag[0]?.toUpperCase() + tag.slice(1) : "All"}>
+		<SectionWrapper headingText={tag ? (tagAlias ? tagAlias : capitalize(tag)) : "All"}>
 			<PostList entries={filteredPostEntries} />
 		</SectionWrapper>
 	</div>
 </BaseLayout>
- ../../lib/tw-join
