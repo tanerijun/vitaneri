@@ -1,0 +1,59 @@
+---
+import type { InferGetStaticPropsType } from "astro";
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostList from "../../components/PostList.astro";
+import SectionWrapper from "../../components/SectionWrapper.astro";
+
+export async function getStaticPaths() {
+	const postEntries = await getCollection("posts");
+	const tagSet = new Set<string>();
+	postEntries.forEach((entry) => {
+		entry.data.tags.forEach((tag) => {
+			tagSet.add(tag);
+		});
+	});
+	const tagList = Array.from(tagSet).sort();
+
+	type Paths = Array<{
+		params: { tag: string | undefined };
+		props: { tag: string | undefined; tagList: typeof tagList; filteredPostEntries: typeof postEntries };
+	}>;
+
+	// `tag: undefined` matches top level page
+	const paths: Paths = [
+		{ params: { tag: undefined }, props: { tag: undefined, tagList, filteredPostEntries: postEntries } },
+	];
+
+	tagList.forEach((tag) => {
+		paths.push({
+			params: { tag },
+			props: {
+				tag,
+				tagList,
+				filteredPostEntries: postEntries
+					.filter((entry) => entry.data.tags.includes(tag))
+					.sort((a, b) => b.data.datetime.getTime() - a.data.datetime.getTime()),
+			},
+		});
+	});
+
+	return paths;
+}
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { tag, tagList, filteredPostEntries } = Astro.props;
+---
+
+<BaseLayout>
+	<div class="mx-auto flex max-w-3xl flex-col gap-40">
+		<ul class="flex flex-wrap gap-10">
+			{tagList.map((tag) => <li>{tag}</li>)}
+		</ul>
+
+		<SectionWrapper headingText={tag ? tag : "All"}>
+			<PostList entries={filteredPostEntries} />
+		</SectionWrapper>
+	</div>
+</BaseLayout>
