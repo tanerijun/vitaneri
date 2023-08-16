@@ -19,7 +19,7 @@ const postEntries = (await getCollection("posts"))
 		<SectionWrapper headingText="Blog">
 			<div class="flex flex-col gap-8">
 				<p>Here are some of my recent blog posts:</p>
-				<PostsList entries={postEntries} />
+				<PostsList entries={postEntries} showYear />
 				<a href="/posts" class="text-right">View all posts</a>
 			</div>
 		</SectionWrapper>
