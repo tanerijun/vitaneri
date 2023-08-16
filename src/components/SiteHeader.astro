@@ -58,7 +58,7 @@ const activePath = Astro.url.pathname.split("/")[1];
 							>
 								{navLink.displayText}
 							</a>
-							{isActive && <div id="marker" class="absolute h-0.5 w-full bg-zinc-900" />}
+							{isActive && <div id="marker" class="absolute h-0.5 w-full bg-zinc-900" aria-hidden="true" />}
 						</div>
 					);
 				})
