@@ -1,10 +1,40 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import GlobeIcon from "../components/icons/GlobeIcon.astro";
+import GithubIcon from "../components/icons/GithubIcon.astro";
 
 const projectEntries = await getCollection("projects");
 ---
 
 <BaseLayout>
-	{projectEntries.map((entry) => <div>{entry.data.title}</div>)}
+	<ul class="mx-auto max-w-2xl columns-2xs gap-10">
+		{
+			projectEntries.map((entry) => (
+				<li class="group mb-10 flex break-inside-avoid-column flex-col gap-4 rounded-md border-2 border-zinc-200 p-4">
+					<div class="flex justify-between">
+						<h3 class="font-bold">{entry.data.title}</h3>
+						<div class="flex gap-2">
+							{entry.data.url && (
+								<a href={entry.data.url} target="_blank" rel="noreferrer">
+									<GlobeIcon class="h-6 w-6 text-zinc-400 transition-colors group-hover:text-zinc-900" />
+								</a>
+							)}
+							{entry.data.repo && (
+								<a href={entry.data.repo} target="_blank" rel="noreferrer">
+									<GithubIcon class="h-6 w-6 text-zinc-400 transition-colors group-hover:text-zinc-900" />
+								</a>
+							)}
+						</div>
+					</div>
+					<p>{entry.data.description}</p>
+					<ul class="flex flex-wrap gap-4" aria-label="technologies">
+						{entry.data.techs.map((tech) => (
+							<li class="select-none rounded-full bg-zinc-200 px-2 py-1 text-xs">{tech}</li>
+						))}
+					</ul>
+				</li>
+			))
+		}
+	</ul>
 </BaseLayout>
