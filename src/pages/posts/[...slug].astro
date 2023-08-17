@@ -2,6 +2,7 @@
 import type { InferGetStaticPropsType } from "astro";
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { slugify } from "../../lib/utils";
 
 export async function getStaticPaths() {
 	const postEntries = await getCollection("posts");
@@ -18,9 +19,16 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
 ---
 
 <BaseLayout>
-	<h1>{entry.data.title}</h1>
-	<p>{remarkPluginFrontmatter.minutesRead}</p>
-	<div class="prose">
-		<Content />
-	</div>
+	<!-- <h1 transition:name={"Guide To Sorting In Go".split(" ").join("")} class="mb-20 ml-96 text-7xl">
+		Guide to Sorting IN Go
+	</h1> -->
+	<article class="mx-auto max-w-3xl border border-red-300">
+		<header class="flex">
+			<h1 class="text-3xl" transition:name={slugify(entry.data.title)}>{entry.data.title}</h1>
+			<p>{remarkPluginFrontmatter.minutesRead}</p>
+		</header>
+		<div class="prose border border-blue-300">
+			<Content />
+		</div>
+	</article>
 </BaseLayout>
