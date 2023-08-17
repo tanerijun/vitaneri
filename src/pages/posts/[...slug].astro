@@ -19,20 +19,32 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
 ---
 
 <BaseLayout>
-	<article class="mx-auto flex max-w-3xl flex-col gap-10 border border-red-300">
+	<article class="mx-auto flex max-w-3xl flex-col gap-16">
 		<header class="flex flex-col gap-4">
-			<h1 class="text-4xl font-bold text-zinc-950" transition:name={slugify(entry.data.title)}>{entry.data.title}</h1>
+			<h1 class="text-3xl font-bold text-zinc-950" transition:name={slugify(entry.data.title)}>{entry.data.title}</h1>
 			<small class="text-zinc-700">
 				{remarkPluginFrontmatter.minutesRead} · {
 					entry.data.datetime.toLocaleString("en-us", { year: "numeric", month: "short", day: "numeric" })
 				}
 			</small>
+			<div class="mt-1 flex gap-4">
+				{
+					entry.data.tags.map((tag) => (
+						<a
+							href={`/tags/${tag}`}
+							transition:name={tag}
+							class="rounded-full bg-zinc-200 px-3 py-1 text-xs text-zinc-700"
+						>
+							{tag}
+						</a>
+					))
+				}
+			</div>
 		</header>
-		<div class="prose border border-blue-300">
+		<div aria-hidden="true" class="h-0.5 w-8 self-center bg-zinc-300"></div>
+		<div class="prose prose-zinc max-w-none">
 			<Content />
 		</div>
-		<footer>
-			<div>{entry.data.tags.map((tag) => <small>{tag}</small>)}</div>
-		</footer>
+		<footer></footer>
 	</article>
 </BaseLayout>

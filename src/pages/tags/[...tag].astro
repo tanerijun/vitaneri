@@ -62,7 +62,10 @@ const tagAlias = tag ? tagAliases[tag] : undefined;
 
 					return (
 						<a href={`/tags/${tag}`} class={twJoin("relative px-4 py-2 text-zinc-600")}>
-							<li class={twJoin("cursor-pointer select-none text-sm hover:text-zinc-950", isActive && "text-zinc-950")}>
+							<li
+								class={twJoin("cursor-pointer select-none text-sm hover:text-zinc-950", isActive && "text-zinc-950")}
+								transition:name={tag}
+							>
 								{tag}
 							</li>
 							{isActive && (
