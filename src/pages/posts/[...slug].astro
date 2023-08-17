@@ -2,7 +2,6 @@
 import type { InferGetStaticPropsType } from "astro";
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { slugify } from "../../lib/utils";
 
 export async function getStaticPaths() {
 	const postEntries = await getCollection("posts");
@@ -21,7 +20,7 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
 <BaseLayout>
 	<article class="mx-auto flex max-w-3xl flex-col gap-16">
 		<header class="flex flex-col gap-4">
-			<h1 class="text-3xl font-bold text-zinc-950" transition:name={slugify(entry.data.title)}>{entry.data.title}</h1>
+			<h1 class="text-3xl font-bold text-zinc-950" transition:name={entry.slug}>{entry.data.title}</h1>
 			<small class="text-zinc-700">
 				{remarkPluginFrontmatter.minutesRead} · {
 					entry.data.datetime.toLocaleString("en-us", { year: "numeric", month: "short", day: "numeric" })
