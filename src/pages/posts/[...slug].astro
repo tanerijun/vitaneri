@@ -23,9 +23,13 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
 		Guide to Sorting IN Go
 	</h1> -->
 	<article class="mx-auto max-w-3xl border border-red-300">
-		<header class="flex">
-			<h1 class="text-3xl" transition:name={slugify(entry.data.title)}>{entry.data.title}</h1>
-			<p>{remarkPluginFrontmatter.minutesRead}</p>
+		<header class="flex flex-col">
+			<h1 class="text-3xl font-bold" transition:name={slugify(entry.data.title)}>{entry.data.title}</h1>
+			<p class="">
+				{remarkPluginFrontmatter.minutesRead} · {
+					entry.data.datetime.toLocaleString("en-us", { year: "numeric", month: "short", day: "numeric" })
+				}
+			</p>
 		</header>
 		<div class="prose border border-blue-300">
 			<Content />
