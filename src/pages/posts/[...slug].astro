@@ -18,7 +18,7 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
 ---
 
 <BaseLayout>
-	<article class="mx-auto flex max-w-3xl flex-col gap-16">
+	<article class="mx-auto flex max-w-2xl flex-col gap-20">
 		<header class="flex flex-col gap-4">
 			<h1 class="text-3xl font-bold text-zinc-950" transition:name={entry.slug}>{entry.data.title}</h1>
 			<small class="text-zinc-700">
@@ -41,7 +41,6 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
 				}
 			</div>
 		</header>
-		<div aria-hidden="true" class="h-0.5 w-8 self-center bg-zinc-300"></div>
 		<div class="prose prose-zinc max-w-none">
 			<Content />
 		</div>
