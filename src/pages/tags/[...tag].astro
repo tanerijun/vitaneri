@@ -55,7 +55,7 @@ const tagAlias = tag ? tagAliases[tag] : undefined;
 
 <BaseLayout>
 	<div class="mx-auto flex max-w-3xl flex-col gap-40">
-		<ul class="-mt-10 mb-10 flex flex-wrap gap-8">
+		<ul class="flex flex-wrap gap-8">
 			{
 				tagList.map((tag) => {
 					const isActive = tag === activePath;
@@ -70,7 +70,7 @@ const tagAlias = tag ? tagAliases[tag] : undefined;
 									id="active-tag"
 									class="absolute left-0 top-0 -z-10 h-full w-full rounded-full border-2 border-zinc-200 transition-all"
 									aria-hidden="true"
-									transition:animate="morph"
+									transition:name="active-tag-marker"
 								/>
 							)}
 						</a>

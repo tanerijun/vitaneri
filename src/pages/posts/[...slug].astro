@@ -19,20 +19,20 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
 ---
 
 <BaseLayout>
-	<!-- <h1 transition:name={"Guide To Sorting In Go".split(" ").join("")} class="mb-20 ml-96 text-7xl">
-		Guide to Sorting IN Go
-	</h1> -->
-	<article class="mx-auto max-w-3xl border border-red-300">
-		<header class="flex flex-col">
-			<h1 class="text-3xl font-bold" transition:name={slugify(entry.data.title)}>{entry.data.title}</h1>
-			<p class="">
+	<article class="mx-auto flex max-w-3xl flex-col gap-10 border border-red-300">
+		<header class="flex flex-col gap-4">
+			<h1 class="text-4xl font-bold text-zinc-950" transition:name={slugify(entry.data.title)}>{entry.data.title}</h1>
+			<small class="text-zinc-700">
 				{remarkPluginFrontmatter.minutesRead} · {
 					entry.data.datetime.toLocaleString("en-us", { year: "numeric", month: "short", day: "numeric" })
 				}
-			</p>
+			</small>
 		</header>
 		<div class="prose border border-blue-300">
 			<Content />
 		</div>
+		<footer>
+			<div>{entry.data.tags.map((tag) => <small>{tag}</small>)}</div>
+		</footer>
 	</article>
 </BaseLayout>
