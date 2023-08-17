@@ -19,9 +19,11 @@ const { entries, showYear = false } = Astro.props;
 			return (
 				<a href={`/posts/${entry.slug}`}>
 					<li class="text-zinc-600 transition-colors group-hover:text-zinc-500">
-						<div class="flex items-start gap-4 hover:text-zinc-950" transition:name={entry.slug}>
-							<span class="min-w-[100px]">{displayDate}</span>
-							<p>{entry.data.title}</p>
+						<div class="flex items-start gap-4 hover:text-zinc-950">
+							<span class="min-w-[100px]" transition:name={"date" + entry.slug}>
+								{displayDate}
+							</span>
+							<p transition:name={entry.slug}>{entry.data.title}</p>
 						</div>
 					</li>
 				</a>
