@@ -1,24 +1,27 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionWrapper from "../components/SectionWrapper.astro";
+import ProseWrapper from "../components/ProseWrapper.astro";
 
 const tilEntries = (await getCollection("tils")).sort((a, b) => parseInt(b.slug) - parseInt(a.slug));
 ---
 
 <BaseLayout>
-	{
-		tilEntries.map(async (entry) => {
-			const id = parseInt(entry.slug).toString();
-			const { Content } = await entry.render();
+	<div class="mx-auto mt-20 flex max-w-2xl flex-col gap-40">
+		{
+			tilEntries.map(async (entry) => {
+				const id = parseInt(entry.slug).toString();
+				const { Content } = await entry.render();
 
-			return (
-				<div>
-					<h2 id={id}>
-						<a href={`#${id}`}>#{id}</a>
-					</h2>
-					<Content />
-				</div>
-			);
-		})
-	}
+				return (
+					<SectionWrapper headingText={id}>
+						<ProseWrapper>
+							<Content />
+						</ProseWrapper>
+					</SectionWrapper>
+				);
+			})
+		}
+	</div>
 </BaseLayout>
