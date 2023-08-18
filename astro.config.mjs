@@ -3,6 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import getReadingTime from "reading-time";
 import { toString } from "mdast-util-to-string";
+import { myInfo } from "./src/data/my-info";
 
 export function remarkReadingTime() {
 	return function (tree, { data }) {
@@ -31,4 +32,5 @@ export default defineConfig({
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
 	},
+	site: myInfo.website,
 });
