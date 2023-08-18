@@ -1,5 +1,6 @@
 ---
 import { myInfo } from "../data/my-info";
+import MailIcon from "./icons/MailIcon.astro";
 import GithubIcon from "./icons/GithubIcon.astro";
 import TwitterIcon from "./icons/TwitterIcon.astro";
 import ThreadsIcon from "./icons/ThreadsIcon.astro";
@@ -22,6 +23,9 @@ import RSSIcon from "./icons/RSSIcon.astro";
 			<span>© 2022-{new Date().getFullYear()} Vincent Taneri</span>
 		</div>
 		<div class="flex items-center gap-2">
+			<a href={`mailto:${myInfo.email}`} aria-label="email">
+				<MailIcon class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900" />
+			</a>
 			<a href={myInfo.github} target="_blank" rel="noreferrer" aria-label="github">
 				<GithubIcon class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900" />
 			</a>
