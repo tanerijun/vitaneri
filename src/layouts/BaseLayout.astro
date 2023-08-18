@@ -10,7 +10,7 @@ import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 ---
 
-<html lang="en">
+<html lang="en" class="h-[101%]">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
@@ -20,7 +20,7 @@ import SiteFooter from "../components/SiteFooter.astro";
 
 		<ViewTransitions />
 	</head>
-	<body class="flex min-h-screen flex-col gap-20 bg-white text-zinc-700 antialiased selection:bg-zinc-300">
+	<body class="flex min-h-screen flex-col gap-20 overflow-y-scroll bg-white text-zinc-700 antialiased">
 		<SiteHeader />
 
 		<main id="main-content" class="overflow-x-clip px-8 md:px-0">
