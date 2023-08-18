@@ -9,23 +9,35 @@ import RSSIcon from "./icons/RSSIcon.astro";
 ---
 
 <footer class="mt-auto">
-	<div class="mx-auto flex max-w-2xl items-center justify-between py-8">
-		<div class="text-sm text-zinc-500">
+	<div class="mx-auto flex max-w-2xl flex-col-reverse items-center justify-between gap-4 py-8 md:flex-row md:gap-0">
+		<div class="text-sm text-zinc-500 md:text-base">
 			<a
 				href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
 				target="_blank"
 				rel="noreferrer"
 				class="underline underline-offset-4 transition-colors hover:text-zinc-900">CC BY-NC-SA 4.0</a
 			>
-			<span>2022-{new Date().getFullYear()} © Vincent Taneri</span>
+			<span>© 2022-{new Date().getFullYear()} Vincent Taneri</span>
 		</div>
-		<div class="flex">
-			<a href={myInfo.github} target="_blank" rel="noreferrer"><GithubIcon /></a>
-			<a href={myInfo.twitter} target="_blank" rel="noreferrer"><TwitterIcon /></a>
-			<a href={myInfo.threads} target="_blank" rel="noreferrer"><ThreadsIcon /></a>
-			<a href={myInfo.blueSky} target="_blank" rel="noreferrer"><BlueSkyIcon /></a>
-			<a href={myInfo.linkedIn} target="_blank" rel="noreferrer"><LinkedInIcon /></a>
-			<a href="/"><RSSIcon /></a>
+		<div class="flex items-center gap-2">
+			<a href={myInfo.github} target="_blank" rel="noreferrer">
+				<GithubIcon class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 md:h-6 md:w-6" />
+			</a>
+			<a href={myInfo.twitter} target="_blank" rel="noreferrer">
+				<TwitterIcon class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 md:h-6 md:w-6" />
+			</a>
+			<a href={myInfo.threads} target="_blank" rel="noreferrer">
+				<ThreadsIcon class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 md:h-6 md:w-6" />
+			</a>
+			<a href={myInfo.blueSky} target="_blank" rel="noreferrer">
+				<BlueSkyIcon class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 md:h-6 md:w-6" />
+			</a>
+			<a href={myInfo.linkedIn} target="_blank" rel="noreferrer">
+				<LinkedInIcon class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 md:h-6 md:w-6" />
+			</a>
+			<a href="/">
+				<RSSIcon class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 md:h-6 md:w-6" />
+			</a>
 		</div>
 	</div>
 </footer>
