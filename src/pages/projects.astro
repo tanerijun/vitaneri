@@ -16,12 +16,12 @@ const projectEntries = await getCollection("projects");
 						<h3 class="text-xl font-bold text-zinc-900">{entry.data.title}</h3>
 						<div class="flex">
 							{entry.data.url && (
-								<a href={entry.data.url} target="_blank" rel="noreferrer">
+								<a href={entry.data.url} target="_blank" rel="noreferrer" aria-label="live demo">
 									<GlobeIcon class="h-7 w-7 rounded-full p-1 text-zinc-400 transition-colors hover:bg-zinc-200 group-hover:text-zinc-900" />
 								</a>
 							)}
 							{entry.data.repo && (
-								<a href={entry.data.repo} target="_blank" rel="noreferrer">
+								<a href={entry.data.repo} target="_blank" rel="noreferrer" aria-label="source code">
 									<GithubIcon class="h-7 w-7 rounded-full p-1 text-zinc-400 transition-colors hover:bg-zinc-200 group-hover:text-zinc-900" />
 								</a>
 							)}
