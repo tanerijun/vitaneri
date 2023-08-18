@@ -1,0 +1,31 @@
+---
+import { myInfo } from "../data/my-info";
+import GithubIcon from "./icons/GithubIcon.astro";
+import TwitterIcon from "./icons/TwitterIcon.astro";
+import ThreadsIcon from "./icons/ThreadsIcon.astro";
+import BlueSkyIcon from "./icons/BlueSkyIcon.astro";
+import LinkedInIcon from "./icons/LinkedInIcon.astro";
+import RSSIcon from "./icons/RSSIcon.astro";
+---
+
+<footer class="mt-auto">
+	<div class="mx-auto flex max-w-2xl items-center justify-between py-8">
+		<div class="text-sm text-zinc-500">
+			<a
+				href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+				target="_blank"
+				rel="noreferrer"
+				class="underline underline-offset-4 transition-colors hover:text-zinc-900">CC BY-NC-SA 4.0</a
+			>
+			<span>2022-{new Date().getFullYear()} © Vincent Taneri</span>
+		</div>
+		<div class="flex">
+			<a href={myInfo.github} target="_blank" rel="noreferrer"><GithubIcon /></a>
+			<a href={myInfo.twitter} target="_blank" rel="noreferrer"><TwitterIcon /></a>
+			<a href={myInfo.threads} target="_blank" rel="noreferrer"><ThreadsIcon /></a>
+			<a href={myInfo.blueSky} target="_blank" rel="noreferrer"><BlueSkyIcon /></a>
+			<a href={myInfo.linkedIn} target="_blank" rel="noreferrer"><LinkedInIcon /></a>
+			<a href="/"><RSSIcon /></a>
+		</div>
+	</div>
+</footer>
