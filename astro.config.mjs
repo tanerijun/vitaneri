@@ -4,6 +4,7 @@ import mdx from "@astrojs/mdx";
 import getReadingTime from "reading-time";
 import { toString } from "mdast-util-to-string";
 import { siteInfo } from "./src/data/site-info";
+import sitemap from "@astrojs/sitemap";
 
 export function remarkReadingTime() {
 	return function (tree, { data }) {
@@ -15,12 +16,14 @@ export function remarkReadingTime() {
 	};
 }
 
+// https://astro.build/config
 export default defineConfig({
 	integrations: [
 		tailwind({
 			applyBaseStyles: false,
 		}),
 		mdx(),
+		sitemap(),
 	],
 	experimental: {
 		assets: true,
