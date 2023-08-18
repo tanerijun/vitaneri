@@ -23,10 +23,10 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
 		<header class="flex flex-col gap-4">
 			<h1 class="text-3xl font-bold text-zinc-950" transition:name={entry.slug}>{entry.data.title}</h1>
 			<small class="text-zinc-700">
-				{remarkPluginFrontmatter.minutesRead} ·
 				<span transition:name={"date" + entry.slug}>
 					{entry.data.datetime.toLocaleString("en-us", { year: "numeric", month: "short", day: "numeric" })}
 				</span>
+				 · {remarkPluginFrontmatter.minutesRead}
 			</small>
 			<div class="mt-1 flex gap-4">
 				{
