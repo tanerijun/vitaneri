@@ -1,30 +1,83 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import WelcomeMessage from "../components/WelcomeMessage.astro";
 import PostList from "../components/PostList.astro";
 import SectionWrapper from "../components/SectionWrapper.astro";
+import ProseWrapper from "../components/ProseWrapper.astro";
+import BlueSkyIcon from "../components/icons/BlueSkyIcon.astro";
+import GithubIcon from "../components/icons/GithubIcon.astro";
+import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
+import ThreadsIcon from "../components/icons/ThreadsIcon.astro";
+import TwitterIcon from "../components/icons/TwitterIcon.astro";
+import { myInfo } from "../data/my-info";
 
 const postEntries = (await getCollection("posts"))
 	.sort((a, b) => b.data.datetime.getTime() - a.data.datetime.getTime())
 	.slice(0, 10);
+
+const tilEntries = await getCollection("tils");
+
+const { Content: WelcomeMessage } = await (await getEntry("misc", "welcome-message")).render();
+const { Content: AboutMe } = await (await getEntry("misc", "about-me")).render();
+const { Content: LatestTIL } = await tilEntries[tilEntries.length - 1]!.render();
 ---
 
 <BaseLayout>
 	<div class="mx-auto mt-20 flex max-w-2xl flex-col gap-40">
 		<SectionWrapper headingText="Hello">
-			<WelcomeMessage />
+			<ProseWrapper>
+				<WelcomeMessage />
+			</ProseWrapper>
 		</SectionWrapper>
 
 		<SectionWrapper headingText="Blog">
 			<div class="flex flex-col gap-6">
 				<p>Here are some of my recent blog posts:</p>
 				<PostList entries={postEntries} showYear />
-				<a href="/posts" class="text-right">View all posts</a>
+				<a
+					href="/posts"
+					class="text-right text-zinc-500 underline decoration-zinc-300 underline-offset-4 hover:text-zinc-900 hover:decoration-zinc-700"
+				>
+					View all
+				</a>
 			</div>
 		</SectionWrapper>
 
-		<SectionWrapper headingText="Track">
+		<SectionWrapper headingText="TIL">
+			<div class="flex flex-col gap-5">
+				<ProseWrapper>
+					<p>
+						I sometimes stumble upon bite-sized insights that I want to share, yet don't quite demand an entire blog
+						post. I call them TIL -- Today I Learned.
+					</p>
+					<p>Here is my newest TIL:</p>
+					<LatestTIL />
+				</ProseWrapper>
+				<a
+					href="/tils"
+					class="text-right text-zinc-500 underline decoration-zinc-300 underline-offset-4 hover:text-zinc-900 hover:decoration-zinc-700"
+				>
+					View all
+				</a>
+			</div>
+		</SectionWrapper>
+
+		<SectionWrapper headingText="Me">
+			<ProseWrapper>
+				<AboutMe />
+			</ProseWrapper>
+		</SectionWrapper>
+
+		<SectionWrapper headingText="Read">
+			<ProseWrapper>
+				<p>Speaking of reading, here are some books I'm reading:</p>
+				<ul>
+					<li>TODO: get data from goodreads</li>
+				</ul>
+			</ProseWrapper>
+		</SectionWrapper>
+
+		<SectionWrapper headingText="RSS">
 			<p>
 				Stay up to date by subscribing to my
 				<a
@@ -37,6 +90,92 @@ const postEntries = (await getCollection("posts"))
 				</a>
 				 .
 			</p>
+		</SectionWrapper>
+
+		<SectionWrapper headingText="Chat">
+			<div class="flex flex-col gap-6">
+				<p>Feel free to reach out to me:</p>
+				<div class="flex flex-wrap items-center gap-6">
+					<a
+						href={myInfo.github}
+						target="_blank"
+						rel="noreferrer"
+						aria-label="github"
+						class="group flex items-center gap-1"
+					>
+						<GithubIcon class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 group-hover:text-zinc-900" />
+						<span
+							class="text-sm text-zinc-700 underline decoration-zinc-300 underline-offset-4 transition-colors hover:text-zinc-900 hover:decoration-zinc-700 group-hover:text-zinc-900 group-hover:decoration-zinc-700"
+						>
+							Github
+						</span>
+					</a>
+					<a
+						href={myInfo.twitter}
+						target="_blank"
+						rel="noreferrer"
+						aria-label="twitter"
+						class="group flex items-center gap-1"
+					>
+						<TwitterIcon
+							class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 group-hover:text-zinc-900"
+						/>
+						<span
+							class="text-sm text-zinc-700 underline decoration-zinc-300 underline-offset-4 transition-colors hover:text-zinc-900 hover:decoration-zinc-700 group-hover:text-zinc-900 group-hover:decoration-zinc-700"
+						>
+							Twitter
+						</span>
+					</a>
+					<a
+						href={myInfo.threads}
+						target="_blank"
+						rel="noreferrer"
+						aria-label="threads"
+						class="group flex items-center gap-1"
+					>
+						<ThreadsIcon
+							class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 group-hover:text-zinc-900"
+						/>
+						<span
+							class="text-sm text-zinc-700 underline decoration-zinc-300 underline-offset-4 transition-colors hover:text-zinc-900 hover:decoration-zinc-700 group-hover:text-zinc-900 group-hover:decoration-zinc-700"
+						>
+							Threads
+						</span>
+					</a>
+					<a
+						href={myInfo.blueSky}
+						target="_blank"
+						rel="noreferrer"
+						aria-label="bluesky"
+						class="group flex items-center gap-1"
+					>
+						<BlueSkyIcon
+							class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 group-hover:text-zinc-900"
+						/>
+						<span
+							class="text-sm text-zinc-700 underline decoration-zinc-300 underline-offset-4 transition-colors hover:text-zinc-900 hover:decoration-zinc-700 group-hover:text-zinc-900 group-hover:decoration-zinc-700"
+						>
+							BlueSky
+						</span>
+					</a>
+					<a
+						href={myInfo.linkedIn}
+						target="_blank"
+						rel="noreferrer"
+						aria-label="linkedIn"
+						class="group flex items-center gap-1"
+					>
+						<LinkedInIcon
+							class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 group-hover:text-zinc-900"
+						/>
+						<span
+							class="text-sm text-zinc-700 underline decoration-zinc-300 underline-offset-4 transition-colors hover:text-zinc-900 hover:decoration-zinc-700 group-hover:text-zinc-900 group-hover:decoration-zinc-700"
+						>
+							LinkedIn
+						</span>
+					</a>
+				</div>
+			</div>
 		</SectionWrapper>
 	</div>
 </BaseLayout>
