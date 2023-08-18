@@ -61,7 +61,11 @@ const tagAlias = tag ? tagAliases[tag] : undefined;
 					const isActive = tag === activePath;
 
 					return (
-						<a href={`/tags/${tag}`} class={twJoin("relative px-4 py-2 text-zinc-600 hover:text-zinc-900")}>
+						<a
+							href={`/tags/${tag}`}
+							class={twJoin("relative px-4 py-2 text-zinc-600 hover:text-zinc-900")}
+							rel="prefetch-intent"
+						>
 							<li
 								class={twJoin("cursor-pointer select-none text-sm", isActive && "text-zinc-900")}
 								transition:name={tag}

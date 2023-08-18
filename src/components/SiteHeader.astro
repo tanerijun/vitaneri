@@ -40,7 +40,7 @@ const activePath = Astro.url.pathname.split("/")[1];
 
 	<div class="mx-auto flex max-w-2xl items-center justify-between py-8">
 		<div id="site-logo">
-			<a href="/">
+			<a href="/" rel="prefetch">
 				<span class="inline-block select-none">Vitaneri</span>
 			</a>
 		</div>
@@ -55,6 +55,7 @@ const activePath = Astro.url.pathname.split("/")[1];
 							<a
 								href={navLink.url}
 								class={twJoin("text-sm md:text-base", isActive ? "text-zinc-950" : "text-zinc-500 hover:text-zinc-950")}
+								rel="prefetch"
 							>
 								{navLink.displayText}
 							</a>

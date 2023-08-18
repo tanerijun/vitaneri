@@ -17,7 +17,7 @@ const { entries, showYear = false } = Astro.props;
 				entry.data.datetime.toLocaleDateString("en-us", { month: "short", day: "2-digit" });
 
 			return (
-				<a href={`/posts/${entry.slug}`}>
+				<a href={`/posts/${entry.slug}`} rel="prefetch-intent">
 					<li class="text-zinc-600 transition-colors group-hover:text-zinc-500">
 						<div class="flex items-start gap-4 hover:text-zinc-950">
 							<span class="min-w-[100px]" transition:name={"date" + entry.slug}>

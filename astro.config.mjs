@@ -5,6 +5,7 @@ import getReadingTime from "reading-time";
 import { toString } from "mdast-util-to-string";
 import { siteInfo } from "./src/data/site-info";
 import sitemap from "@astrojs/sitemap";
+import prefetch from "@astrojs/prefetch";
 
 export function remarkReadingTime() {
 	return function (tree, { data }) {
@@ -24,6 +25,7 @@ export default defineConfig({
 		}),
 		mdx(),
 		sitemap(),
+		prefetch(),
 	],
 	experimental: {
 		assets: true,
