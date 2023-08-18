@@ -55,17 +55,13 @@ const tagAlias = tag ? tagAliases[tag] : undefined;
 
 <BaseLayout>
 	<div class="mx-auto flex max-w-2xl flex-col gap-40">
-		<ul class="flex flex-wrap gap-4">
+		<ul class="flex flex-wrap justify-center gap-4">
 			{
 				tagList.map((tag) => {
 					const isActive = tag === activePath;
 
 					return (
-						<a
-							href={`/tags/${tag}`}
-							class={twJoin("relative px-4 py-2 text-zinc-600 hover:text-zinc-900")}
-							rel="prefetch-intent"
-						>
+						<a href={`/tags/${tag}`} class="relative px-4 py-2 text-zinc-600 hover:text-zinc-900" rel="prefetch-intent">
 							<li
 								class={twJoin("cursor-pointer select-none text-sm", isActive && "text-zinc-900")}
 								transition:name={tag}
