@@ -8,6 +8,11 @@
 	}
 
 	/* ===== scrollbar ===== */
+	/* Always show scrollbar */
+	html {
+		@apply h-[101%];
+	}
+
 	::-webkit-scrollbar {
 		@apply h-1 w-1;
 	}
