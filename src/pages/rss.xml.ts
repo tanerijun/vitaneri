@@ -24,5 +24,6 @@ export const get: APIRoute = async () => {
 			content: sanitizeHtml(parser.render(post.body)),
 		})),
 		customData: `<language>en-us</language>`,
+		stylesheet: "rss/styles.xsl",
 	});
 };
