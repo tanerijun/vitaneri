@@ -25,7 +25,18 @@ const postEntries = (await getCollection("posts"))
 		</SectionWrapper>
 
 		<SectionWrapper headingText="Track">
-			<p>Stay up to date by subscribing to RSS feed.</p>
+			<p>
+				Stay up to date by subscribing to my
+				<a
+					href="/rss.xml"
+					target="_blank"
+					rel="noreferrer"
+					class="underline underline-offset-4 transition-colors hover:text-zinc-900"
+				>
+					RSS feed
+				</a>
+				 .
+			</p>
 		</SectionWrapper>
 	</div>
 </BaseLayout>
