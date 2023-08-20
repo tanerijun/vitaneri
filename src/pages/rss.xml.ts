@@ -17,6 +17,7 @@ export const get: APIRoute = async () => {
 		site: siteInfo.url,
 		items: posts.map((post) => ({
 			title: post.data.title,
+			description: post.data.description,
 			author: myInfo.firstName + " " + myInfo.lastName,
 			pubDate: post.data.datetime,
 			link: `/posts/${post.slug}`,
