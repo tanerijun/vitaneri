@@ -1,6 +1,7 @@
 ---
 datetime: 2023-01-16T14:18:32.943Z
 title: "Optimize React's useState Hook With Lazy Initialization"
+description: "A guide on optimizing React's performance using lazy initialization."
 tags:
   - javascript
   - react

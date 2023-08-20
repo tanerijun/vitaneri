@@ -1,6 +1,7 @@
 ---
 datetime: 2023-08-19T12:44:35.138Z
 title: Web Scraping On The Edge Using HTMLRewriter
+description: "A guide on doing light web scraping on edge environments like Cloudflare Worker using HTMLRewriter."
 tags:
   - typescript
   - cloudflare

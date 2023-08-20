@@ -1,6 +1,7 @@
 ---
 datetime: 2022-10-10T02:34:04.780Z
 title: Understanding Space Complexity Of Algorithm
+description: "A guide on calculating the space complexity of algorithms."
 tags:
   - dsa
 ---

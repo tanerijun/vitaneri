@@ -1,6 +1,7 @@
 ---
 datetime: 2022-10-25T13:55:29.989Z
 title: "LeetCode: String To Integer (atoi) With TypeScript"
+description: "Going over 'String To Integer (atoi)' from Leetcode with Typescript."
 tags:
   - leetcode
   - dsa

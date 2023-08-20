@@ -1,6 +1,7 @@
 ---
 datetime: 2022-11-15T08:25:07.215Z
 title: "Implementing Map, Filter, And Reduce Using Generic In Go"
+description: "An implementation of map, filter, and reduce using Go's generic."
 tags:
   - go
 ---

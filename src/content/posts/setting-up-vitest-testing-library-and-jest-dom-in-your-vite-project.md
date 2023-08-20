@@ -1,6 +1,7 @@
 ---
 datetime: 2023-01-06T13:07:13.165Z
 title: "Setting Up Vitest, Testing Library, And jest-dom In Your Vite Project"
+description: "A guide on setting up Vitest, Testing Library, and jest-dom for unit testing a Vite project."
 tags:
   - vitest
   - javascript

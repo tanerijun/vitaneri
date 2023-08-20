@@ -1,6 +1,7 @@
 ---
 datetime: 2022-10-29T04:53:41.458Z
 title: "Understanding Mapped Types In TypeScript"
+description: "Exploring Mapped Types in TypeScript."
 tags:
   - typescript
 ---

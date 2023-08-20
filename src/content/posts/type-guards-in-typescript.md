@@ -1,6 +1,7 @@
 ---
 datetime: 2022-10-14T02:15:52.963Z
 title: "Type Guards In TypeScript"
+description: "Exploring type guards in TypeScript."
 tags: 
 	- typescript
 ---

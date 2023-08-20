@@ -1,6 +1,7 @@
 ---
 datetime: 2022-10-15T01:35:13.086Z
 title: "Enums In TypeScript"
+description: "Introduction to Enums in TypeScript."
 tags:
   - typescript
 ---

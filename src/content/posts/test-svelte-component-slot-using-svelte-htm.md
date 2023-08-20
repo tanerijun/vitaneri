@@ -1,6 +1,7 @@
 ---
 datetime: 2023-03-01T16:13:49.880Z
 title: Test Svelte Component Slot Using svelte-htm
+description: "A guide on how to test Svelte components that have slot using the svelte-htm library."
 tags:
   - svelte
 ---

@@ -1,7 +1,7 @@
 ---
 datetime: 2023-07-18T12:04:38.948Z
 title: How To Remove The "Clear All" Button From Search Input
-featured: false
+description: "A guide on how to remove the clear all button when you set input type to search in HTML."
 tags:
   - css
 ---

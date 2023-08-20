@@ -1,6 +1,7 @@
 ---
 datetime: 2022-11-16T04:03:59.416Z
 title: "Guide To Sorting In Go"
+description: "Various ways to sort a slice in using the built-in 'sort' package in Go."
 tags:
   - go
 ---

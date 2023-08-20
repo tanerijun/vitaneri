@@ -1,6 +1,7 @@
 ---
 datetime: 2022-10-22T01:51:06.754Z
 title: "LeetCode: Longest Palindromic Substring With TypeScript"
+description: "Going over 'Longest Palindromic Substring' from LeetCode with TypeScript."
 tags:
   - leetcode
   - dsa

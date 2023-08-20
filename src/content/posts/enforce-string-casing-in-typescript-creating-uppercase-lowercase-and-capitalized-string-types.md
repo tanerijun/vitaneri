@@ -1,6 +1,7 @@
 ---
 datetime: 2023-06-23T11:12:30.743Z
 title: "Enforce String Casing in TypeScript: Creating Uppercase, Lowercase, and Capitalized String Types"
+description: "A little trick to create type that only allow uppercase, lowercase, or capitalized string in Typescript."
 tags:
   - typescript
 ---

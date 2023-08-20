@@ -1,6 +1,7 @@
 ---
 datetime: 2022-09-30T01:15:16.000Z
 title: Make Image Fade To Transparent With CSS
+description: "A guide on how to make any image fade to transparent with CSS."
 tags:
   - css
 ---

@@ -1,6 +1,7 @@
 ---
 datetime: 2022-10-23T05:37:15.568Z
 title: "LeetCode: Zigzag Conversion With TypeScript"
+description: "Going over 'Zigzag Conversion' from Leetcode with Typescript."
 tags:
   - leetcode
   - dsa

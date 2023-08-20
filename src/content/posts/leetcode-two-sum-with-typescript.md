@@ -1,6 +1,7 @@
 ---
 datetime: 2022-10-08T13:39:18.243Z
 title: "LeetCode: Two Sum With TypeScript"
+description: "Going over 'Two Sum' from Leetcode with Typescript."
 tags:
   - leetcode
   - dsa

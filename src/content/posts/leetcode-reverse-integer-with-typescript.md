@@ -1,6 +1,7 @@
 ---
 datetime: 2022-10-24T14:06:23.627Z
 title: "LeetCode: Reverse Integer With TypeScript"
+description: "Going over 'Reverse Integer' from Leetcode with Typescript."
 tags:
   - leetcode
   - dsa

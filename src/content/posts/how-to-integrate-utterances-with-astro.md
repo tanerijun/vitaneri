@@ -1,6 +1,7 @@
 ---
 title: How To Integrate Utterances With Astro
 datetime: 2022-10-07T09:53:35Z
+description: "A tutorial on integrating Utterances comment system with Astro."
 tags:
   - astro
   - general

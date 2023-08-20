@@ -1,6 +1,7 @@
 ---
 datetime: 2022-09-08T01:15:32.000Z
 title: Introduction to Java's Stream API
+description: "Learn Java's Stream API by working with a sample data."
 tags:
   - java
 ---

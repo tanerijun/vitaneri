@@ -1,6 +1,7 @@
 ---
 datetime: 2022-09-01T01:04:50.000Z
 title: "Spring Boot: Working With Database Using JDBCTemplate"
+description: "Learn how to connect a Spring Boot application with a relational database using JDBCTemplate."
 tags:
   - java
   - spring

@@ -1,6 +1,7 @@
 ---
 datetime: 2022-10-09T15:07:17.838Z
 title: "LeetCode: Add Two Numbers With TypeScript"
+description: "Going over `Add Two Numbers` from LeetCode with TypeScript."
 tags:
   - leetcode
   - dsa

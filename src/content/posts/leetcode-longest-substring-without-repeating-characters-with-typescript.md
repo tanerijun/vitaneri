@@ -1,6 +1,7 @@
 ---
 datetime: 2022-10-21T08:18:28.861Z
 title: "LeetCode: Longest Substring Without Repeating Characters With TypeScript"
+description: "Going over 'Longest Substring Without Repeating Characters' from Leetcode with Typescript."
 tags:
   - leetcode
   - dsa

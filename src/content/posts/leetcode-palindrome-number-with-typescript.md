@@ -1,6 +1,7 @@
 ---
 datetime: 2022-10-26T05:39:32.062Z
 title: "LeetCode: Palindrome Number With TypeScript"
+description: "Going over 'Palidrome Number' from Leetcode with Typescript."
 tags:
   - leetcode
   - dsa

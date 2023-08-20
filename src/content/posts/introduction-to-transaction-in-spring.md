@@ -1,6 +1,7 @@
 ---
 datetime: 2022-09-03T03:22:27.000Z
 title: Introduction To Transaction In Spring
+description: "Explaining Transaction in Spring (The ELI5 way)."
 tags:
   - java
   - spring

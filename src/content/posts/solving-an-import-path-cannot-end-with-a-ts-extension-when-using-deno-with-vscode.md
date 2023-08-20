@@ -1,6 +1,7 @@
 ---
 datetime: 2022-10-21T02:25:04.152Z
 title: 'Solving "An import path cannot end with a .ts extension" When Using Deno With VSCode'
+description: "A guide on how to eliminate the error message: 'An import path cannot end with a .ts extension' when using Deno with VSCode."
 tags:
   - deno
   - vscode

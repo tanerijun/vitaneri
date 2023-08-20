@@ -1,6 +1,7 @@
 ---
 datetime: 2022-10-29T01:58:28.122Z
 title: "Introduction To Generics In TypeScript"
+description: "A quick introduction to TypeScript's generics."
 tags:
   - typescript
 ---

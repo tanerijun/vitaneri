@@ -1,6 +1,7 @@
 ---
 datetime: 2022-09-02T05:15:27.000Z
 title: Understanding JavaScript Function As First-class Citizen
+description: "A short post explaining the meaning of JavaScript function as a first-class citizen."
 tags:
   - javascript
 ---

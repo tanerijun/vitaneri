@@ -1,6 +1,7 @@
 ---
 datetime: 2022-11-14T16:07:52.838Z
 title: "Check For Nil Interface In Go"
+description: "A short guide on checking for nil interface in Go."
 tags:
   - go
 ---

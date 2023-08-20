@@ -1,6 +1,7 @@
 ---
 datetime: 2022-10-27T05:34:34.621Z
 title: "LeetCode: Container With Most Water With TypeScript"
+description: "Going over `Container With Most Water` from LeetCode with TypeScript."
 tags:
   - leetcode
   - dsa

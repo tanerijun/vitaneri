@@ -1,6 +1,7 @@
 ---
 datetime: 2023-01-20T08:43:41.820Z
 title: "Better React Context DX With Custom Provider And Consumer Hook"
+description: "Abstracting React's Context API using custom provider and consumer hook."
 tags:
   - react
   - javascript

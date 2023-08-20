@@ -1,6 +1,7 @@
 ---
 datetime: 2023-01-22T15:51:52.609Z
 title: "Code Splitting In React Using React.lazy and React.Suspense"
+description: "A guide on how to code split in React using React.lazy and React.Suspense."
 tags:
   - javascript
   - react
