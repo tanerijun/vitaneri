@@ -8,6 +8,21 @@ import "@fontsource/atkinson-hyperlegible/700-italic.css";
 import ViewTransitions from "astro/components/ViewTransitions.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
+import { siteInfo } from "../data/site-info";
+
+type Props = {
+	title?: string;
+	description?: string;
+	ogImage?: string;
+	canonicalUrl?: string;
+};
+
+const {
+	title = siteInfo.title,
+	description = siteInfo.description,
+	ogImage = siteInfo.OGImage,
+	canonicalUrl = new URL(Astro.url.pathname, Astro.site).href,
+} = Astro.props;
 ---
 
 <html lang="en" class="">

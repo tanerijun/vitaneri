@@ -5,6 +5,7 @@ const postCollection = defineCollection({
 	schema: z.object({
 		datetime: z.date(),
 		title: z.string(),
+		description: z.string().regex(/^[A-Z].*\.$/),
 		tags: z.array(z.string()),
 	}),
 });

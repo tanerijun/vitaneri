@@ -1,7 +1,7 @@
 ---
 datetime: 2022-10-21T15:06:20.401Z
 title: "Type Unknown in TypeScript"
-description: "Exploring one of the primitive types in TypeScript: Unknown"
+description: "Exploring one of the primitive types in TypeScript: Unknown."
 tags: 
 	- typescript
 ---
