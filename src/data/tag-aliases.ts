@@ -6,4 +6,5 @@ export const tagAliases: Record<string, string> = {
 	dsa: "DSA",
 	vscode: "VSCode",
 	leetcode: "LC",
+	cloudflare: "CF",
 };
