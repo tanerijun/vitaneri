@@ -1,5 +1,12 @@
 module.exports = {
-	extends: ["plugin:astro/recommended", "plugin:astro/jsx-a11y-recommended", "prettier"],
+	extends: [
+		"eslint:recommended",
+		"plugin:astro/recommended",
+		"plugin:astro/jsx-a11y-recommended",
+		"plugin:jsx-a11y/recommended",
+		"plugin:solid/typescript",
+		"prettier",
+	],
 	overrides: [
 		{
 			files: ["*.astro"],
@@ -12,9 +19,13 @@ module.exports = {
 			rules: {},
 		},
 	],
+	env: {
+		browser: true,
+		node: true,
+		es2023: true,
+	},
 	parser: "@typescript-eslint/parser",
 	parserOptions: {
-		
 		ecmaVersion: "latest",
 		sourceType: "module",
 	},
