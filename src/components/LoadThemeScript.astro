@@ -1,0 +1,8 @@
+<!-- Load theme before document loads to prevent theme flashing -->
+<script is:inline>
+	let theme = localStorage.getItem("theme");
+	if (!theme) {
+		theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+	}
+	document.documentElement.className = theme;
+</script>
