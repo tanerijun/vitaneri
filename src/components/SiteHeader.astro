@@ -1,6 +1,6 @@
 ---
+import ThemeToggler from "./ThemeToggler";
 import { twJoin } from "../lib/tw-join";
-import SolidButton from "./MySolidComponent";
 
 const navLinks = [
 	{
@@ -42,34 +42,39 @@ const activePath = Astro.url.pathname.split("/")[1];
 			</a>
 		</div>
 
-		<nav class="hidden items-center gap-6 md:flex">
-			{
-				navLinks.map((navLink) => {
-					const isActive = "/" + activePath === navLink.url;
+		<div class="flex gap-8">
+			<nav class="hidden items-center gap-6 md:flex">
+				{
+					navLinks.map((navLink) => {
+						const isActive = "/" + activePath === navLink.url;
 
-					return (
-						<div class="relative">
-							<a
-								href={navLink.url}
-								class={twJoin("text-sm md:text-base", isActive ? "text-zinc-950" : "text-zinc-500 hover:text-zinc-950")}
-								rel="prefetch"
-							>
-								{navLink.displayText}
-							</a>
-							{isActive && (
-								<div
-									id="active-nav"
-									class="absolute h-0.5 w-full bg-zinc-200"
-									aria-hidden="true"
-									transition:name="active-nav-marker"
-								/>
-							)}
-						</div>
-					);
-				})
-			}
-		</nav>
+						return (
+							<div class="relative">
+								<a
+									href={navLink.url}
+									class={twJoin(
+										"text-sm md:text-base",
+										isActive ? "text-zinc-950" : "text-zinc-500 hover:text-zinc-950",
+									)}
+									rel="prefetch"
+								>
+									{navLink.displayText}
+								</a>
+								{isActive && (
+									<div
+										id="active-nav"
+										class="absolute h-0.5 w-full bg-zinc-200"
+										aria-hidden="true"
+										transition:name="active-nav-marker"
+									/>
+								)}
+							</div>
+						);
+					})
+				}
+			</nav>
 
-		<SolidButton client:idle />
+			<ThemeToggler client:idle />
+		</div>
 	</div>
 </header>
