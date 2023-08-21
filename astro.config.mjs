@@ -1,11 +1,12 @@
 import { defineConfig, sharpImageService } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
+import prefetch from "@astrojs/prefetch";
+import solidJs from "@astrojs/solid-js";
 import getReadingTime from "reading-time";
 import { toString } from "mdast-util-to-string";
 import { siteInfo } from "./src/data/site-info";
-import sitemap from "@astrojs/sitemap";
-import prefetch from "@astrojs/prefetch";
 
 export function remarkReadingTime() {
 	return function (tree, { data }) {
@@ -20,6 +21,7 @@ export function remarkReadingTime() {
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
+		solidJs(),
 		tailwind({
 			applyBaseStyles: false,
 		}),
