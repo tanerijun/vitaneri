@@ -9,6 +9,7 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import { siteInfo } from "../data/site-info";
+import { myInfo } from "../data/my-info";
 
 type Props = {
 	title?: string;
@@ -28,10 +29,26 @@ const {
 <html lang="en" class="">
 	<head>
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
+		<link rel="canonical" href={canonicalUrl} />
+
 		<title>Vitaneri</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="author" content={myInfo.name} />
+
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:image" content={ogImage} />
+
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalUrl} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={ogImage} />
 
 		<ViewTransitions />
 	</head>
