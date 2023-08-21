@@ -1,8 +1,7 @@
 import { siteInfo } from "./site-info";
 
 export const myInfo = {
-	firstName: "Vincent",
-	lastName: "Taneri",
+	name: "Vincent Taneri",
 	email: "tanerivince@gmail.com",
 	website: siteInfo.url,
 	github: "https://github.com/tanerijun",
