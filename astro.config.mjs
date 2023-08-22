@@ -21,7 +21,7 @@ export function remarkReadingTime() {
 
 /** @type {import('astro-expressive-code').AstroExpressiveCodeOptions} */
 const astroExpressiveCodeOptions = {
-	theme: ["poimandres"],
+	theme: ["vitesse-dark"],
 	useThemedScrollbars: true,
 	useThemedSelectionColors: true,
 	frames: {
@@ -30,11 +30,6 @@ const astroExpressiveCodeOptions = {
 			frameBoxShadowCssValue: "none",
 			tooltipSuccessBackground: "color-mix(in oklab, var(--code-background), transparent 30%)",
 			inlineButtonHoverOrFocusBackground: "transparent",
-		},
-	},
-	textMarkers: {
-		styleOverrides: {
-			markHue: 285,
 		},
 	},
 };
