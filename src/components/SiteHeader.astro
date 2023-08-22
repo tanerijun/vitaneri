@@ -1,5 +1,4 @@
 ---
-import Logo from "./Logo";
 import ThemeToggler from "./ThemeToggle";
 import { twJoin } from "../lib/tw-join";
 
@@ -39,8 +38,7 @@ const activePath = Astro.url.pathname.split("/")[1];
 	<div class="mx-auto flex max-w-2xl items-center justify-between py-8">
 		<div id="site-logo">
 			<a href="/" rel="prefetch" aria-label="Vitaneri logo">
-				<Logo />
-				<span class="font-logo text-5xl">Vi</span>
+				<span class="font-logo text-5xl transition-colors hover:text-zinc-900 dark:hover:text-zinc-100">Vi</span>
 			</a>
 		</div>
 
