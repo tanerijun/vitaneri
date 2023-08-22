@@ -3,6 +3,8 @@
 	--dark-shade: theme(colors.zinc.600);
 	--light: theme(colors.white);
 	--light-shade: theme(colors.zinc.400);
+
+	--theme-toggle-animation-duration: 0s;
 }
 
 .toggle {
@@ -12,7 +14,7 @@
 	overflow: hidden;
 	position: relative;
 	width: 24px;
-	transition: 0.2s all ease;
+	transition: var(--theme-toggle-animation-duration) all ease;
 }
 
 .toggle:hover {
@@ -26,7 +28,7 @@
 }
 
 .toggle-light:before {
-	animation-duration: 0.2s;
+	animation-duration: var(--theme-toggle-animation-duration);
 	animation-name: sun;
 	background-color: var(--light-shade);
 	border-radius: 50%;
@@ -86,7 +88,7 @@
 }
 
 .toggle-dark:before {
-	animation-duration: 0.2s;
+	animation-duration: var(--theme-toggle-animation-duration);
 	animation-name: moon;
 	background-color: var(--dark-shade);
 	border-radius: 50%;
@@ -117,7 +119,7 @@
 }
 
 .toggle-dark:after {
-	animation-duration: 0.2s;
+	animation-duration: var(--theme-toggle-animation-duration);
 	animation-name: moon-shadow;
 	background: var(--light);
 	border-radius: 50%;

@@ -10,6 +10,13 @@ export default function SolidButton() {
 		setTheme(document.documentElement.className as Theme);
 	});
 
+	function enableToggleAnimationTemporarily() {
+		(document.querySelector(":root") as HTMLElement).style.setProperty("--theme-toggle-animation-duration", "0.2s");
+		setTimeout(() => {
+			(document.querySelector(":root") as HTMLElement).style.setProperty("--theme-toggle-animation-duration", "0s");
+		}, 250);
+	}
+
 	function disableTransitionsTemporarily() {
 		document.documentElement.classList.add("[&_*]:!transition-none");
 		window.setTimeout(() => {
@@ -21,6 +28,7 @@ export default function SolidButton() {
 		const nextTheme = theme() === "light" ? "dark" : "light";
 		localStorage.setItem("theme", nextTheme);
 		document.documentElement.className = nextTheme;
+		enableToggleAnimationTemporarily();
 		disableTransitionsTemporarily();
 		setTheme(nextTheme);
 	}
