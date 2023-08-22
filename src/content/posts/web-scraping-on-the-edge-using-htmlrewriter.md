@@ -74,7 +74,7 @@ In this project though, we're not going to need any of that. But you can change 
 
 I'm going to name mine: `goodreads-currently-reading`
 
-```
+```toml title="wrangler.toml"
 name = "goodreads-currently-reading"
 compatibility_date = "2023-01-01"
 ```
@@ -85,7 +85,7 @@ Alright, now that we're done here. Let's explore `src/index.ts`, where we're goi
 
 Now, if you open the file, you should be greeted with code similar to this:
 
-```ts
+```ts title="src/index.ts"
 import { Hono } from "hono";
 
 const app = new Hono();
