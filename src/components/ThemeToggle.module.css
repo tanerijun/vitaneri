@@ -133,7 +133,7 @@
 
 @keyframes moon-shadow {
 	from {
-		background-color: var(--dark);
+		background-color: var(--light);
 		height: 0;
 		right: 7px;
 		top: 7px;
