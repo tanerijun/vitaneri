@@ -12,7 +12,7 @@ In this tutorial, we're going to create a web scraper using HTMLRewriter. Specif
 
 ## Technologies
 
-First, a short introduction the techs we're going to use.
+First, a short introduction to the techs we're going to use.
 
 #### HTMLRewriter
 
