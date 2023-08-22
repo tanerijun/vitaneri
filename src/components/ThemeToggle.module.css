@@ -14,7 +14,7 @@
 	overflow: hidden;
 	position: relative;
 	width: 24px;
-	transition: var(--theme-toggle-animation-duration) all ease;
+	transition: 0.2s all ease;
 }
 
 .toggle:hover {
