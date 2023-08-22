@@ -19,12 +19,12 @@
 		@apply focus:outline-zinc-700 dark:focus:outline-zinc-300;
 	}
 
-	/* ===== scrollbar ===== */
 	/* Always show scrollbar */
 	html {
 		@apply h-[101%];
 	}
 
+	/* ===== scrollbar ===== */
 	::-webkit-scrollbar {
 		@apply h-1 w-1;
 	}
