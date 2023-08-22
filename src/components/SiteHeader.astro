@@ -30,7 +30,7 @@ const activePath = Astro.url.pathname.split("/")[1];
 	<a
 		id="skip-to-content"
 		href="#main-content"
-		class="top absolute -top-full left-16 z-50 bg-zinc-200 p-2 drop-shadow-md transition-all focus:top-4"
+		class="top absolute -top-full left-16 z-50 bg-zinc-100 p-2 drop-shadow-md transition-all focus:top-4 dark:bg-zinc-950"
 	>
 		Skip to content
 	</a>
@@ -54,7 +54,9 @@ const activePath = Astro.url.pathname.split("/")[1];
 									href={navLink.url}
 									class={twJoin(
 										"text-sm transition-colors md:text-base",
-										isActive ? "text-zinc-950" : "text-zinc-500 hover:text-zinc-950",
+										isActive
+											? "text-zinc-900 dark:text-zinc-100"
+											: "text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100",
 									)}
 									rel="prefetch"
 								>
@@ -63,7 +65,7 @@ const activePath = Astro.url.pathname.split("/")[1];
 								{isActive && (
 									<div
 										id="active-nav"
-										class="absolute h-0.5 w-full bg-zinc-200"
+										class="absolute h-0.5 w-full bg-zinc-200 transition-colors duration-200 dark:bg-zinc-700"
 										aria-hidden="true"
 										transition:name="active-nav-marker"
 									/>

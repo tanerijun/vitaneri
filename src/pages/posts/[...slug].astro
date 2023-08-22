@@ -21,8 +21,10 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
 <BaseLayout>
 	<article class="mx-auto flex max-w-2xl flex-col gap-20">
 		<header class="flex flex-col gap-4">
-			<h1 class="text-3xl font-bold text-zinc-950" transition:name={entry.slug}>{entry.data.title}</h1>
-			<small class="text-zinc-700">
+			<h1 class="text-3xl font-bold text-zinc-900 transition-colors dark:text-white" transition:name={entry.slug}>
+				{entry.data.title}
+			</h1>
+			<small class="text-zinc-700 transition-colors dark:text-zinc-300">
 				<span transition:name={"date" + entry.slug}>
 					{entry.data.datetime.toLocaleString("en-us", { year: "numeric", month: "short", day: "numeric" })}
 				</span>
@@ -34,7 +36,7 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
 						<a
 							href={`/tags/${tag}`}
 							transition:name={tag}
-							class="rounded-full bg-zinc-100 px-3 py-1 text-xs text-zinc-500 transition-colors hover:text-zinc-900"
+							class="rounded-full bg-zinc-100 px-3 py-1 text-xs text-zinc-500 transition-colors hover:text-zinc-900 dark:bg-zinc-800 dark:hover:text-zinc-100"
 						>
 							{tag}
 						</a>
@@ -45,6 +47,5 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
 		<ProseWrapper>
 			<Content />
 		</ProseWrapper>
-		<footer></footer>
 	</article>
 </BaseLayout>

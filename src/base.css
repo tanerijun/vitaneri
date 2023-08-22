@@ -2,9 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--color-stroke: theme(colors.zinc.100);
+	--color-scrollbar: theme(colors.zinc.300);
+	--color-scrollbar-hover: theme(colors.zinc.600);
+}
+
+.dark {
+	--color-stroke: theme(colors.zinc.800);
+	--color-scrollbar: theme(colors.zinc.700);
+	--color-scrollbar-hover: theme(colors.zinc.400);
+}
+
 @layer base {
 	* {
-		@apply focus:outline-zinc-700;
+		@apply focus:outline-zinc-700 dark:focus:outline-zinc-300;
 	}
 
 	/* ===== scrollbar ===== */
@@ -22,15 +34,10 @@
 	}
 
 	::-webkit-scrollbar-thumb {
-		@apply rounded-full bg-zinc-400;
+		@apply rounded-full bg-[--color-scrollbar];
 	}
 
 	::-webkit-scrollbar-thumb:hover {
-		@apply bg-zinc-700;
+		@apply bg-[--color-scrollbar-hover];
 	}
-
-	/* TODO: dark mode */
-	/* .dark ::-webkit-scrollbar-thumb {
-		@apply bg-blue-500;
-	} */
 }
