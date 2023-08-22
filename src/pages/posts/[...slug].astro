@@ -25,7 +25,7 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
 				{entry.data.title}
 			</h1>
 			<small class="text-zinc-700 transition-colors dark:text-zinc-300">
-				<span transition:name={"date" + entry.slug}>
+				<span>
 					{entry.data.datetime.toLocaleString("en-us", { year: "numeric", month: "short", day: "numeric" })}
 				</span>
 				 · {remarkPluginFrontmatter.minutesRead}
