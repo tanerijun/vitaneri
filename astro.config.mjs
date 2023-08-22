@@ -5,6 +5,7 @@ import sitemap from "@astrojs/sitemap";
 import prefetch from "@astrojs/prefetch";
 import solidJs from "@astrojs/solid-js";
 import getReadingTime from "reading-time";
+import defaultTheme from "tailwindcss/defaultTheme";
 import { toString } from "mdast-util-to-string";
 import { siteInfo } from "./src/data/site-info";
 import { astroExpressiveCode } from "astro-expressive-code";
@@ -31,6 +32,9 @@ const astroExpressiveCodeOptions = {
 			tooltipSuccessBackground: "color-mix(in oklab, var(--code-background), transparent 30%)",
 			inlineButtonHoverOrFocusBackground: "transparent",
 		},
+	},
+	styleOverrides: {
+		uiFontFamily: ["Atkinson Hyperlegible", ...defaultTheme.fontFamily.sans].join(","),
 	},
 };
 
