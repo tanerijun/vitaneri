@@ -1,8 +1,8 @@
 :root {
-	--dark: theme(colors.zinc.900);
-	--dark-shade: theme(colors.zinc.600);
+	--dark: theme(colors.gray.900);
+	--dark-shade: theme(colors.gray.600);
 	--light: theme(colors.white);
-	--light-shade: theme(colors.zinc.400);
+	--light-shade: theme(colors.gray.400);
 }
 
 .toggle {
