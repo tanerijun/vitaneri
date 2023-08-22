@@ -7,6 +7,7 @@ import solidJs from "@astrojs/solid-js";
 import getReadingTime from "reading-time";
 import { toString } from "mdast-util-to-string";
 import { siteInfo } from "./src/data/site-info";
+import { astroExpressiveCode } from "astro-expressive-code";
 
 export function remarkReadingTime() {
 	return function (tree, { data }) {
@@ -18,6 +19,26 @@ export function remarkReadingTime() {
 	};
 }
 
+/** @type {import('astro-expressive-code').AstroExpressiveCodeOptions} */
+const astroExpressiveCodeOptions = {
+	theme: ["poimandres"],
+	useThemedScrollbars: true,
+	useThemedSelectionColors: true,
+	frames: {
+		removeCommentsWhenCopyingTerminalFrames: true,
+		styleOverrides: {
+			frameBoxShadowCssValue: "none",
+			tooltipSuccessBackground: "color-mix(in oklab, var(--code-background), transparent 30%)",
+			inlineButtonHoverOrFocusBackground: "transparent",
+		},
+	},
+	textMarkers: {
+		styleOverrides: {
+			markHue: 285,
+		},
+	},
+};
+
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
@@ -25,6 +46,7 @@ export default defineConfig({
 		tailwind({
 			applyBaseStyles: false,
 		}),
+		astroExpressiveCode(astroExpressiveCodeOptions),
 		mdx(),
 		sitemap(),
 		prefetch(),
