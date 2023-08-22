@@ -9,6 +9,7 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ["Atkinson Hyperlegible", ...defaultTheme.fontFamily.sans],
+				mono: ["IBM Plex Mono", ...defaultTheme.fontFamily.mono],
 			},
 		},
 	},
