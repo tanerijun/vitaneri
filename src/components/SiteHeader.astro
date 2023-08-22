@@ -1,5 +1,5 @@
 ---
-import ThemeToggler from "./ThemeToggler";
+import ThemeToggler from "./ThemeToggle";
 import { twJoin } from "../lib/tw-join";
 
 const navLinks = [
@@ -42,7 +42,7 @@ const activePath = Astro.url.pathname.split("/")[1];
 			</a>
 		</div>
 
-		<div class="flex gap-8">
+		<div class="flex items-center gap-8">
 			<nav class="hidden items-center gap-6 md:flex">
 				{
 					navLinks.map((navLink) => {
