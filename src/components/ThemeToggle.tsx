@@ -13,8 +13,8 @@ export default function SolidButton() {
 	function enableToggleAnimationTemporarily() {
 		(document.querySelector(":root") as HTMLElement).style.setProperty("--theme-toggle-animation-duration", "0.2s");
 		setTimeout(() => {
-			(document.querySelector(":root") as HTMLElement).style.setProperty("--theme-toggle-animation-duration", "0s");
-		}, 250);
+			(document.querySelector(":root") as HTMLElement).style.setProperty("--theme-toggle-animation-duration", "0.3s");
+		});
 	}
 
 	function disableTransitionsTemporarily() {
