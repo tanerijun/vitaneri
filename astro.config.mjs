@@ -1,6 +1,5 @@
 import { defineConfig, sharpImageService } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import prefetch from "@astrojs/prefetch";
 import solidJs from "@astrojs/solid-js";
@@ -46,7 +45,6 @@ export default defineConfig({
 			applyBaseStyles: false,
 		}),
 		astroExpressiveCode(astroExpressiveCodeOptions),
-		mdx(),
 		sitemap(),
 		prefetch(),
 	],
