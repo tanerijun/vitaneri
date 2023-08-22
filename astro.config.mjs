@@ -61,4 +61,7 @@ export default defineConfig({
 		remarkPlugins: [remarkReadingTime],
 	},
 	site: siteInfo.url,
+	redirects: {
+		"/tils": "/tils/1",
+	},
 });
