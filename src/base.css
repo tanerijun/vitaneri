@@ -1,3 +1,13 @@
+@font-face {
+	font-family: "Vitaneri";
+	font-display: "swap";
+	font-style: "normal";
+	font-weight: 400;
+	src:
+		url("/fonts/vitaneri-logo.woff2") format("woff2"),
+		url("/fonts/vitaneri-logo.woff") format("woff");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
