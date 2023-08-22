@@ -10,10 +10,18 @@ export default function SolidButton() {
 		setTheme(document.documentElement.className as Theme);
 	});
 
+	function disableTransitionsTemporarily() {
+		document.documentElement.classList.add("[&_*]:!transition-none");
+		window.setTimeout(() => {
+			document.documentElement.classList.remove("[&_*]:!transition-none");
+		}, 0);
+	}
+
 	function toggleTheme() {
 		const nextTheme = theme() === "light" ? "dark" : "light";
 		localStorage.setItem("theme", nextTheme);
 		document.documentElement.className = nextTheme;
+		disableTransitionsTemporarily();
 		setTheme(nextTheme);
 	}
 
