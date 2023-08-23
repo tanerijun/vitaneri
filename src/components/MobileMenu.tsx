@@ -4,6 +4,14 @@ import CloseIcon from "./icons/CloseIcon";
 import MenuIcon from "./icons/MenuIcon";
 import { siteInfo } from "../data/site-info";
 
+function Link(props: { to: string; text: string }) {
+	return (
+		<a href={props.to} class="text-3xl text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-zinc-100">
+			{props.text}
+		</a>
+	);
+}
+
 export default function MobileMenu() {
 	return (
 		<Dialog.Root>
@@ -19,16 +27,8 @@ export default function MobileMenu() {
 								<CloseIcon class="h-10 w-10" />
 							</Dialog.CloseButton>
 							<nav class="flex h-full w-full flex-col justify-center gap-10">
-								<a href="/" class="text-3xl">
-									Home
-								</a>
-								<For each={siteInfo.navLinks}>
-									{(nav) => (
-										<a href={nav.url} class="text-3xl">
-											{nav.displayText}
-										</a>
-									)}
-								</For>
+								<Link to="/" text="Home" />
+								<For each={siteInfo.navLinks}>{(nav) => <Link to={nav.url} text={nav.displayText} />}</For>
 							</nav>
 						</div>
 					</Dialog.Content>
