@@ -1,25 +1,8 @@
 ---
 import ThemeToggler from "./ThemeToggle";
 import { twJoin } from "../lib/tw-join";
-
-const navLinks = [
-	{
-		displayText: "Posts",
-		url: "/posts",
-	},
-	{
-		displayText: "Tags",
-		url: "/tags",
-	},
-	{
-		displayText: "TILs",
-		url: "/tils",
-	},
-	{
-		displayText: "Projects",
-		url: "/projects",
-	},
-];
+import MobileMenu from "./MobileMenu";
+import { siteInfo } from "../data/site-info";
 
 const activePath = Astro.url.pathname.split("/")[1];
 ---
@@ -45,7 +28,7 @@ const activePath = Astro.url.pathname.split("/")[1];
 		<div class="flex items-center gap-8">
 			<nav class="hidden items-center gap-6 md:flex">
 				{
-					navLinks.map((navLink) => {
+					siteInfo.navLinks.map((navLink) => {
 						const isActive = "/" + activePath === navLink.url;
 
 						return (
@@ -76,6 +59,7 @@ const activePath = Astro.url.pathname.split("/")[1];
 				}
 			</nav>
 
+			<MobileMenu client:idle />
 			<ThemeToggler client:idle />
 		</div>
 	</div>
