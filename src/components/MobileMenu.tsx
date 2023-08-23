@@ -7,7 +7,7 @@ import { siteInfo } from "../data/site-info";
 export default function MobileMenu() {
 	return (
 		<Dialog.Root>
-			<Dialog.Trigger>
+			<Dialog.Trigger class="md:hidden">
 				<MenuIcon class="h-6 w-6 text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100" />
 			</Dialog.Trigger>
 			<Dialog.Portal>
