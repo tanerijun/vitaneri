@@ -25,6 +25,7 @@ const astroExpressiveCodeOptions = {
 	useThemedScrollbars: true,
 	useThemedSelectionColors: true,
 	frames: {
+		showCopyToClipboardButton: false,
 		removeCommentsWhenCopyingTerminalFrames: true,
 		styleOverrides: {
 			frameBoxShadowCssValue: "none",
