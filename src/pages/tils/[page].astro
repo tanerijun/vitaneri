@@ -19,7 +19,7 @@ interface Props {
 let { page } = Astro.props;
 ---
 
-<BaseLayout>
+<BaseLayout title={`TILs #${page.currentPage}`} description={`Page ${page.currentPage} of my list of TILs.`}>
 	<div class="mx-auto flex max-w-2xl flex-col gap-20">
 		<div class="mt-20 flex flex-col gap-40">
 			{

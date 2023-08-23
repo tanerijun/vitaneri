@@ -26,6 +26,8 @@ const {
 	ogImage = siteInfo.OGImage,
 	canonicalUrl = new URL(Astro.url.pathname, Astro.site).href,
 } = Astro.props;
+
+const formattedTitle = title === siteInfo.title ? siteInfo.title : title + " - " + myInfo.name;
 ---
 
 <html lang="en" class="banana">
@@ -40,19 +42,19 @@ const {
 		<link rel="manifest" href="/site.webmanifest" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 
-		<title>Vitaneri</title>
-		<meta name="title" content={title} />
+		<title>{formattedTitle}</title>
+		<meta name="title" content={formattedTitle} />
 		<meta name="description" content={description} />
 		<meta name="author" content={myInfo.name} />
 
-		<meta property="og:title" content={title} />
+		<meta property="og:title" content={formattedTitle} />
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={canonicalUrl} />
 		<meta property="og:image" content={ogImage} />
 
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content={canonicalUrl} />
-		<meta property="twitter:title" content={title} />
+		<meta property="twitter:title" content={formattedTitle} />
 		<meta property="twitter:description" content={description} />
 		<meta property="twitter:image" content={ogImage} />
 

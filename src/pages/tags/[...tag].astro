@@ -47,13 +47,13 @@ export async function getStaticPaths() {
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { tag, tagList, filteredPostEntries } = Astro.props;
-
 const activePath = Astro.url.pathname.split("/")[2];
-
 const tagAlias = tag ? tagAliases[tag] : undefined;
+const pageTitle = tag ? `Tag: ${tag}` : "Tag";
+const pageDescription = tag ? `Posts tagged with ${tag}.` : "List of tags.";
 ---
 
-<BaseLayout>
+<BaseLayout title={pageTitle} description={pageDescription}>
 	<div class="mx-auto flex max-w-2xl flex-col gap-40">
 		<ul class="flex flex-wrap justify-center gap-4">
 			{
