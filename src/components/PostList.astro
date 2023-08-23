@@ -17,14 +17,14 @@ const { entries, showYear = false } = Astro.props;
 				entry.data.datetime.toLocaleDateString("en-us", { month: "short", day: "2-digit" });
 
 			return (
-				<a href={`/posts/${entry.slug}`} rel="prefetch-intent">
-					<li class="text-zinc-700 transition-colors dark:text-zinc-300">
+				<li class="text-zinc-700 transition-colors dark:text-zinc-300">
+					<a href={`/posts/${entry.slug}`} rel="prefetch-intent">
 						<div class="flex items-start gap-4 hover:text-zinc-950 dark:hover:text-white">
 							<span class="min-w-[100px]">{displayDate}</span>
 							<p transition:name={entry.slug}>{entry.data.title}</p>
 						</div>
-					</li>
-				</a>
+					</a>
+				</li>
 			);
 		})
 	}
