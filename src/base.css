@@ -14,40 +14,14 @@
 
 :root {
 	--color-stroke: theme(colors.zinc.100);
-	--color-scrollbar: theme(colors.zinc.300);
-	--color-scrollbar-hover: theme(colors.zinc.600);
 }
 
 .dark {
 	--color-stroke: theme(colors.zinc.800);
-	--color-scrollbar: theme(colors.zinc.700);
-	--color-scrollbar-hover: theme(colors.zinc.400);
 }
 
 @layer base {
 	* {
 		@apply focus:outline-zinc-700 dark:focus:outline-zinc-300;
-	}
-
-	/* Always show scrollbar */
-	html {
-		@apply h-[101%];
-	}
-
-	/* ===== scrollbar ===== */
-	::-webkit-scrollbar {
-		@apply h-1 w-1;
-	}
-
-	::-webkit-scrollbar-track {
-		@apply bg-transparent;
-	}
-
-	::-webkit-scrollbar-thumb {
-		@apply rounded-full bg-[--color-scrollbar];
-	}
-
-	::-webkit-scrollbar-thumb:hover {
-		@apply bg-[--color-scrollbar-hover];
 	}
 }
