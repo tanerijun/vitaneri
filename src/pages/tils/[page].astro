@@ -4,6 +4,7 @@ import type { GetStaticPaths, Page } from "astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import SectionWrapper from "../../components/SectionWrapper.astro";
 import ProseWrapper from "../../components/ProseWrapper.astro";
+import PageLink from "../../components/PageLink.astro";
 
 export const getStaticPaths = (async ({ paginate }) => {
 	const tilEntries = (await getCollection("tils")).sort((a, b) => parseInt(b.slug) - parseInt(a.slug));
@@ -37,30 +38,8 @@ let { page } = Astro.props;
 			}
 		</div>
 		<div class="flex justify-between">
-			{
-				page.url.prev ? (
-					<a
-						href={page.url.prev}
-						class="text-zinc-600 underline decoration-zinc-300 underline-offset-4 hover:text-zinc-900 hover:decoration-zinc-700 dark:text-zinc-400 dark:decoration-zinc-700 dark:hover:text-zinc-100 dark:hover:decoration-zinc-300"
-					>
-						Previous
-					</a>
-				) : (
-					<div />
-				)
-			}
-			{
-				page.url.next ? (
-					<a
-						href={page.url.next}
-						class="text-zinc-600 underline decoration-zinc-300 underline-offset-4 hover:text-zinc-900 hover:decoration-zinc-700 dark:text-zinc-400 dark:decoration-zinc-700 dark:hover:text-zinc-100 dark:hover:decoration-zinc-300"
-					>
-						Next
-					</a>
-				) : (
-					<div />
-				)
-			}
+			{page.url.prev ? <PageLink to={page.url.prev} text="Previous" /> : <div />}
+			{page.url.next ? <PageLink to={page.url.next} text="Next" /> : <div />}
 		</div>
 	</div>
 </BaseLayout>

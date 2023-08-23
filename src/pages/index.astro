@@ -4,6 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PostList from "../components/PostList.astro";
 import SectionWrapper from "../components/SectionWrapper.astro";
 import ProseWrapper from "../components/ProseWrapper.astro";
+import PageLink from "../components/PageLink.astro";
 import BlueSkyIcon from "../components/icons/BlueSkyIcon.astro";
 import MailIcon from "../components/icons/MailIcon.astro";
 import GithubIcon from "../components/icons/GithubIcon.astro";
@@ -35,12 +36,7 @@ const { Content: LatestTIL } = await tilEntries[tilEntries.length - 1]!.render()
 			<div class="flex flex-col gap-6">
 				<p>Here are some of my recent blog posts:</p>
 				<PostList entries={postEntries} showYear />
-				<a
-					href="/posts"
-					class="text-right text-zinc-600 underline decoration-zinc-300 underline-offset-4 hover:text-zinc-900 hover:decoration-zinc-700 dark:text-zinc-400 dark:decoration-zinc-700 dark:hover:text-zinc-100 dark:hover:decoration-zinc-300"
-				>
-					View all
-				</a>
+				<PageLink to="/posts" text="View all" />
 			</div>
 		</SectionWrapper>
 
@@ -54,12 +50,7 @@ const { Content: LatestTIL } = await tilEntries[tilEntries.length - 1]!.render()
 					<p>Here is my newest TIL:</p>
 					<LatestTIL />
 				</ProseWrapper>
-				<a
-					href="/tils"
-					class="text-right text-zinc-600 underline decoration-zinc-300 underline-offset-4 hover:text-zinc-900 hover:decoration-zinc-700 dark:text-zinc-400 dark:decoration-zinc-700 dark:hover:text-zinc-100 dark:hover:decoration-zinc-300"
-				>
-					View all
-				</a>
+				<PageLink to="/tils" text="View all" />
 			</div>
 		</SectionWrapper>
 
