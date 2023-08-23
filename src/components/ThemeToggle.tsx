@@ -13,8 +13,8 @@ export default function SolidButton() {
 	function enableToggleAnimationTemporarily() {
 		(document.querySelector(":root") as HTMLElement).style.setProperty("--theme-toggle-animation-duration", "0.2s");
 		setTimeout(() => {
-			(document.querySelector(":root") as HTMLElement).style.setProperty("--theme-toggle-animation-duration", "0.3s");
-		});
+			(document.querySelector(":root") as HTMLElement).style.setProperty("--theme-toggle-animation-duration", "0");
+		}, 300);
 	}
 
 	function disableTransitionsTemporarily() {
@@ -27,8 +27,8 @@ export default function SolidButton() {
 	function toggleTheme() {
 		const nextTheme = theme() === "light" ? "dark" : "light";
 		localStorage.setItem("theme", nextTheme);
-		document.documentElement.className = nextTheme;
 		enableToggleAnimationTemporarily();
+		document.documentElement.className = nextTheme;
 		disableTransitionsTemporarily();
 		setTheme(nextTheme);
 	}
