@@ -26,7 +26,8 @@ const astroExpressiveCodeOptions = {
 	useThemedSelectionColors: true,
 	frames: {
 		showCopyToClipboardButton: false,
-		removeCommentsWhenCopyingTerminalFrames: true,
+		extractFileNameFromCode: false,
+		removeCommentsWhenCopyingTerminalFrames: false,
 		styleOverrides: {
 			frameBoxShadowCssValue: "none",
 			tooltipSuccessBackground: "color-mix(in oklab, var(--code-background), transparent 30%)",
