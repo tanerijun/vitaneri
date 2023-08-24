@@ -19,7 +19,7 @@ export default function MobileMenu() {
 				<MenuIcon class="h-6 w-6 text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100" />
 			</Dialog.Trigger>
 			<Dialog.Portal>
-				<Dialog.Overlay class="animate-fade-out ui-expanded:animate-fade-in fixed inset-0 z-50 bg-white/60 backdrop-blur-sm dark:bg-black/60" />
+				<Dialog.Overlay class="animate-fade-out ui-expanded:animate-fade-in fixed inset-0 z-50 bg-white/70 backdrop-blur-sm dark:bg-black/70" />
 				<div class="fixed inset-0 z-50 flex items-center justify-center">
 					<Dialog.Content class="animate-scale-out ui-expanded:animate-scale-in z-50 h-full w-full px-16 py-24">
 						<div class="flex h-full flex-col items-center">
