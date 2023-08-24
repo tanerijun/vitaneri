@@ -1,5 +1,5 @@
 ---
-import ThemeToggler from "./ThemeToggle";
+import ThemeToggle from "./ThemeToggle";
 import { twJoin } from "../lib/tw-join";
 import MobileMenu from "./MobileMenu";
 import { siteInfo } from "../data/site-info";
@@ -59,8 +59,8 @@ const activePath = Astro.url.pathname.split("/")[1];
 				}
 			</nav>
 
-			<MobileMenu client:idle />
-			<ThemeToggler client:idle />
+			<MobileMenu client:idle transition:persist="mobile-menu" />
+			<ThemeToggle client:idle transition:persist="theme-toggle" />
 		</div>
 	</div>
 </header>
