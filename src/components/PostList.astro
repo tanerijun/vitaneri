@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { twJoin } from "../lib/tw-join";
 
 type Props = {
 	entries: Array<CollectionEntry<"posts">>;
@@ -20,7 +21,7 @@ const { entries, showYear = false } = Astro.props;
 				<li class="text-zinc-700 transition-colors dark:text-zinc-300">
 					<a href={`/posts/${entry.slug}`} rel="prefetch-intent">
 						<div class="flex items-start gap-4 hover:text-zinc-950 dark:hover:text-white">
-							<span class="min-w-[100px]">{displayDate}</span>
+							<span class={twJoin("min-w-[100px]", !showYear && "min-w-[60px]")}>{displayDate}</span>
 							<p transition:name={entry.slug}>{entry.data.title}</p>
 						</div>
 					</a>
