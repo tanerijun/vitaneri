@@ -1,10 +1,5 @@
 ---
 import "../base.css";
-import "@fontsource/atkinson-hyperlegible/400.css";
-import "@fontsource/atkinson-hyperlegible/700.css";
-import "@fontsource/atkinson-hyperlegible/400-italic.css";
-import "@fontsource/atkinson-hyperlegible/700-italic.css";
-import "@fontsource/ibm-plex-mono";
 
 import ViewTransitions from "astro/components/ViewTransitions.astro";
 import SiteHeader from "../components/SiteHeader.astro";
@@ -41,6 +36,12 @@ const formattedTitle = title === siteInfo.title ? siteInfo.title : title + " - "
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 		<link rel="manifest" href="/site.webmanifest" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
+		<link rel="preload" href="/fonts/vitaneri-logo.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/fonts/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/fonts/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/fonts/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/fonts/Atkinson-Hyperlegible-BoldItalic-102a.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
 
 		<title>{formattedTitle}</title>
 		<meta name="title" content={formattedTitle} />
