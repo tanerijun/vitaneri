@@ -59,7 +59,7 @@ const activePath = Astro.url.pathname.split("/")[1];
 				}
 			</nav>
 
-			<MobileMenu client:idle transition:persist="mobile-menu" />
+			<MobileMenu client:load transition:persist="mobile-menu" />
 			<ThemeToggle client:idle transition:persist="theme-toggle" />
 		</div>
 	</div>
