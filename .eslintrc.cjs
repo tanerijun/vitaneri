@@ -22,6 +22,14 @@ module.exports = {
 			rules: {},
 		},
 		{
+			files: ["*.svelte"],
+			extends: ["plugin:svelte/recommended"],
+			parser: "svelte-eslint-parser",
+			parserOptions: {
+				parser: "@typescript-eslint/parser",
+			},
+		},
+		{
 			files: ["*.tsx"],
 			extends: ["plugin:jsx-a11y/recommended", "plugin:solid/typescript"],
 		},

@@ -3,6 +3,7 @@ import ThemeToggle from "./ThemeToggle";
 import { twJoin } from "../lib/tw-join";
 import MobileMenu from "./MobileMenu";
 import { siteInfo } from "../data/site-info";
+import Hello from "./Hello.svelte";
 
 const activePath = Astro.url.pathname.split("/")[1];
 ---
@@ -61,6 +62,7 @@ const activePath = Astro.url.pathname.split("/")[1];
 
 			<MobileMenu client:idle />
 			<ThemeToggle client:idle transition:persist="theme-toggle" />
+			<Hello />
 		</div>
 	</div>
 </header>
