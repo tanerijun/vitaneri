@@ -35,7 +35,6 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
 					entry.data.tags.map((tag) => (
 						<a
 							href={`/tags/${tag}`}
-							transition:name={tag}
 							class="rounded-full bg-zinc-100 px-3 py-1 text-xs text-zinc-500 transition-colors hover:text-zinc-900 dark:bg-zinc-800 dark:hover:text-zinc-100"
 						>
 							{tag}
