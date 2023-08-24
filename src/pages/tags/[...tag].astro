@@ -80,7 +80,7 @@ const pageDescription = tag ? `Posts tagged with ${tag}.` : "List of tags.";
 		</ul>
 
 		<SectionWrapper headingText={tag ? (tagAlias ? tagAlias : capitalize(tag)) : "All"}>
-			<PostList entries={filteredPostEntries} />
+			<PostList entries={filteredPostEntries} showYear />
 		</SectionWrapper>
 	</div>
 </BaseLayout>
