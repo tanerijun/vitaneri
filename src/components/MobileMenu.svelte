@@ -1,14 +1,10 @@
 <script lang="ts">
 	import { siteInfo } from "../data/site-info";
 
-	let showModal = false;
-
 	let dialog: HTMLDialogElement;
-
-	$: if (dialog && showModal) dialog.showModal();
 </script>
 
-<button on:click={() => (showModal = true)}>
+<button on:click={() => dialog.showModal()}>
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		width="1em"
@@ -23,7 +19,6 @@
 <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
 <dialog
 	bind:this={dialog}
-	on:close={() => (showModal = false)}
 	on:click|self={() => dialog.close()}
 	class="w-3/4 bg-transparent backdrop:bg-white/70 backdrop:backdrop-blur-sm backdrop:dark:bg-black/70"
 >
