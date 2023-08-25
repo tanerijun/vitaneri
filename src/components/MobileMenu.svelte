@@ -8,7 +8,17 @@
 	$: if (dialog && showModal) dialog.showModal();
 </script>
 
-<button on:click={() => (showModal = true)}>Open</button>
+<button on:click={() => (showModal = true)}>
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width="1em"
+		height="1em"
+		viewBox="0 0 24 24"
+		class="h-6 w-6 text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 md:hidden"
+	>
+		<path fill="currentColor" d="M3 4h18v2H3V4Zm0 7h18v2H3v-2Zm0 7h18v2H3v-2Z" />
+	</svg>
+</button>
 
 <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
 <dialog
