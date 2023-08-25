@@ -4,7 +4,7 @@
 	let dialog: HTMLDialogElement;
 </script>
 
-<button on:click={() => dialog.showModal()} class="md:hidden">
+<button on:click={() => dialog.showModal()} class="rounded-md p-1 hover:bg-zinc-100 dark:hover:bg-zinc-800 md:hidden">
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		width="1em"
