@@ -3,7 +3,6 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import prefetch from "@astrojs/prefetch";
 import svelte from "@astrojs/svelte";
-import solidJs from "@astrojs/solid-js";
 import getReadingTime from "reading-time";
 import defaultTheme from "tailwindcss/defaultTheme";
 import { toString } from "mdast-util-to-string";
@@ -43,7 +42,6 @@ const astroExpressiveCodeOptions = {
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
-		solidJs(),
 		svelte(),
 		tailwind({
 			applyBaseStyles: false,

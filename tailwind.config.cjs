@@ -57,5 +57,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require("@tailwindcss/typography"), require("@kobalte/tailwindcss")],
+	plugins: [require("@tailwindcss/typography")],
 };
