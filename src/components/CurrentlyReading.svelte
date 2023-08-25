@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from "svelte";
 	import { siteInfo } from "../data/site-info";
 
 	type Book = {
@@ -6,19 +7,32 @@
 		url: string;
 	};
 
-	async function getCurrentlyReading(): Promise<Array<Book>> {
-		const response = await fetch(siteInfo.currentlyReading);
-		if (!response.ok) {
-			throw new Error(response.status + " " + response.statusText);
+	let books: Array<Book> | undefined = undefined;
+
+	async function fetchBooks() {
+		const cachedBooks = sessionStorage.getItem("books");
+		if (cachedBooks) {
+			books = JSON.parse(cachedBooks) as unknown as Array<Book>;
+			return;
 		}
 
-		return await response.json();
+		const response = await fetch(siteInfo.currentlyReading);
+		if (!response.ok) {
+			books = [];
+			return;
+		}
+
+		const result = await response.json();
+		sessionStorage.setItem("books", JSON.stringify(result));
+		books = result as unknown as Array<Book>;
 	}
 
-	let promise = getCurrentlyReading();
+	onMount(async () => {
+		await fetchBooks();
+	});
 </script>
 
-{#await promise}
+{#if !books}
 	<div role="status" class="flex animate-pulse flex-col">
 		<span class="sr-only">Loading...</span>
 		<div class="mb-4 h-3 w-full rounded-full bg-zinc-200 dark:bg-zinc-700 md:w-3/4"></div>
@@ -27,7 +41,9 @@
 		<div class="mb-4 h-3 w-full rounded-full bg-zinc-200 dark:bg-zinc-700 md:w-2/3"></div>
 		<div class="mb-4 h-3 w-full rounded-full bg-zinc-200 dark:bg-zinc-700"></div>
 	</div>
-{:then books}
+{:else if books.length === 0}
+	<p>Seems like I'm not reading anything at the moment.</p>
+{:else}
 	<ul class="group">
 		{#each books as book (book.url)}
 			<li>
@@ -42,6 +58,4 @@
 			</li>
 		{/each}
 	</ul>
-{:catch}
-	<p>Seems like I'm not reading anything at the moment.</p>
-{/await}
+{/if}
