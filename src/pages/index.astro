@@ -5,6 +5,7 @@ import PostList from "../components/PostList.astro";
 import SectionWrapper from "../components/SectionWrapper.astro";
 import ProseWrapper from "../components/ProseWrapper.astro";
 import PageLink from "../components/PageLink.astro";
+import CurrentlyReading from "../components/CurrentlyReading.svelte";
 import BlueSkyIcon from "../components/icons/BlueSkyIcon.astro";
 import MailIcon from "../components/icons/MailIcon.astro";
 import GithubIcon from "../components/icons/GithubIcon.astro";
@@ -44,8 +45,8 @@ const { Content: LatestTIL } = await tilEntries[tilEntries.length - 1]!.render()
 			<div class="flex flex-col gap-5">
 				<ProseWrapper>
 					<p>
-						I sometimes stumble upon bite-sized insights that I want to share, yet don't quite demand an entire blog
-						post. I call them TIL -- Today I Learned.
+						I sometimes stumble upon bite-sized insights that I want to share, yet don't quite demand an entire blog post. I call
+						them TIL -- Today I Learned.
 					</p>
 					<p>Here is my newest TIL:</p>
 					<LatestTIL />
@@ -63,9 +64,7 @@ const { Content: LatestTIL } = await tilEntries[tilEntries.length - 1]!.render()
 		<SectionWrapper headingText="Read">
 			<ProseWrapper>
 				<p>Speaking of reading, here are some books I'm reading:</p>
-				<ul>
-					<li>TODO: get data from goodreads</li>
-				</ul>
+				<CurrentlyReading client:idle />
 			</ProseWrapper>
 		</SectionWrapper>
 
