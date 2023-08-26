@@ -1,5 +1,6 @@
 import { OGImageRoute } from "astro-og-canvas";
 import { type CollectionEntry, getCollection } from "astro:content";
+import { siteInfo } from "../../data/site-info";
 
 async function getPagesToGenerate() {
 	const entries = await getCollection("posts");
@@ -18,11 +19,20 @@ export const { getStaticPaths, get } = OGImageRoute({
 
 	pages: await getPagesToGenerate(),
 
-	getImageOptions: (path, page: CollectionEntry<"posts">) => ({
+	getImageOptions: (_path, page: CollectionEntry<"posts">) => ({
 		title: page.data.title,
-		description: path,
 		logo: {
-			path: "./public/favicon-32x32.png",
+			path: "./public/android-chrome-96x96.png",
 		},
+		bgGradient: [[24, 24, 27]],
+		padding: 80,
+		font: {
+			title: {
+				color: [244, 244, 245],
+				weight: "Bold",
+				families: ["Atkinson Hyperlegible"],
+			},
+		},
+		fonts: [`${siteInfo.url}/fonts/Atkinson-Hyperlegible-Bold-102a.woff2`],
 	}),
 });
