@@ -1,0 +1,8 @@
+{
+	"title": "Vitaneri",
+	"description": "The website you are currently on",
+	"techs": ["TypeScript", "Svelte", "SvelteKit", "TailwindCSS"],
+	"imgUrl": "/assets/projects/vitaneri.png",
+	"url": "https://vitaneri.com",
+	"repo": "https://github.com/tanerijun/vitaneri"
+}

@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PostList from "../components/PostList.astro";
+import SectionWrapper from "../components/SectionWrapper.astro";
+
+const postEntries = (await getCollection("posts")).sort((a, b) => b.data.datetime.getTime() - a.data.datetime.getTime());
+
+const postsGroupedByYear = new Map<number, typeof postEntries>();
+
+for (const entry of postEntries) {
+	const year = entry.data.datetime.getFullYear();
+
+	if (!postsGroupedByYear.has(year)) {
+		postsGroupedByYear.set(year, [entry]);
+		continue;
+	}
+
+	postsGroupedByYear.get(year)!.push(entry);
+}
+---
+
+<BaseLayout title="Posts" description="List of posts.">
+	<div class="mx-auto mt-20 flex max-w-2xl flex-col gap-40">
+		{
+			Array.from(postsGroupedByYear).map(([year, entries]) => (
+				<SectionWrapper headingText={year}>
+					<PostList {entries} />
+				</SectionWrapper>
+			))
+		}
+	</div>
+</BaseLayout>

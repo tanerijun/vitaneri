@@ -1,21 +1,11 @@
 {
-	"cSpell.words": [
-		"bitmachina",
-		"heroicons",
-		"idxs",
-		"jdbctemplate",
-		"keydown",
-		"leetcode",
-		"lowlight",
-		"outro",
-		"postbuild",
-		"searchdata",
-		"searchdb",
-		"Supabase",
-		"testid",
-		"tils",
-		"typeahead",
-		"Wordle",
-		"wowie"
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"astro",
+		"svelte",
+		"vue"
 	]
 }

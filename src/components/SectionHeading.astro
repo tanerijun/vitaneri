@@ -1,0 +1,33 @@
+---
+type Props = {
+	tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+	text: string | number;
+};
+
+const { tag, text } = Astro.props;
+const Element = tag;
+---
+
+<Element
+	class="stroked pointer-events-none absolute -left-7 -top-[3.75rem] -z-10 select-none text-8xl font-bold text-white dark:text-zinc-900 md:-left-12 md:-top-24 md:text-[10rem]"
+>
+	{text}
+</Element>
+
+<style>
+	.stroked {
+		text-shadow:
+			-3px -3px 0 var(--color-stroke),
+			3px -3px 0 var(--color-stroke),
+			-3px 3px 0 var(--color-stroke),
+			3px 3px 0 var(--color-stroke);
+	}
+
+	@supports (-webkit-text-stroke-width: 1px) {
+		.stroked {
+			-webkit-text-stroke-width: 3px;
+			-webkit-text-stroke-color: var(--color-stroke);
+			text-shadow: none;
+		}
+	}
+</style>
