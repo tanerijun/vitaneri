@@ -3,7 +3,7 @@ export const siteInfo = {
 	description: "Vincent Taneri's blog and portfolio",
 	url: "https://vitaneri.com",
 	currentlyReading: "https://currently-reading.vitaneri.com",
-	OGImage: "/vitaneri-go.png",
+	OGImage: "/vitaneri-og.png",
 	navLinks: [
 		{
 			displayText: "Posts",
