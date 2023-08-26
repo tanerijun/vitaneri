@@ -1,14 +1,14 @@
 import * as fs from "fs";
 
 /**
- * Generate a new TIL template.
+ * Generate a new Bit template.
  *
- * @param {string} path - The path to the folder where the TIL will be created.
- * @returns {string} The path to the TIL.
+ * @param {string} path - The path to the folder where the Bit will be created.
+ * @returns {string} The path to the Bit.
  */
-export function generateTIL(path) {
+export function generateBit(path) {
 	const BASE_PATH = path;
-	const id = getNextTILId(BASE_PATH);
+	const id = getNextBitId(BASE_PATH);
 	const fileName = zeroPad(id, 4);
 	const FILE_PATH = `${BASE_PATH}/${fileName}.md`;
 
@@ -32,12 +32,12 @@ export function generateTIL(path) {
 }
 
 /**
- * Get the next TIL id.
+ * Get the next Bit id.
  *
- * @param {string} path - The path to the TILs folder.
- * @returns {number} The next TIL id.
+ * @param {string} path - The path to the Bits folder.
+ * @returns {number} The next Bit id.
  */
-function getNextTILId(path) {
+function getNextBitId(path) {
 	const files = fs.readdirSync(path);
 	return files.length + 1;
 }

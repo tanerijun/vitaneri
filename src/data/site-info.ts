@@ -14,8 +14,8 @@ export const siteInfo = {
 			url: "/tags",
 		},
 		{
-			displayText: "TILs",
-			url: "/tils",
+			displayText: "Bits",
+			url: "/bits",
 		},
 		{
 			displayText: "Projects",

@@ -18,11 +18,11 @@ const postEntries = (await getCollection("posts"))
 	.sort((a, b) => b.data.datetime.getTime() - a.data.datetime.getTime())
 	.slice(0, 10);
 
-const tilEntries = await getCollection("tils");
+const bitEntries = await getCollection("bits");
 
 const { Content: WelcomeMessage } = await (await getEntry("misc", "welcome-message")).render();
 const { Content: AboutMe } = await (await getEntry("misc", "about-me")).render();
-const { Content: LatestTIL } = await tilEntries[tilEntries.length - 1]!.render();
+const { Content: LatestBit } = await bitEntries[bitEntries.length - 1]!.render();
 ---
 
 <BaseLayout>
@@ -41,17 +41,17 @@ const { Content: LatestTIL } = await tilEntries[tilEntries.length - 1]!.render()
 			</div>
 		</SectionWrapper>
 
-		<SectionWrapper headingText="TIL">
+		<SectionWrapper headingText="Bit">
 			<div class="flex flex-col gap-5">
 				<ProseWrapper>
 					<p>
 						I sometimes stumble upon bite-sized insights that I want to share, yet don't quite demand an entire blog post. I call
-						them TIL -- Today I Learned.
+						them Bit.
 					</p>
-					<p>Here is my newest TIL:</p>
-					<LatestTIL />
+					<p>Here is my newest Bit:</p>
+					<LatestBit />
 				</ProseWrapper>
-				<PageLink to="/tils" text="View all" />
+				<PageLink to="/bits" text="View all" />
 			</div>
 		</SectionWrapper>
 

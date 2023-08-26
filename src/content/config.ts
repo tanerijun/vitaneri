@@ -21,7 +21,7 @@ const projectCollection = defineCollection({
 	}),
 });
 
-const tilCollection = defineCollection({
+const bitCollection = defineCollection({
 	type: "content",
 	schema: z.object({
 		datetime: z.date(),
@@ -31,5 +31,5 @@ const tilCollection = defineCollection({
 export const collections = {
 	posts: postCollection,
 	projects: projectCollection,
-	tils: tilCollection,
+	bits: bitCollection,
 };

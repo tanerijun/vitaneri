@@ -7,19 +7,19 @@ import ProseWrapper from "../../components/ProseWrapper.astro";
 import PageLink from "../../components/PageLink.astro";
 
 export const getStaticPaths = (async ({ paginate }) => {
-	const tilEntries = (await getCollection("tils")).sort((a, b) => parseInt(b.slug) - parseInt(a.slug));
+	const bitEntries = (await getCollection("bits")).sort((a, b) => parseInt(b.slug) - parseInt(a.slug));
 
-	return paginate(tilEntries, { pageSize: 10 });
+	return paginate(bitEntries, { pageSize: 10 });
 }) satisfies GetStaticPaths;
 
 interface Props {
-	page: Page<CollectionEntry<"tils">>;
+	page: Page<CollectionEntry<"bits">>;
 }
 
 let { page } = Astro.props;
 ---
 
-<BaseLayout title={`TILs #${page.currentPage}`} description={`Page ${page.currentPage} of my list of TILs.`}>
+<BaseLayout title={`Bits #${page.currentPage}`} description={`Page ${page.currentPage} of my Bits.`}>
 	<div class="mx-auto flex max-w-2xl flex-col gap-20">
 		<div class="mt-20 flex flex-col gap-40">
 			{

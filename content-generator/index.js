@@ -1,9 +1,9 @@
 import * as prompt from "@clack/prompts";
 import { generatePost } from "./generate-post.js";
-import { generateTIL } from "./generate-til.js";
+import { generateBit } from "./generate-bit.js";
 
 const POSTS_PATH = "src/content/posts";
-const TIL_PATH = "src/content/TILs";
+const BITS_PATH = "src/content/Bits";
 
 prompt.intro(`Starting content template generator...`);
 
@@ -11,7 +11,7 @@ const contentType = await prompt.select({
 	message: "Pick a content type.",
 	options: [
 		{ value: "post", label: "Blog Post" },
-		{ value: "TIL", label: "Today I Learned" },
+		{ value: "bit", label: "Bit" },
 	],
 });
 
@@ -64,8 +64,8 @@ if (contentType === "post") {
 	prompt.outro(`You're all set! Go to ${filePath} to start writing your post.`);
 }
 
-if (contentType === "TIL") {
-	const filePath = generateTIL(TIL_PATH);
+if (contentType === "bit") {
+	const filePath = generateBit(BITS_PATH);
 
-	prompt.outro(`You're all set! Go to ${filePath} to start writing your TIL.`);
+	prompt.outro(`You're all set! Go to ${filePath} to start writing your Bit.`);
 }
