@@ -28,6 +28,7 @@
 <button
 	class="rounded-full p-1 text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-100"
 	on:click={toggleTheme}
+	aria-label="theme-toggle"
 >
 	<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512" class="h-6 w-6">
 		<path
