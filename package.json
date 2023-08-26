@@ -22,6 +22,7 @@
 		"@types/sanitize-html": "^2.9.0",
 		"astro": "^2.10.13",
 		"astro-expressive-code": "^0.22.2",
+		"astro-og-canvas": "^0.1.8",
 		"markdown-it": "^13.0.1",
 		"mdast-util-to-string": "^4.0.0",
 		"reading-time": "^1.5.0",
