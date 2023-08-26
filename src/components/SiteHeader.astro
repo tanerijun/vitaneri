@@ -3,8 +3,6 @@ import MobileMenu from "./MobileMenu.svelte";
 import ThemeToggle from "./ThemeToggle.svelte";
 import { twJoin } from "../lib/tw-join";
 import { siteInfo } from "../data/site-info";
-
-const activePath = Astro.url.pathname.split("/")[1];
 ---
 
 <header>
@@ -29,7 +27,7 @@ const activePath = Astro.url.pathname.split("/")[1];
 			<nav class="hidden items-center gap-6 md:flex">
 				{
 					siteInfo.navLinks.map((navLink) => {
-						const isActive = "/" + activePath === navLink.url;
+						const isActive = Astro.url.pathname.startsWith(navLink.url);
 
 						return (
 							<div class="relative">
