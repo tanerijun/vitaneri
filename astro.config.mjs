@@ -61,4 +61,8 @@ export default defineConfig({
 		remarkPlugins: [remarkReadingTime],
 	},
 	site: siteInfo.url,
+	trailingSlash: "never",
+	build: {
+		format: "file",
+	},
 });
