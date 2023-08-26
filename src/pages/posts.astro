@@ -4,9 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PostList from "../components/PostList.astro";
 import SectionWrapper from "../components/SectionWrapper.astro";
 
-const postEntries = (await getCollection("posts")).sort(
-	(a, b) => b.data.datetime.getTime() - a.data.datetime.getTime(),
-);
+const postEntries = (await getCollection("posts")).sort((a, b) => b.data.datetime.getTime() - a.data.datetime.getTime());
 
 const postsGroupedByYear = new Map<number, typeof postEntries>();
 
