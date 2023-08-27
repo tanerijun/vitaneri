@@ -3,5 +3,6 @@
 	"description": "The website you are currently on",
 	"techs": ["TypeScript", "Astro", "Svelte", "TailwindCSS"],
 	"url": "https://vitaneri.com",
-	"repo": "https://github.com/tanerijun/vitaneri"
+	"repo": "https://github.com/tanerijun/vitaneri",
+	"featured": true
 }

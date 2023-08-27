@@ -3,5 +3,6 @@
 	"description": "Super fast dictionary hosted on the edge",
 	"techs": ["Typescript", "React", "Remix"],
 	"url": "https://dicto.pages.dev",
-	"repo": "https://github.com/tanerijun/dicto"
+	"repo": "https://github.com/tanerijun/dicto",
+	"featured": true
 }
