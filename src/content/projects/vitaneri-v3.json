@@ -1,0 +1,8 @@
+{
+	"title": "Vitaneri V3",
+	"description": "V3 of my personal website based on Astro Paper",
+	"techs": ["TypeScript", "Astro", "React", "TailwindCSS"],
+	"url": "https://vitaneri-v3.pages.dev",
+	"repo": "https://github.com/tanerijun/vitaneri-v3",
+	"sortOrder": 351
+}

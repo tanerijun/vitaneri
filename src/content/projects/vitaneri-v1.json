@@ -1,0 +1,8 @@
+{
+	"title": "Vitaneri V1",
+	"description": "My first attempt at creating a personal website",
+	"techs": ["TypeScript", "NextJS", "ChakraUI"],
+	"url": "https://vitaneri.vercel.app",
+	"repo": "https://github.com/tanerijun/vitaneri-v1",
+	"sortOrder": 350
+}
