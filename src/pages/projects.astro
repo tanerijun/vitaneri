@@ -5,8 +5,12 @@ import SectionWrapper from "../components/SectionWrapper.astro";
 import ProjectList from "../components/ProjectList.astro";
 
 const projectEntries = await getCollection("projects");
-const featuredProjectEntries = projectEntries.filter((entry) => entry.data.featured);
-const notFeaturedProjectEntries = projectEntries.filter((entry) => !entry.data.featured);
+const featuredProjectEntries = projectEntries
+	.filter((entry) => entry.data.featured)
+	.sort((a, b) => a.data.sortOrder - b.data.sortOrder);
+const notFeaturedProjectEntries = projectEntries
+	.filter((entry) => !entry.data.featured)
+	.sort((a, b) => a.data.sortOrder - b.data.sortOrder);
 ---
 
 <BaseLayout title="Projects" description="List of my side projects.">

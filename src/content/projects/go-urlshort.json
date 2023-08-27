@@ -1,6 +1,7 @@
 {
-	"title": "go-urlshort",
-	"description": "URL Shortener based on JSON/YAML.",
+	"title": "Go URLShort",
+	"description": "An URL Shortener based on JSON/YAML",
 	"techs": ["Go"],
-	"repo": "https://github.com/tanerijun/go-urlshort"
+	"repo": "https://github.com/tanerijun/go-urlshort",
+	"sortOrder": 1006
 }

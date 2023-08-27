@@ -3,5 +3,7 @@
 	"description": "Wordle game for the true hardcore",
 	"techs": ["TypeScript", "React", "ChakraUI", "Framer Motion"],
 	"url": "https://wordle-fever.netlify.app",
-	"repo": "https://github.com/tanerijun/wordle-fever"
+	"repo": "https://github.com/tanerijun/wordle-fever",
+	"sortOrder": 399,
+	"featured": true
 }

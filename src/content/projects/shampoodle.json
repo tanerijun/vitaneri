@@ -3,5 +3,7 @@
 	"description": "A platform to share your shower thoughts",
 	"techs": ["TypeScript", "React", "NextJS", "TRPC", "Prisma", "MySQL"],
 	"url": "https://shampoodle.vercel.app",
-	"repo": "https://github.com/tanerijun/shampoodle"
+	"repo": "https://github.com/tanerijun/shampoodle",
+	"sortOrder": 404,
+	"featured": true
 }

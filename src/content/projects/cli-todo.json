@@ -1,6 +1,7 @@
 {
-	"title": "cli-todo",
-	"description": "A simple and minimalist todo-list app for CLI",
+	"title": "CLI Todo",
+	"description": "A simple, minimalist, and completely offline To-Do list app for CLI",
 	"techs": ["Go", "BoltDB"],
-	"repo": "https://github.com/tanerijun/cli-todo"
+	"repo": "https://github.com/tanerijun/cli-todo",
+	"sortOrder": 1000
 }

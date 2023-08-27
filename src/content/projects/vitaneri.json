@@ -4,5 +4,6 @@
 	"techs": ["TypeScript", "Astro", "Svelte", "TailwindCSS"],
 	"url": "https://vitaneri.com",
 	"repo": "https://github.com/tanerijun/vitaneri",
+	"sortOrder": 1,
 	"featured": true
 }

@@ -4,5 +4,6 @@
 	"techs": ["Typescript", "React", "Remix"],
 	"url": "https://dicto.pages.dev",
 	"repo": "https://github.com/tanerijun/dicto",
+	"sortOrder": 400,
 	"featured": true
 }

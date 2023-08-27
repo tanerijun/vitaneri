@@ -2,5 +2,6 @@
 	"title": "Vid To MP3 Converter",
 	"description": "A tool that converts video to .mp3 audio",
 	"techs": ["Python"],
-	"repo": "https://github.com/tanerijun/vid-to-mp3-converter"
+	"repo": "https://github.com/tanerijun/vid-to-mp3-converter",
+	"sortOrder": 2003
 }

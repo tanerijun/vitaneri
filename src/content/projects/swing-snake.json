@@ -1,6 +1,7 @@
 {
-	"title": "swing-snake",
-	"description": "Classic Snake created with Swing",
+	"title": "Swing Snake",
+	"description": "Classic Snake game created with Swing",
 	"techs": ["Java", "Swing"],
-	"repo": "https://github.com/tanerijun/swing-snake"
+	"repo": "https://github.com/tanerijun/swing-snake",
+	"sortOrder": 602
 }

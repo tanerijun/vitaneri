@@ -1,7 +1,8 @@
 {
-	"title": "read-light-novel-crawlers",
-	"description": "A service that crawl readlightnovels for Light Novel data.",
+	"title": "Light Novel API",
+	"description": "A service that crawl readlightnovels for Light Novel data",
 	"techs": ["Cloudflare Worker", "Typescript", "Hono"],
 	"url": "https://read-light-novels-crawler.vitaneri.workers.dev/",
-	"repo": "https://github.com/tanerijun/read-light-novels-crawler"
+	"repo": "https://github.com/tanerijun/read-light-novels-crawler",
+	"sortOrder": 501
 }

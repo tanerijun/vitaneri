@@ -2,5 +2,6 @@
 	"title": "Vid To Gif Converter",
 	"description": "A tool that converts video to .gif image",
 	"techs": ["Python"],
-	"repo": "https://github.com/tanerijun/vid-to-gif-converter"
+	"repo": "https://github.com/tanerijun/vid-to-gif-converter",
+	"sortOrder": 2002
 }

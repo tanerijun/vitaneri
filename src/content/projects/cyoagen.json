@@ -1,6 +1,7 @@
 {
-	"title": "cyoagen",
+	"title": "CYOA Generator",
 	"description": "A generator for \"Choose Your Own Adventure\" books.",
 	"techs": ["Go"],
-	"repo": "https://github.com/tanerijun/cyoagen"
+	"repo": "https://github.com/tanerijun/cyoagen",
+	"sortOrder": 1002
 }

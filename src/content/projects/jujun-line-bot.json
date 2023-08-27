@@ -1,6 +1,7 @@
 {
 	"title": "Jujun",
-	"description": "A Line bot that reminds you to do something.",
+	"description": "A remainder bot for Line",
 	"techs": ["Javascript"],
-	"repo": "https://github.com/tanerijun/jujun_line_bot"
+	"repo": "https://github.com/tanerijun/jujun_line_bot",
+	"sortOrder": 902
 }
