@@ -1,0 +1,6 @@
+{
+	"title": "cli-todo",
+	"description": "A simple and minimalist todo-list app for CLI",
+	"techs": ["Go", "BoltDB"],
+	"repo": "https://github.com/tanerijun/cli-todo"
+}

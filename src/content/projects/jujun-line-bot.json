@@ -1,0 +1,6 @@
+{
+	"title": "Jujun",
+	"description": "A Line bot that reminds you to do something.",
+	"techs": ["Javascript"],
+	"repo": "https://github.com/tanerijun/jujun_line_bot"
+}

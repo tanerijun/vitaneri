@@ -1,0 +1,6 @@
+{
+	"title": "QRCode Generator and Reader",
+	"description": "A tool to generate and read QRCode",
+	"techs": ["Python"],
+	"repo": "https://github.com/tanerijun/qrcode-generator-and-reader"
+}

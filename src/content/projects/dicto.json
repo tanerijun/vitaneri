@@ -2,7 +2,6 @@
 	"title": "Dicto",
 	"description": "Super fast dictionary hosted on the edge",
 	"techs": ["Typescript", "React", "Remix"],
-	"imgUrl": "/assets/projects/dicto.png",
 	"url": "https://dicto.pages.dev",
 	"repo": "https://github.com/tanerijun/dicto"
 }

@@ -1,0 +1,7 @@
+{
+	"title": "Subchiper",
+	"description": "A mono-alphabetic substitution cipher",
+	"techs": ["Javascript"],
+	"url": "https://tanerijun.github.io/subscipher/",
+	"repo": "https://github.com/tanerijun/subscipher"
+}

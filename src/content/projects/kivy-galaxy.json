@@ -1,0 +1,6 @@
+{
+	"title": "Kivy Galaxy",
+	"description": "A space themed endless runner game",
+	"techs": ["Python"],
+	"repo": "https://github.com/tanerijun/kivy-galaxy"
+}

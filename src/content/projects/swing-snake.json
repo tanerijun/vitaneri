@@ -1,0 +1,6 @@
+{
+	"title": "swing-snake",
+	"description": "Classic Snake created with Swing",
+	"techs": ["Java", "Swing"],
+	"repo": "https://github.com/tanerijun/swing-snake"
+}

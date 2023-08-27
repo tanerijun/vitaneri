@@ -1,0 +1,6 @@
+{
+	"title": "Shampoodle",
+	"description": "A platform to share your shower thoughts",
+	"techs": ["Java", "Springboot", "Thymeleaf", "PostgreSQL"],
+	"repo": "https://github.com/tanerijun/student-management-system-spring"
+}

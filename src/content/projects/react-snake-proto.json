@@ -1,0 +1,7 @@
+{
+	"title": "React Snake Proto",
+	"description": "Prototype of classic Snake in React",
+	"techs": ["Typescript", "React", "NextJS"],
+	"url": "https://react-snake-proto.vercel.app/",
+	"repo": "https://github.com/tanerijun/react-snake-proto"
+}

@@ -1,0 +1,6 @@
+{
+	"title": "go-card-deck",
+	"description": "A package to work with poker deck",
+	"techs": ["Go"],
+	"repo": "https://github.com/tanerijun/go-card-deck"
+}

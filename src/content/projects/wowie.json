@@ -1,8 +1,7 @@
 {
 	"title": "Wowie",
 	"description": "A frontend for The Movie Database API",
-	"techs": ["TypeScript", "React", "TailwindCSS", "React Query"],
-	"imgUrl": "/assets/projects/wowie.png",
+	"techs": ["TypeScript", "React", "NextJS", "TailwindCSS", "React Query"],
 	"url": "https://wowie-fawn.vercel.app",
 	"repo": "https://github.com/tanerijun/wowie"
 }

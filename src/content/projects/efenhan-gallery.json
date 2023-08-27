@@ -2,6 +2,5 @@
 	"title": "Efenhan's Gallery",
 	"description": "Minimalist art showcase website",
 	"techs": ["Typescript", "Astro"],
-	"imgUrl": "/assets/projects/efenhan-gallery.png",
 	"url": "https://efenhan.com"
 }

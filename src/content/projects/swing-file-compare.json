@@ -1,0 +1,6 @@
+{
+	"title": "Swing File Comparor",
+	"description": "A tool to compare files and show their differences",
+	"techs": ["Java", "Swing"],
+	"repo": "https://github.com/tanerijun/swing-file-compare"
+}

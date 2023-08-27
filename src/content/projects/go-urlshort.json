@@ -1,0 +1,6 @@
+{
+	"title": "go-urlshort",
+	"description": "URL Shortener based on JSON/YAML.",
+	"techs": ["Go"],
+	"repo": "https://github.com/tanerijun/go-urlshort"
+}

@@ -1,0 +1,6 @@
+{
+	"title": "xml-sitemap-generator",
+	"description": "A sitemap generator",
+	"techs": ["Go"],
+	"repo": "https://github.com/tanerijun/xml-sitemap-generator"
+}
