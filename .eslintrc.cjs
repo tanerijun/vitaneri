@@ -19,15 +19,6 @@ module.exports = {
 				parser: "@typescript-eslint/parser",
 				extraFileExtensions: [".astro"],
 			},
-			rules: {},
-		},
-		{
-			files: ["*.svelte"],
-			extends: ["plugin:svelte/recommended"],
-			parser: "svelte-eslint-parser",
-			parserOptions: {
-				parser: "@typescript-eslint/parser",
-			},
 		},
 		{
 			files: ["*.tsx"],
