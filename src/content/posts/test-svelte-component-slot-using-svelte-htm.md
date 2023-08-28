@@ -24,7 +24,7 @@ For example, say that we have a `Button.svelte` component.
 
 To test if the component inside the slot is rendered properly, we have to create a dummy component that use `Button.svelte`. We'll call this component `TestButton.svelte`.
 
-```svelte
+```svelte title="TestButton.svelte"
 <script>
 	import Button from ./Button.svelte;
 </script>
@@ -54,7 +54,7 @@ That works, but it's certainly not a fun experience, and your project is probabl
 
 The solution to this problem is to use `svelte-htm`.
 
-`svelte-htm` allows us to write our Svelte components with JSX-like syntax. It completely eliminates our need of dummy component. We can test our Svelte component just like how we test components from JSX-based framework like [React](https://reactjs.org/).
+`svelte-htm` allows us to write our Svelte components with JSX-like syntax. It completely eliminates our need of dummy component. We can test our Svelte component just like how we test components from JSX-based framework like [React](https://react.dev/).
 
 Now, let's refactor our test using `svelte-htm`.
 
