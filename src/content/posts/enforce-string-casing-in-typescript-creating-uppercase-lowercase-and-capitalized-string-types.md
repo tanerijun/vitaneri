@@ -11,7 +11,7 @@ In this post, I'll share a little trick to create type that only allow uppercase
 What we want to achieve:
 
 ```ts
-const str: IsUppercase = "hello"; // should error
+const str: IsUppercase = "hello"; // we want this line to error
 ```
 
 ## Intrinsic String Manipulation Types
@@ -38,7 +38,7 @@ type ListlessGreeting = Lowercase<Greeting>; // type ListlessGreeting = "hello, 
 
 ### Capitalize
 
-This utility converts _only_ the first character in the string to an uppercase equivalent.
+This utility converts _only_ the first character in the string to uppercase.
 
 ```ts
 type Greeting = "hello, world";
