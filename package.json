@@ -19,8 +19,6 @@
 		"@astrojs/solid-js": "^2.2.1",
 		"@astrojs/tailwind": "^4.0.0",
 		"@tailwindcss/typography": "^0.5.9",
-		"@types/markdown-it": "^13.0.0",
-		"@types/sanitize-html": "^2.9.0",
 		"astro": "^2.10.13",
 		"astro-expressive-code": "^0.22.2",
 		"astro-og-canvas": "^0.1.8",
@@ -34,6 +32,8 @@
 	},
 	"devDependencies": {
 		"@clack/prompts": "^0.7.0",
+		"@types/markdown-it": "^13.0.1",
+		"@types/sanitize-html": "^2.9.0",
 		"@typescript-eslint/parser": "^6.3.0",
 		"eslint": "^8.47.0",
 		"eslint-config-prettier": "^9.0.0",
