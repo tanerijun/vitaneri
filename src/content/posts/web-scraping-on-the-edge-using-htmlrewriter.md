@@ -30,7 +30,7 @@ If you're interested with HTMLRewriter, you can read more about the history of i
 
 #### Cloudflare Workers
 
-The app will be deployed as a [Cloudflare Worker](https://workers.cloudflare.com/) running on the edge.
+The app will be deployed as a [Cloudflare Worker](https://workers.cloudflare.com/) running on the edge (close to your users).
 
 > Note that even though, We're deploying to Cloudflare Worker in this tutorial, the tutorial should also apply for other environments that implement HTMLRewriter like [Deno](https://deno.land/x/html_rewriter) and [Bun](https://bun.sh/docs/api/html-rewriter).
 
@@ -97,14 +97,22 @@ export default app;
 
 The code should be really familiar if you have experience with backend frameworks like [Express](https://expressjs.com/).
 
-Our app will only have 1 route, `/:id`. The `id` here refers to Goodreads' user id. To create the route:
+Our app will only have 1 route, `/:id`. The `id` here refers to Goodreads' user id. To create the route, just add the following code after the `index` route handler:
 
-```ts
+```ts {7-11}
+import { Hono } from "hono";
+
+const app = new Hono();
+
+app.get("/", (c) => c.text("Hello Hono!"));
+
 app.get("/:id", async (c) => {
 	const id = c.req.param("id");
 
 	return c.json({ userId: id });
 });
+
+export default app;
 ```
 
 Verify that your app is working by going to `/<anything>`.
@@ -141,7 +149,9 @@ app.get("/:id", async (c) => {
 });
 ```
 
-The fetch request might fail, let's also handle the error.
+> Tips: You can also fetch other shelves by modifying `shelf=currently-reading`. For example: `shelf=read`.
+
+Let's also do a minimal error handling in case the fetch request fails.
 
 ```ts {5}
 app.get("/:id", async (c) => {
@@ -156,11 +166,13 @@ app.get("/:id", async (c) => {
 
 ### Scraping
 
+Now, that we're connected with Goodreads. We can start scraping.
+
 To start scraping, we have to pass `response` to HTMLRewriter to parse and transform. But since we don't need the result of the transformation, we can just ignore it.
 
-```ts {5}
+```ts
 app.get("/:id", async (c) => {
-	// ...
+	// Fetch Goodreads with userId...
 
 	// Array to store our data
 	const res: { title: string; url: string }[] = [];
@@ -218,7 +230,7 @@ Then `element` refers to the `<a>` tag, while the `text` refers to the text insi
 
 Now, back to our app.
 
-Since the data that I need is conveniently provided in the `<a>` element, I can just take it using the `getAttribute` method and push it into the array.
+Since the data that I needed is conveniently provided in the `<a>` element, I can just take it using the `getAttribute` method and push it into the array.
 
 ```ts
 element(el) {
@@ -231,7 +243,7 @@ element(el) {
 },
 ```
 
-Now if you run the app, and check the result, you should get the data as intended.
+Now if you run the app, go to `/:id`, and check the result, you should get the data as intended.
 
 ```json
 [
@@ -287,13 +299,13 @@ app.get("/:id", async (c) => {
 export default app;
 ```
 
-Notice that I refactored the app a bit because the `href` attribute of the `<a>` is relative, but I want it to be an absolute URL.
+Notice that I refactored the app a bit because the `href` attribute of the `<a>` is relative, but I want it to be an absolute URL. So, I extracted the Goodreads url into a separate variable.
 
 You should also adjust yours to better fit your needs. Maybe you also want to scrape the cover? the rating? You got the idea.
 
 ### Deploying
 
-Finallly, you can deploy your app using the command:
+Finally, you can deploy your app using the command:
 
 ```sh
 npm run deploy
@@ -349,10 +361,12 @@ type Item = {
 };
 ```
 
-The code to scrape an item from the HTML tree above have to be like this.
+When we're on the `a` selector, we have no way to access the nested `<img />` and `<span>` inside it. To access them, we need to create separate selectors to handle each case.
+
+Like this:
 
 ```ts
-const item = { title: null, url: null, string: null, caption: null };
+const item: Item = { title: null, url: null, string: null, caption: null };
 
 await new HTMLRewriter()
 	.on("a", {
@@ -384,9 +398,9 @@ await new HTMLRewriter()
 	.arrayBuffer();
 ```
 
-And it get slightly more complicated when we need to scrape multiple items.
+And it can get a little complicated when we need to scrape multiple items.
 
-```ts {3}
+```ts
 // Array to store the results
 const items: Item[] = [];
 
@@ -427,7 +441,7 @@ await new HTMLRewriter()
 	.arrayBuffer();
 ```
 
-You might have noticed, but yes. Fortunately, our handlers are called in order, allowing the code above to work.
+Fortunately, as you might have noticed, our handlers are called in order, allowing the code above to work.
 
 ## Wrap Up
 
