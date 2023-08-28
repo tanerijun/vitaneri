@@ -41,13 +41,15 @@ export default function Toggle {
   const [showGraph, setShowGraph] = React.useState(false)
 
   return (
-    <Switch
-      on={showGraph}
-      onClick={() => setShowGraph(!showGraph)}
-    />
-    <div>
-      { showGraph ? <Graph /> : null}
-    </div>
+    <>
+      <Switch
+        on={showGraph}
+        onClick={() => setShowGraph(!showGraph)}
+      />
+      <div>
+        { showGraph ? <Graph /> : null}
+      </div>
+    </>
   )
 }
 ```
@@ -101,7 +103,7 @@ export default function Toggle {
   const [showGraph, setShowGraph] = React.useState(false)
 
   return (
-   <>
+    <>
       <Switch
         on={showGraph}
         onClick={() => setShowGraph(!showGraph)}
@@ -118,7 +120,7 @@ export default function Toggle {
 
 Now our app work as expected. But we can make the UX even better by providing a fallback component in `React.Suspense`.
 
-```jsx {2, 17}
+```jsx {2, 16}
 import * as React from "react"
 import LoadingIndicator from "./Components/LoadingIndicator"
 
@@ -181,7 +183,7 @@ export default function Toggle {
 
 That's it!
 
-You might be wondering about whether it's actually fine to import the same component multiple times like we did above. The answer is that it's actually fine. The browser caches the imported components.
+You might be wondering about whether it's actually fine to import the same component multiple times like we did above. The answer is that it's actually fine because browser will cache the imported components.
 
 In the scenario above, when the user hover over the switch, we start importing the `<Graph />` component. And when the user finally click on the switch. This line of code: `React.lazy(() => import("./Components/Graph"))` will still run, but the component in the cache will be returned instead.
 
