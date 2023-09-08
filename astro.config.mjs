@@ -1,4 +1,4 @@
-import { defineConfig, sharpImageService } from "astro/config";
+import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import prefetch from "@astrojs/prefetch";
@@ -50,13 +50,6 @@ export default defineConfig({
 		sitemap(),
 		prefetch(),
 	],
-	experimental: {
-		assets: true,
-		viewTransitions: true,
-	},
-	image: {
-		service: sharpImageService(),
-	},
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
 	},
