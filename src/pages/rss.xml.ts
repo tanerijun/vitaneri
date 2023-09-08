@@ -8,7 +8,7 @@ import { myInfo } from "../data/my-info";
 
 const parser = new MarkdownIt();
 
-export const get: APIRoute = async () => {
+export const GET: APIRoute = async () => {
 	const posts = await getCollection("posts");
 
 	return rss({
