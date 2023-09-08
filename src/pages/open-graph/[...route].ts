@@ -14,7 +14,7 @@ async function getPagesToGenerate() {
 	return map;
 }
 
-export const { getStaticPaths, get } = OGImageRoute({
+export const { getStaticPaths } = OGImageRoute({
 	param: "route",
 
 	pages: await getPagesToGenerate(),
