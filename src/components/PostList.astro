@@ -18,7 +18,7 @@ const { entries, showYear = false } = Astro.props;
 				entry.data.datetime.toLocaleDateString("en-us", { month: "short", day: "2-digit" });
 
 			return (
-				<li class="text-zinc-700 transition-colors group-hover:text-zinc-400 dark:text-zinc-300 group-hover:dark:text-zinc-500">
+				<li class="text-zinc-700 transition-colors duration-0 group-hover:text-zinc-400 dark:text-zinc-300 group-hover:dark:text-zinc-500">
 					<a href={`/posts/${entry.slug}`} rel="prefetch-intent">
 						<div class="flex items-start gap-4 transition-colors hover:text-zinc-950 dark:hover:text-white">
 							<span class={twJoin("min-w-[100px]", !showYear && "min-w-[60px]")}>{displayDate}</span>
