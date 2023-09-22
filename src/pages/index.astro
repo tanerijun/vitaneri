@@ -87,46 +87,68 @@ const { Content: LatestBit } = await bitEntries[bitEntries.length - 1]!.render()
 			<div class="flex flex-col gap-6">
 				<p>React out to me on:</p>
 				<div class="flex flex-wrap items-center gap-6">
-					<a href={`mailto:${myInfo.email}`} aria-label="email" class="social-link group">
-						<MailIcon class="social-icon" />
-						<span class="social-text"> Email</span>
+					<a href={`mailto:${myInfo.email}`} aria-label="email" class="group flex items-center gap-1">
+						<MailIcon
+							class="h-5 w-5 text-zinc-400 transition-colors group-hover:text-zinc-700 dark:text-zinc-500 dark:group-hover:text-zinc-300"
+						/>
+						<span
+							class="text-sm text-zinc-600 underline decoration-zinc-300 underline-offset-4 transition-colors group-hover:text-zinc-900 group-hover:decoration-zinc-700 dark:text-zinc-400 dark:decoration-zinc-500 dark:group-hover:text-zinc-100 dark:group-hover:decoration-zinc-300"
+						>
+							Email
+						</span>
 					</a>
-					<a href={myInfo.github} target="_blank" rel="noreferrer" aria-label="github" class="social-link group">
-						<GithubIcon class="social-icon" />
-						<span class="social-text"> Github</span>
+					<a href={myInfo.github} target="_blank" rel="noreferrer" aria-label="github" class="group flex items-center gap-1">
+						<GithubIcon
+							class="h-5 w-5 text-zinc-400 transition-colors group-hover:text-zinc-700 dark:text-zinc-500 dark:group-hover:text-zinc-300"
+						/>
+						<span
+							class="text-sm text-zinc-600 underline decoration-zinc-300 underline-offset-4 transition-colors group-hover:text-zinc-900 group-hover:decoration-zinc-700 dark:text-zinc-400 dark:decoration-zinc-500 dark:group-hover:text-zinc-100 dark:group-hover:decoration-zinc-300"
+						>
+							Github
+						</span>
 					</a>
-					<a href={myInfo.twitter} target="_blank" rel="noreferrer" aria-label="twitter" class="social-link group">
-						<TwitterIcon class="social-icon" />
-						<span class="social-text"> Twitter</span>
+					<a href={myInfo.twitter} target="_blank" rel="noreferrer" aria-label="twitter" class="group flex items-center gap-1">
+						<TwitterIcon
+							class="h-5 w-5 text-zinc-400 transition-colors group-hover:text-zinc-700 dark:text-zinc-500 dark:group-hover:text-zinc-300"
+						/>
+						<span
+							class="text-sm text-zinc-600 underline decoration-zinc-300 underline-offset-4 transition-colors group-hover:text-zinc-900 group-hover:decoration-zinc-700 dark:text-zinc-400 dark:decoration-zinc-500 dark:group-hover:text-zinc-100 dark:group-hover:decoration-zinc-300"
+						>
+							Twitter
+						</span>
 					</a>
-					<a href={myInfo.threads} target="_blank" rel="noreferrer" aria-label="threads" class="social-link group">
-						<ThreadsIcon class="social-icon" />
-						<span class="social-text"> Threads</span>
+					<a href={myInfo.threads} target="_blank" rel="noreferrer" aria-label="threads" class="group flex items-center gap-1">
+						<ThreadsIcon
+							class="h-5 w-5 text-zinc-400 transition-colors group-hover:text-zinc-700 dark:text-zinc-500 dark:group-hover:text-zinc-300"
+						/>
+						<span
+							class="text-sm text-zinc-600 underline decoration-zinc-300 underline-offset-4 transition-colors group-hover:text-zinc-900 group-hover:decoration-zinc-700 dark:text-zinc-400 dark:decoration-zinc-500 dark:group-hover:text-zinc-100 dark:group-hover:decoration-zinc-300"
+						>
+							Threads
+						</span>
 					</a>
-					<a href={myInfo.blueSky} target="_blank" rel="noreferrer" aria-label="bluesky" class="social-link group">
-						<BlueSkyIcon class="social-icon" />
-						<span class="social-text"> BlueSky</span>
+					<a href={myInfo.blueSky} target="_blank" rel="noreferrer" aria-label="bluesky" class="group flex items-center gap-1">
+						<BlueSkyIcon
+							class="h-5 w-5 text-zinc-400 transition-colors group-hover:text-zinc-700 dark:text-zinc-500 dark:group-hover:text-zinc-300"
+						/>
+						<span
+							class="text-sm text-zinc-600 underline decoration-zinc-300 underline-offset-4 transition-colors group-hover:text-zinc-900 group-hover:decoration-zinc-700 dark:text-zinc-400 dark:decoration-zinc-500 dark:group-hover:text-zinc-100 dark:group-hover:decoration-zinc-300"
+						>
+							BlueSky
+						</span>
 					</a>
-					<a href={myInfo.linkedIn} target="_blank" rel="noreferrer" aria-label="linkedIn" class="social-link group">
-						<LinkedInIcon class="social-icon" />
-						<span class="social-text"> LinkedIn</span>
+					<a href={myInfo.linkedIn} target="_blank" rel="noreferrer" aria-label="linkedIn" class="group flex items-center gap-1">
+						<LinkedInIcon
+							class="h-5 w-5 text-zinc-400 transition-colors group-hover:text-zinc-700 dark:text-zinc-500 dark:group-hover:text-zinc-300"
+						/>
+						<span
+							class="text-sm text-zinc-600 underline decoration-zinc-300 underline-offset-4 transition-colors group-hover:text-zinc-900 group-hover:decoration-zinc-700 dark:text-zinc-400 dark:decoration-zinc-500 dark:group-hover:text-zinc-100 dark:group-hover:decoration-zinc-300"
+						>
+							LinkedIn
+						</span>
 					</a>
 				</div>
 			</div>
 		</SectionWrapper>
 	</div>
 </BaseLayout>
-
-<style>
-	.social-link {
-		@apply flex items-center gap-1;
-	}
-
-	.social-icon {
-		@apply h-5 w-5 text-zinc-400 transition-colors group-hover:text-zinc-700 dark:text-zinc-500 dark:group-hover:text-zinc-300;
-	}
-
-	.social-text {
-		@apply text-sm text-zinc-600 underline decoration-zinc-300 underline-offset-4 transition-colors group-hover:text-zinc-900 group-hover:decoration-zinc-700 dark:text-zinc-400 dark:decoration-zinc-500 dark:group-hover:text-zinc-100 dark:group-hover:decoration-zinc-300;
-	}
-</style>

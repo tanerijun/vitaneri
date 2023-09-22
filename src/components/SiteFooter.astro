@@ -28,34 +28,28 @@ const shouldHideSocials = Astro.url.pathname === "/";
 			!shouldHideSocials && (
 				<div class="flex items-center gap-2">
 					<a href={`mailto:${myInfo.email}`} aria-label="email">
-						<MailIcon class="icon" />
+						<MailIcon class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 dark:text-zinc-600 dark:hover:text-zinc-100" />
 					</a>
 					<a href={myInfo.github} target="_blank" rel="noreferrer" aria-label="github">
-						<GithubIcon class="icon" />
+						<GithubIcon class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 dark:text-zinc-600 dark:hover:text-zinc-100" />
 					</a>
 					<a href={myInfo.twitter} target="_blank" rel="noreferrer" aria-label="twitter">
-						<TwitterIcon class="icon" />
+						<TwitterIcon class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 dark:text-zinc-600 dark:hover:text-zinc-100" />
 					</a>
 					<a href={myInfo.threads} target="_blank" rel="noreferrer" aria-label="threads">
-						<ThreadsIcon class="icon" />
+						<ThreadsIcon class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 dark:text-zinc-600 dark:hover:text-zinc-100" />
 					</a>
 					<a href={myInfo.blueSky} target="_blank" rel="noreferrer" aria-label="bluesky">
-						<BlueSkyIcon class="icon" />
+						<BlueSkyIcon class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 dark:text-zinc-600 dark:hover:text-zinc-100" />
 					</a>
 					<a href={myInfo.linkedIn} target="_blank" rel="noreferrer" aria-label="linkedIn">
-						<LinkedInIcon class="icon" />
+						<LinkedInIcon class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 dark:text-zinc-600 dark:hover:text-zinc-100" />
 					</a>
 					<a href="/rss.xml" target="_blank" rel="noreferrer" aria-label="rss">
-						<RSSIcon class="icon" />
+						<RSSIcon class="h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 dark:text-zinc-600 dark:hover:text-zinc-100" />
 					</a>
 				</div>
 			)
 		}
 	</div>
 </footer>
-
-<style>
-	.icon {
-		@apply h-5 w-5 text-zinc-400 transition-colors hover:text-zinc-900 dark:text-zinc-600 dark:hover:text-zinc-100;
-	}
-</style>
