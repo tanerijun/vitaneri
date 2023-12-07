@@ -28,7 +28,7 @@ export default function MobileMenu() {
 				class="w-3/4 bg-transparent backdrop:bg-white/70 backdrop:backdrop-blur-sm backdrop:dark:bg-black/70"
 			>
 				<div class="flex flex-col gap-12 p-4">
-					<button autofocus onClick={() => dialog.close()} class="self-end">
+					<button onClick={() => dialog.close()} class="self-end">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="1em"
