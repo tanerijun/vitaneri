@@ -55,7 +55,7 @@ const pageDescription = tag ? `Posts tagged with ${tag}.` : "List of tags.";
 		<ul class="flex flex-wrap justify-center gap-4">
 			{
 				tagList.map((tag) => {
-					const isActive = Astro.url.pathname.startsWith(`/tags/${tag}`);
+					const isActive = Astro.url.pathname.split("/").at(-1) === tag;
 
 					return (
 						<a
