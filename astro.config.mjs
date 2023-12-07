@@ -28,14 +28,14 @@ const astroExpressiveCodeOptions = {
 		showCopyToClipboardButton: false,
 		extractFileNameFromCode: false,
 		removeCommentsWhenCopyingTerminalFrames: false,
-		styleOverrides: {
+	},
+	styleOverrides: {
+		uiFontFamily: ["Atkinson Hyperlegible", ...defaultTheme.fontFamily.sans].join(","),
+		frames: {
 			frameBoxShadowCssValue: "none",
 			tooltipSuccessBackground: "color-mix(in oklab, var(--code-background), transparent 30%)",
 			inlineButtonHoverOrFocusBackground: "transparent",
 		},
-	},
-	styleOverrides: {
-		uiFontFamily: ["Atkinson Hyperlegible", ...defaultTheme.fontFamily.sans].join(","),
 	},
 };
 
