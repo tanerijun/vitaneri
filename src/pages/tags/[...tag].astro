@@ -58,22 +58,27 @@ const pageDescription = tag ? `Posts tagged with ${tag}.` : "List of tags.";
 					const isActive = Astro.url.pathname.endsWith(tag);
 
 					return (
-						<a
-							href={`/tags/${tag}`}
-							class="relative px-4 py-2 text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
-							rel="prefetch-intent"
-						>
-							<li class={twJoin("cursor-pointer select-none text-sm", isActive && "text-zinc-900 dark:text-zinc-100")}>{tag}</li>
-							{!isActive && <li>XX</li>}
-							{isActive && (
-								<div
-									id="active-tag"
-									class="absolute left-0 top-0 -z-10 h-full w-full rounded-full border-2 border-zinc-200 transition-all dark:border-zinc-700"
-									aria-hidden="true"
-									transition:name="active-tag-marker"
-								/>
-							)}
-						</a>
+						<>
+							<p>{Astro.url.pathname}</p>
+							<a
+								href={`/tags/${tag}`}
+								class="relative px-4 py-2 text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+								rel="prefetch-intent"
+							>
+								<li class={twJoin("cursor-pointer select-none text-sm", isActive && "text-zinc-900 dark:text-zinc-100")}>
+									{tag}
+								</li>
+								{!isActive && <li>XX</li>}
+								{isActive && (
+									<div
+										id="active-tag"
+										class="absolute left-0 top-0 -z-10 h-full w-full rounded-full border-2 border-zinc-200 transition-all dark:border-zinc-700"
+										aria-hidden="true"
+										transition:name="active-tag-marker"
+									/>
+								)}
+							</a>
+						</>
 					);
 				})
 			}
