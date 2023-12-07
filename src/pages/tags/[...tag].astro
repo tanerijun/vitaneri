@@ -64,6 +64,7 @@ const pageDescription = tag ? `Posts tagged with ${tag}.` : "List of tags.";
 							rel="prefetch-intent"
 						>
 							<li class={twJoin("cursor-pointer select-none text-sm", isActive && "text-zinc-900 dark:text-zinc-100")}>{tag}</li>
+							{!isActive && <li>XX</li>}
 							{isActive && (
 								<div
 									id="active-tag"
