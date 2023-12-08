@@ -18,7 +18,7 @@ import { siteInfo } from "../data/site-info";
 
 	<div class="mx-auto flex max-w-2xl items-center justify-between px-8 py-8 md:px-0">
 		<div id="site-logo">
-			<a href="/" rel="prefetch" aria-label="Vitaneri logo">
+			<a href="/" aria-label="Vitaneri logo" data-astro-prefetch="viewport">
 				<span class="font-logo text-5xl transition-colors hover:text-zinc-900 dark:hover:text-zinc-100">Vi</span>
 			</a>
 		</div>
@@ -39,7 +39,7 @@ import { siteInfo } from "../data/site-info";
 											? "text-zinc-900 dark:text-zinc-100"
 											: "text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100",
 									)}
-									rel="prefetch"
+									data-astro-prefetch="viewport"
 								>
 									{navLink.displayText}
 								</a>
