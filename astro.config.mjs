@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
-import prefetch from "@astrojs/prefetch";
 import solidJs from "@astrojs/solid-js";
 import getReadingTime from "reading-time";
 import defaultTheme from "tailwindcss/defaultTheme";
@@ -48,7 +47,6 @@ export default defineConfig({
 		}),
 		astroExpressiveCode(astroExpressiveCodeOptions),
 		sitemap(),
-		prefetch(),
 	],
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
