@@ -1,5 +1,14 @@
+import { prefetch } from "astro:prefetch";
 import { For } from "solid-js";
 import { siteInfo } from "../data/site-info";
+
+function prefetchNavLinks() {
+	for (const navLink of siteInfo.navLinks) {
+		prefetch(navLink.url);
+	}
+
+	prefetch("/");
+}
 
 export default function MobileMenu() {
 	let dialog: HTMLDialogElement;
@@ -7,7 +16,10 @@ export default function MobileMenu() {
 	return (
 		<>
 			<button
-				onClick={() => dialog.showModal()}
+				onClick={() => {
+					dialog.showModal();
+					prefetchNavLinks();
+				}}
 				class="rounded-md p-1 hover:bg-zinc-100 dark:hover:bg-zinc-800 md:hidden"
 				aria-label="menu"
 			>
