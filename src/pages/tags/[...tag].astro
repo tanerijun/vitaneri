@@ -54,20 +54,17 @@ const pageDescription = tag ? `Posts tagged with ${tag}.` : "List of tags.";
 	<div class="mx-auto flex max-w-2xl flex-col gap-40">
 		<ul class="flex flex-wrap justify-center gap-4">
 			{
-				tagList.map((tag) => {
-					const isActive = Astro.url.pathname.endsWith(tag);
+				tagList.map((t) => {
+					const isActive = t === tag;
 
 					return (
 						<>
 							<a
-								href={`/tags/${tag}`}
+								href={`/tags/${t}`}
 								class="relative px-4 py-2 text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
 								rel="prefetch-intent"
 							>
-								<li class={twJoin("cursor-pointer select-none text-sm", isActive && "text-zinc-900 dark:text-zinc-100")}>
-									{tag}
-								</li>
-								{!isActive && <li>XX</li>}
+								<li class={twJoin("cursor-pointer select-none text-sm", isActive && "text-zinc-900 dark:text-zinc-100")}>{t}</li>
 								{isActive && (
 									<div
 										id="active-tag"
