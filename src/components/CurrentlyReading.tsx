@@ -10,10 +10,10 @@ function LoadingIndicator() {
 	return (
 		<div role="status" class="flex animate-pulse flex-col">
 			<span class="sr-only">Loading...</span>
-			<div class="mb-4 h-3 w-full rounded-full bg-zinc-200 dark:bg-zinc-700 md:w-3/4" />
+			<div class="mb-4 h-3 w-full rounded-full bg-zinc-200 md:w-3/4 dark:bg-zinc-700" />
 			<div class="mb-4 h-3 w-full rounded-full bg-zinc-200 dark:bg-zinc-700" />
-			<div class="mb-4 h-3 w-full rounded-full bg-zinc-200 dark:bg-zinc-700 md:w-1/2" />
-			<div class="mb-4 h-3 w-full rounded-full bg-zinc-200 dark:bg-zinc-700 md:w-2/3" />
+			<div class="mb-4 h-3 w-full rounded-full bg-zinc-200 md:w-1/2 dark:bg-zinc-700" />
+			<div class="mb-4 h-3 w-full rounded-full bg-zinc-200 md:w-2/3 dark:bg-zinc-700" />
 			<div class="mb-4 h-3 w-full rounded-full bg-zinc-200 dark:bg-zinc-700" />
 		</div>
 	);
@@ -53,7 +53,7 @@ export default function CurrentlyReading() {
 							<li>
 								<a
 									href={book.url}
-									class="text-zinc-700 no-underline group-hover:text-zinc-400 dark:text-zinc-300 group-hover:dark:text-zinc-600"
+									class="text-zinc-700 no-underline transition-colors group-hover:text-zinc-400 dark:text-zinc-300 group-hover:dark:text-zinc-600"
 									target="_blank"
 									rel="norereffer"
 								>
