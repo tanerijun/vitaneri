@@ -10,7 +10,7 @@ type Props = {
 const { entries, showYear = false } = Astro.props;
 ---
 
-<ul class="group flex flex-col gap-3">
+<ul class="flex flex-col text-zinc-700 has-[li:hover]:text-zinc-400 dark:text-zinc-300 dark:has-[li:hover]:text-zinc-500">
 	{
 		entries.map((entry) => {
 			const displayDate =
@@ -18,12 +18,13 @@ const { entries, showYear = false } = Astro.props;
 				entry.data.datetime.toLocaleDateString("en-us", { month: "short", day: "2-digit" });
 
 			return (
-				<li class="text-zinc-700 transition-colors duration-0 group-hover:text-zinc-400 dark:text-zinc-300 group-hover:dark:text-zinc-500">
-					<a href={`/posts/${entry.slug}`}>
-						<div class="flex items-start gap-4 transition-colors hover:text-zinc-950 dark:hover:text-white">
-							<span class={twJoin("min-w-[100px]", !showYear && "min-w-[60px]")}>{displayDate}</span>
-							<p transition:name={entry.slug}>{entry.data.title}</p>
-						</div>
+				<li class="max-w-fit">
+					<a
+						href={`/posts/${entry.slug}`}
+						class="flex max-w-fit items-start gap-4 py-1 transition-colors duration-200 hover:text-zinc-950 dark:hover:text-white"
+					>
+						<span class={twJoin("min-w-[100px]", !showYear && "min-w-[60px]")}>{displayDate}</span>
+						<p transition:name={entry.slug}>{entry.data.title}</p>
 					</a>
 				</li>
 			);
