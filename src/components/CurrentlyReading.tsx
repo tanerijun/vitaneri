@@ -47,17 +47,17 @@ export default function CurrentlyReading() {
 				<p>Seems like I'm not reading anything at the moment.</p>
 			</Match>
 			<Match when={books()?.length}>
-				<ul class="group">
+				<ul class="list-disc text-zinc-700 marker:text-zinc-300 has-[li:hover]:text-zinc-400 dark:text-zinc-300 dark:marker:text-zinc-600 dark:has-[li:hover]:text-zinc-500">
 					<For each={books()}>
 						{(book) => (
-							<li>
+							<li class="ml-6 max-w-fit">
 								<a
 									href={book.url}
-									class="text-zinc-700 no-underline transition-colors group-hover:text-zinc-400 dark:text-zinc-300 group-hover:dark:text-zinc-600"
+									class="flex max-w-fit items-start gap-4 py-1 pl-2 transition-colors duration-200 hover:text-zinc-950 dark:hover:text-white"
 									target="_blank"
 									rel="norereffer"
 								>
-									<span class="transition-colors hover:text-zinc-900 dark:hover:text-zinc-100">{book.title}</span>
+									{book.title}
 								</a>
 							</li>
 						)}
