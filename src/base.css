@@ -62,14 +62,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--color-stroke: theme(colors.zinc.100);
-}
-
-.dark {
-	--color-stroke: theme(colors.zinc.800);
-}
-
 @layer base {
 	* {
 		@apply focus:outline-zinc-700 dark:focus:outline-zinc-300;

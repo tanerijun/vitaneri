@@ -14,6 +14,16 @@ const Element = tag;
 	{text}
 </Element>
 
+<style is:global>
+	:root {
+		--color-stroke: theme(colors.zinc.100);
+	}
+
+	.dark {
+		--color-stroke: theme(colors.zinc.800);
+	}
+</style>
+
 <style>
 	.stroked {
 		text-shadow:
