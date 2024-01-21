@@ -1,0 +1,64 @@
+<button id="search-button">Search</button>
+
+<dialog
+	id="search-dialog"
+	class="h-2/3 w-1/2 overscroll-contain rounded-md border border-zinc-300 bg-transparent p-4 shadow-md backdrop:bg-white/90 backdrop:backdrop-blur-md dark:border-zinc-700 backdrop:dark:bg-black/90"
+>
+	<div id="search-container" class="h-full w-full [&>div]:pb-4"></div>
+</dialog>
+
+<script>
+	document.addEventListener("astro:page-load", () => {
+		const searchButton = document.querySelector("#search-button") as HTMLButtonElement;
+		const searchDialog = document.querySelector("#search-dialog") as HTMLDialogElement;
+		const searchContainer = document.querySelector("#search-container") as HTMLDivElement;
+
+		searchButton.addEventListener("click", () => searchDialog.showModal());
+
+		searchDialog.addEventListener("click", () => searchDialog.close());
+
+		searchContainer.addEventListener("click", (event) => {
+			event.stopPropagation();
+		});
+
+		window.addEventListener("keydown", (event) => {
+			if (event.key === "/" || (event.key === "." && !searchDialog.open)) {
+				event.preventDefault();
+				searchDialog.showModal();
+			}
+		});
+
+		// @ts-expect-error
+		// eslint-disable-next-line no-undef
+		new PagefindUI({
+			element: "#search-container",
+			resetStyles: false,
+			showSubResult: true,
+			pageSize: 5,
+			showImages: false,
+			autofocus: true,
+		});
+	});
+</script>
+
+<style is:global>
+	:root {
+		--pagefind-ui-scale: 0.8;
+		--pagefind-ui-border-width: 2px;
+		--pagefind-ui-border-radius: 8px;
+		--pagefind-ui-font: "Atkinson Hyperlegible";
+		--pagefind-ui-primary: theme(colors.zinc.700);
+		--pagefind-ui-text: theme(colors.zinc.700);
+		--pagefind-ui-background: theme(colors.white);
+		--pagefind-ui-border: theme(colors.zinc.100);
+		--pagefind-ui-tag: theme(colors.zinc.100);
+	}
+
+	.dark {
+		--pagefind-ui-primary: theme(colors.zinc.300);
+		--pagefind-ui-text: theme(colors.zinc.300);
+		--pagefind-ui-background: theme(colors.zinc.900);
+		--pagefind-ui-border: theme(colors.zinc.700);
+		--pagefind-ui-tag: theme(colors.zinc.700);
+	}
+</style>

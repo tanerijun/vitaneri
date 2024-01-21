@@ -3,6 +3,7 @@ import MobileMenu from "./MobileMenu";
 import ThemeToggle from "./ThemeToggle";
 import { twJoin } from "../lib/tw-join";
 import { siteInfo } from "../data/site-info";
+import PageFind from "./PageFind.astro";
 ---
 
 <header>
@@ -57,6 +58,7 @@ import { siteInfo } from "../data/site-info";
 			</nav>
 
 			<MobileMenu client:idle />
+			<PageFind />
 			<ThemeToggle client:idle />
 		</div>
 	</div>
