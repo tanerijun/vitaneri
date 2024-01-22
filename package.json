@@ -10,8 +10,7 @@
 		"astro": "astro",
 		"lint": "eslint .",
 		"format": "prettier --write .",
-		"create": "node content-generator",
-		"pagefind-dev": "npm run build && npm run preview"
+		"create": "node content-generator"
 	},
 	"dependencies": {
 		"@astrojs/rss": "^4.0.2",
