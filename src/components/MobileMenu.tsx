@@ -37,7 +37,7 @@ export default function MobileMenu() {
 			<dialog
 				ref={dialog!}
 				onClick={() => dialog.close()}
-				class="w-3/4 bg-transparent backdrop:bg-white/70 backdrop:backdrop-blur-sm backdrop:dark:bg-black/70"
+				class="w-3/4 bg-transparent backdrop:bg-white/70 backdrop:backdrop-blur-md backdrop:dark:bg-black/70"
 			>
 				<div class="flex flex-col gap-12 p-4">
 					<button onClick={() => dialog.close()} class="self-end">
