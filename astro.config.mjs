@@ -7,6 +7,7 @@ import defaultTheme from "tailwindcss/defaultTheme";
 import { toString } from "mdast-util-to-string";
 import { siteInfo } from "./src/data/site-info";
 import { astroExpressiveCode } from "astro-expressive-code";
+import { pagefindIntegration } from "./src/lib/astro-integrations/pagefind";
 
 export function remarkReadingTime() {
 	return function (tree, { data }) {
@@ -47,6 +48,7 @@ export default defineConfig({
 		}),
 		astroExpressiveCode(astroExpressiveCodeOptions),
 		sitemap(),
+		pagefindIntegration(),
 	],
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
