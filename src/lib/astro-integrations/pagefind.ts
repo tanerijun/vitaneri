@@ -9,13 +9,13 @@ export function pagefindIntegration(): AstroIntegration {
 		hooks: {
 			"astro:server:setup": ({ logger, server }) => {
 				if (!fs.existsSync("dist")) {
-					logger.error("Couldn't find Pagefind index.");
+					logger.error("Couldn't find Pagefind resources.");
 					logger.warn("To enable local development. Make sure to build your project at least once.");
-					logger.warn("Skipping serving Pagefind index.");
+					logger.warn("Skipping serving Pagefind resources.");
 					return;
 				}
 
-				logger.info("Serving Pagefind index from previous build.");
+				logger.info("Serving Pagefind resources from previous build.");
 				const serve = sirv("dist", { dev: true, etag: true });
 				server.middlewares.use((req, res, next) => {
 					if (req.url?.startsWith("/pagefind")) {
