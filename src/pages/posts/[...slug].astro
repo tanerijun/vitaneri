@@ -19,7 +19,7 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description} ogImage={`/open-graph/${entry.slug}.png`}>
-	<article class="mx-auto flex max-w-2xl flex-col gap-20">
+	<article class="mx-auto flex max-w-2xl flex-col gap-20" data-pagefind-body>
 		<header class="flex flex-col gap-4">
 			<h1 class="text-3xl font-bold text-zinc-900 transition-colors dark:text-white" transition:name={entry.slug}>
 				{entry.data.title}
@@ -28,7 +28,7 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
 				<span>
 					{entry.data.datetime.toLocaleString("en-us", { year: "numeric", month: "short", day: "numeric" })}
 				</span>
-				 · {remarkPluginFrontmatter.minutesRead}
+				· {remarkPluginFrontmatter.minutesRead}
 			</small>
 			<div class="mt-1 flex gap-4">
 				{
