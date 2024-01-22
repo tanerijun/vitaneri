@@ -9,7 +9,7 @@ type Props = {
 const { headingTag = "h2", headingText } = Astro.props;
 ---
 
-<section class="relative">
+<section id={String(headingText).toLowerCase()} class="relative">
 	<StylishHeading tag={headingTag} text={headingText} />
 	<slot />
 </section>
