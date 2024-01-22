@@ -57,9 +57,11 @@ import PageFind from "./PageFind.astro";
 				}
 			</nav>
 
-			<MobileMenu client:idle />
-			<PageFind />
-			<ThemeToggle client:idle />
+			<div class="flex items-center gap-4">
+				<MobileMenu client:idle />
+				<PageFind />
+				<ThemeToggle client:idle />
+			</div>
 		</div>
 	</div>
 </header>

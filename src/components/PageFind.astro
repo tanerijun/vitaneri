@@ -1,12 +1,25 @@
-<button id="search-button">Search</button>
+<button
+	id="search-button"
+	class="rounded-full p-0.5 text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-100"
+>
+	<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+		<path
+			fill="none"
+			stroke="currentColor"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="2"
+			d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314"></path>
+	</svg>
+</button>
 
 <dialog
 	id="search-dialog"
-	class="h-2/3 w-1/2 overscroll-contain rounded-md border border-zinc-300 bg-transparent p-4 shadow-md backdrop:bg-white/80 backdrop:backdrop-blur-md dark:border-zinc-700 backdrop:dark:bg-black/70"
+	class="h-2/3 w-1/2 overscroll-contain rounded-md border border-zinc-300 bg-transparent px-4 py-6 shadow-md backdrop:bg-white/80 backdrop:backdrop-blur-md dark:border-zinc-700 backdrop:dark:bg-black/70"
 >
 	<div
 		id="search-container"
-		class="h-full w-full [&>div]:pb-4 [&_mark]:bg-zinc-300 [&_mark]:text-zinc-950 [&_mark]:dark:bg-zinc-700 [&_mark]:dark:text-zinc-50"
+		class="h-full w-full [&>div]:pb-6 [&_mark]:bg-zinc-300 [&_mark]:text-zinc-950 [&_mark]:dark:bg-zinc-700 [&_mark]:dark:text-zinc-50"
 	>
 	</div>
 </dialog>
