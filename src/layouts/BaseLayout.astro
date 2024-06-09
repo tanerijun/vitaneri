@@ -62,7 +62,7 @@ const formattedOgImageUrl = siteInfo.url + ogImage;
 		<meta property="twitter:image" content={formattedOgImageUrl} />
 
 		<LoadThemeScript />
-		<ViewTransitions />
+		<ViewTransitions fallback="none" />
 		<PageFindHead />
 	</head>
 	<body
