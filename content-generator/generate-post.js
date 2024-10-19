@@ -12,31 +12,31 @@ const slugger = new GithubSlugger();
  * @returns {string} The path to the post.
  */
 export function generatePost(path, title, description = "", tags = "") {
-	const BASE_PATH = path;
-	const postSlug = slugger.slug(title);
-	const processedTags = processTagsString(tags);
-	const FILE_PATH = `${BASE_PATH}/${postSlug}.md`;
+  const BASE_PATH = path;
+  const postSlug = slugger.slug(title);
+  const processedTags = processTagsString(tags);
+  const FILE_PATH = `${BASE_PATH}/${postSlug}.md`;
 
-	const frontmatter = {
-		datetime: new Date().toISOString(),
-		title,
-		description,
-		tags: processedTags,
-	};
+  const frontmatter = {
+    datetime: new Date().toISOString(),
+    title,
+    description,
+    tags: processedTags,
+  };
 
-	const writeStream = fs.createWriteStream(FILE_PATH);
+  const writeStream = fs.createWriteStream(FILE_PATH);
 
-	writeStream.write("---\n");
-	for (const [key, value] of Object.entries(frontmatter)) {
-		writeStream.write(`${key}: ${value}\n`);
-	}
-	writeStream.write("---\n");
-	writeStream.write("\n");
-	writeStream.write("{/* Happy writing! */}");
-	writeStream.write("\n");
-	writeStream.end();
+  writeStream.write("---\n");
+  for (const [key, value] of Object.entries(frontmatter)) {
+    writeStream.write(`${key}: ${value}\n`);
+  }
+  writeStream.write("---\n");
+  writeStream.write("\n");
+  writeStream.write("{/* Happy writing! */}");
+  writeStream.write("\n");
+  writeStream.end();
 
-	return FILE_PATH;
+  return FILE_PATH;
 }
 
 /**
@@ -46,13 +46,13 @@ export function generatePost(path, title, description = "", tags = "") {
  * @returns {string} The tags string in YAML array format.
  */
 function processTagsString(tags) {
-	const separator = "\n  - ";
-	let res = "";
+  const separator = "\n  - ";
+  let res = "";
 
-	const tagsArray = tags.split(",").map((tag) => tag.trim());
-	tagsArray.forEach((tag) => {
-		res += separator + tag;
-	});
+  const tagsArray = tags.split(",").map((tag) => tag.trim());
+  tagsArray.forEach((tag) => {
+    res += separator + tag;
+  });
 
-	return res;
+  return res;
 }

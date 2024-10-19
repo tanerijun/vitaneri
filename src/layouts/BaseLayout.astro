@@ -10,17 +10,17 @@ import LoadThemeScript from "../components/LoadThemeScript.astro";
 import PageFindHead from "~/components/PageFindHead.astro";
 
 type Props = {
-	title?: string;
-	description?: string;
-	ogImage?: string;
-	canonicalUrl?: string;
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
 };
 
 const {
-	title = siteInfo.title,
-	description = siteInfo.description,
-	ogImage = siteInfo.OGImage,
-	canonicalUrl = new URL(Astro.url.pathname, Astro.site).href,
+  title = siteInfo.title,
+  description = siteInfo.description,
+  ogImage = siteInfo.OGImage,
+  canonicalUrl = new URL(Astro.url.pathname, Astro.site).href,
 } = Astro.props;
 
 const formattedTitle = title === siteInfo.title ? siteInfo.title : title + " - " + myInfo.name;
@@ -28,52 +28,52 @@ const formattedOgImageUrl = siteInfo.url + ogImage;
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<link rel="canonical" href={canonicalUrl} />
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-		<link rel="manifest" href="/site.webmanifest" />
-		<link rel="sitemap" href="/sitemap-index.xml" />
-		<link rel="preload" href="/fonts/vitaneri-logo.woff2" as="font" type="font/woff2" crossorigin />
-		<link rel="preload" href="/fonts/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin />
-		<link rel="preload" href="/fonts/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin />
-		<link rel="preload" href="/fonts/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin />
-		<link rel="preload" href="/fonts/Atkinson-Hyperlegible-BoldItalic-102a.woff2" as="font" type="font/woff2" crossorigin />
-		<link rel="preload" href="/fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preload" href="/fonts/vitaneri-logo.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Atkinson-Hyperlegible-BoldItalic-102a.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
 
-		<title>{formattedTitle}</title>
-		<meta name="title" content={formattedTitle} />
-		<meta name="description" content={description} />
-		<meta name="author" content={myInfo.name} />
+    <title>{formattedTitle}</title>
+    <meta name="title" content={formattedTitle} />
+    <meta name="description" content={description} />
+    <meta name="author" content={myInfo.name} />
 
-		<meta property="og:title" content={formattedTitle} />
-		<meta property="og:description" content={description} />
-		<meta property="og:url" content={canonicalUrl} />
-		<meta property="og:image" content={formattedOgImageUrl} />
+    <meta property="og:title" content={formattedTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={formattedOgImageUrl} />
 
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content={canonicalUrl} />
-		<meta property="twitter:title" content={formattedTitle} />
-		<meta property="twitter:description" content={description} />
-		<meta property="twitter:image" content={formattedOgImageUrl} />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalUrl} />
+    <meta property="twitter:title" content={formattedTitle} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={formattedOgImageUrl} />
 
-		<LoadThemeScript />
-		<ViewTransitions fallback="none" />
-		<PageFindHead />
-	</head>
-	<body
-		class="flex min-h-screen flex-col gap-10 overflow-y-scroll bg-white text-zinc-700 antialiased selection:bg-zinc-200 dark:bg-zinc-900 dark:text-zinc-300 dark:selection:bg-zinc-800 md:gap-20"
-	>
-		<SiteHeader />
+    <LoadThemeScript />
+    <ViewTransitions fallback="none" />
+    <PageFindHead />
+  </head>
+  <body
+    class="flex min-h-screen flex-col gap-10 overflow-y-scroll bg-white text-zinc-700 antialiased selection:bg-zinc-200 dark:bg-zinc-900 dark:text-zinc-300 dark:selection:bg-zinc-800 md:gap-20"
+  >
+    <SiteHeader />
 
-		<main id="main-content" class="overflow-x-clip px-8 md:px-0">
-			<slot />
-		</main>
+    <main id="main-content" class="overflow-x-clip px-8 md:px-0">
+      <slot />
+    </main>
 
-		<SiteFooter />
-	</body>
+    <SiteFooter />
+  </body>
 </html>

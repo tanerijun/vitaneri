@@ -47,17 +47,17 @@ For the brute force approach, we just have to calculate all the possibles area f
 
 ```ts
 function maxArea(height: number[]): number {
-	let max: number = 0;
+  let max: number = 0;
 
-	for (let i = 0; i < height.length; i++) {
-		for (let j = i + 1; j < height.length; j++) {
-			const w = j - i;
-			const h = Math.min(height[i], height[j]);
-			max = Math.max(max, w * h);
-		}
-	}
+  for (let i = 0; i < height.length; i++) {
+    for (let j = i + 1; j < height.length; j++) {
+      const w = j - i;
+      const h = Math.min(height[i], height[j]);
+      max = Math.max(max, w * h);
+    }
+  }
 
-	return max;
+  return max;
 }
 ```
 
@@ -71,23 +71,23 @@ For this approach, we have two pointers that start off at the edges of the array
 
 ```ts
 function maxArea(height: number[]): number {
-	let max: number = 0;
-	let l: number = 0;
-	let r: number = height.length - 1;
+  let max: number = 0;
+  let l: number = 0;
+  let r: number = height.length - 1;
 
-	while (l < r) {
-		const w = r - l;
-		const h = Math.min(height[l], height[r]);
-		max = Math.max(max, w * h);
+  while (l < r) {
+    const w = r - l;
+    const h = Math.min(height[l], height[r]);
+    max = Math.max(max, w * h);
 
-		if (height[l] < height[r]) {
-			l++;
-		} else {
-			r--;
-		}
-	}
+    if (height[l] < height[r]) {
+      l++;
+    } else {
+      r--;
+    }
+  }
 
-	return max;
+  return max;
 }
 ```
 

@@ -6,7 +6,7 @@ tags:
   - css
 ---
 
-You might have been in a situation where you're forced or would prefer to write vanilla CSS in a Tailwind project. 
+You might have been in a situation where you're forced or would prefer to write vanilla CSS in a Tailwind project.
 
 In my case, I wanted to write some animation code involving multiple keyframes, and pseudo-elements, and implementing it in Tailwind resulted in a class name that's very long and hard to read, so I reached out to vanilla CSS instead.
 
@@ -30,10 +30,10 @@ You can also use it for CSS variable like this:
 
 ```css
 :root {
-	--dark: theme(colors.zinc.900);
-	--dark-shade: theme(colors.zinc.600);
-	--light: theme(colors.white);
-	--light-shade: theme(colors.zinc.400);
+  --dark: theme(colors.zinc.900);
+  --dark-shade: theme(colors.zinc.600);
+  --light: theme(colors.white);
+  --light-shade: theme(colors.zinc.400);
 }
 ```
 

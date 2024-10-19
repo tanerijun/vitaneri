@@ -1,37 +1,37 @@
 import { z, defineCollection } from "astro:content";
 
 const postCollection = defineCollection({
-	type: "content",
-	schema: z.object({
-		datetime: z.date(),
-		title: z.string(),
-		description: z.string().regex(/^[A-Z].*\.$/),
-		tags: z.array(z.string()),
-	}),
+  type: "content",
+  schema: z.object({
+    datetime: z.date(),
+    title: z.string(),
+    description: z.string().regex(/^[A-Z].*\.$/),
+    tags: z.array(z.string()),
+  }),
 });
 
 const projectCollection = defineCollection({
-	type: "data",
-	schema: z.object({
-		title: z.string(),
-		description: z.string(),
-		techs: z.array(z.string()),
-		url: z.string().url().optional(),
-		repo: z.string().url().optional(),
-		featured: z.boolean().optional(),
-		sortOrder: z.number(),
-	}),
+  type: "data",
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    techs: z.array(z.string()),
+    url: z.string().url().optional(),
+    repo: z.string().url().optional(),
+    featured: z.boolean().optional(),
+    sortOrder: z.number(),
+  }),
 });
 
 const bitCollection = defineCollection({
-	type: "content",
-	schema: z.object({
-		datetime: z.date(),
-	}),
+  type: "content",
+  schema: z.object({
+    datetime: z.date(),
+  }),
 });
 
 export const collections = {
-	posts: postCollection,
-	projects: projectCollection,
-	bits: bitCollection,
+  posts: postCollection,
+  projects: projectCollection,
+  bits: bitCollection,
 };

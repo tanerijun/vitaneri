@@ -231,8 +231,8 @@ Here is an example of how the request body should look like when calling the POS
 
 ```json
 {
-	"name": "John",
-	"age": 17
+  "name": "John",
+  "age": 17
 }
 ```
 
@@ -242,7 +242,7 @@ Here is an example of how the request body should look like when calling the DEL
 
 ```json
 {
-	"id": 1
+  "id": 1
 }
 ```
 

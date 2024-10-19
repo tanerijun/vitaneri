@@ -25,13 +25,13 @@ Next, fill in the template below with your information.
 
 ```html
 <script
-	src="https://utteranc.es/client.js"
-	repo="[ENTER REPO HERE]"
-	issue-term="[ISSUE TERM]"
-	label="[LABEL NAME]"
-	theme="[THEME NAME]"
-	crossorigin="anonymous"
-	async
+  src="https://utteranc.es/client.js"
+  repo="[ENTER REPO HERE]"
+  issue-term="[ISSUE TERM]"
+  label="[LABEL NAME]"
+  theme="[THEME NAME]"
+  crossorigin="anonymous"
+  async
 ></script>
 ```
 
@@ -65,14 +65,14 @@ const container = document.querySelector("#utterances-container"); // your id in
 
 // Replace the value of each key with yours
 Object.entries({
-	src: "https://utteranc.es/client.js",
-	repo: "tanerijun/vitaneri-v3",
-	"issue-term": "pathname",
-	label: "post comments", // omit this line, if you don't need label
-	theme: "github-dark",
-	crossorigin: "anonymous",
+  src: "https://utteranc.es/client.js",
+  repo: "tanerijun/vitaneri-v3",
+  "issue-term": "pathname",
+  label: "post comments", // omit this line, if you don't need label
+  theme: "github-dark",
+  crossorigin: "anonymous",
 }).forEach(([key, value]) => {
-	script.setAttribute(key, value);
+  script.setAttribute(key, value);
 });
 
 container?.appendChild(script);
@@ -86,21 +86,21 @@ Your `Utterances.astro` should now look something like this:
 <div id="utterances-container"></div>
 
 <script>
-	const script = document.createElement("script");
-	const container = document.querySelector("#utterances-container");
+  const script = document.createElement("script");
+  const container = document.querySelector("#utterances-container");
 
-	Object.entries({
-		src: "https://utteranc.es/client.js",
-		repo: "tanerijun/vitaneri-v3",
-		"issue-term": "pathname",
-		label: "post comments",
-		theme: "github-dark",
-		crossorigin: "anonymous",
-	}).forEach(([key, value]) => {
-		script.setAttribute(key, value);
-	});
+  Object.entries({
+    src: "https://utteranc.es/client.js",
+    repo: "tanerijun/vitaneri-v3",
+    "issue-term": "pathname",
+    label: "post comments",
+    theme: "github-dark",
+    crossorigin: "anonymous",
+  }).forEach(([key, value]) => {
+    script.setAttribute(key, value);
+  });
 
-	container?.appendChild(script);
+  container?.appendChild(script);
 </script>
 ```
 
@@ -114,23 +114,23 @@ Now let's take this a step further by having the Utterances theme match the site
 <div id="utterances-container"></div>
 
 <script>
-	const script = document.createElement("script");
-	const container = document.querySelector("#utterances-container");
-	const currentTheme = localStorage.getItem("theme");
+  const script = document.createElement("script");
+  const container = document.querySelector("#utterances-container");
+  const currentTheme = localStorage.getItem("theme");
 
-	// Set configurations
-	Object.entries({
-		src: "https://utteranc.es/client.js",
-		repo: "tanerijun/vitaneri-v3",
-		"issue-term": "pathname",
-		label: "post comments",
-		theme: currentTheme == "light" ? "github-light" : "github-dark",
-		crossorigin: "anonymous",
-	}).forEach(([key, value]) => {
-		script.setAttribute(key, value);
-	});
+  // Set configurations
+  Object.entries({
+    src: "https://utteranc.es/client.js",
+    repo: "tanerijun/vitaneri-v3",
+    "issue-term": "pathname",
+    label: "post comments",
+    theme: currentTheme == "light" ? "github-light" : "github-dark",
+    crossorigin: "anonymous",
+  }).forEach(([key, value]) => {
+    script.setAttribute(key, value);
+  });
 
-	container?.appendChild(script);
+  container?.appendChild(script);
 </script>
 ```
 
@@ -144,15 +144,15 @@ In order to make sure the Utterance theme is synced with the `theme` value in ou
 
 ```ts
 function toggleUtterancesTheme() {
-	if (document.querySelector(".utterances-frame")) {
-		const theme = localStorage.getItem("theme") === "light" ? "github-light" : "github-dark";
-		const message = {
-			type: "set-theme",
-			theme,
-		};
-		const iframe = document.querySelector(".utterances-frame") as HTMLIFrameElement; // omit as HTMLIFrameElement if you're wring JS
-		iframe?.contentWindow?.postMessage(message, "https://utteranc.es");
-	}
+  if (document.querySelector(".utterances-frame")) {
+    const theme = localStorage.getItem("theme") === "light" ? "github-light" : "github-dark";
+    const message = {
+      type: "set-theme",
+      theme,
+    };
+    const iframe = document.querySelector(".utterances-frame") as HTMLIFrameElement; // omit as HTMLIFrameElement if you're wring JS
+    iframe?.contentWindow?.postMessage(message, "https://utteranc.es");
+  }
 }
 ```
 
@@ -162,13 +162,13 @@ And finally, we need to make sure our light/dark mode toggle button change the v
 
 ```ts
 themeBtn?.addEventListener("click", function () {
-	// toggle light/dark mode
-	if (htmlClassList?.contains("theme-dark")) {
-		localStorage.setItem("theme", "light");
-	} else {
-		localStorage.setItem("theme", "dark");
-	}
-	toggleUtterancesTheme();
+  // toggle light/dark mode
+  if (htmlClassList?.contains("theme-dark")) {
+    localStorage.setItem("theme", "light");
+  } else {
+    localStorage.setItem("theme", "dark");
+  }
+  toggleUtterancesTheme();
 });
 ```
 

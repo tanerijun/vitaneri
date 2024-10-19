@@ -9,36 +9,36 @@ import { capitalize } from "../../lib/utils";
 import { tagAliases } from "../../data/tag-aliases";
 
 export async function getStaticPaths() {
-	const postEntries = await getCollection("posts");
-	const tagSet = new Set<string>();
-	postEntries.forEach((entry) => {
-		entry.data.tags.forEach((tag) => {
-			tagSet.add(tag);
-		});
-	});
-	const tagList = Array.from(tagSet).sort();
+  const postEntries = await getCollection("posts");
+  const tagSet = new Set<string>();
+  postEntries.forEach((entry) => {
+    entry.data.tags.forEach((tag) => {
+      tagSet.add(tag);
+    });
+  });
+  const tagList = Array.from(tagSet).sort();
 
-	type Paths = Array<{
-		params: { tag: string | undefined };
-		props: { tagList: typeof tagList; filteredPostEntries: typeof postEntries };
-	}>;
+  type Paths = Array<{
+    params: { tag: string | undefined };
+    props: { tagList: typeof tagList; filteredPostEntries: typeof postEntries };
+  }>;
 
-	// `tag: undefined` matches top level page
-	const paths: Paths = [{ params: { tag: undefined }, props: { tagList, filteredPostEntries: postEntries } }];
+  // `tag: undefined` matches top level page
+  const paths: Paths = [{ params: { tag: undefined }, props: { tagList, filteredPostEntries: postEntries } }];
 
-	tagList.forEach((tag) => {
-		paths.push({
-			params: { tag },
-			props: {
-				tagList,
-				filteredPostEntries: postEntries
-					.filter((entry) => entry.data.tags.includes(tag))
-					.sort((a, b) => b.data.datetime.getTime() - a.data.datetime.getTime()),
-			},
-		});
-	});
+  tagList.forEach((tag) => {
+    paths.push({
+      params: { tag },
+      props: {
+        tagList,
+        filteredPostEntries: postEntries
+          .filter((entry) => entry.data.tags.includes(tag))
+          .sort((a, b) => b.data.datetime.getTime() - a.data.datetime.getTime()),
+      },
+    });
+  });
 
-	return paths;
+  return paths;
 }
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
@@ -51,36 +51,36 @@ const pageDescription = tag ? `Posts tagged with ${tag}.` : "List of tags.";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
-	<div class="mx-auto flex max-w-2xl flex-col gap-40">
-		<ul class="flex flex-wrap justify-center gap-4">
-			{
-				tagList.map((t) => {
-					const isActive = t === tag;
+  <div class="mx-auto flex max-w-2xl flex-col gap-40">
+    <ul class="flex flex-wrap justify-center gap-4">
+      {
+        tagList.map((t) => {
+          const isActive = t === tag;
 
-					return (
-						<>
-							<a
-								href={`/tags/${t}`}
-								class="relative px-4 py-2 text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
-							>
-								<li class={twJoin("cursor-pointer select-none text-sm", isActive && "text-zinc-900 dark:text-zinc-100")}>{t}</li>
-								{isActive && (
-									<div
-										id="active-tag"
-										class="absolute left-0 top-0 -z-10 h-full w-full rounded-full border-2 border-zinc-200 transition-all dark:border-zinc-700"
-										aria-hidden="true"
-										transition:name="active-tag-marker"
-									/>
-								)}
-							</a>
-						</>
-					);
-				})
-			}
-		</ul>
+          return (
+            <>
+              <a
+                href={`/tags/${t}`}
+                class="relative px-4 py-2 text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+              >
+                <li class={twJoin("cursor-pointer select-none text-sm", isActive && "text-zinc-900 dark:text-zinc-100")}>{t}</li>
+                {isActive && (
+                  <div
+                    id="active-tag"
+                    class="absolute left-0 top-0 -z-10 h-full w-full rounded-full border-2 border-zinc-200 transition-all dark:border-zinc-700"
+                    aria-hidden="true"
+                    transition:name="active-tag-marker"
+                  />
+                )}
+              </a>
+            </>
+          );
+        })
+      }
+    </ul>
 
-		<SectionWrapper headingText={tag ? (tagAlias ? tagAlias : capitalize(tag)) : "All"}>
-			<PostList entries={filteredPostEntries} showYear />
-		</SectionWrapper>
-	</div>
+    <SectionWrapper headingText={tag ? (tagAlias ? tagAlias : capitalize(tag)) : "All"}>
+      <PostList entries={filteredPostEntries} showYear />
+    </SectionWrapper>
+  </div>
 </BaseLayout>

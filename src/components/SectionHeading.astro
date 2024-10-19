@@ -1,7 +1,7 @@
 ---
 type Props = {
-	tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-	text: string | number;
+  tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  text: string | number;
 };
 
 const { tag, text } = Astro.props;
@@ -9,35 +9,35 @@ const Element = tag;
 ---
 
 <Element
-	class="stroked pointer-events-none absolute -left-5 -top-11 -z-10 select-none text-7xl font-bold text-white dark:text-zinc-900 md:-left-10 md:-top-20 md:text-9xl"
+  class="stroked pointer-events-none absolute -left-5 -top-11 -z-10 select-none text-7xl font-bold text-white dark:text-zinc-900 md:-left-10 md:-top-20 md:text-9xl"
 >
-	{text}
+  {text}
 </Element>
 
 <style is:global>
-	:root {
-		--color-stroke: theme(colors.zinc.100);
-	}
+  :root {
+    --color-stroke: theme(colors.zinc.100);
+  }
 
-	.dark {
-		--color-stroke: theme(colors.zinc.800);
-	}
+  .dark {
+    --color-stroke: theme(colors.zinc.800);
+  }
 </style>
 
 <style>
-	.stroked {
-		text-shadow:
-			-3px -3px 0 var(--color-stroke),
-			3px -3px 0 var(--color-stroke),
-			-3px 3px 0 var(--color-stroke),
-			3px 3px 0 var(--color-stroke);
-	}
+  .stroked {
+    text-shadow:
+      -3px -3px 0 var(--color-stroke),
+      3px -3px 0 var(--color-stroke),
+      -3px 3px 0 var(--color-stroke),
+      3px 3px 0 var(--color-stroke);
+  }
 
-	@supports (-webkit-text-stroke-width: 1px) {
-		.stroked {
-			-webkit-text-stroke-width: 3px;
-			-webkit-text-stroke-color: var(--color-stroke);
-			text-shadow: none;
-		}
-	}
+  @supports (-webkit-text-stroke-width: 1px) {
+    .stroked {
+      -webkit-text-stroke-width: 3px;
+      -webkit-text-stroke-color: var(--color-stroke);
+      text-shadow: none;
+    }
+  }
 </style>

@@ -1,8 +1,8 @@
 {
-	"title": "Vitaneri V4",
-	"description": "The 4th iteration of my personal website",
-	"techs": ["TypeScript", "Svelte", "Sveltekit", "TailwindCSS"],
-	"url": "https://vitaneri-v4.pages.dev",
-	"repo": "https://github.com/tanerijun/vitaneri-v4",
-	"sortOrder": 353
+  "title": "Vitaneri V4",
+  "description": "The 4th iteration of my personal website",
+  "techs": ["TypeScript", "Svelte", "Sveltekit", "TailwindCSS"],
+  "url": "https://vitaneri-v4.pages.dev",
+  "repo": "https://github.com/tanerijun/vitaneri-v4",
+  "sortOrder": 353
 }

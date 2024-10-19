@@ -9,25 +9,25 @@ const postEntries = (await getCollection("posts")).sort((a, b) => b.data.datetim
 const postsGroupedByYear = new Map<number, typeof postEntries>();
 
 for (const entry of postEntries) {
-	const year = entry.data.datetime.getFullYear();
+  const year = entry.data.datetime.getFullYear();
 
-	if (!postsGroupedByYear.has(year)) {
-		postsGroupedByYear.set(year, [entry]);
-		continue;
-	}
+  if (!postsGroupedByYear.has(year)) {
+    postsGroupedByYear.set(year, [entry]);
+    continue;
+  }
 
-	postsGroupedByYear.get(year)!.push(entry);
+  postsGroupedByYear.get(year)!.push(entry);
 }
 ---
 
 <BaseLayout title="Posts" description="List of posts.">
-	<div class="mx-auto mt-20 flex max-w-2xl flex-col gap-40">
-		{
-			Array.from(postsGroupedByYear).map(([year, entries]) => (
-				<SectionWrapper headingText={year}>
-					<PostList {entries} />
-				</SectionWrapper>
-			))
-		}
-	</div>
+  <div class="mx-auto mt-20 flex max-w-2xl flex-col gap-40">
+    {
+      Array.from(postsGroupedByYear).map(([year, entries]) => (
+        <SectionWrapper headingText={year}>
+          <PostList {entries} />
+        </SectionWrapper>
+      ))
+    }
+  </div>
 </BaseLayout>

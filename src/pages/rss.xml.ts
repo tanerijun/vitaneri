@@ -9,22 +9,22 @@ import { myInfo } from "../data/my-info";
 const parser = new MarkdownIt();
 
 export const GET: APIRoute = async () => {
-	const posts = await getCollection("posts");
+  const posts = await getCollection("posts");
 
-	return rss({
-		title: siteInfo.title,
-		description: siteInfo.description,
-		site: siteInfo.url,
-		items: posts.map((post) => ({
-			title: post.data.title,
-			description: post.data.description,
-			author: myInfo.name,
-			pubDate: post.data.datetime,
-			link: `/posts/${post.slug}`,
-			categories: post.data.tags,
-			content: sanitizeHtml(parser.render(post.body)),
-		})),
-		customData: `<language>en-us</language>`,
-		stylesheet: "rss/styles.xsl",
-	});
+  return rss({
+    title: siteInfo.title,
+    description: siteInfo.description,
+    site: siteInfo.url,
+    items: posts.map((post) => ({
+      title: post.data.title,
+      description: post.data.description,
+      author: myInfo.name,
+      pubDate: post.data.datetime,
+      link: `/posts/${post.slug}`,
+      categories: post.data.tags,
+      content: sanitizeHtml(parser.render(post.body)),
+    })),
+    customData: `<language>en-us</language>`,
+    stylesheet: "rss/styles.xsl",
+  });
 };

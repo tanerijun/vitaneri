@@ -7,28 +7,28 @@ import * as fs from "fs";
  * @returns {string} The path to the Bit.
  */
 export function generateBit(path) {
-	const BASE_PATH = path;
-	const id = getNextBitId(BASE_PATH);
-	const fileName = zeroPad(id, 4);
-	const FILE_PATH = `${BASE_PATH}/${fileName}.md`;
+  const BASE_PATH = path;
+  const id = getNextBitId(BASE_PATH);
+  const fileName = zeroPad(id, 4);
+  const FILE_PATH = `${BASE_PATH}/${fileName}.md`;
 
-	const frontmatter = {
-		datetime: new Date().toISOString(),
-	};
+  const frontmatter = {
+    datetime: new Date().toISOString(),
+  };
 
-	const writeStream = fs.createWriteStream(FILE_PATH);
+  const writeStream = fs.createWriteStream(FILE_PATH);
 
-	writeStream.write("---\n");
-	for (const [key, value] of Object.entries(frontmatter)) {
-		writeStream.write(`${key}: ${value}\n`);
-	}
-	writeStream.write("---\n");
-	writeStream.write("\n");
-	writeStream.write("{/* Happy writing! */}");
-	writeStream.write("\n");
-	writeStream.end();
+  writeStream.write("---\n");
+  for (const [key, value] of Object.entries(frontmatter)) {
+    writeStream.write(`${key}: ${value}\n`);
+  }
+  writeStream.write("---\n");
+  writeStream.write("\n");
+  writeStream.write("{/* Happy writing! */}");
+  writeStream.write("\n");
+  writeStream.end();
 
-	return FILE_PATH;
+  return FILE_PATH;
 }
 
 /**
@@ -38,8 +38,8 @@ export function generateBit(path) {
  * @returns {number} The next Bit id.
  */
 function getNextBitId(path) {
-	const files = fs.readdirSync(path);
-	return files.length + 1;
+  const files = fs.readdirSync(path);
+  return files.length + 1;
 }
 
 /**
@@ -50,5 +50,5 @@ function getNextBitId(path) {
  * @returns {string} The padded number.
  */
 function zeroPad(num, places) {
-	return String(num).padStart(places, "0");
+  return String(num).padStart(places, "0");
 }

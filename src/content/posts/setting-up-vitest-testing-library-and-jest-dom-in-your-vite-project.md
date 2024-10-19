@@ -45,11 +45,11 @@ import { defineConfig } from "vitest/config";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 
 export default defineConfig({
-	plugins: [svelte({ hot: !process.env.VITEST })],
-	test: {
-		include: ["src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
-		environment: "jsdom",
-	},
+  plugins: [svelte({ hot: !process.env.VITEST })],
+  test: {
+    include: ["src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+    environment: "jsdom",
+  },
 });
 ```
 
@@ -66,12 +66,12 @@ import { defineConfig } from "vitest/config";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 
 export default defineConfig({
-	plugins: [svelte({ hot: !process.env.VITEST })],
-	test: {
-		include: ["src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
-		globals: true,
-		environment: "jsdom",
-	},
+  plugins: [svelte({ hot: !process.env.VITEST })],
+  test: {
+    include: ["src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+    globals: true,
+    environment: "jsdom",
+  },
 });
 ```
 
@@ -79,20 +79,20 @@ If you're using Typescript, we need to do one extra step to please the type chec
 
 ```json {12}
 {
-	"extends": "@tsconfig/svelte/tsconfig.json",
-	"compilerOptions": {
-		"target": "ESNext",
-		"useDefineForClassFields": true,
-		"module": "ESNext",
-		"resolveJsonModule": true,
-		"allowJs": true,
-		"checkJs": true,
-		"isolatedModules": true,
-		"moduleResolution": "node",
-		"types": ["vitest/globals"]
-	},
-	"include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
-	"references": [{ "path": "./tsconfig.node.json" }]
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": true,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "types": ["vitest/globals"]
+  },
+  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
 ```
 
@@ -100,10 +100,10 @@ And finally, let's add the following to our `package.json` file for convenience 
 
 ```json
 {
-	"scripts": {
-		"test": "vitest run src",
-		"test:watch": "vitest src"
-	}
+  "scripts": {
+    "test": "vitest run src",
+    "test:watch": "vitest src"
+  }
 }
 ```
 
@@ -155,13 +155,13 @@ import { defineConfig } from "vitest/config";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 
 export default defineConfig({
-	plugins: [svelte({ hot: !process.env.VITEST })],
-	test: {
-		include: ["src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
-		globals: true,
-		environment: "jsdom",
-		setupFiles: "./src/tests/setup.ts",
-	},
+  plugins: [svelte({ hot: !process.env.VITEST })],
+  test: {
+    include: ["src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+    globals: true,
+    environment: "jsdom",
+    setupFiles: "./src/tests/setup.ts",
+  },
 });
 ```
 
@@ -183,20 +183,20 @@ And update your `tsconfig.json`.
 
 ```json {12}
 {
-	"extends": "@tsconfig/svelte/tsconfig.json",
-	"compilerOptions": {
-		"target": "ESNext",
-		"useDefineForClassFields": true,
-		"module": "ESNext",
-		"resolveJsonModule": true,
-		"allowJs": true,
-		"checkJs": true,
-		"isolatedModules": true,
-		"moduleResolution": "node",
-		"types": ["vitest/globals", "@testing-library/jest-dom"]
-	},
-	"include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
-	"references": [{ "path": "./tsconfig.node.json" }]
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": true,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
+  },
+  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
 ```
 

@@ -1,9 +1,9 @@
 {
-	"title": "React Speed Type",
-	"description": "A speed typing game created with React",
-	"techs": ["TypeScript", "React", "TailwindCSS"],
-	"url": "https://speed-type-react.vercel.app",
-	"repo": "https://github.com/tanerijun/speed-type-react",
-	"sortOrder": 450,
-	"featured": true
+  "title": "React Speed Type",
+  "description": "A speed typing game created with React",
+  "techs": ["TypeScript", "React", "TailwindCSS"],
+  "url": "https://speed-type-react.vercel.app",
+  "repo": "https://github.com/tanerijun/speed-type-react",
+  "sortOrder": 450,
+  "featured": true
 }

@@ -74,7 +74,7 @@ let a: unknown = "a string";
 let b: number = 0;
 
 if (typeof a === "number") {
-	b = a;
+  b = a;
 }
 ```
 

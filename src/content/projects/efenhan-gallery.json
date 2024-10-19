@@ -1,8 +1,8 @@
 {
-	"title": "Efenhan's Gallery",
-	"description": "Minimalist art showcase website",
-	"techs": ["Typescript", "Astro"],
-	"url": "https://efenhan.com",
-	"sortOrder": 40,
-	"featured": true
+  "title": "Efenhan's Gallery",
+  "description": "Minimalist art showcase website",
+  "techs": ["Typescript", "Astro"],
+  "url": "https://efenhan.com",
+  "sortOrder": 40,
+  "featured": true
 }

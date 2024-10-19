@@ -1,12 +1,12 @@
 <!-- Load theme before document loads to prevent theme flashing -->
 <script is:inline>
-	function updateTheme() {
-		let theme = localStorage.getItem("theme");
-		if (!theme) {
-			theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-		}
-		document.documentElement.className = theme;
-	}
-	updateTheme();
-	document.addEventListener("astro:after-swap", updateTheme);
+  function updateTheme() {
+    let theme = localStorage.getItem("theme");
+    if (!theme) {
+      theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    document.documentElement.className = theme;
+  }
+  updateTheme();
+  document.addEventListener("astro:after-swap", updateTheme);
 </script>

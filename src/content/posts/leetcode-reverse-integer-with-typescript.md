@@ -72,12 +72,12 @@ The time complexity for this approach is `O(log(x))`. Because the complexity dep
 
 ```ts
 function reverse(x: number): number {
-	const reversed = x.toString().split("").reverse().join("");
-	const result = parseInt(reversed) * Math.sign(x);
+  const reversed = x.toString().split("").reverse().join("");
+  const result = parseInt(reversed) * Math.sign(x);
 
-	if (result < Math.pow(-2, 31) || result > Math.pow(2, 31) - 1) return 0;
+  if (result < Math.pow(-2, 31) || result > Math.pow(2, 31) - 1) return 0;
 
-	return result;
+  return result;
 }
 ```
 
@@ -85,19 +85,19 @@ function reverse(x: number): number {
 
 ```ts
 function reverse(x: number): number {
-	let input = Math.abs(x);
-	let result: number = 0;
+  let input = Math.abs(x);
+  let result: number = 0;
 
-	while (input != 0) {
-		result = result * 10 + (input % 10);
-		input = Math.floor(input / 10);
-	}
+  while (input != 0) {
+    result = result * 10 + (input % 10);
+    input = Math.floor(input / 10);
+  }
 
-	result *= Math.sign(x);
+  result *= Math.sign(x);
 
-	if (result < Math.pow(-2, 31) || result > Math.pow(2, 31) - 1) return 0;
+  if (result < Math.pow(-2, 31) || result > Math.pow(2, 31) - 1) return 0;
 
-	return result;
+  return result;
 }
 ```
 

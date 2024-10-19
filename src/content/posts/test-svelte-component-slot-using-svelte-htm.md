@@ -41,10 +41,10 @@ Finally, we can test the component.
 import TestButton from "./TestButton.svelte";
 
 describe("Button", () => {
-	it("should render component inside slot properly", () => {
-		render(TestButton);
-		expect(screen.getByTestId("slot-component")).toBeInTheDocument();
-	});
+  it("should render component inside slot properly", () => {
+    render(TestButton);
+    expect(screen.getByTestId("slot-component")).toBeInTheDocument();
+  });
 });
 ```
 
@@ -86,14 +86,14 @@ In case you're wondering how the test would look like for JSX component:
 import Button from "./Button.tsx";
 
 describe("Button", () => {
-	it("should render component inside slot properly", () => {
-		render(
-			<Button>
-				<div data-testid="slot-component">PLACEHOLDER</div>
-			</Button>,
-		);
-		expect(screen.getByTestId("slot-component")).toBeInTheDocument();
-	});
+  it("should render component inside slot properly", () => {
+    render(
+      <Button>
+        <div data-testid="slot-component">PLACEHOLDER</div>
+      </Button>,
+    );
+    expect(screen.getByTestId("slot-component")).toBeInTheDocument();
+  });
 });
 ```
 

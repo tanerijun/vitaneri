@@ -1,7 +1,7 @@
 {
-	"title": "Instagram Clone",
-	"description": "Frontend clone of Instagram mobile",
-	"techs": ["Javascript", "React Native", "Firebase"],
-	"repo": "https://github.com/tanerijun/instagram-clone-rn",
-	"sortOrder": 401
+  "title": "Instagram Clone",
+  "description": "Frontend clone of Instagram mobile",
+  "techs": ["Javascript", "React Native", "Firebase"],
+  "repo": "https://github.com/tanerijun/instagram-clone-rn",
+  "sortOrder": 401
 }

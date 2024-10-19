@@ -5,11 +5,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import ProseWrapper from "../../components/ProseWrapper.astro";
 
 export async function getStaticPaths() {
-	const bitEntries = await getCollection("bits");
-	return bitEntries.map((entry) => ({
-		params: { slug: parseInt(entry.slug).toString() },
-		props: { entry },
-	}));
+  const bitEntries = await getCollection("bits");
+  return bitEntries.map((entry) => ({
+    params: { slug: parseInt(entry.slug).toString() },
+    props: { entry },
+  }));
 }
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
@@ -20,14 +20,14 @@ const bitID = parseInt(entry.slug).toString();
 ---
 
 <BaseLayout title={`Bit #${bitID}`} description={`Bit entry number ${bitID}.`}>
-	<article class="mx-auto flex max-w-2xl flex-col gap-14" data-pagefind-body>
-		<header>
-			<h1 class="text-5xl font-bold text-zinc-900 transition-colors dark:text-white">
-				Bit #{bitID}
-			</h1>
-		</header>
-		<ProseWrapper>
-			<Content />
-		</ProseWrapper>
-	</article>
+  <article class="mx-auto flex max-w-2xl flex-col gap-14" data-pagefind-body>
+    <header>
+      <h1 class="text-5xl font-bold text-zinc-900 transition-colors dark:text-white">
+        Bit #{bitID}
+      </h1>
+    </header>
+    <ProseWrapper>
+      <Content />
+    </ProseWrapper>
+  </article>
 </BaseLayout>

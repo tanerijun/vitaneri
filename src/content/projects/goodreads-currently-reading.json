@@ -1,8 +1,8 @@
 {
-	"title": "Goodreads Currently Reading API",
-	"description": "An API endpoint serving what a user is reading from Goodreads",
-	"techs": ["Cloudflare Worker", "Typescript", "Hono"],
-	"url": "https://goodreads-currently-reading.vitaneri.workers.dev",
-	"repo": "https://github.com/tanerijun/goodreads-currently-reading",
-	"sortOrder": 500
+  "title": "Goodreads Currently Reading API",
+  "description": "An API endpoint serving what a user is reading from Goodreads",
+  "techs": ["Cloudflare Worker", "Typescript", "Hono"],
+  "url": "https://goodreads-currently-reading.vitaneri.workers.dev",
+  "repo": "https://github.com/tanerijun/goodreads-currently-reading",
+  "sortOrder": 500
 }

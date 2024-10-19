@@ -18,8 +18,8 @@ Mapped type is easier to explain using examples. Say that we have an interface t
 
 ```ts
 interface RequireAB {
-	a: number;
-	b: string;
+  a: number;
+  b: string;
 }
 ```
 
@@ -27,8 +27,8 @@ Any object that implements the interface must have the `a` and `b` properties.
 
 ```ts
 const obj: RequireAB = {
-	a: 1,
-	b: "hello",
+  a: 1,
+  b: "hello",
 };
 ```
 
@@ -36,8 +36,8 @@ Now, what if we want to make another interface that doesn't require the `a` and 
 
 ```ts
 interface NotRequireAB {
-	a?: number;
-	b?: string;
+  a?: number;
+  b?: string;
 }
 ```
 
@@ -45,17 +45,17 @@ This look awfully familiar with the `RequireAB` interface above. Can't we just c
 
 ```ts {11-13}
 interface RequireAB {
-	a: number;
-	b: string;
+  a: number;
+  b: string;
 }
 
 const obj: RequireAB = {
-	a: 1,
-	b: "hello",
+  a: 1,
+  b: "hello",
 };
 
 type NotRequireAB<RequireAB> = {
-	[K in keyof RequireAB]?: RequireAB[K];
+  [K in keyof RequireAB]?: RequireAB[K];
 };
 
 const obj2: NotRequireAB<RequireAB> = {};
@@ -65,8 +65,8 @@ We created `NotRequireAB` based on `RequireAB`. The type will contain a property
 
 ```ts
 type NotRequireAB = {
-	a?: number;
-	b?: string;
+  a?: number;
+  b?: string;
 };
 ```
 
@@ -74,15 +74,15 @@ An advantage of using this method to hard-coding is that we don't need to mainta
 
 ```ts
 interface RequireAB {
-	a: number;
-	b: string;
-	c: boolean;
-	d: string | number;
+  a: number;
+  b: string;
+  c: boolean;
+  d: string | number;
 }
 
 // We don't need to do any modification here
 type NotRequireAB<RequireAB> = {
-	[K in keyof RequireAB]?: RequireAB[K];
+  [K in keyof RequireAB]?: RequireAB[K];
 };
 ```
 
@@ -90,7 +90,7 @@ We can make the type even more powerful with generics.
 
 ```ts
 type WeakInterface<T> = {
-	[K in keyof T]?: T[K];
+  [K in keyof T]?: T[K];
 };
 ```
 
@@ -127,7 +127,7 @@ Now let's look at an example where we use the `-` operator. Say that we want to 
 
 ```ts
 type StrongInterface<T> = {
-	[K in keyof T]-?: T[K];
+  [K in keyof T]-?: T[K];
 };
 ```
 
@@ -150,7 +150,7 @@ Partial make all properties of a type optional.
  * Make all properties in T optional
  */
 type Partial<T> = {
-	[P in keyof T]?: T[P];
+  [P in keyof T]?: T[P];
 };
 ```
 
@@ -165,7 +165,7 @@ Required is the opposite of Partial. It will mark each property as required.
  * Make all properties in T required
  */
 type Required<T> = {
-	[P in keyof T]-?: T[P];
+  [P in keyof T]-?: T[P];
 };
 ```
 
@@ -178,7 +178,7 @@ We can use Readonly mapped type to mark each property as readonly (immutable), a
  * Make all properties in T readonly
  */
 type Readonly<T> = {
-	readonly [P in keyof T]: T[P];
+  readonly [P in keyof T]: T[P];
 };
 ```
 
@@ -188,7 +188,7 @@ We can also create a type that remove the `readonly` modifier, and make the prop
 
 ```ts
 type CreateMutable<T> = {
-	-readonly [K in keyof T]: T[K];
+  -readonly [K in keyof T]: T[K];
 };
 ```
 
@@ -196,13 +196,13 @@ Now, Let's look at an example of using Readonly.
 
 ```ts
 interface RequireAB {
-	a: number;
-	b: string;
+  a: number;
+  b: string;
 }
 
 const obj: Readonly<RequireAB> = {
-	a: 1,
-	b: "hello",
+  a: 1,
+  b: "hello",
 };
 
 obj.a = 2;
@@ -223,7 +223,7 @@ Pick is used to construct a type based on a subset of properties of another type
  * From T, pick a set of properties whose keys are in the union K
  */
 type Pick<T, K extends keyof T> = {
-	[P in K]: T[P];
+  [P in K]: T[P];
 };
 ```
 
@@ -231,14 +231,14 @@ Let's look at an example that use Pick.
 
 ```ts
 interface ABC {
-	a: number;
-	b: string;
-	c: boolean;
+  a: number;
+  b: string;
+  c: boolean;
 }
 
 let obj: Pick<ABC, "a" | "b"> = {
-	a: 1,
-	b: "hello",
+  a: 1,
+  b: "hello",
 };
 ```
 
@@ -253,7 +253,7 @@ Record is used to construct a type on the fly. In a way, it's the opposite of Pi
  * Construct a type with a set of properties K of type T
  */
 type Record<K extends keyof any, T> = {
-	[P in K]: T;
+  [P in K]: T;
 };
 ```
 
@@ -261,8 +261,8 @@ Let's look at an example that use Record.
 
 ```ts
 let obj: Record<"c" | "d", string> = {
-	c: "hello",
-	d: "world",
+  c: "hello",
+  d: "world",
 };
 ```
 

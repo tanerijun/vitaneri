@@ -7,61 +7,61 @@ import PageFind from "./PageFind.astro";
 ---
 
 <header>
-	<!-- Skip To Content -->
-	<!-- Normally hidden, useful for screen reader or keyboard user -->
-	<a
-		id="skip-to-content"
-		href="#main-content"
-		class="top absolute -top-full left-16 z-50 bg-zinc-100 p-2 drop-shadow-md transition-all focus:top-4 dark:bg-zinc-950"
-	>
-		Skip to content
-	</a>
+  <!-- Skip To Content -->
+  <!-- Normally hidden, useful for screen reader or keyboard user -->
+  <a
+    id="skip-to-content"
+    href="#main-content"
+    class="top absolute -top-full left-16 z-50 bg-zinc-100 p-2 drop-shadow-md transition-all focus:top-4 dark:bg-zinc-950"
+  >
+    Skip to content
+  </a>
 
-	<div class="mx-auto flex max-w-2xl items-center justify-between px-8 py-8 md:px-0">
-		<div id="site-logo">
-			<a href="/" aria-label="Vitaneri logo">
-				<span class="font-logo text-5xl transition-colors hover:text-zinc-900 dark:hover:text-zinc-100">Vi</span>
-			</a>
-		</div>
+  <div class="mx-auto flex max-w-2xl items-center justify-between px-8 py-8 md:px-0">
+    <div id="site-logo">
+      <a href="/" aria-label="Vitaneri logo">
+        <span class="font-logo text-5xl transition-colors hover:text-zinc-900 dark:hover:text-zinc-100">Vi</span>
+      </a>
+    </div>
 
-		<div class="flex items-center gap-8">
-			<nav class="hidden items-center gap-6 md:flex">
-				{
-					siteInfo.navLinks.map((navLink) => {
-						const isActive = Astro.url.pathname.startsWith(navLink.url);
+    <div class="flex items-center gap-8">
+      <nav class="hidden items-center gap-6 md:flex">
+        {
+          siteInfo.navLinks.map((navLink) => {
+            const isActive = Astro.url.pathname.startsWith(navLink.url);
 
-						return (
-							<div class="relative">
-								<a
-									href={navLink.url}
-									class={twJoin(
-										"text-sm transition-colors md:text-base",
-										isActive
-											? "text-zinc-900 dark:text-zinc-100"
-											: "text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100",
-									)}
-								>
-									{navLink.displayText}
-								</a>
-								{isActive && (
-									<div
-										id="active-nav"
-										class="absolute h-0.5 w-full bg-zinc-200 transition-colors duration-200 dark:bg-zinc-700"
-										aria-hidden="true"
-										transition:name="active-nav-marker"
-									/>
-								)}
-							</div>
-						);
-					})
-				}
-			</nav>
+            return (
+              <div class="relative">
+                <a
+                  href={navLink.url}
+                  class={twJoin(
+                    "text-sm transition-colors md:text-base",
+                    isActive
+                      ? "text-zinc-900 dark:text-zinc-100"
+                      : "text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100",
+                  )}
+                >
+                  {navLink.displayText}
+                </a>
+                {isActive && (
+                  <div
+                    id="active-nav"
+                    class="absolute h-0.5 w-full bg-zinc-200 transition-colors duration-200 dark:bg-zinc-700"
+                    aria-hidden="true"
+                    transition:name="active-nav-marker"
+                  />
+                )}
+              </div>
+            );
+          })
+        }
+      </nav>
 
-			<div class="flex items-center gap-4">
-				<MobileMenu client:idle />
-				<PageFind />
-				<ThemeToggle client:idle />
-			</div>
-		</div>
-	</div>
+      <div class="flex items-center gap-4">
+        <MobileMenu client:idle />
+        <PageFind />
+        <ThemeToggle client:idle />
+      </div>
+    </div>
+  </div>
 </header>

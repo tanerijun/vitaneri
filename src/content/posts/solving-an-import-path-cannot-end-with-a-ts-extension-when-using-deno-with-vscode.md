@@ -23,8 +23,8 @@ This will create a `.vscode` folder in your workspace with a file called `settin
 
 ```json
 {
-	"deno.enable": true,
-	"deno.lint": true
+  "deno.enable": true,
+  "deno.lint": true
 }
 ```
 

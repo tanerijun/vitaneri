@@ -35,18 +35,18 @@ import { createContext, useState } from "react";
 export const ThemeContext = createContext();
 
 export default ThemeProvider = (props) => {
-	const [theme, setTheme] = useState("light");
-	const toggleTheme = () => {
-		setTheme(theme === "light" ? "dark" : "light");
-	};
+  const [theme, setTheme] = useState("light");
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
-	const color = theme === "light" ? "#333" : "#FFF";
-	const backgroundColor = theme === "light" ? "#FFF" : "#333";
+  const color = theme === "light" ? "#333" : "#FFF";
+  const backgroundColor = theme === "light" ? "#FFF" : "#333";
 
-	document.body.style.color = color;
-	document.body.style.backgroundColor = backgroundColor;
+  document.body.style.color = color;
+  document.body.style.backgroundColor = backgroundColor;
 
-	return <ThemeContext.Provider value={{ theme, toggleTheme }} {...props} />;
+  return <ThemeContext.Provider value={{ theme, toggleTheme }} {...props} />;
 };
 ```
 
@@ -59,10 +59,10 @@ import App from "./App";
 import { ThemeProvider } from "./ThemeProvider";
 
 ReactDOM.render(
-	<ThemeProvider>
-		<App />
-	</ThemeProvider>,
-	document.getElementById("root"),
+  <ThemeProvider>
+    <App />
+  </ThemeProvider>,
+  document.getElementById("root"),
 );
 ```
 
@@ -100,22 +100,22 @@ import { createContext, useContext, useState } from "react";
 export const ThemeContext = createContext();
 
 export const useTheme = () => {
-	const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 };
 
 export default ThemeProvider = (props) => {
-	const [theme, setTheme] = useState("light");
-	const toggleTheme = () => {
-		setTheme(theme === "light" ? "dark" : "light");
-	};
+  const [theme, setTheme] = useState("light");
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
-	const color = theme === "light" ? "#333" : "#FFF";
-	const backgroundColor = theme === "light" ? "#FFF" : "#333";
+  const color = theme === "light" ? "#333" : "#FFF";
+  const backgroundColor = theme === "light" ? "#FFF" : "#333";
 
-	document.body.style.color = color;
-	document.body.style.backgroundColor = backgroundColor;
+  document.body.style.color = color;
+  document.body.style.backgroundColor = backgroundColor;
 
-	return <ThemeContext.Provider value={{ theme, toggleTheme }} {...props} />;
+  return <ThemeContext.Provider value={{ theme, toggleTheme }} {...props} />;
 };
 ```
 
@@ -193,11 +193,11 @@ But with our custom hook solution, we can just handle that inside the hook.
 
 ```jsx
 export const useTheme = () => {
-	const themeContext = useContext(ThemeContext);
-	if (!themeContext) {
-		throw new Error("ThemeContext is undefined. Make sure to wrap your component with ThemeProvider.");
-	}
-	return themeContext;
+  const themeContext = useContext(ThemeContext);
+  if (!themeContext) {
+    throw new Error("ThemeContext is undefined. Make sure to wrap your component with ThemeProvider.");
+  }
+  return themeContext;
 };
 ```
 

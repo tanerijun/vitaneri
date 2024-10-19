@@ -3,31 +3,31 @@ import type { CollectionEntry } from "astro:content";
 import { twJoin } from "../lib/tw-join";
 
 type Props = {
-	entries: Array<CollectionEntry<"posts">>;
-	showYear?: boolean;
+  entries: Array<CollectionEntry<"posts">>;
+  showYear?: boolean;
 };
 
 const { entries, showYear = false } = Astro.props;
 ---
 
 <ul class="flex flex-col text-zinc-700 has-[li:hover]:text-zinc-400 dark:text-zinc-300 dark:has-[li:hover]:text-zinc-500">
-	{
-		entries.map((entry) => {
-			const displayDate =
-				(showYear ? entry.data.datetime.getFullYear() + " " : "") +
-				entry.data.datetime.toLocaleDateString("en-us", { month: "short", day: "2-digit" });
+  {
+    entries.map((entry) => {
+      const displayDate =
+        (showYear ? entry.data.datetime.getFullYear() + " " : "") +
+        entry.data.datetime.toLocaleDateString("en-us", { month: "short", day: "2-digit" });
 
-			return (
-				<li class="max-w-fit">
-					<a
-						href={`/posts/${entry.slug}`}
-						class="flex max-w-fit items-start gap-4 py-1 transition-colors duration-200 hover:text-zinc-950 dark:hover:text-white"
-					>
-						<span class={twJoin("min-w-[100px]", !showYear && "min-w-[60px]")}>{displayDate}</span>
-						<p transition:name={entry.slug}>{entry.data.title}</p>
-					</a>
-				</li>
-			);
-		})
-	}
+      return (
+        <li class="max-w-fit">
+          <a
+            href={`/posts/${entry.slug}`}
+            class="flex max-w-fit items-start gap-4 py-1 transition-colors duration-200 hover:text-zinc-950 dark:hover:text-white"
+          >
+            <span class={twJoin("min-w-[100px]", !showYear && "min-w-[60px]")}>{displayDate}</span>
+            <p transition:name={entry.slug}>{entry.data.title}</p>
+          </a>
+        </li>
+      );
+    })
+  }
 </ul>

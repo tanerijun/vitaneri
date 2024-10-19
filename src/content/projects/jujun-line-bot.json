@@ -1,7 +1,7 @@
 {
-	"title": "Jujun",
-	"description": "A remainder bot for Line",
-	"techs": ["Javascript"],
-	"repo": "https://github.com/tanerijun/jujun_line_bot",
-	"sortOrder": 902
+  "title": "Jujun",
+  "description": "A remainder bot for Line",
+  "techs": ["Javascript"],
+  "repo": "https://github.com/tanerijun/jujun_line_bot",
+  "sortOrder": 902
 }

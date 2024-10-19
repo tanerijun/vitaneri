@@ -1,8 +1,8 @@
 {
-	"title": "React Snake Proto",
-	"description": "Prototype of classic Snake game in React",
-	"techs": ["Typescript", "React", "NextJS"],
-	"url": "https://react-snake-proto.vercel.app/",
-	"repo": "https://github.com/tanerijun/react-snake-proto",
-	"sortOrder": 499
+  "title": "React Snake Proto",
+  "description": "Prototype of classic Snake game in React",
+  "techs": ["Typescript", "React", "NextJS"],
+  "url": "https://react-snake-proto.vercel.app/",
+  "repo": "https://github.com/tanerijun/react-snake-proto",
+  "sortOrder": 499
 }

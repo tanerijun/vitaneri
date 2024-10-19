@@ -1,7 +1,7 @@
 {
-	"title": "go-card-deck",
-	"description": "A Go package to work with poker deck",
-	"techs": ["Go"],
-	"repo": "https://github.com/tanerijun/go-card-deck",
-	"sortOrder": 1003
+  "title": "go-card-deck",
+  "description": "A Go package to work with poker deck",
+  "techs": ["Go"],
+  "repo": "https://github.com/tanerijun/go-card-deck",
+  "sortOrder": 1003
 }

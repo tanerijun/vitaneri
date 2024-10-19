@@ -1,9 +1,9 @@
 {
-	"title": "Vitaneri V5",
-	"description": "The website you are currently on",
-	"techs": ["TypeScript", "Astro", "SolidJS", "TailwindCSS"],
-	"url": "https://vitaneri.com",
-	"repo": "https://github.com/tanerijun/vitaneri",
-	"sortOrder": 1,
-	"featured": true
+  "title": "Vitaneri V5",
+  "description": "The website you are currently on",
+  "techs": ["TypeScript", "Astro", "SolidJS", "TailwindCSS"],
+  "url": "https://vitaneri.com",
+  "repo": "https://github.com/tanerijun/vitaneri",
+  "sortOrder": 1,
+  "featured": true
 }

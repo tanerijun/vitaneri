@@ -1,9 +1,9 @@
 {
-	"title": "Wowie",
-	"description": "A frontend for The Movie Database API",
-	"techs": ["TypeScript", "React", "NextJS", "TailwindCSS", "React Query"],
-	"url": "https://wowie-fawn.vercel.app",
-	"repo": "https://github.com/tanerijun/wowie",
-	"sortOrder": 410,
-	"featured": true
+  "title": "Wowie",
+  "description": "A frontend for The Movie Database API",
+  "techs": ["TypeScript", "React", "NextJS", "TailwindCSS", "React Query"],
+  "url": "https://wowie-fawn.vercel.app",
+  "repo": "https://github.com/tanerijun/wowie",
+  "sortOrder": 410,
+  "featured": true
 }

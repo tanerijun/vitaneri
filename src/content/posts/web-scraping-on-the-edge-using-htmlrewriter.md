@@ -107,9 +107,9 @@ const app = new Hono();
 app.get("/", (c) => c.text("Hello Hono!"));
 
 app.get("/:id", async (c) => {
-	const id = c.req.param("id");
+  const id = c.req.param("id");
 
-	return c.json({ userId: id });
+  return c.json({ userId: id });
 });
 
 export default app;
@@ -121,7 +121,7 @@ You should get a JSON response like this.
 
 ```ts
 {
-	userId: 123;
+  userId: 123;
 }
 ```
 
@@ -141,11 +141,11 @@ Going back to the code, here is how you can fetch the "currently-reading" page:
 
 ```ts {4}
 app.get("/:id", async (c) => {
-	const id = c.req.param("id");
+  const id = c.req.param("id");
 
-	const response = await fetch(`https://www.goodreads.com/review/list/${id}?shelf=currently-reading`);
+  const response = await fetch(`https://www.goodreads.com/review/list/${id}?shelf=currently-reading`);
 
-	return c.json({ userId: id });
+  return c.json({ userId: id });
 });
 ```
 
@@ -155,12 +155,12 @@ Let's also do a minimal error handling in case the fetch request fails.
 
 ```ts {5}
 app.get("/:id", async (c) => {
-	const id = c.req.param("id");
+  const id = c.req.param("id");
 
-	const response = await fetch(`https://www.goodreads.com/review/list/${id}?shelf=currently-reading`);
-	if (!response.ok) throw new HTTPException(response.status, { message: response.statusText });
+  const response = await fetch(`https://www.goodreads.com/review/list/${id}?shelf=currently-reading`);
+  if (!response.ok) throw new HTTPException(response.status, { message: response.statusText });
 
-	return c.json({ userId: id });
+  return c.json({ userId: id });
 });
 ```
 
@@ -172,25 +172,25 @@ To start scraping, we have to pass `response` to HTMLRewriter to parse and trans
 
 ```ts
 app.get("/:id", async (c) => {
-	// Fetch Goodreads with userId...
+  // Fetch Goodreads with userId...
 
-	// Array to store our data
-	const res: { title: string; url: string }[] = [];
+  // Array to store our data
+  const res: { title: string; url: string }[] = [];
 
-	await new HTMLRewriter()
-		.on("td.field.title a", {
-			element(el) {
-				const title = el.getAttribute("title");
-				const url = el.getAttribute("href");
-				if (title && url) {
-					res.push({ title, url });
-				}
-			},
-		})
-		.transform(response)
-		.arrayBuffer(); // drive the parser
+  await new HTMLRewriter()
+    .on("td.field.title a", {
+      element(el) {
+        const title = el.getAttribute("title");
+        const url = el.getAttribute("href");
+        if (title && url) {
+          res.push({ title, url });
+        }
+      },
+    })
+    .transform(response)
+    .arrayBuffer(); // drive the parser
 
-	return c.json(res); // return the array as JSON
+  return c.json(res); // return the array as JSON
 });
 ```
 
@@ -202,17 +202,17 @@ The `ElementHandler` looks like this in full:
 
 ```ts
 class ElementHandler {
-	element(element) {
-		// An incoming element
-	}
+  element(element) {
+    // An incoming element
+  }
 
-	comments(comment) {
-		// An incoming comment
-	}
+  comments(comment) {
+    // An incoming comment
+  }
 
-	text(text) {
-		// An incoming piece of text
-	}
+  text(text) {
+    // An incoming piece of text
+  }
 }
 ```
 
@@ -220,7 +220,7 @@ In the case of our app, our selector captured an HTML tree that look like this:
 
 ```html
 <a title="Pixel Art for Game Developers" href="/book/show/26117789-pixel-art-for-game-developers">
-	Pixel Art for Game Developers
+  Pixel Art for Game Developers
 </a>
 ```
 
@@ -247,14 +247,14 @@ Now if you run the app, go to `/:id`, and check the result, you should get the d
 
 ```json
 [
-	{
-		"title": "さくら荘のペットな彼女",
-		"url": "/book/show/16088343"
-	},
-	{
-		"title": "Thinking, Fast and Slow",
-		"url": "/book/show/11468377-thinking-fast-and-slow"
-	}
+  {
+    "title": "さくら荘のペットな彼女",
+    "url": "/book/show/16088343"
+  },
+  {
+    "title": "Thinking, Fast and Slow",
+    "url": "/book/show/11468377-thinking-fast-and-slow"
+  }
 ]
 ```
 
@@ -273,27 +273,27 @@ const app = new Hono();
 app.get("/", (c) => c.text("Hello Hono!"));
 
 app.get("/:id", async (c) => {
-	const id = c.req.param("id");
+  const id = c.req.param("id");
 
-	const response = await fetch(`${BASE_URL}/review/list/${id}?shelf=currently-reading`);
-	if (!response.ok) throw new HTTPException(response.status, { message: response.statusText });
+  const response = await fetch(`${BASE_URL}/review/list/${id}?shelf=currently-reading`);
+  if (!response.ok) throw new HTTPException(response.status, { message: response.statusText });
 
-	const res: { title: string; url: string }[] = [];
+  const res: { title: string; url: string }[] = [];
 
-	await new HTMLRewriter()
-		.on("td.field.title a", {
-			element(el) {
-				const title = el.getAttribute("title");
-				const url = el.getAttribute("href");
-				if (title && url) {
-					res.push({ title, url: BASE_URL + url });
-				}
-			},
-		})
-		.transform(response)
-		.arrayBuffer();
+  await new HTMLRewriter()
+    .on("td.field.title a", {
+      element(el) {
+        const title = el.getAttribute("title");
+        const url = el.getAttribute("href");
+        if (title && url) {
+          res.push({ title, url: BASE_URL + url });
+        }
+      },
+    })
+    .transform(response)
+    .arrayBuffer();
 
-	return c.json(res);
+  return c.json(res);
 });
 
 export default app;
@@ -341,12 +341,12 @@ For example, say that our HTML look like this:
 
 ```html
 <a href="/A" title="A">
-	<img src="https://link-to-foo.png" />
-	<span class="caption">Foo</span>
+  <img src="https://link-to-foo.png" />
+  <span class="caption">Foo</span>
 </a>
 <a href="/B" title="B">
-	<img src="https://link-to-bar.png" />
-	<span class="caption">Bar</span>
+  <img src="https://link-to-bar.png" />
+  <span class="caption">Bar</span>
 </a>
 ```
 
@@ -354,10 +354,10 @@ And we want our data to be in this shape:
 
 ```ts
 type Item = {
-	title: string | null;
-	url: string | null;
-	img: string | null;
-	caption: string | null;
+  title: string | null;
+  url: string | null;
+  img: string | null;
+  caption: string | null;
 };
 ```
 
@@ -369,33 +369,33 @@ Like this:
 const item: Item = { title: null, url: null, string: null, caption: null };
 
 await new HTMLRewriter()
-	.on("a", {
-		element(el) {
-			item.title = el.getAttribute("title");
-			item.url = el.getAttribute("href");
-		},
-	})
-	// Separate selector for nested element
-	.on("a img", {
-		element(el) {
-			item.img = el.getAttribute("src");
-		},
-	})
-	// Separate selector for nested element
-	.on("a .caption", {
-		text({ text }) {
-			// Handle null because initial value is null
-			if (item.caption === null) {
-				item.caption = text;
-				return;
-			}
+  .on("a", {
+    element(el) {
+      item.title = el.getAttribute("title");
+      item.url = el.getAttribute("href");
+    },
+  })
+  // Separate selector for nested element
+  .on("a img", {
+    element(el) {
+      item.img = el.getAttribute("src");
+    },
+  })
+  // Separate selector for nested element
+  .on("a .caption", {
+    text({ text }) {
+      // Handle null because initial value is null
+      if (item.caption === null) {
+        item.caption = text;
+        return;
+      }
 
-			// String concatenation because text might come in chunks
-			item.caption += text;
-		},
-	})
-	.transform(response)
-	.arrayBuffer();
+      // String concatenation because text might come in chunks
+      item.caption += text;
+    },
+  })
+  .transform(response)
+  .arrayBuffer();
 ```
 
 And it can get a little complicated when we need to scrape multiple items.
@@ -405,40 +405,40 @@ And it can get a little complicated when we need to scrape multiple items.
 const items: Item[] = [];
 
 await new HTMLRewriter()
-	.on("a", {
-		element(el) {
-			// This selector is the start of a new Item object
-			const item: Item = { title: null, url: null, img: null, caption: null };
-			item.title = el.getAttribute("title");
-			item.url = el.getAttribute("href");
-			items.push(item);
-		},
-	})
-	// Separate selector for nested element
-	.on("a img", {
-		element(el) {
-			// Access the latest item added by the parent's handler
-			const lastItem = items[items.length - 1];
-			lastItem.img = el.getAttribute("src");
-		},
-	})
-	// Separate selector for nested element
-	.on("a .caption", {
-		text({ text }) {
-			const lastItem = items[items.length - 1];
+  .on("a", {
+    element(el) {
+      // This selector is the start of a new Item object
+      const item: Item = { title: null, url: null, img: null, caption: null };
+      item.title = el.getAttribute("title");
+      item.url = el.getAttribute("href");
+      items.push(item);
+    },
+  })
+  // Separate selector for nested element
+  .on("a img", {
+    element(el) {
+      // Access the latest item added by the parent's handler
+      const lastItem = items[items.length - 1];
+      lastItem.img = el.getAttribute("src");
+    },
+  })
+  // Separate selector for nested element
+  .on("a .caption", {
+    text({ text }) {
+      const lastItem = items[items.length - 1];
 
-			// Handle null because initial value is null
-			if (lastItem.caption === null) {
-				lastItem.caption = text;
-				return;
-			}
+      // Handle null because initial value is null
+      if (lastItem.caption === null) {
+        lastItem.caption = text;
+        return;
+      }
 
-			// String concatenation because text might come in chunks
-			items[items.length - 1].caption += text;
-		},
-	})
-	.transform(response)
-	.arrayBuffer();
+      // String concatenation because text might come in chunks
+      items[items.length - 1].caption += text;
+    },
+  })
+  .transform(response)
+  .arrayBuffer();
 ```
 
 Fortunately, as you might have noticed, our handlers are called in order, allowing the code above to work.

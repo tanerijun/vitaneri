@@ -1,7 +1,7 @@
 {
-	"title": "count-chinese",
-	"description": "A JS library to count Chinese characters",
-	"techs": ["Javascript"],
-	"repo": "https://github.com/tanerijun/count-chinese",
-	"sortOrder": 901
+  "title": "count-chinese",
+  "description": "A JS library to count Chinese characters",
+  "techs": ["Javascript"],
+  "repo": "https://github.com/tanerijun/count-chinese",
+  "sortOrder": 901
 }

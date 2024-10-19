@@ -20,8 +20,8 @@ Let's first look at a code snippet that uses generics.
 
 ```ts
 function print<T>(val: T) {
-	console.log(`typeof T is: ${typeof val}`);
-	console.log(`value is: ${val}`);
+  console.log(`typeof T is: ${typeof val}`);
+  console.log(`value is: ${val}`);
 }
 ```
 
@@ -60,8 +60,8 @@ Take `print<number>()` for example. All `T` that appear inside the function will
 
 ```ts
 function print(val: number) {
-	console.log(`typeof T is: ${typeof val}`);
-	console.log(`value is: ${val}`);
+  console.log(`typeof T is: ${typeof val}`);
+  console.log(`value is: ${val}`);
 }
 ```
 
@@ -93,8 +93,8 @@ For example:
 
 ```ts
 function twoTypes<A, B>(arg1: A, arg2: B) {
-	console.log(`Type of the first argument is: ${typeof arg1}`);
-	console.log(`Type of the second argument is: ${typeof arg2}`);
+  console.log(`Type of the first argument is: ${typeof arg1}`);
+  console.log(`Type of the second argument is: ${typeof arg2}`);
 }
 ```
 
@@ -145,7 +145,7 @@ For example:
 
 ```ts
 function printProperty<T, K extends keyof T>(obj: T, key: K) {
-	console.log(`obj[${key}] = ${obj[key]}`);
+  console.log(`obj[${key}] = ${obj[key]}`);
 }
 ```
 
@@ -157,8 +157,8 @@ Let's look at an example.
 
 ```ts
 const obj = {
-	id: 1,
-	name: "John",
+  id: 1,
+  name: "John",
 };
 
 printProperty(obj, "id");
@@ -189,7 +189,7 @@ For example:
 class Fish {}
 
 function createClassInstance<T>(arg: T): T {
-	return new arg();
+  return new arg();
 }
 
 let instanceOfFish = createClassInstance(Fish);
@@ -210,7 +210,7 @@ In order to fix the code above, we need to refer to type `T` by its constructor 
 class Fish {}
 
 function createClassInstance<T>(arg: { new (): T }): T {
-	return new arg();
+  return new arg();
 }
 
 let instanceOfFish = createClassInstance(Fish);

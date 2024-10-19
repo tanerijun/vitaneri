@@ -1,9 +1,9 @@
 {
-	"title": "Dicto",
-	"description": "Super fast dictionary hosted on the edge",
-	"techs": ["Typescript", "React", "Remix"],
-	"url": "https://dicto.pages.dev",
-	"repo": "https://github.com/tanerijun/dicto",
-	"sortOrder": 400,
-	"featured": true
+  "title": "Dicto",
+  "description": "Super fast dictionary hosted on the edge",
+  "techs": ["Typescript", "React", "Remix"],
+  "url": "https://dicto.pages.dev",
+  "repo": "https://github.com/tanerijun/dicto",
+  "sortOrder": 400,
+  "featured": true
 }
