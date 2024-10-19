@@ -25,36 +25,34 @@
 </dialog>
 
 <script>
-  document.addEventListener("astro:page-load", () => {
-    const searchButton = document.querySelector("#search-button") as HTMLButtonElement;
-    const searchDialog = document.querySelector("#search-dialog") as HTMLDialogElement;
-    const searchContainer = document.querySelector("#search-container") as HTMLDivElement;
+  const searchButton = document.querySelector("#search-button") as HTMLButtonElement;
+  const searchDialog = document.querySelector("#search-dialog") as HTMLDialogElement;
+  const searchContainer = document.querySelector("#search-container") as HTMLDivElement;
 
-    searchButton.addEventListener("click", () => searchDialog.showModal());
+  searchButton.addEventListener("click", () => searchDialog.showModal());
 
-    searchDialog.addEventListener("click", () => searchDialog.close());
+  searchDialog.addEventListener("click", () => searchDialog.close());
 
-    searchContainer.addEventListener("click", (event) => {
-      event.stopPropagation();
-    });
+  searchContainer.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
 
-    window.addEventListener("keydown", (event) => {
-      if (event.key === "/" || (event.key === "." && !searchDialog.open)) {
-        event.preventDefault();
-        searchDialog.showModal();
-      }
-    });
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "/" || (event.key === "." && !searchDialog.open)) {
+      event.preventDefault();
+      searchDialog.showModal();
+    }
+  });
 
-    // @ts-expect-error
-    // eslint-disable-next-line no-undef
-    new PagefindUI({
-      element: "#search-container",
-      resetStyles: false,
-      showSubResult: true,
-      pageSize: 5,
-      showImages: false,
-      autofocus: true,
-    });
+  // @ts-expect-error
+  // eslint-disable-next-line no-undef
+  new PagefindUI({
+    element: "#search-container",
+    resetStyles: false,
+    showSubResult: true,
+    pageSize: 5,
+    showImages: false,
+    autofocus: true,
   });
 </script>
 
