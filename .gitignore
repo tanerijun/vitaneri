@@ -12,6 +12,10 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# editor
+.vscode/
+.idea/
+.zed/
 
 # environment variables
 .env
