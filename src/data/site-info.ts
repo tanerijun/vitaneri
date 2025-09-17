@@ -17,9 +17,9 @@ export const siteInfo = {
       displayText: "Bits",
       url: "/bits",
     },
-    {
-      displayText: "Projects",
-      url: "/projects",
-    },
+    // {
+    //   displayText: "Projects",
+    //   url: "/projects",
+    // },
   ],
 };
